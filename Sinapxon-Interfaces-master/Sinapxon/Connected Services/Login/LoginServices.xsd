@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.sinapxon.pucp.edu.pe/" targetNamespace="http://services.sinapxon.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="validarLogin" type="tns:validarLogin" />
+  <xs:element name="validarLoginResponse" type="tns:validarLoginResponse" />
+  <xs:complexType name="validarLogin">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nickname" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validarLoginResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="persona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

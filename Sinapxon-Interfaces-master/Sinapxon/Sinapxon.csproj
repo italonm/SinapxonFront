@@ -1,0 +1,671 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DFDB269B-16DA-49E6-860D-CBBF4375537F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Sinapxon</RootNamespace>
+    <AssemblyName>Sinapxon</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrador\frmAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmAdministrador.Designer.cs">
+      <DependentUpon>frmAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmCurso.Designer.cs">
+      <DependentUpon>frmCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmAgregarEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmAgregarEspecialidad.Designer.cs">
+      <DependentUpon>frmAgregarEspecialidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmAgregarRequisito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmAgregarRequisito.Designer.cs">
+      <DependentUpon>frmAgregarRequisito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmDatosAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmDatosAlumno.Designer.cs">
+      <DependentUpon>frmDatosAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmDatosProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmDatosProfesor.Designer.cs">
+      <DependentUpon>frmDatosProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmGestionarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmGestionarAlumno.Designer.cs">
+      <DependentUpon>frmGestionarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmGestionarClassroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmGestionarClassroom.Designer.cs">
+      <DependentUpon>frmGestionarClassroom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmGestionarCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmGestionarCursos.Designer.cs">
+      <DependentUpon>frmGestionarCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmGestionarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmGestionarProfesor.Designer.cs">
+      <DependentUpon>frmGestionarProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmListaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmListaUsuarios.Designer.cs">
+      <DependentUpon>frmListaUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmSolicitudClassroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmSolicitudClassroom.Designer.cs">
+      <DependentUpon>frmSolicitudClassroom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmAlumno.Designer.cs">
+      <DependentUpon>frmAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmConfirmarIngresoClassroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmConfirmarIngresoClassroom.Designer.cs">
+      <DependentUpon>frmConfirmarIngresoClassroom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmEvaluacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmEvaluacion.Designer.cs">
+      <DependentUpon>frmEvaluacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmEvaluaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmEvaluaciones.Designer.cs">
+      <DependentUpon>frmEvaluaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmExplorarClassroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmExplorarClassroom.Designer.cs">
+      <DependentUpon>frmExplorarClassroom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmExplorarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmExplorarCurso.Designer.cs">
+      <DependentUpon>frmExplorarCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmExplorarCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmExplorarCursos.Designer.cs">
+      <DependentUpon>frmExplorarCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmMiClassroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmMiClassroom.Designer.cs">
+      <DependentUpon>frmMiClassroom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmMisClassrooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmMisClassrooms.Designer.cs">
+      <DependentUpon>frmMisClassrooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmTema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmTema.Designer.cs">
+      <DependentUpon>frmTema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmTemas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmTemas.Designer.cs">
+      <DependentUpon>frmTemas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\Administrador\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\Alumno\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\Login\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\Profesor\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmOvlideContrasenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmOvlideContrasenia.Designer.cs">
+      <DependentUpon>frmOvlideContrasenia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmRegistro.Designer.cs">
+      <DependentUpon>frmRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\frmCalificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\frmCalificar.Designer.cs">
+      <DependentUpon>frmCalificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\frmEvaluacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\frmEvaluacion.Designer.cs">
+      <DependentUpon>frmEvaluacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\frmTema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\frmTema.Designer.cs">
+      <DependentUpon>frmTema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\frmConfirmacionEnvioSolicitudClassroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\frmConfirmacionEnvioSolicitudClassroom.Designer.cs">
+      <DependentUpon>frmConfirmacionEnvioSolicitudClassroom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\frmDatosClassroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\frmDatosClassroom.Designer.cs">
+      <DependentUpon>frmDatosClassroom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\frmVerClassroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\frmVerClassroom.Designer.cs">
+      <DependentUpon>frmVerClassroom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\frmGestionarMisClassrooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\frmGestionarMisClassrooms.Designer.cs">
+      <DependentUpon>frmGestionarMisClassrooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\frmProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\frmProfesor.Designer.cs">
+      <DependentUpon>frmProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Administrador\frmAdministrador.resx">
+      <DependentUpon>frmAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmCurso.resx">
+      <DependentUpon>frmCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmAgregarEspecialidad.resx">
+      <DependentUpon>frmAgregarEspecialidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmAgregarRequisito.resx">
+      <DependentUpon>frmAgregarRequisito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmDatosAlumno.resx">
+      <DependentUpon>frmDatosAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmDatosProfesor.resx">
+      <DependentUpon>frmDatosProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmGestionarAlumno.resx">
+      <DependentUpon>frmGestionarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmGestionarClassroom.resx">
+      <DependentUpon>frmGestionarClassroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmGestionarCursos.resx">
+      <DependentUpon>frmGestionarCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmGestionarProfesor.resx">
+      <DependentUpon>frmGestionarProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmListaUsuarios.resx">
+      <DependentUpon>frmListaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmSolicitudClassroom.resx">
+      <DependentUpon>frmSolicitudClassroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmAlumno.resx">
+      <DependentUpon>frmAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmConfirmarIngresoClassroom.resx">
+      <DependentUpon>frmConfirmarIngresoClassroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmEvaluacion.resx">
+      <DependentUpon>frmEvaluacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmEvaluaciones.resx">
+      <DependentUpon>frmEvaluaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmExplorarClassroom.resx">
+      <DependentUpon>frmExplorarClassroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmExplorarCurso.resx">
+      <DependentUpon>frmExplorarCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmExplorarCursos.resx">
+      <DependentUpon>frmExplorarCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmMiClassroom.resx">
+      <DependentUpon>frmMiClassroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmMisClassrooms.resx">
+      <DependentUpon>frmMisClassrooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmTema.resx">
+      <DependentUpon>frmTema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmTemas.resx">
+      <DependentUpon>frmTemas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmOvlideContrasenia.resx">
+      <DependentUpon>frmOvlideContrasenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmRegistro.resx">
+      <DependentUpon>frmRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\frmCalificar.resx">
+      <DependentUpon>frmCalificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\frmEvaluacion.resx">
+      <DependentUpon>frmEvaluacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\frmTema.resx">
+      <DependentUpon>frmTema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\frmConfirmacionEnvioSolicitudClassroom.resx">
+      <DependentUpon>frmConfirmacionEnvioSolicitudClassroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\frmDatosClassroom.resx">
+      <DependentUpon>frmDatosClassroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\frmVerClassroom.resx">
+      <DependentUpon>frmVerClassroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\frmGestionarMisClassrooms.resx">
+      <DependentUpon>frmGestionarMisClassrooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\frmProfesor.resx">
+      <DependentUpon>frmProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Connected Services\Administrador\AdministradorServices.wsdl" />
+    <None Include="Connected Services\Administrador\AdministradorServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.curso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.insertarAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.insertarCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.insertarProfesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarCursosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarProfesoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.profesor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Alumno\AlumnoServices.wsdl" />
+    <None Include="Connected Services\Alumno\AlumnoServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.classroom.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.curso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarClassroomxAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarCursosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Login\LoginServices.wsdl" />
+    <None Include="Connected Services\Login\LoginServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Login\Sinapxon.Login.persona.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Login\Sinapxon.Login.validarLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Profesor\ProfesorServices.wsdl" />
+    <None Include="Connected Services\Profesor\ProfesorServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.classroom.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.curso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.idioma.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.insertarSolicitudClassroomResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.insertarTemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarClassroomxProfesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarCursosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarIdiomasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarPeriodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.periodo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SINAPXON_LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="ShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ContenedorTXT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_account_circle_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_lock_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lina-_P-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barra_P-Light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barra_P-Blanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_find_in_page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_account_circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_account_circle_Big.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_exit_to_app.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bloque_S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bloque-G3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barra-G4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barra-G41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barra-PD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_description.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_assignment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_check_circle_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_cancel_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_get_app_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_remove_circle_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_add_circle_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_collections_bookmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_group_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_add_box_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_edit_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\Administrador\" />
+    <WCFMetadataStorage Include="Connected Services\Alumno\" />
+    <WCFMetadataStorage Include="Connected Services\Login\" />
+    <WCFMetadataStorage Include="Connected Services\Profesor\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Login\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Login\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Login\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_inbox_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RBloque-P.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bloque-Usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Profesor\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Profesor\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Profesor\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Alumno\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Alumno\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Alumno\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Administrador\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Administrador\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Administrador\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

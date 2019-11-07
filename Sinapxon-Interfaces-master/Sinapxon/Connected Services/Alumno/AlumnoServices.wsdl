@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.sinapxon.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="AlumnoServices" targetNamespace="http://services.sinapxon.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/SinapxonSoftServices/AlumnoServices?xsd=1" namespace="http://services.sinapxon.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="listarClassroomxAlumno">
+    <part name="parameters" element="tns:listarClassroomxAlumno" />
+  </message>
+  <message name="listarClassroomxAlumnoResponse">
+    <part name="parameters" element="tns:listarClassroomxAlumnoResponse" />
+  </message>
+  <message name="listarCursos">
+    <part name="parameters" element="tns:listarCursos" />
+  </message>
+  <message name="listarCursosResponse">
+    <part name="parameters" element="tns:listarCursosResponse" />
+  </message>
+  <portType name="AlumnoServices">
+    <operation name="listarClassroomxAlumno">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomxAlumnoRequest" message="tns:listarClassroomxAlumno" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomxAlumnoResponse" message="tns:listarClassroomxAlumnoResponse" />
+    </operation>
+    <operation name="listarCursos">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarCursosRequest" message="tns:listarCursos" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarCursosResponse" message="tns:listarCursosResponse" />
+    </operation>
+  </portType>
+  <binding name="AlumnoServicesPortBinding" type="tns:AlumnoServices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarClassroomxAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCursos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="AlumnoServices">
+    <port name="AlumnoServicesPort" binding="tns:AlumnoServicesPortBinding">
+      <soap:address location="http://localhost:8080/SinapxonSoftServices/AlumnoServices" />
+    </port>
+  </service>
+</definitions>

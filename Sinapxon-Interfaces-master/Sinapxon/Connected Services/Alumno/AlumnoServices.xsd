@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.sinapxon.pucp.edu.pe/" targetNamespace="http://services.sinapxon.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="listarClassroomxAlumno" type="tns:listarClassroomxAlumno" />
+  <xs:element name="listarClassroomxAlumnoResponse" type="tns:listarClassroomxAlumnoResponse" />
+  <xs:element name="listarCursos" type="tns:listarCursos" />
+  <xs:element name="listarCursosResponse" type="tns:listarCursosResponse" />
+  <xs:complexType name="listarClassroomxAlumno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarClassroomxAlumnoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:classroom" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="classroom">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="alumnos" nillable="true" type="tns:classroomXAlumno" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="curso" type="tns:curso" />
+      <xs:element name="id_classroom" type="xs:int" />
+      <xs:element minOccurs="0" name="idioma" type="tns:idioma" />
+      <xs:element name="idiomaid" type="xs:int" />
+      <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="temas" nillable="true" type="tns:temaXClassroom" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="classroomXAlumno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="alumno" type="tns:alumno" />
+      <xs:element minOccurs="0" name="classroom" type="tns:classroom" />
+      <xs:element name="etapaActual" type="xs:int" />
+      <xs:element name="id_Classroom_x_Alumno" type="xs:int" />
+      <xs:element name="nota_final" type="xs:float" />
+      <xs:element name="vez" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="alumno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element name="estado" type="xs:int" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="nickname" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="pais" type="tns:pais" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pais">
+    <xs:sequence>
+      <xs:element name="id_pais" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="curso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="especialidad" type="tns:especialidad" />
+      <xs:element name="estado" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="administrador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="nickname" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="pais" type="tns:pais" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="especialidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="id_especialidad" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="idioma">
+    <xs:sequence>
+      <xs:element name="id_idioma" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="profesor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="areaInteres" type="xs:string" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element name="estado" type="xs:int" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="gradoInstruccion" type="xs:string" />
+      <xs:element minOccurs="0" name="nickname" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="pais" type="tns:pais" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="temaXClassroom">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="evaluacion" type="tns:evaluacion" />
+      <xs:element name="id_tema" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="tema" type="tns:tema" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="evaluacion">
+    <xs:sequence>
+      <xs:element name="id_evaluacion" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="peso_porcentual" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tema">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="id_tema" type="xs:int" />
+      <xs:element minOccurs="0" name="link" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCursos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCursosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
