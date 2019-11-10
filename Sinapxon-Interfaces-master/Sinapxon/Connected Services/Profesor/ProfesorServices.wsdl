@@ -5,11 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/SinapxonSoftServices/ProfesorServices?xsd=1" namespace="http://services.sinapxon.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="listarPeriodos">
-    <part name="parameters" element="tns:listarPeriodos" />
+  <message name="insertarSolicitudClassroom">
+    <part name="parameters" element="tns:insertarSolicitudClassroom" />
   </message>
-  <message name="listarPeriodosResponse">
-    <part name="parameters" element="tns:listarPeriodosResponse" />
+  <message name="insertarSolicitudClassroomResponse">
+    <part name="parameters" element="tns:insertarSolicitudClassroomResponse" />
+  </message>
+  <message name="listarClassroomxProfesor">
+    <part name="parameters" element="tns:listarClassroomxProfesor" />
+  </message>
+  <message name="listarClassroomxProfesorResponse">
+    <part name="parameters" element="tns:listarClassroomxProfesorResponse" />
   </message>
   <message name="listarCursos">
     <part name="parameters" element="tns:listarCursos" />
@@ -17,11 +23,11 @@
   <message name="listarCursosResponse">
     <part name="parameters" element="tns:listarCursosResponse" />
   </message>
-  <message name="insertarSolicitudClassroom">
-    <part name="parameters" element="tns:insertarSolicitudClassroom" />
+  <message name="listarPeriodos">
+    <part name="parameters" element="tns:listarPeriodos" />
   </message>
-  <message name="insertarSolicitudClassroomResponse">
-    <part name="parameters" element="tns:insertarSolicitudClassroomResponse" />
+  <message name="listarPeriodosResponse">
+    <part name="parameters" element="tns:listarPeriodosResponse" />
   </message>
   <message name="listarIdiomas">
     <part name="parameters" element="tns:listarIdiomas" />
@@ -35,24 +41,22 @@
   <message name="insertarTemaResponse">
     <part name="parameters" element="tns:insertarTemaResponse" />
   </message>
-  <message name="listarClassroomxProfesor">
-    <part name="parameters" element="tns:listarClassroomxProfesor" />
-  </message>
-  <message name="listarClassroomxProfesorResponse">
-    <part name="parameters" element="tns:listarClassroomxProfesorResponse" />
-  </message>
   <portType name="ProfesorServices">
-    <operation name="listarPeriodos">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarPeriodosRequest" message="tns:listarPeriodos" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarPeriodosResponse" message="tns:listarPeriodosResponse" />
+    <operation name="insertarSolicitudClassroom">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/insertarSolicitudClassroomRequest" message="tns:insertarSolicitudClassroom" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/insertarSolicitudClassroomResponse" message="tns:insertarSolicitudClassroomResponse" />
+    </operation>
+    <operation name="listarClassroomxProfesor">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarClassroomxProfesorRequest" message="tns:listarClassroomxProfesor" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarClassroomxProfesorResponse" message="tns:listarClassroomxProfesorResponse" />
     </operation>
     <operation name="listarCursos">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarCursosRequest" message="tns:listarCursos" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarCursosResponse" message="tns:listarCursosResponse" />
     </operation>
-    <operation name="insertarSolicitudClassroom">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/insertarSolicitudClassroomRequest" message="tns:insertarSolicitudClassroom" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/insertarSolicitudClassroomResponse" message="tns:insertarSolicitudClassroomResponse" />
+    <operation name="listarPeriodos">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarPeriodosRequest" message="tns:listarPeriodos" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarPeriodosResponse" message="tns:listarPeriodosResponse" />
     </operation>
     <operation name="listarIdiomas">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarIdiomasRequest" message="tns:listarIdiomas" />
@@ -62,14 +66,19 @@
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/insertarTemaRequest" message="tns:insertarTema" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/insertarTemaResponse" message="tns:insertarTemaResponse" />
     </operation>
-    <operation name="listarClassroomxProfesor">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarClassroomxProfesorRequest" message="tns:listarClassroomxProfesor" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarClassroomxProfesorResponse" message="tns:listarClassroomxProfesorResponse" />
-    </operation>
   </portType>
   <binding name="ProfesorServicesPortBinding" type="tns:ProfesorServices">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarPeriodos">
+    <operation name="insertarSolicitudClassroom">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarClassroomxProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -87,7 +96,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarSolicitudClassroom">
+    <operation name="listarPeriodos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -106,15 +115,6 @@
       </output>
     </operation>
     <operation name="insertarTema">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarClassroomxProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

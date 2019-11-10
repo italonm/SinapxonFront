@@ -15,22 +15,23 @@ namespace Sinapxon.Profesor
     {
         private frmProfesor _padre;
         private int altura = 0, boxAltura = 164;
+
         Profesor.ProfesorServicesClient DBController = new Profesor.ProfesorServicesClient();
+
+        private BindingList<Profesor.classroom> classrooms;
+
         public frmGestionarMisClassrooms()
         {
             InitializeComponent();
             
-            BindingList<Profesor.classroom> classroom = 
-                new BindingList<Profesor.classroom>(DBController.listarClassroomxProfesor(LoginInfo.persona.codigo));
+            classrooms = 
+                new BindingList<Profesor.classroom>(DBController.listarClassroomxProfesor(LoginInfo.persona.codigo,""));
 
-            foreach (Profesor.classroom obj in classroom)
+            foreach (Profesor.classroom obj in classrooms)
             {
                 crearClassroom(obj.curso.codigo, obj.curso.nombre, obj.codigo);
             }
             
-            //crearClassroom("HOLA");
-            //crearClassroom("HMMMM");
-            //crearClassroom("ESKERE");
         }
 
         public frmGestionarMisClassrooms(frmProfesor padre)
@@ -38,8 +39,8 @@ namespace Sinapxon.Profesor
             _padre = padre;
             InitializeComponent();
 
-            BindingList<Profesor.classroom> classrooms =
-                new BindingList<Profesor.classroom>(DBController.listarClassroomxProfesor(LoginInfo.persona.codigo));
+            classrooms =
+                new BindingList<Profesor.classroom>(DBController.listarClassroomxProfesor(LoginInfo.persona.codigo,""));
 
             foreach (Profesor.classroom obj in classrooms)
             {
@@ -72,7 +73,7 @@ namespace Sinapxon.Profesor
             lblNombreCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
             lblNombreCurso.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lblNombreCurso.ForeColor = System.Drawing.Color.White;
-            lblNombreCurso.Location = new System.Drawing.Point(260, 54+altura);
+            lblNombreCurso.Location = new System.Drawing.Point(265, 54+altura);
             lblNombreCurso.Name = "lblNombreCurso";
             lblNombreCurso.Size = new System.Drawing.Size(181, 25);
             lblNombreCurso.Text = nombre;
@@ -184,6 +185,21 @@ namespace Sinapxon.Profesor
         {
             frmEvaluacion formAniadirEvaluacion = new frmEvaluacion();
             formAniadirEvaluacion.Visible = true;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            altura = 0;
+            boxAltura = 164;
+            panelContenedor.Controls.Clear();
+
+            classrooms =
+                new BindingList<Profesor.classroom>(DBController.listarClassroomxProfesor(LoginInfo.persona.codigo,txtBuscar.Text));
+
+            foreach (Profesor.classroom obj in classrooms)
+            {
+                crearClassroom(obj.curso.codigo, obj.curso.nombre, obj.codigo);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
