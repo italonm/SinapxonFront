@@ -16,6 +16,7 @@ namespace Sinapxon.Profesor
         public frmTema()
         {
             InitializeComponent();
+            lblTema.Text = "Tema" + " - " + ClassroomInfo.classroom.codigo;
         }
 
         private void dgvArchivos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -34,6 +35,7 @@ namespace Sinapxon.Profesor
             tema.nombre = txtNombre.Text;
             tema.link = txtLinkVideo.Text;
             tema.descripcion = txtDescripcion.Text;
+            tema.classroom.codigo = ClassroomInfo.classroom.codigo;
             DBController.insertarTema(tema);
             this.Close();
         }

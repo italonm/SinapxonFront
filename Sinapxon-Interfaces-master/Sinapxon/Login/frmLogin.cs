@@ -13,10 +13,7 @@ using System.Windows.Forms;
 
 namespace Sinapxon.Login
 {
-    public static class LoginInfo
-    {
-        public static Login.persona persona;
-    }
+    
     public partial class frmLogin : Form
     {
         public frmLogin()
@@ -74,5 +71,10 @@ namespace Sinapxon.Login
         {
 
         }
+    }
+
+    public static class LoginInfo
+    {
+        public static Login.persona persona;
     }
 }

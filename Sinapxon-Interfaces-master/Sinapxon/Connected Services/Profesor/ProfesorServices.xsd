@@ -19,89 +19,11 @@
   </xs:complexType>
   <xs:complexType name="tema">
     <xs:sequence>
+      <xs:element minOccurs="0" name="classroom" type="tns:classroom" />
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
       <xs:element name="id_tema" type="xs:int" />
       <xs:element minOccurs="0" name="link" type="xs:string" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarTemaResponse">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarCursos">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarCursosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="curso">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
-      <xs:element minOccurs="0" name="codigo" type="xs:string" />
-      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
-      <xs:element minOccurs="0" name="especialidad" type="tns:especialidad" />
-      <xs:element name="estado" type="xs:int" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="administrador">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
-      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
-      <xs:element minOccurs="0" name="codigo" type="xs:string" />
-      <xs:element minOccurs="0" name="correo" type="xs:string" />
-      <xs:element minOccurs="0" name="dni" type="xs:string" />
-      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="nickname" type="xs:string" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-      <xs:element minOccurs="0" name="pais" type="tns:pais" />
-      <xs:element minOccurs="0" name="password" type="xs:string" />
-      <xs:element minOccurs="0" name="telefono" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="pais">
-    <xs:sequence>
-      <xs:element name="id_pais" type="xs:int" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="especialidad">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
-      <xs:element name="id_especialidad" type="xs:int" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarPeriodos">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarPeriodosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:periodo" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="periodo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
-      <xs:element minOccurs="0" name="fecha_fin" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="fecha_inicio" type="xs:dateTime" />
-      <xs:element name="id_periodo" type="xs:int" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarClassroomxProfesor">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="codigo" type="xs:string" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarClassroomxProfesorResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:classroom" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="classroom">
@@ -143,6 +65,44 @@
       <xs:element minOccurs="0" name="telefono" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="pais">
+    <xs:sequence>
+      <xs:element name="id_pais" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="curso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="especialidad" type="tns:especialidad" />
+      <xs:element name="estado" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="administrador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="nickname" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="pais" type="tns:pais" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="especialidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="id_especialidad" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="idioma">
     <xs:sequence>
       <xs:element name="id_idioma" type="xs:int" />
@@ -181,6 +141,47 @@
       <xs:element name="id_evaluacion" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element name="peso_porcentual" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarTemaResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarCursos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCursosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPeriodos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPeriodosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:periodo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="periodo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
+      <xs:element minOccurs="0" name="fecha_fin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fecha_inicio" type="xs:dateTime" />
+      <xs:element name="id_periodo" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarClassroomxProfesor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarClassroomxProfesorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:classroom" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarSolicitudClassroom">

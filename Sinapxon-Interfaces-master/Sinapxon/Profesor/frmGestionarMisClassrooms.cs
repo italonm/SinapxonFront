@@ -14,7 +14,7 @@ namespace Sinapxon.Profesor
     public partial class frmGestionarMisClassrooms : Form
     {
         private frmProfesor _padre;
-        private int altura = 0, boxAltura = 164;
+        private int altura = 0, boxAltura = 164
 
         Profesor.ProfesorServicesClient DBController = new Profesor.ProfesorServicesClient();
 
@@ -140,7 +140,7 @@ namespace Sinapxon.Profesor
             btnAniadirTema.Image = global::Sinapxon.Properties.Resources.baseline_add_box_black_18dp;
             btnAniadirTema.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             btnAniadirTema.Location = new System.Drawing.Point(316, 109+altura);
-            btnAniadirTema.Name = "btnAniadirTema";
+            btnAniadirTema.Name = codClassroom;
             btnAniadirTema.Size = new System.Drawing.Size(189, 44);
             btnAniadirTema.TabIndex = 6;
             btnAniadirTema.Text = "  Añadir Tema";
@@ -177,6 +177,8 @@ namespace Sinapxon.Profesor
 
         private void btnAniadirTema_Click(object sender, EventArgs e)
         {
+            ClassroomInfo.classroom.codigo = "";
+
             frmTema formAniadirTema = new frmTema();
             formAniadirTema.Visible = true;
         }
@@ -207,5 +209,10 @@ namespace Sinapxon.Profesor
             frmVerClassroom formVerClassroom = new frmVerClassroom();
             _padre.openChildForm(formVerClassroom);
         }
+    }
+
+    public static class ClassroomInfo
+    {
+        public static Profesor.classroom classroom;
     }
 }
