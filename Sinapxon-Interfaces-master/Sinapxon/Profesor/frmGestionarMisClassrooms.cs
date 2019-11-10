@@ -14,7 +14,7 @@ namespace Sinapxon.Profesor
     public partial class frmGestionarMisClassrooms : Form
     {
         private frmProfesor _padre;
-        private int altura = 0, boxAltura = 164
+        private int altura = 0, boxAltura = 164;
 
         Profesor.ProfesorServicesClient DBController = new Profesor.ProfesorServicesClient();
 
@@ -49,7 +49,7 @@ namespace Sinapxon.Profesor
             
         }
 
-        private void crearClassroom(string codCurso, string nombre,string codClassroom)
+        private void crearClassroom(string codCurso, string nombre, string codClassroom)
         {
             // 
             // lblCodigoCurso
@@ -59,7 +59,7 @@ namespace Sinapxon.Profesor
             lblCodigoCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
             lblCodigoCurso.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lblCodigoCurso.ForeColor = System.Drawing.Color.White;
-            lblCodigoCurso.Location = new System.Drawing.Point(180, 54+altura);
+            lblCodigoCurso.Location = new System.Drawing.Point(180, 54 + altura);
             lblCodigoCurso.Name = "lblCodigoCurso";
             lblCodigoCurso.Size = new System.Drawing.Size(89, 25);
             lblCodigoCurso.Text = codCurso;
@@ -73,7 +73,7 @@ namespace Sinapxon.Profesor
             lblNombreCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
             lblNombreCurso.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lblNombreCurso.ForeColor = System.Drawing.Color.White;
-            lblNombreCurso.Location = new System.Drawing.Point(265, 54+altura);
+            lblNombreCurso.Location = new System.Drawing.Point(265, 54 + altura);
             lblNombreCurso.Name = "lblNombreCurso";
             lblNombreCurso.Size = new System.Drawing.Size(181, 25);
             lblNombreCurso.Text = nombre;
@@ -121,7 +121,7 @@ namespace Sinapxon.Profesor
             btnAniadirEvaluacion.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             btnAniadirEvaluacion.Image = global::Sinapxon.Properties.Resources.baseline_add_box_black_18dp;
             btnAniadirEvaluacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnAniadirEvaluacion.Location = new System.Drawing.Point(96, 109+altura);
+            btnAniadirEvaluacion.Location = new System.Drawing.Point(96, 109 + altura);
             btnAniadirEvaluacion.Name = "btnAniadirEvaluacion";
             btnAniadirEvaluacion.Size = new System.Drawing.Size(189, 44);
             btnAniadirEvaluacion.Text = "Añadir evaluación";
@@ -139,14 +139,15 @@ namespace Sinapxon.Profesor
             btnAniadirTema.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             btnAniadirTema.Image = global::Sinapxon.Properties.Resources.baseline_add_box_black_18dp;
             btnAniadirTema.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnAniadirTema.Location = new System.Drawing.Point(316, 109+altura);
+            btnAniadirTema.Location = new System.Drawing.Point(316, 109 + altura);
             btnAniadirTema.Name = codClassroom;
             btnAniadirTema.Size = new System.Drawing.Size(189, 44);
             btnAniadirTema.TabIndex = 6;
             btnAniadirTema.Text = "  Añadir Tema";
             btnAniadirTema.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             btnAniadirTema.UseVisualStyleBackColor = false;
-            btnAniadirTema.Click += new System.EventHandler(this.btnAniadirTema_Click);
+            //btnAniadirTema.Click += new System.EventHandler(this.btnAniadirTema_Click);
+            btnAniadirTema.Click += new System.EventHandler((sender, e) => btnAniadirTema_Click(sender, e, codClassroom));
             panelContenedor.Controls.Add(btnAniadirTema);
             // 
             // pbBlueBox
@@ -175,9 +176,9 @@ namespace Sinapxon.Profesor
             //formAniadirClassroom.Visible = true;
         }
 
-        private void btnAniadirTema_Click(object sender, EventArgs e)
+        private void btnAniadirTema_Click(object sender, EventArgs e,string codclassroom)
         {
-            ClassroomInfo.classroom.codigo = "";
+            ClassroomInfo.classroom.codigo = codclassroom;
 
             frmTema formAniadirTema = new frmTema();
             formAniadirTema.Visible = true;
@@ -213,6 +214,6 @@ namespace Sinapxon.Profesor
 
     public static class ClassroomInfo
     {
-        public static Profesor.classroom classroom;
+        public static Profesor.classroom classroom= new Profesor.classroom();
     }
 }
