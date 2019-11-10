@@ -31,28 +31,28 @@
             this.lblCurso = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panelDescripcion = new System.Windows.Forms.Panel();
-            this.panelDatosProfesor = new System.Windows.Forms.Panel();
             this.panelTituloDescripcion = new System.Windows.Forms.Panel();
-            this.panelTituloDatosProfesor = new System.Windows.Forms.Panel();
             this.lblDescripcion = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblApellido = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.panelDatosProfesor = new System.Windows.Forms.Panel();
             this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelTituloDatosProfesor = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelDescripcion.SuspendLayout();
-            this.panelDatosProfesor.SuspendLayout();
             this.panelTituloDescripcion.SuspendLayout();
-            this.panelTituloDatosProfesor.SuspendLayout();
+            this.panelDatosProfesor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelTituloDatosProfesor.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblCurso
             // 
             this.lblCurso.AutoSize = true;
             this.lblCurso.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurso.Location = new System.Drawing.Point(12, 9);
+            this.lblCurso.Location = new System.Drawing.Point(12, 23);
             this.lblCurso.Name = "lblCurso";
             this.lblCurso.Size = new System.Drawing.Size(207, 29);
             this.lblCurso.TabIndex = 0;
@@ -63,11 +63,11 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(728, 12);
+            this.button1.Location = new System.Drawing.Point(606, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(185, 44);
+            this.button1.Size = new System.Drawing.Size(307, 40);
             this.button1.TabIndex = 3;
             this.button1.Text = "Ingresar al classroom";
             this.button1.UseVisualStyleBackColor = false;
@@ -83,6 +83,27 @@
             this.panelDescripcion.Size = new System.Drawing.Size(398, 539);
             this.panelDescripcion.TabIndex = 6;
             // 
+            // panelTituloDescripcion
+            // 
+            this.panelTituloDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(99)))));
+            this.panelTituloDescripcion.Controls.Add(this.lblDescripcion);
+            this.panelTituloDescripcion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTituloDescripcion.Location = new System.Drawing.Point(0, 0);
+            this.panelTituloDescripcion.Name = "panelTituloDescripcion";
+            this.panelTituloDescripcion.Size = new System.Drawing.Size(398, 100);
+            this.panelTituloDescripcion.TabIndex = 0;
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.ForeColor = System.Drawing.Color.White;
+            this.lblDescripcion.Location = new System.Drawing.Point(42, 38);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(126, 25);
+            this.lblDescripcion.TabIndex = 0;
+            this.lblDescripcion.Text = "Descripcion";
+            // 
             // panelDatosProfesor
             // 
             this.panelDatosProfesor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
@@ -97,68 +118,19 @@
             this.panelDatosProfesor.Size = new System.Drawing.Size(470, 539);
             this.panelDatosProfesor.TabIndex = 7;
             // 
-            // panelTituloDescripcion
+            // txtApellido
             // 
-            this.panelTituloDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(99)))));
-            this.panelTituloDescripcion.Controls.Add(this.lblDescripcion);
-            this.panelTituloDescripcion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTituloDescripcion.Location = new System.Drawing.Point(0, 0);
-            this.panelTituloDescripcion.Name = "panelTituloDescripcion";
-            this.panelTituloDescripcion.Size = new System.Drawing.Size(398, 100);
-            this.panelTituloDescripcion.TabIndex = 0;
+            this.txtApellido.Location = new System.Drawing.Point(45, 414);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(376, 20);
+            this.txtApellido.TabIndex = 5;
             // 
-            // panelTituloDatosProfesor
+            // txtNombre
             // 
-            this.panelTituloDatosProfesor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(99)))));
-            this.panelTituloDatosProfesor.Controls.Add(this.label1);
-            this.panelTituloDatosProfesor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTituloDatosProfesor.Location = new System.Drawing.Point(0, 0);
-            this.panelTituloDatosProfesor.Name = "panelTituloDatosProfesor";
-            this.panelTituloDatosProfesor.Size = new System.Drawing.Size(470, 100);
-            this.panelTituloDatosProfesor.TabIndex = 0;
-            // 
-            // lblDescripcion
-            // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.ForeColor = System.Drawing.Color.White;
-            this.lblDescripcion.Location = new System.Drawing.Point(42, 38);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(126, 25);
-            this.lblDescripcion.TabIndex = 0;
-            this.lblDescripcion.Text = "Descripcion";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(40, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Datos del profosor";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Sinapxon.Properties.Resources.baseline_account_circle_Big;
-            this.pictureBox1.Location = new System.Drawing.Point(192, 147);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(96, 96);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(41, 282);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(78, 23);
-            this.lblNombre.TabIndex = 2;
-            this.lblNombre.Text = "Nombre";
+            this.txtNombre.Location = new System.Drawing.Point(45, 322);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(376, 20);
+            this.txtNombre.TabIndex = 4;
             // 
             // lblApellido
             // 
@@ -171,19 +143,47 @@
             this.lblApellido.TabIndex = 3;
             this.lblApellido.Text = "Apellido";
             // 
-            // txtNombre
+            // lblNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(45, 322);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(376, 20);
-            this.txtNombre.TabIndex = 4;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
+            this.lblNombre.Location = new System.Drawing.Point(41, 282);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(78, 23);
+            this.lblNombre.TabIndex = 2;
+            this.lblNombre.Text = "Nombre";
             // 
-            // txtApellido
+            // pictureBox1
             // 
-            this.txtApellido.Location = new System.Drawing.Point(45, 414);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(376, 20);
-            this.txtApellido.TabIndex = 5;
+            this.pictureBox1.Image = global::Sinapxon.Properties.Resources.baseline_account_circle_Big;
+            this.pictureBox1.Location = new System.Drawing.Point(192, 147);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(96, 96);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panelTituloDatosProfesor
+            // 
+            this.panelTituloDatosProfesor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(99)))));
+            this.panelTituloDatosProfesor.Controls.Add(this.label1);
+            this.panelTituloDatosProfesor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTituloDatosProfesor.Location = new System.Drawing.Point(0, 0);
+            this.panelTituloDatosProfesor.Name = "panelTituloDatosProfesor";
+            this.panelTituloDatosProfesor.Size = new System.Drawing.Size(470, 100);
+            this.panelTituloDatosProfesor.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(40, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(189, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Datos del profosor";
             // 
             // frmExplorarClassroom
             // 
@@ -200,13 +200,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmExplorarClassroom";
             this.panelDescripcion.ResumeLayout(false);
-            this.panelDatosProfesor.ResumeLayout(false);
-            this.panelDatosProfesor.PerformLayout();
             this.panelTituloDescripcion.ResumeLayout(false);
             this.panelTituloDescripcion.PerformLayout();
+            this.panelDatosProfesor.ResumeLayout(false);
+            this.panelDatosProfesor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTituloDatosProfesor.ResumeLayout(false);
             this.panelTituloDatosProfesor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -41,14 +41,14 @@
             this.btnAgregarRequisito = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.panelDatosCurso = new System.Windows.Forms.Panel();
+            this.cbEspecialidad = new System.Windows.Forms.ComboBox();
+            this.cbIdioma = new System.Windows.Forms.ComboBox();
             this.panelTituloCurso = new System.Windows.Forms.Panel();
             this.lblDatosCurso = new System.Windows.Forms.Label();
-            this.cbIdioma = new System.Windows.Forms.ComboBox();
-            this.cbEspecialidad = new System.Windows.Forms.ComboBox();
             this.panelRequisitos = new System.Windows.Forms.Panel();
+            this.btnQuitarRequisito = new System.Windows.Forms.Button();
             this.panelTituloRequisitos = new System.Windows.Forms.Panel();
             this.lblRequisitos = new System.Windows.Forms.Label();
-            this.btnQuitarRequisito = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequisitos)).BeginInit();
             this.panelDatosCurso.SuspendLayout();
             this.panelTituloCurso.SuspendLayout();
@@ -90,7 +90,7 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(32, 340);
+            this.lblDescripcion.Location = new System.Drawing.Point(32, 326);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(160, 19);
             this.lblDescripcion.TabIndex = 3;
@@ -136,10 +136,10 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(36, 362);
+            this.txtDescripcion.Location = new System.Drawing.Point(36, 348);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(348, 197);
+            this.txtDescripcion.Size = new System.Drawing.Size(348, 211);
             this.txtDescripcion.TabIndex = 9;
             // 
             // dgvRequisitos
@@ -183,7 +183,7 @@
             // 
             // panelDatosCurso
             // 
-            this.panelDatosCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
+            this.panelDatosCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelDatosCurso.Controls.Add(this.cbEspecialidad);
             this.panelDatosCurso.Controls.Add(this.cbIdioma);
             this.panelDatosCurso.Controls.Add(this.panelTituloCurso);
@@ -199,6 +199,24 @@
             this.panelDatosCurso.Name = "panelDatosCurso";
             this.panelDatosCurso.Size = new System.Drawing.Size(405, 580);
             this.panelDatosCurso.TabIndex = 16;
+            // 
+            // cbEspecialidad
+            // 
+            this.cbEspecialidad.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEspecialidad.FormattingEnabled = true;
+            this.cbEspecialidad.Location = new System.Drawing.Point(36, 275);
+            this.cbEspecialidad.Name = "cbEspecialidad";
+            this.cbEspecialidad.Size = new System.Drawing.Size(348, 27);
+            this.cbEspecialidad.TabIndex = 10;
+            // 
+            // cbIdioma
+            // 
+            this.cbIdioma.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbIdioma.FormattingEnabled = true;
+            this.cbIdioma.Location = new System.Drawing.Point(36, 201);
+            this.cbIdioma.Name = "cbIdioma";
+            this.cbIdioma.Size = new System.Drawing.Size(348, 27);
+            this.cbIdioma.TabIndex = 9;
             // 
             // panelTituloCurso
             // 
@@ -221,27 +239,9 @@
             this.lblDatosCurso.TabIndex = 0;
             this.lblDatosCurso.Text = "Datos del curso";
             // 
-            // cbIdioma
-            // 
-            this.cbIdioma.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbIdioma.FormattingEnabled = true;
-            this.cbIdioma.Location = new System.Drawing.Point(36, 201);
-            this.cbIdioma.Name = "cbIdioma";
-            this.cbIdioma.Size = new System.Drawing.Size(348, 27);
-            this.cbIdioma.TabIndex = 9;
-            // 
-            // cbEspecialidad
-            // 
-            this.cbEspecialidad.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEspecialidad.FormattingEnabled = true;
-            this.cbEspecialidad.Location = new System.Drawing.Point(36, 275);
-            this.cbEspecialidad.Name = "cbEspecialidad";
-            this.cbEspecialidad.Size = new System.Drawing.Size(348, 27);
-            this.cbEspecialidad.TabIndex = 10;
-            // 
             // panelRequisitos
             // 
-            this.panelRequisitos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
+            this.panelRequisitos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelRequisitos.Controls.Add(this.btnQuitarRequisito);
             this.panelRequisitos.Controls.Add(this.panelTituloRequisitos);
             this.panelRequisitos.Controls.Add(this.dgvRequisitos);
@@ -250,6 +250,22 @@
             this.panelRequisitos.Name = "panelRequisitos";
             this.panelRequisitos.Size = new System.Drawing.Size(450, 580);
             this.panelRequisitos.TabIndex = 17;
+            // 
+            // btnQuitarRequisito
+            // 
+            this.btnQuitarRequisito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.btnQuitarRequisito.FlatAppearance.BorderSize = 0;
+            this.btnQuitarRequisito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitarRequisito.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarRequisito.ForeColor = System.Drawing.Color.White;
+            this.btnQuitarRequisito.Image = global::Sinapxon.Properties.Resources.baseline_remove_circle_white_18dp;
+            this.btnQuitarRequisito.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQuitarRequisito.Location = new System.Drawing.Point(230, 64);
+            this.btnQuitarRequisito.Name = "btnQuitarRequisito";
+            this.btnQuitarRequisito.Size = new System.Drawing.Size(200, 45);
+            this.btnQuitarRequisito.TabIndex = 12;
+            this.btnQuitarRequisito.Text = "Quitar";
+            this.btnQuitarRequisito.UseVisualStyleBackColor = false;
             // 
             // panelTituloRequisitos
             // 
@@ -272,26 +288,11 @@
             this.lblRequisitos.TabIndex = 1;
             this.lblRequisitos.Text = "Requisitos";
             // 
-            // btnQuitarRequisito
-            // 
-            this.btnQuitarRequisito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
-            this.btnQuitarRequisito.FlatAppearance.BorderSize = 0;
-            this.btnQuitarRequisito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuitarRequisito.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuitarRequisito.ForeColor = System.Drawing.Color.White;
-            this.btnQuitarRequisito.Image = global::Sinapxon.Properties.Resources.baseline_remove_circle_white_18dp;
-            this.btnQuitarRequisito.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuitarRequisito.Location = new System.Drawing.Point(230, 64);
-            this.btnQuitarRequisito.Name = "btnQuitarRequisito";
-            this.btnQuitarRequisito.Size = new System.Drawing.Size(200, 45);
-            this.btnQuitarRequisito.TabIndex = 12;
-            this.btnQuitarRequisito.Text = "Quitar";
-            this.btnQuitarRequisito.UseVisualStyleBackColor = false;
-            // 
             // frmCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
             this.ClientSize = new System.Drawing.Size(964, 681);
             this.Controls.Add(this.panelRequisitos);
             this.Controls.Add(this.panelDatosCurso);

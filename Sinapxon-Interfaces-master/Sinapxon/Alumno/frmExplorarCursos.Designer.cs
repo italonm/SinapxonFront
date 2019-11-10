@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExplorarCursos));
             this.lblExplorarCursos = new System.Windows.Forms.Label();
-            this.btnVerCurso = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panelContenedorCursos = new System.Windows.Forms.Panel();
@@ -51,17 +50,6 @@
             this.lblExplorarCursos.Size = new System.Drawing.Size(186, 29);
             this.lblExplorarCursos.TabIndex = 0;
             this.lblExplorarCursos.Text = "Explorar Cursos";
-            // 
-            // btnVerCurso
-            // 
-            this.btnVerCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerCurso.Location = new System.Drawing.Point(757, 12);
-            this.btnVerCurso.Name = "btnVerCurso";
-            this.btnVerCurso.Size = new System.Drawing.Size(110, 23);
-            this.btnVerCurso.TabIndex = 4;
-            this.btnVerCurso.Text = "Ver curso";
-            this.btnVerCurso.UseVisualStyleBackColor = true;
-            this.btnVerCurso.Click += new System.EventHandler(this.BtnVerCurso_Click);
             // 
             // btnBuscar
             // 
@@ -142,7 +130,6 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.btnVerCurso);
             this.Controls.Add(this.lblExplorarCursos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmExplorarCursos";
@@ -158,7 +145,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblExplorarCursos;
-        private System.Windows.Forms.Button btnVerCurso;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.PictureBox pictureBox4;
