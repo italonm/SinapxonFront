@@ -35,6 +35,7 @@
       <xs:element name="id_classroom" type="xs:int" />
       <xs:element minOccurs="0" name="idioma" type="tns:idioma" />
       <xs:element name="idiomaid" type="xs:int" />
+      <xs:element minOccurs="0" name="periodo" type="tns:periodo" />
       <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="temas" nillable="true" type="tns:temaXClassroom" />
     </xs:sequence>
@@ -109,6 +110,15 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="periodo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
+      <xs:element minOccurs="0" name="fecha_fin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fecha_inicio" type="xs:dateTime" />
+      <xs:element name="id_periodo" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="profesor">
     <xs:sequence>
       <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
@@ -162,15 +172,6 @@
   <xs:complexType name="listarPeriodosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:periodo" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="periodo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
-      <xs:element minOccurs="0" name="fecha_fin" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="fecha_inicio" type="xs:dateTime" />
-      <xs:element name="id_periodo" type="xs:int" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarClassroomxProfesor">

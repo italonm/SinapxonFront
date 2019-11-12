@@ -37,6 +37,12 @@ namespace Sinapxon.Profesor
             tema.descripcion = txtDescripcion.Text;
             tema.classroom= new Profesor.classroom();
             tema.classroom.codigo= ClassroomInfo.classroom.codigo;
+            tema.classroom.curso = new Profesor.curso();
+            tema.classroom.profesor = new profesor();
+            tema.classroom.idioma = new idioma();
+            tema.classroom.temas = new Profesor.temaXClassroom[0];
+            tema.classroom.alumnos = new Profesor.classroomXAlumno[0];
+            tema.classroom.periodo = new Profesor.periodo();
             DBController.insertarTema(tema);
             this.Close();
         }

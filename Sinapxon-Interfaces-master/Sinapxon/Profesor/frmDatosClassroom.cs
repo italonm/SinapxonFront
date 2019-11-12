@@ -65,5 +65,12 @@ namespace Sinapxon.Profesor
         {
             e.Value = ((Profesor.periodo)e.ListItem).nombre;
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            dgvCursos.AutoGenerateColumns = false;
+            cursos = new BindingList<Profesor.curso>(DBController.listarCursos(lblCurso.Text));
+            dgvCursos.DataSource = cursos;
+        }
     }
 }

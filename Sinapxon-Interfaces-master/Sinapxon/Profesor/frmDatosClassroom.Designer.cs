@@ -43,7 +43,7 @@
             this.panelBucador = new System.Windows.Forms.Panel();
             this.lblCursos = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblCurso = new System.Windows.Forms.TextBox();
             this.pbBuscar = new System.Windows.Forms.PictureBox();
             this.pbContenedorBuscador = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -103,7 +103,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(40, 92);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(511, 219);
@@ -117,7 +117,7 @@
             this.btnEnviarSolicitud.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviarSolicitud.ForeColor = System.Drawing.Color.White;
             this.btnEnviarSolicitud.Location = new System.Drawing.Point(989, 22);
-            this.btnEnviarSolicitud.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEnviarSolicitud.Margin = new System.Windows.Forms.Padding(4);
             this.btnEnviarSolicitud.Name = "btnEnviarSolicitud";
             this.btnEnviarSolicitud.Size = new System.Drawing.Size(263, 52);
             this.btnEnviarSolicitud.TabIndex = 9;
@@ -131,7 +131,7 @@
             this.cbPeriodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPeriodos.FormattingEnabled = true;
             this.cbPeriodos.Location = new System.Drawing.Point(40, 97);
-            this.cbPeriodos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbPeriodos.Margin = new System.Windows.Forms.Padding(4);
             this.cbPeriodos.Name = "cbPeriodos";
             this.cbPeriodos.Size = new System.Drawing.Size(511, 33);
             this.cbPeriodos.TabIndex = 10;
@@ -154,7 +154,7 @@
             this.cbIdiomas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbIdiomas.FormattingEnabled = true;
             this.cbIdiomas.Location = new System.Drawing.Point(40, 97);
-            this.cbIdiomas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbIdiomas.Margin = new System.Windows.Forms.Padding(4);
             this.cbIdiomas.Name = "cbIdiomas";
             this.cbIdiomas.Size = new System.Drawing.Size(511, 33);
             this.cbIdiomas.TabIndex = 16;
@@ -165,7 +165,7 @@
             this.panelContenedorCursos.Controls.Add(this.dgvCursos);
             this.panelContenedorCursos.Controls.Add(this.panelBucador);
             this.panelContenedorCursos.Location = new System.Drawing.Point(23, 91);
-            this.panelContenedorCursos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelContenedorCursos.Margin = new System.Windows.Forms.Padding(4);
             this.panelContenedorCursos.Name = "panelContenedorCursos";
             this.panelContenedorCursos.Size = new System.Drawing.Size(611, 720);
             this.panelContenedorCursos.TabIndex = 17;
@@ -178,7 +178,7 @@
             this.Codigo,
             this.Nombre});
             this.dgvCursos.Location = new System.Drawing.Point(29, 191);
-            this.dgvCursos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCursos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCursos.Name = "dgvCursos";
             this.dgvCursos.Size = new System.Drawing.Size(547, 505);
             this.dgvCursos.TabIndex = 1;
@@ -201,12 +201,12 @@
             this.panelBucador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
             this.panelBucador.Controls.Add(this.lblCursos);
             this.panelBucador.Controls.Add(this.btnBuscar);
-            this.panelBucador.Controls.Add(this.textBox1);
+            this.panelBucador.Controls.Add(this.lblCurso);
             this.panelBucador.Controls.Add(this.pbBuscar);
             this.panelBucador.Controls.Add(this.pbContenedorBuscador);
             this.panelBucador.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBucador.Location = new System.Drawing.Point(0, 0);
-            this.panelBucador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelBucador.Margin = new System.Windows.Forms.Padding(4);
             this.panelBucador.Name = "panelBucador";
             this.panelBucador.Size = new System.Drawing.Size(611, 161);
             this.panelBucador.TabIndex = 0;
@@ -230,30 +230,31 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(492, 75);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(100, 55);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // textBox1
+            // lblCurso
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(85, 91);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(376, 23);
-            this.textBox1.TabIndex = 2;
+            this.lblCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblCurso.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lblCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurso.Location = new System.Drawing.Point(85, 91);
+            this.lblCurso.Margin = new System.Windows.Forms.Padding(4);
+            this.lblCurso.Name = "lblCurso";
+            this.lblCurso.Size = new System.Drawing.Size(376, 23);
+            this.lblCurso.TabIndex = 2;
             // 
             // pbBuscar
             // 
             this.pbBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pbBuscar.Image = global::Sinapxon.Properties.Resources.round_search;
             this.pbBuscar.Location = new System.Drawing.Point(29, 81);
-            this.pbBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.pbBuscar.Name = "pbBuscar";
             this.pbBuscar.Size = new System.Drawing.Size(36, 36);
             this.pbBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -264,7 +265,7 @@
             // 
             this.pbContenedorBuscador.Image = global::Sinapxon.Properties.Resources.Barra_G4;
             this.pbContenedorBuscador.Location = new System.Drawing.Point(5, 73);
-            this.pbContenedorBuscador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbContenedorBuscador.Margin = new System.Windows.Forms.Padding(4);
             this.pbContenedorBuscador.Name = "pbContenedorBuscador";
             this.pbContenedorBuscador.Size = new System.Drawing.Size(479, 62);
             this.pbContenedorBuscador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -277,7 +278,7 @@
             this.panel1.Controls.Add(this.panelIdioma);
             this.panel1.Controls.Add(this.cbIdiomas);
             this.panel1.Location = new System.Drawing.Point(656, 91);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(596, 161);
             this.panel1.TabIndex = 18;
@@ -288,7 +289,7 @@
             this.panelIdioma.Controls.Add(this.lblIdioma);
             this.panelIdioma.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelIdioma.Location = new System.Drawing.Point(0, 0);
-            this.panelIdioma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelIdioma.Margin = new System.Windows.Forms.Padding(4);
             this.panelIdioma.Name = "panelIdioma";
             this.panelIdioma.Size = new System.Drawing.Size(596, 71);
             this.panelIdioma.TabIndex = 17;
@@ -299,7 +300,7 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.cbPeriodos);
             this.panel2.Location = new System.Drawing.Point(656, 282);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(596, 159);
             this.panel2.TabIndex = 18;
@@ -310,7 +311,7 @@
             this.panel3.Controls.Add(this.lblPeriodo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(596, 71);
             this.panel3.TabIndex = 0;
@@ -321,7 +322,7 @@
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.txtDescripcion);
             this.panel4.Location = new System.Drawing.Point(656, 474);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(596, 337);
             this.panel4.TabIndex = 19;
@@ -332,7 +333,7 @@
             this.panel5.Controls.Add(this.lblDescripcion);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(596, 71);
             this.panel5.TabIndex = 0;
@@ -350,7 +351,7 @@
             this.Controls.Add(this.btnEnviarSolicitud);
             this.Controls.Add(this.lblDatosClassroom);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDatosClassroom";
             this.Text = "frmDatosClassroom";
             this.panelContenedorCursos.ResumeLayout(false);
@@ -386,7 +387,7 @@
         private System.Windows.Forms.ComboBox cbIdiomas;
         private System.Windows.Forms.Panel panelContenedorCursos;
         private System.Windows.Forms.Panel panelBucador;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox lblCurso;
         private System.Windows.Forms.PictureBox pbBuscar;
         private System.Windows.Forms.PictureBox pbContenedorBuscador;
         private System.Windows.Forms.DataGridView dgvCursos;
