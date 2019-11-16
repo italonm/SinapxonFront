@@ -64,7 +64,7 @@ namespace Sinapxon.Administrador
 
         private void btnGestionarAlumno_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmGestionarAlumno(this));
+            openChildForm(new frmDatosAlumno(this));
         }
     }
 }

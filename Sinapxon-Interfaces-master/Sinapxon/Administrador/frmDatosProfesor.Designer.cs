@@ -47,7 +47,6 @@
             this.lblNickname = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnGenerarContraseña = new System.Windows.Forms.Button();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -76,6 +75,8 @@
             this.rbBloqueado = new System.Windows.Forms.RadioButton();
             this.rbInactivo = new System.Windows.Forms.RadioButton();
             this.rbActivo = new System.Windows.Forms.RadioButton();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnGenerarContr = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -83,19 +84,21 @@
             this.panelDatosGenerales.SuspendLayout();
             this.panelTituloDatosGenerales.SuspendLayout();
             this.gbEstado.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnEliminar.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(321, 21);
+            this.btnEliminar.Location = new System.Drawing.Point(302, 3);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(119, 48);
+            this.btnEliminar.Size = new System.Drawing.Size(125, 42);
             this.btnEliminar.TabIndex = 73;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -104,16 +107,17 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnBuscar.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(478, 21);
+            this.btnBuscar.Location = new System.Drawing.Point(464, 3);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(118, 48);
+            this.btnBuscar.Size = new System.Drawing.Size(127, 42);
             this.btnBuscar.TabIndex = 72;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -122,16 +126,17 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnNuevo.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(17, 21);
+            this.btnNuevo.Location = new System.Drawing.Point(0, 3);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(104, 48);
+            this.btnNuevo.Size = new System.Drawing.Size(104, 42);
             this.btnNuevo.TabIndex = 71;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -140,15 +145,16 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnCancelar.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(812, 21);
+            this.btnCancelar.Location = new System.Drawing.Point(799, 3);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(124, 48);
+            this.btnCancelar.Size = new System.Drawing.Size(124, 42);
             this.btnCancelar.TabIndex = 70;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -157,15 +163,16 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnModificar.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.Location = new System.Drawing.Point(637, 21);
+            this.btnModificar.Location = new System.Drawing.Point(627, 3);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(136, 47);
+            this.btnModificar.Size = new System.Drawing.Size(136, 44);
             this.btnModificar.TabIndex = 69;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -174,16 +181,17 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnGuardar.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(159, 21);
+            this.btnGuardar.Location = new System.Drawing.Point(142, 3);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(123, 48);
+            this.btnGuardar.Size = new System.Drawing.Size(123, 42);
             this.btnGuardar.TabIndex = 68;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -198,9 +206,9 @@
             this.panel3.Controls.Add(this.lblAreaInteres);
             this.panel3.Controls.Add(this.lblGradoInstruccion);
             this.panel3.Controls.Add(this.txtGrado);
-            this.panel3.Location = new System.Drawing.Point(17, 470);
+            this.panel3.Location = new System.Drawing.Point(17, 483);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(468, 183);
+            this.panel3.Size = new System.Drawing.Size(468, 181);
             this.panel3.TabIndex = 66;
             // 
             // panel4
@@ -263,17 +271,17 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.btnGenerarContr);
             this.panel1.Controls.Add(this.txtNickname);
             this.panel1.Controls.Add(this.lblNickname);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.btnGenerarContraseña);
             this.panel1.Controls.Add(this.lblCorreo);
             this.panel1.Controls.Add(this.txtCorreo);
             this.panel1.Controls.Add(this.lblPassword);
             this.panel1.Controls.Add(this.txtPassword);
-            this.panel1.Location = new System.Drawing.Point(491, 90);
+            this.panel1.Location = new System.Drawing.Point(491, 100);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(445, 257);
+            this.panel1.Size = new System.Drawing.Size(445, 264);
             this.panel1.TabIndex = 67;
             // 
             // txtNickname
@@ -314,19 +322,6 @@
             this.label2.Size = new System.Drawing.Size(210, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Datos de la cuenta";
-            // 
-            // btnGenerarContraseña
-            // 
-            this.btnGenerarContraseña.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnGenerarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerarContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarContraseña.ForeColor = System.Drawing.Color.White;
-            this.btnGenerarContraseña.Location = new System.Drawing.Point(337, 202);
-            this.btnGenerarContraseña.Name = "btnGenerarContraseña";
-            this.btnGenerarContraseña.Size = new System.Drawing.Size(93, 34);
-            this.btnGenerarContraseña.TabIndex = 53;
-            this.btnGenerarContraseña.Text = "Generar contraseña";
-            this.btnGenerarContraseña.UseVisualStyleBackColor = false;
             // 
             // lblCorreo
             // 
@@ -384,9 +379,9 @@
             this.panelDatosGenerales.Controls.Add(this.cboPais);
             this.panelDatosGenerales.Controls.Add(this.lblPais);
             this.panelDatosGenerales.Controls.Add(this.lblTelefono);
-            this.panelDatosGenerales.Location = new System.Drawing.Point(17, 90);
+            this.panelDatosGenerales.Location = new System.Drawing.Point(17, 100);
             this.panelDatosGenerales.Name = "panelDatosGenerales";
-            this.panelDatosGenerales.Size = new System.Drawing.Size(468, 374);
+            this.panelDatosGenerales.Size = new System.Drawing.Size(468, 377);
             this.panelDatosGenerales.TabIndex = 65;
             // 
             // lblId_Profesor
@@ -560,7 +555,7 @@
             this.lblDatosDelProfesor.AutoSize = true;
             this.lblDatosDelProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDatosDelProfesor.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblDatosDelProfesor.Location = new System.Drawing.Point(12, -11);
+            this.lblDatosDelProfesor.Location = new System.Drawing.Point(12, 4);
             this.lblDatosDelProfesor.Name = "lblDatosDelProfesor";
             this.lblDatosDelProfesor.Size = new System.Drawing.Size(229, 29);
             this.lblDatosDelProfesor.TabIndex = 64;
@@ -574,9 +569,9 @@
             this.gbEstado.Controls.Add(this.rbActivo);
             this.gbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbEstado.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.gbEstado.Location = new System.Drawing.Point(491, 353);
+            this.gbEstado.Location = new System.Drawing.Point(491, 370);
             this.gbEstado.Name = "gbEstado";
-            this.gbEstado.Size = new System.Drawing.Size(445, 150);
+            this.gbEstado.Size = new System.Drawing.Size(445, 148);
             this.gbEstado.TabIndex = 63;
             this.gbEstado.TabStop = false;
             this.gbEstado.Text = "Estado";
@@ -585,6 +580,7 @@
             // 
             this.rbBloqueado.AutoSize = true;
             this.rbBloqueado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbBloqueado.ForeColor = System.Drawing.Color.Black;
             this.rbBloqueado.Location = new System.Drawing.Point(35, 117);
             this.rbBloqueado.Name = "rbBloqueado";
             this.rbBloqueado.Size = new System.Drawing.Size(104, 24);
@@ -597,6 +593,7 @@
             // 
             this.rbInactivo.AutoSize = true;
             this.rbInactivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbInactivo.ForeColor = System.Drawing.Color.Black;
             this.rbInactivo.Location = new System.Drawing.Point(35, 73);
             this.rbInactivo.Name = "rbInactivo";
             this.rbInactivo.Size = new System.Drawing.Size(82, 24);
@@ -609,6 +606,7 @@
             // 
             this.rbActivo.AutoSize = true;
             this.rbActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbActivo.ForeColor = System.Drawing.Color.Black;
             this.rbActivo.Location = new System.Drawing.Point(35, 36);
             this.rbActivo.Name = "rbActivo";
             this.rbActivo.Size = new System.Drawing.Size(70, 24);
@@ -617,18 +615,43 @@
             this.rbActivo.Text = "Activo";
             this.rbActivo.UseVisualStyleBackColor = true;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.SlateBlue;
+            this.panel5.Controls.Add(this.btnNuevo);
+            this.panel5.Controls.Add(this.btnGuardar);
+            this.panel5.Controls.Add(this.btnEliminar);
+            this.panel5.Controls.Add(this.btnBuscar);
+            this.panel5.Controls.Add(this.btnCancelar);
+            this.panel5.Controls.Add(this.btnModificar);
+            this.panel5.Location = new System.Drawing.Point(17, 36);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(923, 48);
+            this.panel5.TabIndex = 74;
+            // 
+            // btnGenerarContr
+            // 
+            this.btnGenerarContr.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnGenerarContr.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGenerarContr.FlatAppearance.BorderSize = 0;
+            this.btnGenerarContr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarContr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarContr.ForeColor = System.Drawing.Color.White;
+            this.btnGenerarContr.Location = new System.Drawing.Point(338, 206);
+            this.btnGenerarContr.Name = "btnGenerarContr";
+            this.btnGenerarContr.Size = new System.Drawing.Size(95, 30);
+            this.btnGenerarContr.TabIndex = 74;
+            this.btnGenerarContr.Text = "Generar";
+            this.btnGenerarContr.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGenerarContr.UseVisualStyleBackColor = false;
+            // 
             // frmDatosProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(948, 664);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnGuardar);
+            this.ClientSize = new System.Drawing.Size(952, 676);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelDatosGenerales);
@@ -637,7 +660,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmDatosProfesor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDatosProfesor";
+            this.Text = "Registrar Profesor";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -652,6 +675,7 @@
             this.panelTituloDatosGenerales.PerformLayout();
             this.gbEstado.ResumeLayout(false);
             this.gbEstado.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -677,7 +701,6 @@
         private System.Windows.Forms.Label lblNickname;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnGenerarContraseña;
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label lblPassword;
@@ -706,5 +729,7 @@
         private System.Windows.Forms.RadioButton rbBloqueado;
         private System.Windows.Forms.RadioButton rbInactivo;
         private System.Windows.Forms.RadioButton rbActivo;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnGenerarContr;
     }
 }

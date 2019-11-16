@@ -21,13 +21,10 @@ namespace Sinapxon.Administrador
         public frmDatosProfesor(frmAdministrador padre)
         {
             InitializeComponent();
-            //Obtenemos los géneros desde BD
             BindingList<Administrador.pais> paises = new BindingList<Administrador.pais>(DBController.listarPaises());
-
-            //Enlazamos el ComboBox con los géneros obtenidos
+            
             cboPais.DataSource = paises;
-
-            //Indicamos la Propiedad que debería visualizarse
+            
             cboPais.DisplayMember = "nombre";
             cboPais.ValueMember = "id_Pais";
             this.Padre = padre;
@@ -144,12 +141,6 @@ namespace Sinapxon.Administrador
 
 
         public frmAdministrador Padre { get => _padre; set => _padre = value; }
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -275,7 +266,7 @@ namespace Sinapxon.Administrador
             if (DialogResult.Yes == MessageBox.Show("¿Está seguro que desea eliminar este profesor?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation))
             {
                 DBController.eliminarProfesor(profesor.codigo);
-                MessageBox.Show("El profesor ha sido eliminada", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El profesor ha sido eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 estadoComponentes(Estado.Inicial);
             }
         }
@@ -284,6 +275,11 @@ namespace Sinapxon.Administrador
         {
             estadoComponentes(Estado.Nuevo);
             estadoProfesor = Estado.Modificar;
+        }
+
+        private void btnGenerarContraseña_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

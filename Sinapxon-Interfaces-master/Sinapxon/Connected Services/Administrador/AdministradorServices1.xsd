@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.sinapxon.pucp.edu.pe/" targetNamespace="http://services.sinapxon.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarAlumno" type="tns:actualizarAlumno" />
+  <xs:element name="actualizarAlumnoResponse" type="tns:actualizarAlumnoResponse" />
   <xs:element name="actualizarProfesor" type="tns:actualizarProfesor" />
   <xs:element name="actualizarProfesorResponse" type="tns:actualizarProfesorResponse" />
+  <xs:element name="eliminarAlumno" type="tns:eliminarAlumno" />
+  <xs:element name="eliminarAlumnoResponse" type="tns:eliminarAlumnoResponse" />
   <xs:element name="eliminarProfesor" type="tns:eliminarProfesor" />
   <xs:element name="eliminarProfesorResponse" type="tns:eliminarProfesorResponse" />
   <xs:element name="insertarAlumno" type="tns:insertarAlumno" />
@@ -10,6 +14,8 @@
   <xs:element name="insertarCursoResponse" type="tns:insertarCursoResponse" />
   <xs:element name="insertarProfesor" type="tns:insertarProfesor" />
   <xs:element name="insertarProfesorResponse" type="tns:insertarProfesorResponse" />
+  <xs:element name="listarAlumnos" type="tns:listarAlumnos" />
+  <xs:element name="listarAlumnosResponse" type="tns:listarAlumnosResponse" />
   <xs:element name="listarCursos" type="tns:listarCursos" />
   <xs:element name="listarCursosResponse" type="tns:listarCursosResponse" />
   <xs:element name="listarPaises" type="tns:listarPaises" />
@@ -60,6 +66,16 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="eliminarAlumno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAlumnoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarAlumno">
     <xs:sequence>
       <xs:element minOccurs="0" name="arg0" type="tns:alumno" />
@@ -82,14 +98,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarAlumnoResponse">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="insertarProfesor">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="tns:profesor" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarProfesorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -100,6 +108,26 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarProfesorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarAlumno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:alumno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarAlumnoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarProfesor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:profesor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarProfesorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -160,6 +188,16 @@
   <xs:complexType name="listarPaisesResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pais" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarAlumnos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarAlumnosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:alumno" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

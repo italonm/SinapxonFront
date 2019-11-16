@@ -13,35 +13,49 @@ namespace Sinapxon.Administrador
     public partial class frmGestionarAlumno : Form
     {
         private frmAdministrador _padre = null;
+        private Administrador.alumno alSeleccionado;
+
+
+        Administrador.AdministradorServicesClient DBController = new Administrador.AdministradorServicesClient();
+
+        public alumno AlSeleccionado { get => alSeleccionado; set => alSeleccionado = value; }
+
         public frmGestionarAlumno()
         {
             InitializeComponent();
+            dgvAlumnos.AutoGenerateColumns = false;
+            dgvAlumnos.DataSource = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));
         }
 
-        public frmGestionarAlumno(frmAdministrador padre)
+        private void dgvProfesores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            InitializeComponent();
-            this.Padre = padre;
+            Administrador.alumno alumnoFila = (Administrador.alumno)dgvAlumnos.Rows[e.RowIndex].DataBoundItem;
+            if (alumnoFila != null)
+            {
+                dgvAlumnos.Rows[e.RowIndex].Cells[0].Value = alumnoFila.codigo.ToString();
+                dgvAlumnos.Rows[e.RowIndex].Cells[1].Value = alumnoFila.nombre;
+                dgvAlumnos.Rows[e.RowIndex].Cells[2].Value = alumnoFila.apellidoPaterno;
+                dgvAlumnos.Rows[e.RowIndex].Cells[3].Value = alumnoFila.apellidoMaterno;
+                dgvAlumnos.Rows[e.RowIndex].Cells[4].Value = alumnoFila.dni;
+                dgvAlumnos.Rows[e.RowIndex].Cells[5].Value = alumnoFila.telefono.ToString();
+                dgvAlumnos.Rows[e.RowIndex].Cells[6].Value = alumnoFila.correo;
+            }
         }
 
-        public frmAdministrador Padre { get => _padre; set => _padre = value; }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
-            frmListaUsuarios formListarUsuario = new frmListaUsuarios("alumnos");
-            formListarUsuario.Visible = true;
+            dgvAlumnos.DataSource = DBController.listarAlumnos(txtNombre.Text);
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
+        private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            frmDatosAlumno formDatosAlumno = new frmDatosAlumno();
-            formDatosAlumno.Visible = true;
+            alSeleccionado = dgvAlumnos.CurrentRow.DataBoundItem as Administrador.alumno;
+            this.DialogResult = DialogResult.OK;
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
-            frmDatosAlumno formDatosAlumno = new frmDatosAlumno();
-            formDatosAlumno.Visible = true;
+            this.Close();
         }
     }
 }
