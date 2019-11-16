@@ -59,16 +59,16 @@ namespace Sinapxon.Alumno
             /*
              * Codigo del curso
              */
-            //Label lblCod = new Label();
-            //lblCod.BackColor = Color.FromArgb(0, 0, 90);
-            //lblCod.Font = new Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            //lblCod.ForeColor = Color.White;
-            //lblCod.Location = new Point(69, 54+altura);
-            //lblCod.Name = "lblCod";
-            //lblCod.Size = new Size(92, 25);
-            //lblCod.Text = clsroom.curso.codigo.ToString();
-            //lblCod.Visible = true;
-            //panelContenido.Controls.Add(lblCod);
+            Label lblCod = new Label();
+            lblCod.BackColor = Color.FromArgb(0, 0, 90);
+            lblCod.Font = new Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblCod.ForeColor = Color.White;
+            lblCod.Location = new Point(69, 54 + altura);
+            lblCod.Name = "lblCod";
+            lblCod.Size = new Size(92, 25);
+            lblCod.Text = clsroom.codigo.ToString();
+            lblCod.Visible = true;
+            panelContenido.Controls.Add(lblCod);
 
             /*
              * lbl Nombre del profesor
@@ -77,10 +77,11 @@ namespace Sinapxon.Alumno
             lblNombreProf.BackColor = Color.FromArgb(0, 0, 90);
             lblNombreProf.Font = new Font("Roboto", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNombreProf.ForeColor = Color.White;
-            lblNombreProf.Location = new Point(168, 85+altura);
+            lblNombreProf.Location = new Point(168, 85 + altura);
             lblNombreProf.Name = "lblNombProfesor";
             lblNombreProf.Size = new Size(300, 25);
             lblNombreProf.Text = clsroom.profesor.nombre;
+            lblNombreProf.BringToFront();
             panelContenido.Controls.Add(lblNombreProf);
 
             /*
