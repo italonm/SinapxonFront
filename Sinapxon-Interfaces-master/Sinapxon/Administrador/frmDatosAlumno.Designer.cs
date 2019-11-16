@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDatosAlumno));
             this.lblDatosDelAlumno = new System.Windows.Forms.Label();
             this.panelDatosGenerales = new System.Windows.Forms.Panel();
+            this.lblId_Alumno = new System.Windows.Forms.Label();
+            this.txtIdAlumno = new System.Windows.Forms.TextBox();
             this.panelTituloDatosGenerales = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -48,6 +50,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGenerarContr = new System.Windows.Forms.Button();
             this.txtNickname = new System.Windows.Forms.TextBox();
             this.lblNickname = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -67,9 +70,6 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.btnGenerarContr = new System.Windows.Forms.Button();
-            this.lblId_Alumno = new System.Windows.Forms.Label();
-            this.txtIdAlumno = new System.Windows.Forms.TextBox();
             this.panelDatosGenerales.SuspendLayout();
             this.panelTituloDatosGenerales.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -85,9 +85,9 @@
             this.lblDatosDelAlumno.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.lblDatosDelAlumno.Location = new System.Drawing.Point(12, 9);
             this.lblDatosDelAlumno.Name = "lblDatosDelAlumno";
-            this.lblDatosDelAlumno.Size = new System.Drawing.Size(216, 29);
+            this.lblDatosDelAlumno.Size = new System.Drawing.Size(220, 29);
             this.lblDatosDelAlumno.TabIndex = 68;
-            this.lblDatosDelAlumno.Text = "Datos del alumno";
+            this.lblDatosDelAlumno.Text = "Gestionar Alumno";
             // 
             // panelDatosGenerales
             // 
@@ -113,6 +113,24 @@
             this.panelDatosGenerales.Name = "panelDatosGenerales";
             this.panelDatosGenerales.Size = new System.Drawing.Size(468, 378);
             this.panelDatosGenerales.TabIndex = 69;
+            // 
+            // lblId_Alumno
+            // 
+            this.lblId_Alumno.AutoSize = true;
+            this.lblId_Alumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId_Alumno.Location = new System.Drawing.Point(14, 51);
+            this.lblId_Alumno.Name = "lblId_Alumno";
+            this.lblId_Alumno.Size = new System.Drawing.Size(117, 20);
+            this.lblId_Alumno.TabIndex = 51;
+            this.lblId_Alumno.Text = "Codigo Alumno";
+            // 
+            // txtIdAlumno
+            // 
+            this.txtIdAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdAlumno.Location = new System.Drawing.Point(16, 76);
+            this.txtIdAlumno.Name = "txtIdAlumno";
+            this.txtIdAlumno.Size = new System.Drawing.Size(191, 26);
+            this.txtIdAlumno.TabIndex = 50;
             // 
             // panelTituloDatosGenerales
             // 
@@ -277,6 +295,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(449, 266);
             this.panel1.TabIndex = 70;
+            // 
+            // btnGenerarContr
+            // 
+            this.btnGenerarContr.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnGenerarContr.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGenerarContr.FlatAppearance.BorderSize = 0;
+            this.btnGenerarContr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarContr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarContr.ForeColor = System.Drawing.Color.White;
+            this.btnGenerarContr.Location = new System.Drawing.Point(338, 206);
+            this.btnGenerarContr.Name = "btnGenerarContr";
+            this.btnGenerarContr.Size = new System.Drawing.Size(95, 30);
+            this.btnGenerarContr.TabIndex = 75;
+            this.btnGenerarContr.Text = "Generar";
+            this.btnGenerarContr.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGenerarContr.UseVisualStyleBackColor = false;
             // 
             // txtNickname
             // 
@@ -532,40 +566,6 @@
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // btnGenerarContr
-            // 
-            this.btnGenerarContr.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnGenerarContr.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGenerarContr.FlatAppearance.BorderSize = 0;
-            this.btnGenerarContr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerarContr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarContr.ForeColor = System.Drawing.Color.White;
-            this.btnGenerarContr.Location = new System.Drawing.Point(338, 206);
-            this.btnGenerarContr.Name = "btnGenerarContr";
-            this.btnGenerarContr.Size = new System.Drawing.Size(95, 30);
-            this.btnGenerarContr.TabIndex = 75;
-            this.btnGenerarContr.Text = "Generar";
-            this.btnGenerarContr.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGenerarContr.UseVisualStyleBackColor = false;
-            // 
-            // lblId_Alumno
-            // 
-            this.lblId_Alumno.AutoSize = true;
-            this.lblId_Alumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId_Alumno.Location = new System.Drawing.Point(14, 51);
-            this.lblId_Alumno.Name = "lblId_Alumno";
-            this.lblId_Alumno.Size = new System.Drawing.Size(117, 20);
-            this.lblId_Alumno.TabIndex = 51;
-            this.lblId_Alumno.Text = "Codigo Alumno";
-            // 
-            // txtIdAlumno
-            // 
-            this.txtIdAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdAlumno.Location = new System.Drawing.Point(16, 76);
-            this.txtIdAlumno.Name = "txtIdAlumno";
-            this.txtIdAlumno.Size = new System.Drawing.Size(191, 26);
-            this.txtIdAlumno.TabIndex = 50;
-            // 
             // frmDatosAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -580,7 +580,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmDatosAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registrar Alumno";
+            this.Text = "Gestionar Alumno";
             this.panelDatosGenerales.ResumeLayout(false);
             this.panelDatosGenerales.PerformLayout();
             this.panelTituloDatosGenerales.ResumeLayout(false);

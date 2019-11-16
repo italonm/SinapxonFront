@@ -30,9 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvTemas = new System.Windows.Forms.DataGridView();
             this.btnIrTema = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTemas)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -47,21 +47,22 @@
             // 
             // btnAtras
             // 
+            this.btnAtras.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnAtras.Location = new System.Drawing.Point(12, 12);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(75, 23);
             this.btnAtras.TabIndex = 1;
             this.btnAtras.Text = "<";
-            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.BtnAtras_Click);
             // 
-            // dataGridView1
+            // dgvTemas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 140);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(769, 447);
-            this.dataGridView1.TabIndex = 2;
+            this.dgvTemas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTemas.Location = new System.Drawing.Point(17, 140);
+            this.dgvTemas.Name = "dgvTemas";
+            this.dgvTemas.Size = new System.Drawing.Size(769, 447);
+            this.dgvTemas.TabIndex = 2;
             // 
             // btnIrTema
             // 
@@ -80,13 +81,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(798, 642);
             this.Controls.Add(this.btnIrTema);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvTemas);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmTemas";
             this.Text = "frmTemas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTemas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,7 +97,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAtras;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvTemas;
         private System.Windows.Forms.Button btnIrTema;
     }
 }

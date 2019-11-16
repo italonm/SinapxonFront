@@ -17,17 +17,55 @@ namespace Sinapxon.Administrador
         Administrador.AdministradorServicesClient DBController = new Administrador.AdministradorServicesClient();
         private Estado estadoProfesor;
 
-
-        public frmDatosProfesor(frmAdministrador padre)
+        public frmDatosProfesor(Administrador.profesor profesor)
         {
             InitializeComponent();
             BindingList<Administrador.pais> paises = new BindingList<Administrador.pais>(DBController.listarPaises());
-            
             cboPais.DataSource = paises;
-            
             cboPais.DisplayMember = "nombre";
             cboPais.ValueMember = "id_Pais";
-            this.Padre = padre;
+
+            txtIdProfesor.Text = profesor.codigo;
+            txtNombre.Text = profesor.nombre;
+            txtApMat.Text = profesor.apellidoMaterno;
+            txtApPat.Text = profesor.apellidoPaterno;
+            txtDNI.Text = profesor.dni;
+            txtCorreo.Text = profesor.correo;
+            cboPais.Text = profesor.pais.nombre;
+            txtGrado.Text = profesor.gradoInstruccion;
+            txtTelf.Text = profesor.telefono;
+            txtNickname.Text = profesor.nickname;
+            txtPassword.Text = profesor.password;
+            txtAInt.Text = profesor.areaInteres;
+            dtFechNac.Text = profesor.fecha.ToShortDateString();
+            if (profesor.estado == 0)
+            {
+                rbActivo.Checked = false;
+                rbBloqueado.Checked = false;
+                rbInactivo.Checked = true;
+            }
+            if (profesor.estado == 1)
+            {
+                rbActivo.Checked = true;
+                rbBloqueado.Checked = false;
+                rbInactivo.Checked = false;
+            }
+            if (profesor.estado == 2)
+            {
+                rbActivo.Checked = false;
+                rbBloqueado.Checked = true;
+                rbInactivo.Checked = false;
+            }
+            estadoComponentes(Estado.Modificar);
+    }
+
+        public frmDatosProfesor()
+        {
+            InitializeComponent();
+            BindingList<Administrador.pais> paises = new BindingList<Administrador.pais>(DBController.listarPaises()); 
+            cboPais.DataSource = paises;    
+            cboPais.DisplayMember = "nombre";
+            cboPais.ValueMember = "id_Pais";
             estadoComponentes(Estado.Inicial);
 
         }
@@ -154,7 +192,7 @@ namespace Sinapxon.Administrador
                 txtApPat.Text = profesor.apellidoPaterno;
                 txtDNI.Text = profesor.dni;
                 txtCorreo.Text = profesor.correo;
-                cboPais.SelectedValue = profesor.pais.nombre;
+                cboPais.Text = profesor.pais.nombre;
                 txtGrado.Text = profesor.gradoInstruccion;
                 txtTelf.Text = profesor.telefono;
                 txtNickname.Text = profesor.nickname;
@@ -222,7 +260,7 @@ namespace Sinapxon.Administrador
                 MessageBox.Show("Debe colocar el DNI del profesor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
+            profesor = new Administrador.profesor();
             profesor.codigo = txtIdProfesor.Text;
             profesor.nombre = txtNombre.Text;
             profesor.apellidoMaterno = txtApMat.Text;
@@ -235,6 +273,9 @@ namespace Sinapxon.Administrador
             profesor.nickname = txtNickname.Text;
             profesor.password = txtPassword.Text;
             profesor.areaInteres = txtAInt.Text;
+            profesor.password = txtPassword.Text;
+            profesor.fecha = dtFechNac.Value;
+            profesor.fechaSpecified = true;
             if (rbActivo.Checked == true)
             {
                 profesor.estado = 1;

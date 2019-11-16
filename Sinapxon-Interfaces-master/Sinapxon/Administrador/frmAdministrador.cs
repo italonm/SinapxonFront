@@ -59,12 +59,12 @@ namespace Sinapxon.Administrador
 
         private void btnGestionarProfesor_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmDatosProfesor(this));
+            openChildForm(new frmGestionarProfesor(this));
         }
 
         private void btnGestionarAlumno_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmDatosAlumno(this));
+            openChildForm(new frmGestionarAlumno(this));
         }
     }
 }

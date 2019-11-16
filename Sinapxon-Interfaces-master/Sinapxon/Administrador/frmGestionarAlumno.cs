@@ -12,6 +12,7 @@ namespace Sinapxon.Administrador
 {
     public partial class frmGestionarAlumno : Form
     {
+        static int i = 0;
         private frmAdministrador _padre = null;
         private Administrador.alumno alSeleccionado;
 
@@ -26,6 +27,16 @@ namespace Sinapxon.Administrador
             dgvAlumnos.AutoGenerateColumns = false;
             dgvAlumnos.DataSource = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));
         }
+
+        public frmGestionarAlumno(frmAdministrador padre)
+        {
+            InitializeComponent();
+            this.Padre = padre;
+            dgvAlumnos.AutoGenerateColumns = false;
+            dgvAlumnos.DataSource = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));
+        }
+
+        public frmAdministrador Padre { get => _padre; set => _padre = value; }
 
         private void dgvProfesores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -51,6 +62,11 @@ namespace Sinapxon.Administrador
         {
             alSeleccionado = dgvAlumnos.CurrentRow.DataBoundItem as Administrador.alumno;
             this.DialogResult = DialogResult.OK;
+            if (i==0) {
+                frmDatosAlumno formDatosAlumno = new frmDatosAlumno(alSeleccionado);
+                i = i+1;
+                _padre.openChildForm(formDatosAlumno);
+            } 
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

@@ -398,8 +398,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Connected Services\Administrador\AdministradorServices1.wsdl" />
-    <None Include="Connected Services\Administrador\AdministradorServices1.xsd">
+    <None Include="Connected Services\Administrador\AdministradorServices.wsdl" />
+    <None Include="Connected Services\Administrador\AdministradorServices.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.actualizarAlumnoResponse.datasource">
@@ -691,6 +691,15 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\denegar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aceptar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ver.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

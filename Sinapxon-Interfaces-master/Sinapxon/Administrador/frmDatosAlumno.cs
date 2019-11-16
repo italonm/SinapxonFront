@@ -13,19 +13,58 @@ namespace Sinapxon.Administrador
     public partial class frmDatosAlumno : Form
     {
         private frmAdministrador _padre = null;
+
         private Administrador.alumno alumno;
         Administrador.AdministradorServicesClient DBController = new Administrador.AdministradorServicesClient();
         private Estado estadoAlumno;
-        public frmDatosAlumno(frmAdministrador padre)
+
+        public frmDatosAlumno(Administrador.alumno alumno)
         {
             InitializeComponent();
             BindingList<Administrador.pais> paises = new BindingList<Administrador.pais>(DBController.listarPaises());
-
             cboPais.DataSource = paises;
-
             cboPais.DisplayMember = "nombre";
             cboPais.ValueMember = "id_Pais";
-            this.Padre = padre;
+            txtIdAlumno.Text = alumno.codigo;
+            txtNombre.Text = alumno.nombre;
+            txtApMat.Text = alumno.apellidoMaterno;
+            txtApPat.Text = alumno.apellidoPaterno;
+            txtDNI.Text = alumno.dni;
+            txtCorreo.Text = alumno.correo;
+            cboPais.Text = alumno.pais.nombre;
+            txtTelf.Text = alumno.telefono;
+            txtNickname.Text = alumno.nickname;
+            txtPassword.Text = alumno.password;
+            dtFechNac.Text = alumno.fecha.ToShortDateString();
+            if (alumno.estado == 0)
+            {
+                rbActivo.Checked = false;
+                rbBloqueado.Checked = false;
+                rbInactivo.Checked = true;
+            }
+            if (alumno.estado == 1)
+            {
+                rbActivo.Checked = true;
+                rbBloqueado.Checked = false;
+                rbInactivo.Checked = false;
+            }
+            if (alumno.estado == 2)
+            {
+                rbActivo.Checked = false;
+                rbBloqueado.Checked = true;
+                rbInactivo.Checked = false;
+            }        
+            estadoComponentes(Estado.Modificar);
+        }
+
+        public frmDatosAlumno()
+        {
+            InitializeComponent();
+            BindingList<Administrador.pais> paises = new BindingList<Administrador.pais>(DBController.listarPaises());
+            cboPais.DataSource = paises;
+            cboPais.DisplayMember = "nombre";
+            cboPais.ValueMember = "id_Pais";
+
             estadoComponentes(Estado.Inicial);
         }
 
@@ -68,6 +107,8 @@ namespace Sinapxon.Administrador
                     txtNombre.Enabled = false;
                     txtPassword.Enabled = false;
                     txtTelf.Enabled = false;
+                    dtFechNac.Enabled = false;
+                    cboPais.Enabled = false;
                     break;
                 case Estado.Nuevo:
                     btnNuevo.Enabled = false;
@@ -86,6 +127,8 @@ namespace Sinapxon.Administrador
                     txtNombre.Enabled = true;
                     txtPassword.Enabled = true;
                     txtTelf.Enabled = true;
+                    dtFechNac.Enabled = true;
+                    cboPais.Enabled = true;
                     break;
                 case Estado.Actualizar:
                     btnNuevo.Enabled = false;
@@ -104,9 +147,11 @@ namespace Sinapxon.Administrador
                     txtNombre.Enabled = true;
                     txtPassword.Enabled = true;
                     txtTelf.Enabled = true;
+                    dtFechNac.Enabled = true;
+                    cboPais.Enabled = true;
                     break;
                 case Estado.Modificar:
-                    btnNuevo.Enabled = false;
+                    btnNuevo.Enabled = true;
                     btnGuardar.Enabled = false;
                     btnModificar.Enabled = true;
                     btnEliminar.Enabled = true;
@@ -122,11 +167,11 @@ namespace Sinapxon.Administrador
                     txtNombre.Enabled = false;
                     txtPassword.Enabled = false;
                     txtTelf.Enabled = false;
+                    dtFechNac.Enabled = false;
+                    cboPais.Enabled = false;
                     break;
             }
         }
-
-        public frmAdministrador Padre { get => _padre; set => _padre = value; }
 
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -149,7 +194,7 @@ namespace Sinapxon.Administrador
                 txtApPat.Text = alumno.apellidoPaterno;
                 txtDNI.Text = alumno.dni;
                 txtCorreo.Text = alumno.correo;
-                cboPais.SelectedValue = alumno.pais.nombre;
+                cboPais.Text = alumno.pais.nombre;
                 txtTelf.Text = alumno.telefono;
                 txtNickname.Text = alumno.nickname;
                 txtPassword.Text = alumno.password;
@@ -206,7 +251,7 @@ namespace Sinapxon.Administrador
                 MessageBox.Show("Debe colocar el DNI del alumno", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
+            alumno = new Administrador.alumno();
             alumno.codigo = txtIdAlumno.Text;
             alumno.nombre = txtNombre.Text;
             alumno.apellidoMaterno = txtApMat.Text;
@@ -217,6 +262,8 @@ namespace Sinapxon.Administrador
             alumno.telefono = txtTelf.Text;
             alumno.nickname = txtNickname.Text;
             alumno.password = txtPassword.Text;
+            alumno.fecha = dtFechNac.Value;
+            alumno.fechaSpecified = true;
             if (rbActivo.Checked == true)
             {
                 alumno.estado = 1;
@@ -234,7 +281,7 @@ namespace Sinapxon.Administrador
                 DBController.insertarAlumno(alumno);
                 MessageBox.Show("El alumno se ha registrado con exito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (estadoAlumno== Estado.Modificar)
+            else if (estadoAlumno == Estado.Modificar)
             {
                 DBController.actualizarAlumno(alumno);
                 MessageBox.Show("El alumno se ha sido actualizada con exito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -256,7 +303,7 @@ namespace Sinapxon.Administrador
         private void btnModificar_Click(object sender, EventArgs e)
         {
             estadoComponentes(Estado.Nuevo);
-            estadoAlumno= Estado.Modificar;
+            estadoAlumno = Estado.Modificar;
         }
     }
 }

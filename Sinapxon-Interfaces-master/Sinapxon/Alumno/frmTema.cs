@@ -9,9 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Sinapxon.Alumno
-{
+{    
     public partial class frmTema : Form
     {
+        private Alumno.tema tema;
+        Alumno.AlumnoServicesClient DBController = new Alumno.AlumnoServicesClient();
+        private Estado estadoTema;
 
         public frmTema()
         {

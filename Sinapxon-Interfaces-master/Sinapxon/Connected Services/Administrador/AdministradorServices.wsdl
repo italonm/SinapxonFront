@@ -2,14 +2,20 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.sinapxon.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="AdministradorServices" targetNamespace="http://services.sinapxon.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://192.168.201.102:8080/SinapxonSoftServices/AdministradorServices?xsd=1" namespace="http://services.sinapxon.pucp.edu.pe/" />
+      <xsd:import schemaLocation="http://localhost:8080/SinapxonSoftServices/AdministradorServices?xsd=1" namespace="http://services.sinapxon.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="actualizarProfesor">
-    <part name="parameters" element="tns:actualizarProfesor" />
+  <message name="actualizarAlumno">
+    <part name="parameters" element="tns:actualizarAlumno" />
   </message>
-  <message name="actualizarProfesorResponse">
-    <part name="parameters" element="tns:actualizarProfesorResponse" />
+  <message name="actualizarAlumnoResponse">
+    <part name="parameters" element="tns:actualizarAlumnoResponse" />
+  </message>
+  <message name="eliminarAlumno">
+    <part name="parameters" element="tns:eliminarAlumno" />
+  </message>
+  <message name="eliminarAlumnoResponse">
+    <part name="parameters" element="tns:eliminarAlumnoResponse" />
   </message>
   <message name="listarCursos">
     <part name="parameters" element="tns:listarCursos" />
@@ -17,17 +23,23 @@
   <message name="listarCursosResponse">
     <part name="parameters" element="tns:listarCursosResponse" />
   </message>
+  <message name="insertarAlumno">
+    <part name="parameters" element="tns:insertarAlumno" />
+  </message>
+  <message name="insertarAlumnoResponse">
+    <part name="parameters" element="tns:insertarAlumnoResponse" />
+  </message>
   <message name="listarProfesores">
     <part name="parameters" element="tns:listarProfesores" />
   </message>
   <message name="listarProfesoresResponse">
     <part name="parameters" element="tns:listarProfesoresResponse" />
   </message>
-  <message name="actualizarAlumno">
-    <part name="parameters" element="tns:actualizarAlumno" />
+  <message name="insertarProfesor">
+    <part name="parameters" element="tns:insertarProfesor" />
   </message>
-  <message name="actualizarAlumnoResponse">
-    <part name="parameters" element="tns:actualizarAlumnoResponse" />
+  <message name="insertarProfesorResponse">
+    <part name="parameters" element="tns:insertarProfesorResponse" />
   </message>
   <message name="eliminarProfesor">
     <part name="parameters" element="tns:eliminarProfesor" />
@@ -35,11 +47,11 @@
   <message name="eliminarProfesorResponse">
     <part name="parameters" element="tns:eliminarProfesorResponse" />
   </message>
-  <message name="insertarProfesor">
-    <part name="parameters" element="tns:insertarProfesor" />
+  <message name="listarPaises">
+    <part name="parameters" element="tns:listarPaises" />
   </message>
-  <message name="insertarProfesorResponse">
-    <part name="parameters" element="tns:insertarProfesorResponse" />
+  <message name="listarPaisesResponse">
+    <part name="parameters" element="tns:listarPaisesResponse" />
   </message>
   <message name="listarAlumnos">
     <part name="parameters" element="tns:listarAlumnos" />
@@ -53,48 +65,44 @@
   <message name="insertarCursoResponse">
     <part name="parameters" element="tns:insertarCursoResponse" />
   </message>
-  <message name="insertarAlumno">
-    <part name="parameters" element="tns:insertarAlumno" />
+  <message name="actualizarProfesor">
+    <part name="parameters" element="tns:actualizarProfesor" />
   </message>
-  <message name="insertarAlumnoResponse">
-    <part name="parameters" element="tns:insertarAlumnoResponse" />
-  </message>
-  <message name="listarPaises">
-    <part name="parameters" element="tns:listarPaises" />
-  </message>
-  <message name="listarPaisesResponse">
-    <part name="parameters" element="tns:listarPaisesResponse" />
-  </message>
-  <message name="eliminarAlumno">
-    <part name="parameters" element="tns:eliminarAlumno" />
-  </message>
-  <message name="eliminarAlumnoResponse">
-    <part name="parameters" element="tns:eliminarAlumnoResponse" />
+  <message name="actualizarProfesorResponse">
+    <part name="parameters" element="tns:actualizarProfesorResponse" />
   </message>
   <portType name="AdministradorServices">
-    <operation name="actualizarProfesor">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarProfesorRequest" message="tns:actualizarProfesor" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarProfesorResponse" message="tns:actualizarProfesorResponse" />
+    <operation name="actualizarAlumno">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarAlumnoRequest" message="tns:actualizarAlumno" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarAlumnoResponse" message="tns:actualizarAlumnoResponse" />
+    </operation>
+    <operation name="eliminarAlumno">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarAlumnoRequest" message="tns:eliminarAlumno" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarAlumnoResponse" message="tns:eliminarAlumnoResponse" />
     </operation>
     <operation name="listarCursos">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarCursosRequest" message="tns:listarCursos" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarCursosResponse" message="tns:listarCursosResponse" />
     </operation>
+    <operation name="insertarAlumno">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarAlumnoRequest" message="tns:insertarAlumno" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarAlumnoResponse" message="tns:insertarAlumnoResponse" />
+    </operation>
     <operation name="listarProfesores">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarProfesoresRequest" message="tns:listarProfesores" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarProfesoresResponse" message="tns:listarProfesoresResponse" />
     </operation>
-    <operation name="actualizarAlumno">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarAlumnoRequest" message="tns:actualizarAlumno" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarAlumnoResponse" message="tns:actualizarAlumnoResponse" />
+    <operation name="insertarProfesor">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarProfesorRequest" message="tns:insertarProfesor" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarProfesorResponse" message="tns:insertarProfesorResponse" />
     </operation>
     <operation name="eliminarProfesor">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarProfesorRequest" message="tns:eliminarProfesor" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarProfesorResponse" message="tns:eliminarProfesorResponse" />
     </operation>
-    <operation name="insertarProfesor">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarProfesorRequest" message="tns:insertarProfesor" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarProfesorResponse" message="tns:insertarProfesorResponse" />
+    <operation name="listarPaises">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarPaisesRequest" message="tns:listarPaises" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarPaisesResponse" message="tns:listarPaisesResponse" />
     </operation>
     <operation name="listarAlumnos">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarAlumnosRequest" message="tns:listarAlumnos" />
@@ -104,22 +112,23 @@
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarCursoRequest" message="tns:insertarCurso" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarCursoResponse" message="tns:insertarCursoResponse" />
     </operation>
-    <operation name="insertarAlumno">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarAlumnoRequest" message="tns:insertarAlumno" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarAlumnoResponse" message="tns:insertarAlumnoResponse" />
-    </operation>
-    <operation name="listarPaises">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarPaisesRequest" message="tns:listarPaises" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarPaisesResponse" message="tns:listarPaisesResponse" />
-    </operation>
-    <operation name="eliminarAlumno">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarAlumnoRequest" message="tns:eliminarAlumno" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarAlumnoResponse" message="tns:eliminarAlumnoResponse" />
+    <operation name="actualizarProfesor">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarProfesorRequest" message="tns:actualizarProfesor" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarProfesorResponse" message="tns:actualizarProfesorResponse" />
     </operation>
   </portType>
   <binding name="AdministradorServicesPortBinding" type="tns:AdministradorServices">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="actualizarProfesor">
+    <operation name="actualizarAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarAlumno">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -137,6 +146,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="insertarAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="listarProfesores">
       <soap:operation soapAction="" />
       <input>
@@ -146,7 +164,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarAlumno">
+    <operation name="insertarProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -164,7 +182,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarProfesor">
+    <operation name="listarPaises">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -191,25 +209,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarAlumno">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarPaises">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarAlumno">
+    <operation name="actualizarProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -221,7 +221,7 @@
   </binding>
   <service name="AdministradorServices">
     <port name="AdministradorServicesPort" binding="tns:AdministradorServicesPortBinding">
-      <soap:address location="http://192.168.201.102:8080/SinapxonSoftServices/AdministradorServices" />
+      <soap:address location="http://localhost:8080/SinapxonSoftServices/AdministradorServices" />
     </port>
   </service>
 </definitions>
