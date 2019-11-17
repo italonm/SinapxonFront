@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sinapxon.Login;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace Sinapxon.Alumno
         public frmAlumno()
         {
             InitializeComponent();
+            lblNombreUsuario.Text = LoginInfo.persona.nombre;
         }
 
         public void openChildForm(Form formularioHijo)
@@ -44,6 +46,13 @@ namespace Sinapxon.Alumno
         {
             frmExplorarCursos explorarCursos = new frmExplorarCursos(this);
             openChildForm(explorarCursos);
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLogin formLogin = new frmLogin();
+            formLogin.Show();
         }
     }
 }

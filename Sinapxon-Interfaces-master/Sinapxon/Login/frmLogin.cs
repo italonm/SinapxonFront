@@ -51,6 +51,7 @@ namespace Sinapxon.Login
                 /* ERROR en el usuario o contraseña*/
 
             }
+            this.Hide();
         }
 
         private void Button3_Click(object sender, EventArgs e)
