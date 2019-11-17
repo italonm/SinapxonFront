@@ -28,23 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnGenerarContraseña = new System.Windows.Forms.Button();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.lblPassword = new System.Windows.Forms.Label();
             this.gbEstado = new System.Windows.Forms.GroupBox();
             this.rbBloqueado = new System.Windows.Forms.RadioButton();
             this.rbInactivo = new System.Windows.Forms.RadioButton();
             this.rbActivo = new System.Windows.Forms.RadioButton();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtGradoInstruccion = new System.Windows.Forms.TextBox();
+            this.txtAreaInteres = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.cbPais = new System.Windows.Forms.ComboBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDNI = new System.Windows.Forms.TextBox();
+            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.txtApellidoMaterno = new System.Windows.Forms.TextBox();
+            this.txtApellidoPaterno = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblGradoInstruccion = new System.Windows.Forms.Label();
             this.lblAreaInteres = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
@@ -65,9 +62,16 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.lblNickname = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblNickname = new System.Windows.Forms.Label();
+            this.txtConfirmacionCorreo = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.gbEstado.SuspendLayout();
             this.panelDatosGenerales.SuspendLayout();
             this.panelTituloDatosGenerales.SuspendLayout();
@@ -75,35 +79,10 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnGenerarContraseña
-            // 
-            this.btnGenerarContraseña.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarContraseña.Location = new System.Drawing.Point(342, 212);
-            this.btnGenerarContraseña.Name = "btnGenerarContraseña";
-            this.btnGenerarContraseña.Size = new System.Drawing.Size(91, 27);
-            this.btnGenerarContraseña.TabIndex = 53;
-            this.btnGenerarContraseña.Text = "Generar contraseña";
-            this.btnGenerarContraseña.UseVisualStyleBackColor = true;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(13, 210);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(310, 27);
-            this.txtPassword.TabIndex = 52;
-            // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(9, 188);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(79, 19);
-            this.lblPassword.TabIndex = 51;
-            this.lblPassword.Text = "Password";
             // 
             // gbEstado
             // 
@@ -111,7 +90,7 @@
             this.gbEstado.Controls.Add(this.rbInactivo);
             this.gbEstado.Controls.Add(this.rbActivo);
             this.gbEstado.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbEstado.Location = new System.Drawing.Point(500, 358);
+            this.gbEstado.Location = new System.Drawing.Point(500, 451);
             this.gbEstado.Name = "gbEstado";
             this.gbEstado.Size = new System.Drawing.Size(436, 157);
             this.gbEstado.TabIndex = 50;
@@ -154,86 +133,86 @@
             this.rbActivo.Text = "Activo";
             this.rbActivo.UseVisualStyleBackColor = true;
             // 
-            // textBox8
+            // txtGradoInstruccion
             // 
-            this.textBox8.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(14, 177);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(433, 27);
-            this.textBox8.TabIndex = 49;
+            this.txtGradoInstruccion.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGradoInstruccion.Location = new System.Drawing.Point(14, 177);
+            this.txtGradoInstruccion.Name = "txtGradoInstruccion";
+            this.txtGradoInstruccion.Size = new System.Drawing.Size(433, 27);
+            this.txtGradoInstruccion.TabIndex = 49;
             // 
-            // textBox7
+            // txtAreaInteres
             // 
-            this.textBox7.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(16, 95);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(431, 27);
-            this.textBox7.TabIndex = 48;
+            this.txtAreaInteres.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAreaInteres.Location = new System.Drawing.Point(16, 95);
+            this.txtAreaInteres.Name = "txtAreaInteres";
+            this.txtAreaInteres.Size = new System.Drawing.Size(431, 27);
+            this.txtAreaInteres.TabIndex = 48;
             // 
-            // textBox6
+            // txtTelefono
             // 
-            this.textBox6.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(14, 285);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(251, 27);
-            this.textBox6.TabIndex = 47;
+            this.txtTelefono.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(14, 285);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(251, 27);
+            this.txtTelefono.TabIndex = 47;
             // 
-            // comboBox1
+            // cbPais
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(290, 285);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(157, 27);
-            this.comboBox1.TabIndex = 46;
+            this.cbPais.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPais.FormattingEnabled = true;
+            this.cbPais.Location = new System.Drawing.Point(290, 285);
+            this.cbPais.Name = "cbPais";
+            this.cbPais.Size = new System.Drawing.Size(157, 27);
+            this.cbPais.TabIndex = 46;
             // 
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(13, 74);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(420, 27);
+            this.txtCorreo.Size = new System.Drawing.Size(406, 27);
             this.txtCorreo.TabIndex = 45;
             // 
-            // textBox4
+            // txtDNI
             // 
-            this.textBox4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(256, 74);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(191, 27);
-            this.textBox4.TabIndex = 44;
+            this.txtDNI.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDNI.Location = new System.Drawing.Point(256, 74);
+            this.txtDNI.Name = "txtDNI";
+            this.txtDNI.Size = new System.Drawing.Size(191, 27);
+            this.txtDNI.TabIndex = 44;
             // 
-            // dateTimePicker1
+            // dtpFechaNacimiento
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(14, 210);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(433, 27);
-            this.dateTimePicker1.TabIndex = 43;
+            this.dtpFechaNacimiento.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(14, 210);
+            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(433, 27);
+            this.dtpFechaNacimiento.TabIndex = 43;
             // 
-            // textBox3
+            // txtApellidoMaterno
             // 
-            this.textBox3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(256, 141);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(191, 27);
-            this.textBox3.TabIndex = 42;
+            this.txtApellidoMaterno.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidoMaterno.Location = new System.Drawing.Point(256, 141);
+            this.txtApellidoMaterno.Name = "txtApellidoMaterno";
+            this.txtApellidoMaterno.Size = new System.Drawing.Size(191, 27);
+            this.txtApellidoMaterno.TabIndex = 42;
             // 
-            // textBox2
+            // txtApellidoPaterno
             // 
-            this.textBox2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(14, 141);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(225, 27);
-            this.textBox2.TabIndex = 41;
+            this.txtApellidoPaterno.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidoPaterno.Location = new System.Drawing.Point(14, 141);
+            this.txtApellidoPaterno.Name = "txtApellidoPaterno";
+            this.txtApellidoPaterno.Size = new System.Drawing.Size(225, 27);
+            this.txtApellidoPaterno.TabIndex = 41;
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(14, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 27);
-            this.textBox1.TabIndex = 40;
+            this.txtNombre.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(14, 73);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(225, 27);
+            this.txtNombre.TabIndex = 40;
             // 
             // lblGradoInstruccion
             // 
@@ -350,17 +329,17 @@
             this.panelDatosGenerales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelDatosGenerales.Controls.Add(this.panelTituloDatosGenerales);
             this.panelDatosGenerales.Controls.Add(this.lblNombre);
-            this.panelDatosGenerales.Controls.Add(this.textBox1);
+            this.panelDatosGenerales.Controls.Add(this.txtNombre);
             this.panelDatosGenerales.Controls.Add(this.lblApellidoPaterno);
-            this.panelDatosGenerales.Controls.Add(this.textBox2);
+            this.panelDatosGenerales.Controls.Add(this.txtApellidoPaterno);
             this.panelDatosGenerales.Controls.Add(this.lblApellidoMaterno);
-            this.panelDatosGenerales.Controls.Add(this.textBox3);
+            this.panelDatosGenerales.Controls.Add(this.txtApellidoMaterno);
             this.panelDatosGenerales.Controls.Add(this.lblDni);
-            this.panelDatosGenerales.Controls.Add(this.textBox4);
+            this.panelDatosGenerales.Controls.Add(this.txtDNI);
             this.panelDatosGenerales.Controls.Add(this.lblFechaNacimiento);
-            this.panelDatosGenerales.Controls.Add(this.textBox6);
-            this.panelDatosGenerales.Controls.Add(this.dateTimePicker1);
-            this.panelDatosGenerales.Controls.Add(this.comboBox1);
+            this.panelDatosGenerales.Controls.Add(this.txtTelefono);
+            this.panelDatosGenerales.Controls.Add(this.dtpFechaNacimiento);
+            this.panelDatosGenerales.Controls.Add(this.cbPais);
             this.panelDatosGenerales.Controls.Add(this.lblPais);
             this.panelDatosGenerales.Controls.Add(this.lblTelefono);
             this.panelDatosGenerales.Location = new System.Drawing.Point(12, 60);
@@ -392,17 +371,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.txtConfirmacionCorreo);
             this.panel1.Controls.Add(this.lblNickname);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.btnGenerarContraseña);
             this.panel1.Controls.Add(this.lblCorreo);
             this.panel1.Controls.Add(this.txtCorreo);
-            this.panel1.Controls.Add(this.lblPassword);
-            this.panel1.Controls.Add(this.txtPassword);
-            this.panel1.Location = new System.Drawing.Point(487, 60);
+            this.panel1.Location = new System.Drawing.Point(500, 261);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(449, 266);
+            this.panel1.Size = new System.Drawing.Size(436, 178);
             this.panel1.TabIndex = 56;
             // 
             // panel2
@@ -412,7 +388,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(449, 45);
+            this.panel2.Size = new System.Drawing.Size(436, 45);
             this.panel2.TabIndex = 0;
             // 
             // label2
@@ -430,10 +406,10 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.textBox7);
+            this.panel3.Controls.Add(this.txtAreaInteres);
             this.panel3.Controls.Add(this.lblAreaInteres);
             this.panel3.Controls.Add(this.lblGradoInstruccion);
-            this.panel3.Controls.Add(this.textBox8);
+            this.panel3.Controls.Add(this.txtGradoInstruccion);
             this.panel3.Location = new System.Drawing.Point(12, 404);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(468, 226);
@@ -460,24 +436,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Formación";
             // 
-            // lblNickname
-            // 
-            this.lblNickname.AutoSize = true;
-            this.lblNickname.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNickname.Location = new System.Drawing.Point(10, 118);
-            this.lblNickname.Name = "lblNickname";
-            this.lblNickname.Size = new System.Drawing.Size(76, 18);
-            this.lblNickname.TabIndex = 54;
-            this.lblNickname.Text = "Nickname";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(13, 141);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(417, 27);
-            this.textBox5.TabIndex = 55;
-            // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
@@ -493,12 +451,111 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(586, 15);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(165, 36);
+            this.btnCancelar.TabIndex = 58;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // lblNickname
+            // 
+            this.lblNickname.AutoSize = true;
+            this.lblNickname.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNickname.Location = new System.Drawing.Point(10, 118);
+            this.lblNickname.Name = "lblNickname";
+            this.lblNickname.Size = new System.Drawing.Size(114, 18);
+            this.lblNickname.TabIndex = 54;
+            this.lblNickname.Text = "Repita el correo";
+            // 
+            // txtConfirmacionCorreo
+            // 
+            this.txtConfirmacionCorreo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmacionCorreo.Location = new System.Drawing.Point(13, 141);
+            this.txtConfirmacionCorreo.Name = "txtConfirmacionCorreo";
+            this.txtConfirmacionCorreo.Size = new System.Drawing.Size(406, 27);
+            this.txtConfirmacionCorreo.TabIndex = 55;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.pictureBox1);
+            this.panel5.Controls.Add(this.button1);
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Location = new System.Drawing.Point(500, 60);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(436, 195);
+            this.panel5.TabIndex = 57;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(436, 45);
+            this.panel6.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(19, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 25);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Imagen";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(254, 143);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(165, 36);
+            this.button1.TabIndex = 59;
+            this.button1.Text = "Cancelar";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(24, 66);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(137, 113);
+            this.pictureBox1.TabIndex = 60;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(181, 66);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(137, 19);
+            this.label4.TabIndex = 61;
+            this.label4.Text = "Path de la imagen";
+            // 
             // frmDatosProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
             this.ClientSize = new System.Drawing.Size(948, 642);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -523,30 +580,31 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnGenerarContraseña;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.GroupBox gbEstado;
         private System.Windows.Forms.RadioButton rbBloqueado;
         private System.Windows.Forms.RadioButton rbInactivo;
         private System.Windows.Forms.RadioButton rbActivo;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtGradoInstruccion;
+        private System.Windows.Forms.TextBox txtAreaInteres;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.ComboBox cbPais;
         private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDNI;
+        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
+        private System.Windows.Forms.TextBox txtApellidoMaterno;
+        private System.Windows.Forms.TextBox txtApellidoPaterno;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblGradoInstruccion;
         private System.Windows.Forms.Label lblAreaInteres;
         private System.Windows.Forms.Label lblTelefono;
@@ -567,8 +625,15 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label lblNickname;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox txtConfirmacionCorreo;
+        private System.Windows.Forms.Label lblNickname;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label5;
     }
 }
