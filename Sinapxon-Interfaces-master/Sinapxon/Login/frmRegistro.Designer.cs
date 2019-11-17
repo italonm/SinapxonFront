@@ -47,10 +47,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtRepetirPassword = new System.Windows.Forms.TextBox();
             this.gbDatosPersonales = new System.Windows.Forms.GroupBox();
+            this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaNac = new System.Windows.Forms.Label();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.cboPais = new System.Windows.Forms.ComboBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pbLineNombres = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -64,22 +75,18 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.cboPais = new System.Windows.Forms.ComboBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.lblTelefono = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.lblFechaNac = new System.Windows.Forms.Label();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
-            this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnRestablecer = new System.Windows.Forms.Button();
             this.gbDatosPersonales.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLineNombres)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -93,11 +100,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNickname
@@ -294,7 +296,7 @@
             this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarse.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarse.Location = new System.Drawing.Point(1631, 980);
+            this.btnRegistrarse.Location = new System.Drawing.Point(1631, 835);
             this.btnRegistrarse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRegistrarse.Name = "btnRegistrarse";
             this.btnRegistrarse.Size = new System.Drawing.Size(150, 46);
@@ -368,6 +370,105 @@
             this.gbDatosPersonales.TabStop = false;
             this.gbDatosPersonales.Text = "Datos personales";
             // 
+            // dtpFechaNac
+            // 
+            this.dtpFechaNac.Location = new System.Drawing.Point(684, 402);
+            this.dtpFechaNac.Name = "dtpFechaNac";
+            this.dtpFechaNac.Size = new System.Drawing.Size(513, 35);
+            this.dtpFechaNac.TabIndex = 37;
+            // 
+            // lblFechaNac
+            // 
+            this.lblFechaNac.AutoSize = true;
+            this.lblFechaNac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.lblFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaNac.ForeColor = System.Drawing.Color.White;
+            this.lblFechaNac.Location = new System.Drawing.Point(671, 367);
+            this.lblFechaNac.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaNac.Name = "lblFechaNac";
+            this.lblFechaNac.Size = new System.Drawing.Size(242, 29);
+            this.lblFechaNac.TabIndex = 35;
+            this.lblFechaNac.Text = "Fecha de Nacimiento";
+            // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Image = global::Sinapxon.Properties.Resources.ContenedorTXT;
+            this.pictureBox20.Location = new System.Drawing.Point(639, 346);
+            this.pictureBox20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(606, 126);
+            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox20.TabIndex = 36;
+            this.pictureBox20.TabStop = false;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.pictureBox18.Image = global::Sinapxon.Properties.Resources.Barra_P_Blanco;
+            this.pictureBox18.Location = new System.Drawing.Point(61, 438);
+            this.pictureBox18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(513, 5);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 34;
+            this.pictureBox18.TabStop = false;
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.ForeColor = System.Drawing.Color.White;
+            this.lblTelefono.Location = new System.Drawing.Point(57, 367);
+            this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(110, 29);
+            this.lblTelefono.TabIndex = 31;
+            this.lblTelefono.Text = "Teléfono";
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.ForeColor = System.Drawing.Color.White;
+            this.txtTelefono.Location = new System.Drawing.Point(61, 401);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(513, 28);
+            this.txtTelefono.TabIndex = 32;
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Image = global::Sinapxon.Properties.Resources.ContenedorTXT;
+            this.pictureBox19.Location = new System.Drawing.Point(25, 346);
+            this.pictureBox19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(606, 126);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox19.TabIndex = 33;
+            this.pictureBox19.TabStop = false;
+            // 
+            // cboPais
+            // 
+            this.cboPais.FormattingEnabled = true;
+            this.cboPais.Location = new System.Drawing.Point(1297, 93);
+            this.cboPais.Name = "cboPais";
+            this.cboPais.Size = new System.Drawing.Size(413, 37);
+            this.cboPais.TabIndex = 30;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.pictureBox16.Image = global::Sinapxon.Properties.Resources.Barra_P_Blanco;
+            this.pictureBox16.Location = new System.Drawing.Point(1298, 120);
+            this.pictureBox16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(273, 10);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 29;
+            this.pictureBox16.TabStop = false;
+            // 
             // pictureBox11
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
@@ -392,6 +493,19 @@
             this.pictureBox10.TabIndex = 25;
             this.pictureBox10.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(1292, 54);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 29);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "País";
+            // 
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
@@ -415,6 +529,17 @@
             this.pbLineNombres.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLineNombres.TabIndex = 20;
             this.pbLineNombres.TabStop = false;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = global::Sinapxon.Properties.Resources.ContenedorTXT;
+            this.pictureBox17.Location = new System.Drawing.Point(1253, 40);
+            this.pictureBox17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(502, 126);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 28;
+            this.pictureBox17.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -581,128 +706,37 @@
             this.pictureBox8.TabIndex = 27;
             this.pictureBox8.TabStop = false;
             // 
-            // pictureBox16
+            // btnCancelar
             // 
-            this.pictureBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.pictureBox16.Image = global::Sinapxon.Properties.Resources.Barra_P_Blanco;
-            this.pictureBox16.Location = new System.Drawing.Point(1298, 120);
-            this.pictureBox16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(273, 10);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox16.TabIndex = 29;
-            this.pictureBox16.TabStop = false;
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(1631, 967);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(150, 46);
+            this.btnCancelar.TabIndex = 20;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // label2
+            // btnRestablecer
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1292, 54);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 29);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "País";
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.Image = global::Sinapxon.Properties.Resources.ContenedorTXT;
-            this.pictureBox17.Location = new System.Drawing.Point(1253, 40);
-            this.pictureBox17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(502, 126);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox17.TabIndex = 28;
-            this.pictureBox17.TabStop = false;
-            // 
-            // cboPais
-            // 
-            this.cboPais.FormattingEnabled = true;
-            this.cboPais.Location = new System.Drawing.Point(1297, 93);
-            this.cboPais.Name = "cboPais";
-            this.cboPais.Size = new System.Drawing.Size(413, 37);
-            this.cboPais.TabIndex = 30;
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.pictureBox18.Image = global::Sinapxon.Properties.Resources.Barra_P_Blanco;
-            this.pictureBox18.Location = new System.Drawing.Point(61, 438);
-            this.pictureBox18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(513, 5);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox18.TabIndex = 34;
-            this.pictureBox18.TabStop = false;
-            // 
-            // lblTelefono
-            // 
-            this.lblTelefono.AutoSize = true;
-            this.lblTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.ForeColor = System.Drawing.Color.White;
-            this.lblTelefono.Location = new System.Drawing.Point(57, 367);
-            this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(110, 29);
-            this.lblTelefono.TabIndex = 31;
-            this.lblTelefono.Text = "Teléfono";
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.ForeColor = System.Drawing.Color.White;
-            this.txtTelefono.Location = new System.Drawing.Point(61, 401);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(513, 28);
-            this.txtTelefono.TabIndex = 32;
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.Image = global::Sinapxon.Properties.Resources.ContenedorTXT;
-            this.pictureBox19.Location = new System.Drawing.Point(25, 346);
-            this.pictureBox19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(606, 126);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox19.TabIndex = 33;
-            this.pictureBox19.TabStop = false;
-            // 
-            // lblFechaNac
-            // 
-            this.lblFechaNac.AutoSize = true;
-            this.lblFechaNac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.lblFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaNac.ForeColor = System.Drawing.Color.White;
-            this.lblFechaNac.Location = new System.Drawing.Point(671, 367);
-            this.lblFechaNac.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFechaNac.Name = "lblFechaNac";
-            this.lblFechaNac.Size = new System.Drawing.Size(242, 29);
-            this.lblFechaNac.TabIndex = 35;
-            this.lblFechaNac.Text = "Fecha de Nacimiento";
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.Image = global::Sinapxon.Properties.Resources.ContenedorTXT;
-            this.pictureBox20.Location = new System.Drawing.Point(639, 346);
-            this.pictureBox20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(606, 126);
-            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox20.TabIndex = 36;
-            this.pictureBox20.TabStop = false;
-            // 
-            // dtpFechaNac
-            // 
-            this.dtpFechaNac.Location = new System.Drawing.Point(684, 402);
-            this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(513, 35);
-            this.dtpFechaNac.TabIndex = 37;
+            this.btnRestablecer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.btnRestablecer.FlatAppearance.BorderSize = 0;
+            this.btnRestablecer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestablecer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnRestablecer.ForeColor = System.Drawing.Color.White;
+            this.btnRestablecer.Location = new System.Drawing.Point(1631, 903);
+            this.btnRestablecer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRestablecer.Name = "btnRestablecer";
+            this.btnRestablecer.Size = new System.Drawing.Size(150, 46);
+            this.btnRestablecer.TabIndex = 21;
+            this.btnRestablecer.Text = "Restablecer";
+            this.btnRestablecer.UseVisualStyleBackColor = false;
+            this.btnRestablecer.Click += new System.EventHandler(this.btnRestablecer_Click);
             // 
             // frmRegistro
             // 
@@ -710,6 +744,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(27)))), ((int)(((byte)(146)))));
             this.ClientSize = new System.Drawing.Size(1805, 1050);
+            this.Controls.Add(this.btnRestablecer);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.gbDatosCuenta);
             this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.lblRegistroUsuario);
@@ -719,10 +755,15 @@
             this.Text = "frmRegistro";
             this.gbDatosPersonales.ResumeLayout(false);
             this.gbDatosPersonales.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLineNombres)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -737,11 +778,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -796,5 +832,7 @@
         private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnRestablecer;
     }
 }

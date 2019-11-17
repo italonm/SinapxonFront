@@ -18,6 +18,7 @@ namespace Sinapxon.Login
         public frmRegistro()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
             alumno = new Administrador.alumno();
             BindingList<Administrador.pais> paises = new BindingList<Administrador.pais>(dbContoller.listarPaises());
             cboPais.DataSource = paises;
@@ -60,6 +61,25 @@ namespace Sinapxon.Login
             dbContoller.insertarAlumno(alumno);
             MessageBox.Show("Se ha registrado exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+        }
+
+        private void btnRestablecer_Click(object sender, EventArgs e)
+        {
+            txtCorreo.Text = "";
+            txtDni.Text = "";
+            txtNickname.Text = "";
+            txtNombres.Text = "";
+            txtApellidoMaterno.Text = "";
+            txtApellidoPaterno.Text = "";
+            txtPassword.Text = "";
+            txtRepetirPassword.Text = "";
+            txtTelefono.Text = "";            
+            dtpFechaNac.ResetText();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
