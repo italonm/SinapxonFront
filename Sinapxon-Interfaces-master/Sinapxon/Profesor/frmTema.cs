@@ -13,10 +13,15 @@ namespace Sinapxon.Profesor
     public partial class frmTema : Form
     {
         Profesor.ProfesorServicesClient DBController = new Profesor.ProfesorServicesClient();
+        BindingList<Profesor.tema> temas;
         public frmTema()
         {
             InitializeComponent();
             lblTema.Text = "Tema" + " - " + ClassroomInfo.classroom.codigo;
+            temas = new BindingList<Profesor.tema>(DBController.listarTemas());
+            cbTemas.DataSource = temas;
+            cbTemas.DisplayMember = "Nombre";
+            cbTemas.ValueMember = "id_tema";
         }
 
         private void dgvArchivos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -31,19 +36,21 @@ namespace Sinapxon.Profesor
 
         private void btnGuardarTema_Click(object sender, EventArgs e)
         {
-            Profesor.tema tema = new Profesor.tema();
-            tema.nombre = txtNombre.Text;
-            tema.link = txtLinkVideo.Text;
-            tema.descripcion = txtDescripcion.Text;
-            tema.classroom= new Profesor.classroom();
-            tema.classroom.codigo= ClassroomInfo.classroom.codigo;
-            tema.classroom.curso = new Profesor.curso();
-            tema.classroom.profesor = new profesor();
-            tema.classroom.idioma = new idioma();
-            tema.classroom.temas = new Profesor.temaXClassroom[0];
-            tema.classroom.alumnos = new Profesor.classroomXAlumno[0];
-            tema.classroom.periodo = new Profesor.periodo();
-            DBController.insertarTema(tema);
+            Profesor.temaXClassroom temaxClassroom= new Profesor.temaXClassroom();
+            temaxClassroom.tema = new Profesor.tema();
+            temaxClassroom.tema = (Profesor.tema)cbTemas.SelectedItem;
+            temaxClassroom.classroom = new Profesor.classroom();
+            temaxClassroom.classroom.alumnos = new BindingList<Profesor.classroomXAlumno>().ToArray();
+            temaxClassroom.classroom.codigo = ClassroomInfo.classroom.codigo;
+            temaxClassroom.classroom.curso = new Profesor.curso();
+            temaxClassroom.classroom.idioma = new Profesor.idioma();
+            temaxClassroom.classroom.periodo = new Profesor.periodo();
+            temaxClassroom.classroom.profesor = new profesor();
+            temaxClassroom.classroom.temas =new BindingList<Profesor.temaXClassroom>().ToArray();
+            temaxClassroom.descripcion = txtDescripcion.Text;
+            temaxClassroom.link = txtLinkVideo.Text;
+            temaxClassroom.evaluacion = new Profesor.evaluacion();
+            DBController.insertarTemaxClassroom(temaxClassroom);
             this.Close();
         }
     }

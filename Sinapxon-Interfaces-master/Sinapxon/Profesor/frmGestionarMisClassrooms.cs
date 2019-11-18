@@ -127,7 +127,8 @@ namespace Sinapxon.Profesor
             btnAniadirEvaluacion.Text = "Añadir evaluación";
             btnAniadirEvaluacion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             btnAniadirEvaluacion.UseVisualStyleBackColor = false;
-            btnAniadirEvaluacion.Click += new System.EventHandler(this.btnAniadirEvaluacion_Click);
+            //btnAniadirEvaluacion.Click += new System.EventHandler(this.btnAniadirEvaluacion_Click);
+            btnAniadirEvaluacion.Click += new System.EventHandler((sender, e) => btnAniadirEvaluacion_Click(sender, e, codClassroom));
             panelContenedor.Controls.Add(btnAniadirEvaluacion);
             // 
             // btnAniadirTema
@@ -179,13 +180,13 @@ namespace Sinapxon.Profesor
         private void btnAniadirTema_Click(object sender, EventArgs e,string codclassroom)
         {
             ClassroomInfo.classroom.codigo = codclassroom;
-
             frmTema formAniadirTema = new frmTema();
             formAniadirTema.Visible = true;
         }
 
-        private void btnAniadirEvaluacion_Click(object sender, EventArgs e)
+        private void btnAniadirEvaluacion_Click(object sender, EventArgs e,string codclassroom)
         {
+            ClassroomInfo.classroom.codigo = codclassroom;
             frmEvaluacion formAniadirEvaluacion = new frmEvaluacion();
             formAniadirEvaluacion.Visible = true;
         }
@@ -196,8 +197,7 @@ namespace Sinapxon.Profesor
             boxAltura = 164;
             panelContenedor.Controls.Clear();
 
-            classrooms =
-                new BindingList<Profesor.classroom>(DBController.listarClassroomxProfesor(LoginInfo.persona.codigo,txtBuscar.Text));
+            classrooms = new BindingList<Profesor.classroom>(DBController.listarClassroomxProfesor(LoginInfo.persona.codigo,txtBuscar.Text));
 
             foreach (Profesor.classroom obj in classrooms)
             {

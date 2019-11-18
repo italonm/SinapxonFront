@@ -461,10 +461,13 @@
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.idioma.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.insertarEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.insertarSolicitudClassroomResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Profesor\Sinapxon.Profesor.insertarTemaResponse.datasource">
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.insertarTemaxClassroomResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarClassroomxProfesorResponse.datasource">
@@ -479,7 +482,19 @@
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarPeriodosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarTemasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarTemaxClassroomResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.periodo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.tema.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.temaXClassroom.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
