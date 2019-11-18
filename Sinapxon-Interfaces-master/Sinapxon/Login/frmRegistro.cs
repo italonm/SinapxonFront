@@ -79,7 +79,14 @@ namespace Sinapxon.Login
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("¿Esta seguro que desea salir?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                this.Activate();
+            }
         }
     }
 }
