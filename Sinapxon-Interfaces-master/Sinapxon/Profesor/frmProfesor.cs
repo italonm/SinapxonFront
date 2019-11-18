@@ -47,5 +47,12 @@ namespace Sinapxon.Profesor
             frmGestionarMisClassrooms formMisClassrooms = new frmGestionarMisClassrooms(this);
             openChildForm(formMisClassrooms);
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLogin formLogin = new frmLogin();
+            formLogin.Show();
+        }
     }
 }

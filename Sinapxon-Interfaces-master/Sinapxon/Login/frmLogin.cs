@@ -51,6 +51,7 @@ namespace Sinapxon.Login
                 /* ERROR en el usuario o contraseña*/
 
             }
+            this.Hide();
         }
 
         private void Button3_Click(object sender, EventArgs e)
@@ -58,6 +59,7 @@ namespace Sinapxon.Login
             frmRegistro formRegistro = new frmRegistro();
             formRegistro.Visible = true;
             this.Visible = true;
+            this.Hide();
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -65,6 +67,7 @@ namespace Sinapxon.Login
             frmOvlideContrasenia formOlvideContrasenia = new frmOvlideContrasenia();
             formOlvideContrasenia.Visible = true;
             this.Visible = true;
+            this.Hide();
         }
 
         private void pctImagenSinapxon_Click(object sender, EventArgs e)

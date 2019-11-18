@@ -8,6 +8,8 @@
   <xs:element name="insertarProfesorResponse" type="tns:insertarProfesorResponse" />
   <xs:element name="listarCursos" type="tns:listarCursos" />
   <xs:element name="listarCursosResponse" type="tns:listarCursosResponse" />
+  <xs:element name="listarPaises" type="tns:listarPaises" />
+  <xs:element name="listarPaisesResponse" type="tns:listarPaisesResponse" />
   <xs:element name="listarProfesores" type="tns:listarProfesores" />
   <xs:element name="listarProfesoresResponse" type="tns:listarProfesoresResponse" />
   <xs:complexType name="listarProfesores">
@@ -76,14 +78,9 @@
   <xs:complexType name="insertarProfesorResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="listarCursos">
+  <xs:complexType name="insertarCurso">
     <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarCursosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
+      <xs:element minOccurs="0" name="arg0" type="tns:curso" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="curso">
@@ -118,12 +115,25 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarCurso">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="tns:curso" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarCursoResponse">
     <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarCursos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCursosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPaises">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPaisesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pais" />
+    </xs:sequence>
   </xs:complexType>
 </xs:schema>

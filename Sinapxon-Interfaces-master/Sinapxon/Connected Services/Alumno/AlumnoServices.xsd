@@ -4,6 +4,8 @@
   <xs:element name="listarClassroomxAlumnoResponse" type="tns:listarClassroomxAlumnoResponse" />
   <xs:element name="listarCursos" type="tns:listarCursos" />
   <xs:element name="listarCursosResponse" type="tns:listarCursosResponse" />
+  <xs:element name="listarPaises" type="tns:listarPaises" />
+  <xs:element name="listarPaisesResponse" type="tns:listarPaisesResponse" />
   <xs:complexType name="listarClassroomxAlumno">
     <xs:sequence>
       <xs:element minOccurs="0" name="codigo" type="xs:string" />
@@ -148,6 +150,14 @@
       <xs:element name="id_tema" type="xs:int" />
       <xs:element minOccurs="0" name="link" type="xs:string" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPaises">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPaisesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pais" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarCursos">
