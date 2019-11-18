@@ -1,4 +1,4 @@
-﻿namespace Sinapxon.Login
+namespace Sinapxon.Login
 {
     partial class frmOvlideContrasenia
     {

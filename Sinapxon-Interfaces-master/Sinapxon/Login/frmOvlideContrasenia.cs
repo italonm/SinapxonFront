@@ -41,6 +41,9 @@ namespace Sinapxon.Login
                 GenerarNuevaContrasenia(txtCorreo.Text);
 
             }
+            this.Close();
+            frmLogin formLogin = new frmLogin();
+            formLogin.Show();
         }
         public void GenerarNuevaContrasenia(string email)
         {
@@ -53,9 +56,9 @@ namespace Sinapxon.Login
 
         private void EnviarCorreo(string contrasenaNueva, string correo)
         {
-            SmtpClient SmtpServer = new SmtpClient("smtp.live.com");
+            SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
             var mail = new MailMessage();
-            mail.From = new MailAddress("emmaragonq@hotmail.com");
+            mail.From = new MailAddress("sinapxonsac.peru@gmail.com");
             mail.To.Add(correo);
             mail.Subject = "Nueva contraseña Sinapxon";
             mail.IsBodyHtml = true;
@@ -64,37 +67,10 @@ namespace Sinapxon.Login
             mail.Body = htmlBody;
             SmtpServer.Port = 587;
             SmtpServer.UseDefaultCredentials = false;
-            SmtpServer.Credentials = new System.Net.NetworkCredential("emmaragonq@hotmail.com", "aguilamaria");
+            SmtpServer.Credentials = new System.Net.NetworkCredential("sinapxonsac.peru@gmail.com", "lp2grupoB");
             SmtpServer.EnableSsl = true;
             SmtpServer.Send(mail);
             MessageBox.Show("Correo enviado, revise su bandeja de entrada");
-
-            //string mensaje = string.Empty;
-            //string destinatario = correo;
-            //string remitente = "emmaraq96@gmail.com";
-            //string asunto = "Nueva contraseña Sinapxon";
-            //string cuerpoMensaje = "Su nueva contraseña es " + contrasenaNueva;
-            //MailMessage ms = new MailMessage(remitente, destinatario, asunto, cuerpoMensaje);
-            ////Host que se encargara de enviarlo
-            //SmtpClient stmp = new SmtpClient("smtp.gmail.com", 587);
-            //stmp.EnableSsl = true;
-            //stmp.Credentials = new NetworkCredential("emmaraq96@gmail.com", "admitido2013");
-            //try
-            //{
-            //    Task.Run(() =>
-            //    {
-            //        stmp.Send(ms);
-            //        MessageBox.Show("Correo enviado, revise su bandeja de entrada");
-            //    }
-            //);
-            //    MessageBox.Show("Esta tarea puede tardar unos segundos, tenga paciencia");
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error al enviar correo electronico: " + ex.Message);
-            //}
-
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -102,6 +78,8 @@ namespace Sinapxon.Login
             if (MessageBox.Show("¿Esta seguro que desea salir?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 this.Close();
+                frmLogin formLogin = new frmLogin();
+                formLogin.Show();
             }
             else
             {

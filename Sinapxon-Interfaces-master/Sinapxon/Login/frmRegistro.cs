@@ -82,6 +82,8 @@ namespace Sinapxon.Login
             if (MessageBox.Show("¿Esta seguro que desea salir?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 this.Close();
+                frmLogin formLogin = new frmLogin();
+                formLogin.Show();
             }
             else
             {
