@@ -140,12 +140,6 @@
     <Compile Include="Alumno\frmEvaluacion.Designer.cs">
       <DependentUpon>frmEvaluacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Alumno\frmEvaluaciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Alumno\frmEvaluaciones.Designer.cs">
-      <DependentUpon>frmEvaluaciones.cs</DependentUpon>
-    </Compile>
     <Compile Include="Alumno\frmExplorarClassroom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,12 +175,6 @@
     </Compile>
     <Compile Include="Alumno\frmTema.Designer.cs">
       <DependentUpon>frmTema.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Alumno\frmTemas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Alumno\frmTemas.Designer.cs">
-      <DependentUpon>frmTemas.cs</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\Administrador\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -328,9 +316,6 @@
     <EmbeddedResource Include="Alumno\frmEvaluacion.resx">
       <DependentUpon>frmEvaluacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Alumno\frmEvaluaciones.resx">
-      <DependentUpon>frmEvaluaciones.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Alumno\frmExplorarClassroom.resx">
       <DependentUpon>frmExplorarClassroom.cs</DependentUpon>
     </EmbeddedResource>
@@ -348,9 +333,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Alumno\frmTema.resx">
       <DependentUpon>frmTema.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Alumno\frmTemas.resx">
-      <DependentUpon>frmTemas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -766,6 +748,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_arrow_back_ios_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_arrow_left_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_save_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_get_app_white_18dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_assignment_turned_in_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_arrow_left_white_36dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

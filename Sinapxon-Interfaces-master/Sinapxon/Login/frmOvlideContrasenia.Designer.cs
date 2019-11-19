@@ -44,13 +44,12 @@ namespace Sinapxon.Login
             // lblOlvideContrasenia
             // 
             this.lblOlvideContrasenia.AutoSize = true;
-            this.lblOlvideContrasenia.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOlvideContrasenia.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOlvideContrasenia.ForeColor = System.Drawing.Color.White;
-            this.lblOlvideContrasenia.Location = new System.Drawing.Point(18, 14);
-            this.lblOlvideContrasenia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOlvideContrasenia.Location = new System.Drawing.Point(12, 21);
             this.lblOlvideContrasenia.Name = "lblOlvideContrasenia";
             this.lblOlvideContrasenia.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblOlvideContrasenia.Size = new System.Drawing.Size(375, 40);
+            this.lblOlvideContrasenia.Size = new System.Drawing.Size(241, 29);
             this.lblOlvideContrasenia.TabIndex = 0;
             this.lblOlvideContrasenia.Text = "Olvidé mi contraseña";
             // 
@@ -61,13 +60,11 @@ namespace Sinapxon.Login
             this.gbMetodoRecuparacion.Controls.Add(this.txtCorreo);
             this.gbMetodoRecuparacion.Controls.Add(this.pictureBox2);
             this.gbMetodoRecuparacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gbMetodoRecuparacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbMetodoRecuparacion.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbMetodoRecuparacion.ForeColor = System.Drawing.Color.White;
-            this.gbMetodoRecuparacion.Location = new System.Drawing.Point(18, 108);
-            this.gbMetodoRecuparacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbMetodoRecuparacion.Location = new System.Drawing.Point(12, 70);
             this.gbMetodoRecuparacion.Name = "gbMetodoRecuparacion";
-            this.gbMetodoRecuparacion.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gbMetodoRecuparacion.Size = new System.Drawing.Size(906, 171);
+            this.gbMetodoRecuparacion.Size = new System.Drawing.Size(604, 111);
             this.gbMetodoRecuparacion.TabIndex = 8;
             this.gbMetodoRecuparacion.TabStop = false;
             this.gbMetodoRecuparacion.Text = "Metodo de recuperación";
@@ -76,10 +73,9 @@ namespace Sinapxon.Login
             // 
             this.pbLineEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.pbLineEmail.Image = global::Sinapxon.Properties.Resources.Barra_P_Blanco;
-            this.pbLineEmail.Location = new System.Drawing.Point(244, 105);
-            this.pbLineEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbLineEmail.Location = new System.Drawing.Point(163, 68);
             this.pbLineEmail.Name = "pbLineEmail";
-            this.pbLineEmail.Size = new System.Drawing.Size(579, 5);
+            this.pbLineEmail.Size = new System.Drawing.Size(386, 3);
             this.pbLineEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLineEmail.TabIndex = 10;
             this.pbLineEmail.TabStop = false;
@@ -88,10 +84,10 @@ namespace Sinapxon.Login
             // 
             this.rbEmail.AutoSize = true;
             this.rbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.rbEmail.Location = new System.Drawing.Point(45, 74);
-            this.rbEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbEmail.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEmail.Location = new System.Drawing.Point(37, 50);
             this.rbEmail.Name = "rbEmail";
-            this.rbEmail.Size = new System.Drawing.Size(161, 33);
+            this.rbEmail.Size = new System.Drawing.Size(111, 23);
             this.rbEmail.TabIndex = 8;
             this.rbEmail.TabStop = true;
             this.rbEmail.Text = "Usar e-mail";
@@ -102,19 +98,17 @@ namespace Sinapxon.Login
             this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCorreo.ForeColor = System.Drawing.Color.White;
-            this.txtCorreo.Location = new System.Drawing.Point(244, 77);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCorreo.Location = new System.Drawing.Point(163, 50);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(579, 28);
+            this.txtCorreo.Size = new System.Drawing.Size(386, 20);
             this.txtCorreo.TabIndex = 2;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Sinapxon.Properties.Resources.ContenedorTXT;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 54);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(4, 35);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(891, 77);
+            this.pictureBox2.Size = new System.Drawing.Size(594, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
@@ -124,12 +118,11 @@ namespace Sinapxon.Login
             this.btnEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.btnEnviar.FlatAppearance.BorderSize = 0;
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviar.ForeColor = System.Drawing.Color.White;
-            this.btnEnviar.Location = new System.Drawing.Point(430, 407);
-            this.btnEnviar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEnviar.Location = new System.Drawing.Point(297, 209);
             this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(225, 69);
+            this.btnEnviar.Size = new System.Drawing.Size(150, 45);
             this.btnEnviar.TabIndex = 9;
             this.btnEnviar.Text = "Enviar contraseña";
             this.btnEnviar.UseVisualStyleBackColor = false;
@@ -141,12 +134,11 @@ namespace Sinapxon.Login
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(690, 407);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCancelar.Location = new System.Drawing.Point(466, 209);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(225, 69);
+            this.btnCancelar.Size = new System.Drawing.Size(150, 45);
             this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -154,18 +146,17 @@ namespace Sinapxon.Login
             // 
             // frmOvlideContrasenia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(27)))), ((int)(((byte)(146)))));
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(942, 529);
+            this.ClientSize = new System.Drawing.Size(632, 278);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.gbMetodoRecuparacion);
             this.Controls.Add(this.lblOlvideContrasenia);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximumSize = new System.Drawing.Size(964, 585);
-            this.MinimumSize = new System.Drawing.Size(964, 585);
+            this.MaximumSize = new System.Drawing.Size(648, 317);
+            this.MinimumSize = new System.Drawing.Size(648, 317);
             this.Name = "frmOvlideContrasenia";
             this.Text = "frmOvlideContrasenia";
             this.gbMetodoRecuparacion.ResumeLayout(false);
