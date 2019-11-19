@@ -49,7 +49,7 @@ namespace Sinapxon.Administrador
 
         private void btnGestionarUsuarios_Click(object sender, EventArgs e)
         {
-            if(panelSubGestionarUsr.Visible)
+            if (panelSubGestionarUsr.Visible)
             {
                 panelSubGestionarUsr.Visible = false;
             }

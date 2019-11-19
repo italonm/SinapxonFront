@@ -188,6 +188,11 @@ namespace Sinapxon.Alumno
             this.Close();
         }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void BtnIrClassroom_Click(object sender, EventArgs e)
         {
             frmMiClassroom formMiClassroom = new frmMiClassroom(_padre);
