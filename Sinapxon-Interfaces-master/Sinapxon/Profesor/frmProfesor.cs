@@ -19,6 +19,7 @@ namespace Sinapxon.Profesor
         {
             InitializeComponent();
             lblNombreUsuario.Text = LoginInfo.persona.nombre;
+            panelSubGestionarUsr.Visible = false;
         }
 
         public frmProfesor(string codigo)
@@ -42,7 +43,7 @@ namespace Sinapxon.Profesor
             formularioHijo.BringToFront();
             formularioHijo.Show();
         }
-        private void Button1_Click(object sender, EventArgs e)
+        private void btnGestionarMisClassrooms_Click(object sender, EventArgs e)
         {
             frmGestionarMisClassrooms formMisClassrooms = new frmGestionarMisClassrooms(this);
             openChildForm(formMisClassrooms);
@@ -53,6 +54,29 @@ namespace Sinapxon.Profesor
             this.Hide();
             frmLogin formLogin = new frmLogin();
             formLogin.Show();
+        }
+
+        private void btnSolicitud_Click(object sender, EventArgs e)
+        {
+            if (panelSubGestionarUsr.Visible)
+            {
+                panelSubGestionarUsr.Visible = false;
+            }
+            else
+            {
+                panelSubGestionarUsr.Visible = true;
+            }
+        }
+
+        private void btnVerSolicitudes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSolicitar_Click(object sender, EventArgs e)
+        {
+            frmDatosClassroom formDatosClassroom = new frmDatosClassroom();
+            this.openChildForm(formDatosClassroom);
         }
     }
 }
