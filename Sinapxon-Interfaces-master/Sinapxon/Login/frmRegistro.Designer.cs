@@ -226,6 +226,7 @@
             this.txtPassword.Location = new System.Drawing.Point(62, 258);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '●';
             this.txtPassword.Size = new System.Drawing.Size(513, 28);
             this.txtPassword.TabIndex = 9;
             // 
@@ -327,6 +328,7 @@
             this.txtRepetirPassword.Location = new System.Drawing.Point(684, 258);
             this.txtRepetirPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtRepetirPassword.Name = "txtRepetirPassword";
+            this.txtRepetirPassword.PasswordChar = '●';
             this.txtRepetirPassword.Size = new System.Drawing.Size(513, 28);
             this.txtRepetirPassword.TabIndex = 17;
             // 

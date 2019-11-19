@@ -37,6 +37,7 @@
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnExplorar = new System.Windows.Forms.Button();
             this.btnMisClassrooms = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelMenu.SuspendLayout();
@@ -207,5 +208,6 @@
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.Button btnLogOut;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
