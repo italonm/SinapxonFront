@@ -205,6 +205,11 @@ namespace Sinapxon.Profesor
             }
         }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             frmVerClassroom formVerClassroom = new frmVerClassroom();
