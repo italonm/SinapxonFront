@@ -140,12 +140,6 @@
     <Compile Include="Alumno\frmEvaluacion.Designer.cs">
       <DependentUpon>frmEvaluacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Alumno\frmEvaluaciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Alumno\frmEvaluaciones.Designer.cs">
-      <DependentUpon>frmEvaluaciones.cs</DependentUpon>
-    </Compile>
     <Compile Include="Alumno\frmExplorarClassroom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,12 +175,6 @@
     </Compile>
     <Compile Include="Alumno\frmTema.Designer.cs">
       <DependentUpon>frmTema.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Alumno\frmTemas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Alumno\frmTemas.Designer.cs">
-      <DependentUpon>frmTemas.cs</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\Administrador\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -263,6 +251,12 @@
     <Compile Include="Profesor\frmDatosClassroom.Designer.cs">
       <DependentUpon>frmDatosClassroom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Profesor\frmVerAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\frmVerAlumnos.Designer.cs">
+      <DependentUpon>frmVerAlumnos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Profesor\frmVerClassroom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,6 +274,12 @@
     </Compile>
     <Compile Include="Profesor\frmProfesor.Designer.cs">
       <DependentUpon>frmProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\frmVerNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\frmVerNotas.Designer.cs">
+      <DependentUpon>frmVerNotas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -328,9 +328,6 @@
     <EmbeddedResource Include="Alumno\frmEvaluacion.resx">
       <DependentUpon>frmEvaluacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Alumno\frmEvaluaciones.resx">
-      <DependentUpon>frmEvaluaciones.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Alumno\frmExplorarClassroom.resx">
       <DependentUpon>frmExplorarClassroom.cs</DependentUpon>
     </EmbeddedResource>
@@ -348,9 +345,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Alumno\frmTema.resx">
       <DependentUpon>frmTema.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Alumno\frmTemas.resx">
-      <DependentUpon>frmTemas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -379,6 +373,9 @@
     <EmbeddedResource Include="Profesor\frmDatosClassroom.resx">
       <DependentUpon>frmDatosClassroom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\frmVerAlumnos.resx">
+      <DependentUpon>frmVerAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Profesor\frmVerClassroom.resx">
       <DependentUpon>frmVerClassroom.cs</DependentUpon>
     </EmbeddedResource>
@@ -387,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Profesor\frmProfesor.resx">
       <DependentUpon>frmProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\frmVerNotas.resx">
+      <DependentUpon>frmVerNotas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -504,6 +504,9 @@
     <None Include="Connected Services\Profesor\ProfesorServices.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.alumno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.classroom.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -520,6 +523,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.insertarTemaxClassroomResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarAlumnoXClassroomResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarClassroomxProfesorResponse.datasource">
@@ -766,6 +772,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_arrow_back_ios_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_arrow_left_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_save_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_get_app_white_18dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_assignment_turned_in_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_arrow_left_white_36dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
