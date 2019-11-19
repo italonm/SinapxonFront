@@ -49,7 +49,7 @@
             this.panelContenedor.Location = new System.Drawing.Point(450, 0);
             this.panelContenedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1446, 1048);
+            this.panelContenedor.Size = new System.Drawing.Size(1307, 1048);
             this.panelContenedor.TabIndex = 1;
             // 
             // panelLogo
@@ -182,13 +182,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1896, 1048);
+            this.ClientSize = new System.Drawing.Size(1757, 1048);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAlumno";
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

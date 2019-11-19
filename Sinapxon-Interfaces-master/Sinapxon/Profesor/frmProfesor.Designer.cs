@@ -150,20 +150,20 @@
             this.panelContenedor.Location = new System.Drawing.Point(450, 0);
             this.panelContenedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1446, 1048);
+            this.panelContenedor.Size = new System.Drawing.Size(1438, 1048);
             this.panelContenedor.TabIndex = 1;
             // 
             // frmProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1896, 1048);
+            this.ClientSize = new System.Drawing.Size(1888, 1048);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmProfesor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmProfesor";
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
