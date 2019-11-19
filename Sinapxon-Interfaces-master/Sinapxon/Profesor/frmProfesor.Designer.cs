@@ -240,7 +240,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmProfesor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmProfesor";
             this.panelMenu.ResumeLayout(false);
             this.panelSubGestionarUsr.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);

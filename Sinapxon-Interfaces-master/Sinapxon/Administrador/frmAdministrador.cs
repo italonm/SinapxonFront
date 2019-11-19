@@ -17,6 +17,7 @@ namespace Sinapxon.Administrador
         public frmAdministrador()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
             lblNombreUsuario.Text = LoginInfo.persona.nombre;
             panelSubGestionarUsr.Visible = false;
         }

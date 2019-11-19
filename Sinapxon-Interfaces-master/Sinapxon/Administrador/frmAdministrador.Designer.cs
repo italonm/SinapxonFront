@@ -61,7 +61,7 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(450, 1048);
+            this.panelMenu.Size = new System.Drawing.Size(450, 992);
             this.panelMenu.TabIndex = 0;
             // 
             // btnLogOut
@@ -74,7 +74,7 @@
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
             this.btnLogOut.Image = global::Sinapxon.Properties.Resources.baseline_exit_to_app;
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(0, 971);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 915);
             this.btnLogOut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
@@ -252,20 +252,20 @@
             this.panelContenedor.Location = new System.Drawing.Point(450, 0);
             this.panelContenedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1446, 1048);
+            this.panelContenedor.Size = new System.Drawing.Size(1329, 992);
             this.panelContenedor.TabIndex = 1;
             // 
             // frmAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1896, 1048);
+            this.ClientSize = new System.Drawing.Size(1779, 992);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmAdministrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAdministrador";
             this.panelMenu.ResumeLayout(false);
             this.panelSubGestionarUsr.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
