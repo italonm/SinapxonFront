@@ -251,6 +251,12 @@
     <Compile Include="Profesor\frmDatosClassroom.Designer.cs">
       <DependentUpon>frmDatosClassroom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Profesor\frmVerAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\frmVerAlumnos.Designer.cs">
+      <DependentUpon>frmVerAlumnos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Profesor\frmVerClassroom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,6 +274,12 @@
     </Compile>
     <Compile Include="Profesor\frmProfesor.Designer.cs">
       <DependentUpon>frmProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\frmVerNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\frmVerNotas.Designer.cs">
+      <DependentUpon>frmVerNotas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -361,6 +373,9 @@
     <EmbeddedResource Include="Profesor\frmDatosClassroom.resx">
       <DependentUpon>frmDatosClassroom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\frmVerAlumnos.resx">
+      <DependentUpon>frmVerAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Profesor\frmVerClassroom.resx">
       <DependentUpon>frmVerClassroom.cs</DependentUpon>
     </EmbeddedResource>
@@ -369,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Profesor\frmProfesor.resx">
       <DependentUpon>frmProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\frmVerNotas.resx">
+      <DependentUpon>frmVerNotas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -486,6 +504,9 @@
     <None Include="Connected Services\Profesor\ProfesorServices.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.alumno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.classroom.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -502,6 +523,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.insertarTemaxClassroomResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarAlumnoXClassroomResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarClassroomxProfesorResponse.datasource">
