@@ -44,7 +44,7 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(164)))), ((int)(((byte)(164)))));
+            this.panelContenedor.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(300, 0);
             this.panelContenedor.Name = "panelContenedor";
@@ -66,22 +66,22 @@
             // lblRol
             // 
             this.lblRol.AutoSize = true;
-            this.lblRol.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRol.ForeColor = System.Drawing.Color.White;
             this.lblRol.Location = new System.Drawing.Point(119, 99);
             this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(50, 15);
+            this.lblRol.Size = new System.Drawing.Size(53, 16);
             this.lblRol.TabIndex = 2;
             this.lblRol.Text = "Alumno";
             // 
             // lblNombreUsuario
             // 
             this.lblNombreUsuario.AutoSize = true;
-            this.lblNombreUsuario.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreUsuario.ForeColor = System.Drawing.Color.White;
             this.lblNombreUsuario.Location = new System.Drawing.Point(114, 70);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(172, 25);
+            this.lblNombreUsuario.Size = new System.Drawing.Size(185, 25);
             this.lblNombreUsuario.TabIndex = 1;
             this.lblNombreUsuario.Text = "Nombre Apellido";
             // 
@@ -115,7 +115,7 @@
             this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnLogOut.FlatAppearance.BorderSize = 0;
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
             this.btnLogOut.Image = global::Sinapxon.Properties.Resources.baseline_exit_to_app;
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -134,7 +134,7 @@
             this.btnExplorar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnExplorar.FlatAppearance.BorderSize = 0;
             this.btnExplorar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExplorar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExplorar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExplorar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnExplorar.Image = global::Sinapxon.Properties.Resources.baseline_find_in_page;
             this.btnExplorar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -154,7 +154,7 @@
             this.btnMisClassrooms.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMisClassrooms.FlatAppearance.BorderSize = 0;
             this.btnMisClassrooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMisClassrooms.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMisClassrooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMisClassrooms.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnMisClassrooms.Image = global::Sinapxon.Properties.Resources.baseline_book;
             this.btnMisClassrooms.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

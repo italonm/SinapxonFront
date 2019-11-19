@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sinapxon.Login;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace Sinapxon.Administrador
         public frmAdministrador()
         {
             InitializeComponent();
+            lblNombreUsuario.Text = LoginInfo.persona.nombre;
             panelSubGestionarUsr.Visible = false;
         }
 
@@ -47,7 +49,7 @@ namespace Sinapxon.Administrador
 
         private void btnGestionarUsuarios_Click(object sender, EventArgs e)
         {
-            if(panelSubGestionarUsr.Visible)
+            if (panelSubGestionarUsr.Visible)
             {
                 panelSubGestionarUsr.Visible = false;
             }
@@ -65,6 +67,13 @@ namespace Sinapxon.Administrador
         private void btnGestionarAlumno_Click(object sender, EventArgs e)
         {
             openChildForm(new frmGestionarAlumno(this));
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLogin formLogin = new frmLogin();
+            formLogin.Show();
         }
     }
 }

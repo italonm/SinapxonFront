@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/SinapxonSoftServices/AdministradorServices?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AdministradorServices.wsdl" MetadataType="Wsdl" ID="e784b163-dcab-405e-8c43-650f604d8dc5" SourceId="1" SourceUrl="http://localhost:8080/SinapxonSoftServices/AdministradorServices?WSDL" />
-    <MetadataFile FileName="AdministradorServices.xsd" MetadataType="Schema" ID="d5725510-bf7e-4a63-8299-e78ceb46aac2" SourceId="1" SourceUrl="http://localhost:8080/SinapxonSoftServices/AdministradorServices?xsd=1" />
+    <MetadataFile FileName="AdministradorServices.wsdl" MetadataType="Wsdl" ID="789942e2-ba10-475d-bb0d-9cb3491f8942" SourceId="1" SourceUrl="http://localhost:8080/SinapxonSoftServices/AdministradorServices?WSDL" />
+    <MetadataFile FileName="AdministradorServices.xsd" MetadataType="Schema" ID="b9b4c69c-841d-44be-91f7-864e60ae3e0f" SourceId="1" SourceUrl="http://localhost:8080/SinapxonSoftServices/AdministradorServices?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -47,19 +47,19 @@
             // lblNombreTema
             // 
             this.lblNombreTema.AutoSize = true;
-            this.lblNombreTema.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreTema.Location = new System.Drawing.Point(12, 17);
             this.lblNombreTema.Name = "lblNombreTema";
-            this.lblNombreTema.Size = new System.Drawing.Size(201, 29);
+            this.lblNombreTema.Size = new System.Drawing.Size(215, 29);
             this.lblNombreTema.TabIndex = 0;
             this.lblNombreTema.Text = "Nombre del tema";
             // 
             // webBrowser2
             // 
             this.webBrowser2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.webBrowser2.Location = new System.Drawing.Point(397, 125);
+            this.webBrowser2.Location = new System.Drawing.Point(367, 125);
             this.webBrowser2.Name = "webBrowser2";
-            this.webBrowser2.Size = new System.Drawing.Size(496, 303);
+            this.webBrowser2.Size = new System.Drawing.Size(546, 303);
             this.webBrowser2.TabIndex = 3;
             // 
             // dgvArchivos
@@ -70,7 +70,7 @@
             this.dgvArchivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArchivos.Location = new System.Drawing.Point(40, 537);
             this.dgvArchivos.Name = "dgvArchivos";
-            this.dgvArchivos.Size = new System.Drawing.Size(840, 286);
+            this.dgvArchivos.Size = new System.Drawing.Size(873, 284);
             this.dgvArchivos.TabIndex = 10;
             // 
             // lblDescripcion
@@ -79,11 +79,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
-            this.lblDescripcion.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.Color.White;
             this.lblDescripcion.Location = new System.Drawing.Point(30, 79);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(126, 25);
+            this.lblDescripcion.Size = new System.Drawing.Size(136, 25);
             this.lblDescripcion.TabIndex = 11;
             this.lblDescripcion.Text = "Descripción";
             // 
@@ -92,11 +92,11 @@
             this.lblVideo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVideo.AutoSize = true;
             this.lblVideo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
-            this.lblVideo.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVideo.ForeColor = System.Drawing.Color.White;
             this.lblVideo.Location = new System.Drawing.Point(385, 79);
             this.lblVideo.Name = "lblVideo";
-            this.lblVideo.Size = new System.Drawing.Size(67, 25);
+            this.lblVideo.Size = new System.Drawing.Size(72, 25);
             this.lblVideo.TabIndex = 12;
             this.lblVideo.Text = "Video";
             // 
@@ -104,11 +104,11 @@
             // 
             this.lblArchivosTema.AutoSize = true;
             this.lblArchivosTema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
-            this.lblArchivosTema.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArchivosTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArchivosTema.ForeColor = System.Drawing.Color.White;
             this.lblArchivosTema.Location = new System.Drawing.Point(30, 496);
             this.lblArchivosTema.Name = "lblArchivosTema";
-            this.lblArchivosTema.Size = new System.Drawing.Size(183, 25);
+            this.lblArchivosTema.Size = new System.Drawing.Size(200, 25);
             this.lblArchivosTema.TabIndex = 13;
             this.lblArchivosTema.Text = "Archivos del tema";
             // 
@@ -119,7 +119,7 @@
             this.pictureBox1.Image = global::Sinapxon.Properties.Resources.Bloque_G3;
             this.pictureBox1.Location = new System.Drawing.Point(12, 65);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(325, 385);
+            this.pictureBox1.Size = new System.Drawing.Size(328, 385);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -130,11 +130,11 @@
             this.btnDescargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.btnDescargar.FlatAppearance.BorderSize = 0;
             this.btnDescargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDescargar.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDescargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDescargar.ForeColor = System.Drawing.Color.White;
             this.btnDescargar.Image = global::Sinapxon.Properties.Resources.baseline_get_app_white_18dp;
             this.btnDescargar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDescargar.Location = new System.Drawing.Point(656, 486);
+            this.btnDescargar.Location = new System.Drawing.Point(689, 486);
             this.btnDescargar.Name = "btnDescargar";
             this.btnDescargar.Size = new System.Drawing.Size(224, 45);
             this.btnDescargar.TabIndex = 4;
@@ -147,9 +147,9 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::Sinapxon.Properties.Resources.Bloque_G3;
-            this.pictureBox2.Location = new System.Drawing.Point(378, 65);
+            this.pictureBox2.Location = new System.Drawing.Point(346, 65);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(533, 385);
+            this.pictureBox2.Size = new System.Drawing.Size(589, 385);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -161,7 +161,7 @@
             this.pictureBox3.Image = global::Sinapxon.Properties.Resources.Bloque_G3;
             this.pictureBox3.Location = new System.Drawing.Point(10, 470);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(901, 382);
+            this.pictureBox3.Size = new System.Drawing.Size(925, 382);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;

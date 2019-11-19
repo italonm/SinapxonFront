@@ -97,6 +97,7 @@ namespace Sinapxon.Alumno
         private void BtnVerClassroom_Click(object sender, EventArgs e)
         {
             frmExplorarClassroom formExplorarClassroom = new frmExplorarClassroom();
+            
             formExplorarClassroom.Visible = true;
         }
     }
