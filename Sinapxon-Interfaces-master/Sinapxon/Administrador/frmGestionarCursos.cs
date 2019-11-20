@@ -32,12 +32,12 @@ namespace Sinapxon.Administrador
 
         private void btnAniadirCurso_Click(object sender, EventArgs e)
         {
-            Padre.openChildForm(new frmCurso("Añadir"));
+            //Padre.openChildForm(new frmCurso("Añadir"));
         }
 
         private void btnEditarCurso_Click(object sender, EventArgs e)
         {
-            Padre.openChildForm(new frmCurso("Editar"));
+            //Padre.openChildForm(new frmCurso("Editar"));
         }
 
         private void dgvCursos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
