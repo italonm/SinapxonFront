@@ -17,12 +17,13 @@ namespace Sinapxon.Administrador
 
 
         Administrador.AdministradorServicesClient DBController = new Administrador.AdministradorServicesClient();
-
+        
         public alumno AlSeleccionado { get => alSeleccionado; set => alSeleccionado = value; }
 
         public frmGestionarAlumno()
         {
             InitializeComponent();
+            dgvAlumno.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvAlumno.AutoGenerateColumns = false;
             dgvAlumno.DataSource = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));
         }
@@ -30,6 +31,7 @@ namespace Sinapxon.Administrador
         public frmGestionarAlumno(frmAdministrador padre)
         {
             InitializeComponent();
+            dgvAlumno.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.Padre = padre;
             dgvAlumno.AutoGenerateColumns = false;
             dgvAlumno.DataSource = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));

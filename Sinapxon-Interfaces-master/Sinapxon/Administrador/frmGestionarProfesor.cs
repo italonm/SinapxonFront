@@ -72,6 +72,7 @@ namespace Sinapxon.Administrador
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            dgvProfesores.FirstDisplayedScrollingColumnIndex = dgvProfesores.RowCount - 1;
             frmDatosProfesor formDatosProfesor = new frmDatosProfesor(_padre);
             _padre.openChildForm(formDatosProfesor);
         }
