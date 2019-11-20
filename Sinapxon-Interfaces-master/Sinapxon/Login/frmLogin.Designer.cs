@@ -74,6 +74,7 @@
             this.txtContrasenia.Size = new System.Drawing.Size(214, 22);
             this.txtContrasenia.TabIndex = 4;
             this.txtContrasenia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtContrasenia.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContrasenia_KeyDown);
             // 
             // btnIngresar
             // 

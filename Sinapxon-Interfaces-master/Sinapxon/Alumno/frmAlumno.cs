@@ -62,5 +62,10 @@ namespace Sinapxon.Alumno
             frmLogin formLogin = new frmLogin();
             formLogin.Show();
         }
+
+        private void frmAlumno_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
