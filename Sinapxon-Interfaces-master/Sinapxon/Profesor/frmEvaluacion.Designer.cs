@@ -49,6 +49,7 @@
             this.panelTituloEntregables = new System.Windows.Forms.Panel();
             this.lblEntregable = new System.Windows.Forms.Label();
             this.butGuardar = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.panelDatosEvaluacion.SuspendLayout();
             this.panelTituloDatosEvaluacion.SuspendLayout();
             this.panelEntregables.SuspendLayout();
@@ -59,31 +60,31 @@
             // lblEvaluacion
             // 
             this.lblEvaluacion.AutoSize = true;
-            this.lblEvaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEvaluacion.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblEvaluacion.Location = new System.Drawing.Point(9, 10);
+            this.lblEvaluacion.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEvaluacion.ForeColor = System.Drawing.Color.Black;
+            this.lblEvaluacion.Location = new System.Drawing.Point(81, 29);
             this.lblEvaluacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEvaluacion.Name = "lblEvaluacion";
-            this.lblEvaluacion.Size = new System.Drawing.Size(140, 29);
+            this.lblEvaluacion.Size = new System.Drawing.Size(130, 29);
             this.lblEvaluacion.TabIndex = 0;
             this.lblEvaluacion.Text = "Evaluación";
             // 
             // lblPeso
             // 
             this.lblPeso.AutoSize = true;
-            this.lblPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeso.Location = new System.Drawing.Point(243, 48);
+            this.lblPeso.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeso.Location = new System.Drawing.Point(333, 72);
             this.lblPeso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(45, 20);
+            this.lblPeso.Size = new System.Drawing.Size(44, 19);
             this.lblPeso.TabIndex = 5;
             this.lblPeso.Text = "Peso";
             // 
             // txtPeso
             // 
             this.txtPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPeso.Location = new System.Drawing.Point(246, 73);
-            this.txtPeso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPeso.Location = new System.Drawing.Point(337, 97);
+            this.txtPeso.Margin = new System.Windows.Forms.Padding(2);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(89, 22);
             this.txtPeso.TabIndex = 4;
@@ -91,47 +92,47 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(16, 131);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescripcion.Location = new System.Drawing.Point(17, 271);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(319, 101);
+            this.txtDescripcion.Size = new System.Drawing.Size(401, 258);
             this.txtDescripcion.TabIndex = 3;
             // 
             // txtNombreEvaluacion
             // 
             this.txtNombreEvaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreEvaluacion.Location = new System.Drawing.Point(16, 73);
-            this.txtNombreEvaluacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreEvaluacion.Location = new System.Drawing.Point(16, 97);
+            this.txtNombreEvaluacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreEvaluacion.Name = "txtNombreEvaluacion";
-            this.txtNombreEvaluacion.Size = new System.Drawing.Size(219, 22);
+            this.txtNombreEvaluacion.Size = new System.Drawing.Size(317, 22);
             this.txtNombreEvaluacion.TabIndex = 2;
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(13, 109);
+            this.lblDescripcion.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Location = new System.Drawing.Point(13, 231);
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(92, 20);
+            this.lblDescripcion.Size = new System.Drawing.Size(92, 19);
             this.lblDescripcion.TabIndex = 1;
             this.lblDescripcion.Text = "Descripción";
             // 
             // lblNombreEvaluacion
             // 
             this.lblNombreEvaluacion.AutoSize = true;
-            this.lblNombreEvaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreEvaluacion.Location = new System.Drawing.Point(13, 48);
+            this.lblNombreEvaluacion.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreEvaluacion.Location = new System.Drawing.Point(13, 72);
             this.lblNombreEvaluacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreEvaluacion.Name = "lblNombreEvaluacion";
-            this.lblNombreEvaluacion.Size = new System.Drawing.Size(182, 20);
+            this.lblNombreEvaluacion.Size = new System.Drawing.Size(184, 19);
             this.lblNombreEvaluacion.TabIndex = 0;
             this.lblNombreEvaluacion.Text = "Nombre de la evaluación";
             // 
             // panelDatosEvaluacion
             // 
-            this.panelDatosEvaluacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panelDatosEvaluacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelDatosEvaluacion.Controls.Add(this.cbTemas);
             this.panelDatosEvaluacion.Controls.Add(this.lblTemas);
             this.panelDatosEvaluacion.Controls.Add(this.lblDescripcion);
@@ -141,10 +142,10 @@
             this.panelDatosEvaluacion.Controls.Add(this.lblPeso);
             this.panelDatosEvaluacion.Controls.Add(this.lblNombreEvaluacion);
             this.panelDatosEvaluacion.Controls.Add(this.txtNombreEvaluacion);
-            this.panelDatosEvaluacion.Location = new System.Drawing.Point(14, 66);
-            this.panelDatosEvaluacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDatosEvaluacion.Location = new System.Drawing.Point(12, 84);
+            this.panelDatosEvaluacion.Margin = new System.Windows.Forms.Padding(2);
             this.panelDatosEvaluacion.Name = "panelDatosEvaluacion";
-            this.panelDatosEvaluacion.Size = new System.Drawing.Size(348, 414);
+            this.panelDatosEvaluacion.Size = new System.Drawing.Size(448, 547);
             this.panelDatosEvaluacion.TabIndex = 3;
             // 
             // cbTemas
@@ -152,41 +153,41 @@
             this.cbTemas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbTemas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTemas.FormattingEnabled = true;
-            this.cbTemas.Location = new System.Drawing.Point(16, 269);
+            this.cbTemas.Location = new System.Drawing.Point(16, 178);
             this.cbTemas.Name = "cbTemas";
-            this.cbTemas.Size = new System.Drawing.Size(319, 28);
+            this.cbTemas.Size = new System.Drawing.Size(410, 28);
             this.cbTemas.TabIndex = 17;
             // 
             // lblTemas
             // 
             this.lblTemas.AutoSize = true;
-            this.lblTemas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTemas.Location = new System.Drawing.Point(13, 246);
+            this.lblTemas.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTemas.Location = new System.Drawing.Point(13, 141);
             this.lblTemas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTemas.Name = "lblTemas";
-            this.lblTemas.Size = new System.Drawing.Size(158, 20);
+            this.lblTemas.Size = new System.Drawing.Size(160, 19);
             this.lblTemas.TabIndex = 7;
             this.lblTemas.Text = "Temas del classroom";
             this.lblTemas.Click += new System.EventHandler(this.label1_Click);
             // 
             // panelTituloDatosEvaluacion
             // 
-            this.panelTituloDatosEvaluacion.BackColor = System.Drawing.Color.SlateBlue;
+            this.panelTituloDatosEvaluacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
             this.panelTituloDatosEvaluacion.Controls.Add(this.lblDatosEvaluacion);
             this.panelTituloDatosEvaluacion.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTituloDatosEvaluacion.Location = new System.Drawing.Point(0, 0);
-            this.panelTituloDatosEvaluacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTituloDatosEvaluacion.Margin = new System.Windows.Forms.Padding(2);
             this.panelTituloDatosEvaluacion.Name = "panelTituloDatosEvaluacion";
-            this.panelTituloDatosEvaluacion.Size = new System.Drawing.Size(348, 34);
+            this.panelTituloDatosEvaluacion.Size = new System.Drawing.Size(448, 58);
             this.panelTituloDatosEvaluacion.TabIndex = 0;
             // 
             // lblDatosEvaluacion
             // 
             this.lblDatosEvaluacion.AutoSize = true;
-            this.lblDatosEvaluacion.BackColor = System.Drawing.Color.SlateBlue;
+            this.lblDatosEvaluacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
             this.lblDatosEvaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDatosEvaluacion.ForeColor = System.Drawing.Color.White;
-            this.lblDatosEvaluacion.Location = new System.Drawing.Point(12, 6);
+            this.lblDatosEvaluacion.Location = new System.Drawing.Point(12, 18);
             this.lblDatosEvaluacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDatosEvaluacion.Name = "lblDatosEvaluacion";
             this.lblDatosEvaluacion.Size = new System.Drawing.Size(253, 25);
@@ -195,29 +196,29 @@
             // 
             // panelEntregables
             // 
-            this.panelEntregables.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panelEntregables.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelEntregables.Controls.Add(this.btnQuitarEvaluacion);
             this.panelEntregables.Controls.Add(this.btnAgregarEntregable);
             this.panelEntregables.Controls.Add(this.dgvEntregables);
             this.panelEntregables.Controls.Add(this.panelTituloEntregables);
-            this.panelEntregables.Location = new System.Drawing.Point(377, 66);
-            this.panelEntregables.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelEntregables.Location = new System.Drawing.Point(493, 84);
+            this.panelEntregables.Margin = new System.Windows.Forms.Padding(2);
             this.panelEntregables.Name = "panelEntregables";
-            this.panelEntregables.Size = new System.Drawing.Size(319, 414);
+            this.panelEntregables.Size = new System.Drawing.Size(444, 547);
             this.panelEntregables.TabIndex = 4;
             // 
             // btnQuitarEvaluacion
             // 
-            this.btnQuitarEvaluacion.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnQuitarEvaluacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.btnQuitarEvaluacion.FlatAppearance.BorderSize = 0;
             this.btnQuitarEvaluacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuitarEvaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarEvaluacion.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitarEvaluacion.ForeColor = System.Drawing.Color.White;
             this.btnQuitarEvaluacion.Image = global::Sinapxon.Properties.Resources.baseline_remove_circle_white_18dp;
-            this.btnQuitarEvaluacion.Location = new System.Drawing.Point(165, 47);
-            this.btnQuitarEvaluacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQuitarEvaluacion.Location = new System.Drawing.Point(242, 79);
+            this.btnQuitarEvaluacion.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuitarEvaluacion.Name = "btnQuitarEvaluacion";
-            this.btnQuitarEvaluacion.Size = new System.Drawing.Size(141, 48);
+            this.btnQuitarEvaluacion.Size = new System.Drawing.Size(186, 48);
             this.btnQuitarEvaluacion.TabIndex = 3;
             this.btnQuitarEvaluacion.Text = "Quitar";
             this.btnQuitarEvaluacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -225,16 +226,16 @@
             // 
             // btnAgregarEntregable
             // 
-            this.btnAgregarEntregable.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnAgregarEntregable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.btnAgregarEntregable.FlatAppearance.BorderSize = 0;
             this.btnAgregarEntregable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarEntregable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarEntregable.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarEntregable.ForeColor = System.Drawing.Color.White;
             this.btnAgregarEntregable.Image = global::Sinapxon.Properties.Resources.baseline_add_circle_white_18dp;
-            this.btnAgregarEntregable.Location = new System.Drawing.Point(13, 47);
-            this.btnAgregarEntregable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarEntregable.Location = new System.Drawing.Point(13, 79);
+            this.btnAgregarEntregable.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarEntregable.Name = "btnAgregarEntregable";
-            this.btnAgregarEntregable.Size = new System.Drawing.Size(143, 48);
+            this.btnAgregarEntregable.Size = new System.Drawing.Size(196, 48);
             this.btnAgregarEntregable.TabIndex = 2;
             this.btnAgregarEntregable.Text = "Añadir";
             this.btnAgregarEntregable.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -260,21 +261,21 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEntregables.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvEntregables.Location = new System.Drawing.Point(13, 99);
-            this.dgvEntregables.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvEntregables.Location = new System.Drawing.Point(13, 134);
+            this.dgvEntregables.Margin = new System.Windows.Forms.Padding(2);
             this.dgvEntregables.Name = "dgvEntregables";
-            this.dgvEntregables.Size = new System.Drawing.Size(293, 298);
+            this.dgvEntregables.Size = new System.Drawing.Size(415, 401);
             this.dgvEntregables.TabIndex = 1;
             // 
             // panelTituloEntregables
             // 
-            this.panelTituloEntregables.BackColor = System.Drawing.Color.SlateBlue;
+            this.panelTituloEntregables.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
             this.panelTituloEntregables.Controls.Add(this.lblEntregable);
             this.panelTituloEntregables.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTituloEntregables.Location = new System.Drawing.Point(0, 0);
-            this.panelTituloEntregables.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTituloEntregables.Margin = new System.Windows.Forms.Padding(2);
             this.panelTituloEntregables.Name = "panelTituloEntregables";
-            this.panelTituloEntregables.Size = new System.Drawing.Size(319, 34);
+            this.panelTituloEntregables.Size = new System.Drawing.Size(444, 58);
             this.panelTituloEntregables.TabIndex = 0;
             // 
             // lblEntregable
@@ -282,7 +283,7 @@
             this.lblEntregable.AutoSize = true;
             this.lblEntregable.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEntregable.ForeColor = System.Drawing.Color.White;
-            this.lblEntregable.Location = new System.Drawing.Point(9, 6);
+            this.lblEntregable.Location = new System.Drawing.Point(18, 18);
             this.lblEntregable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEntregable.Name = "lblEntregable";
             this.lblEntregable.Size = new System.Drawing.Size(138, 25);
@@ -291,13 +292,13 @@
             // 
             // butGuardar
             // 
-            this.butGuardar.BackColor = System.Drawing.Color.SlateBlue;
+            this.butGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.butGuardar.FlatAppearance.BorderSize = 0;
             this.butGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butGuardar.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butGuardar.ForeColor = System.Drawing.Color.White;
-            this.butGuardar.Image = global::Sinapxon.Properties.Resources.guardar;
-            this.butGuardar.Location = new System.Drawing.Point(540, 10);
+            this.butGuardar.Image = global::Sinapxon.Properties.Resources.round_save_white_18dp;
+            this.butGuardar.Location = new System.Drawing.Point(779, 21);
             this.butGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.butGuardar.Name = "butGuardar";
             this.butGuardar.Size = new System.Drawing.Size(156, 48);
@@ -307,19 +308,32 @@
             this.butGuardar.UseVisualStyleBackColor = false;
             this.butGuardar.Click += new System.EventHandler(this.butGuardar_Click);
             // 
+            // btnAtras
+            // 
+            this.btnAtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.btnAtras.FlatAppearance.BorderSize = 0;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtras.Image = global::Sinapxon.Properties.Resources.round_arrow_left_white_36dp;
+            this.btnAtras.Location = new System.Drawing.Point(12, 18);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(50, 50);
+            this.btnAtras.TabIndex = 21;
+            this.btnAtras.UseVisualStyleBackColor = false;
+            // 
             // frmEvaluacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(711, 491);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
+            this.ClientSize = new System.Drawing.Size(948, 642);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.butGuardar);
             this.Controls.Add(this.panelEntregables);
             this.Controls.Add(this.panelDatosEvaluacion);
             this.Controls.Add(this.lblEvaluacion);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEvaluacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Añadir Evaluación";
@@ -357,5 +371,6 @@
         private System.Windows.Forms.Label lblTemas;
         private System.Windows.Forms.ComboBox cbTemas;
         private System.Windows.Forms.Button butGuardar;
+        private System.Windows.Forms.Button btnAtras;
     }
 }
