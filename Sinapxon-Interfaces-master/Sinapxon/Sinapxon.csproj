@@ -456,10 +456,16 @@
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarProfesoresResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarSolicitudesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.pais.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.profesor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.solicitudClassroom.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Alumno\AlumnoServices.wsdl" />
