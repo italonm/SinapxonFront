@@ -188,26 +188,6 @@ namespace Sinapxon.Alumno
         }
 
         //====================================================================================================
-        //Eliminar estos eventos
-        private void BtnX_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void BtnTemas_Click(object sender, EventArgs e)
-        {
-            frmTemas formTemas = new frmTemas();
-            formTemas.Visible = true;
-            
-        }
-
-        private void BtnEvaluaciones_Click(object sender, EventArgs e)
-        {
-            frmEvaluaciones formEvaluaciones = new frmEvaluaciones();
-            formEvaluaciones.Visible = true;
-        }
-
-        //====================================================================================================
 
         private void btnVerEvaluacion_Click(object sender, EventArgs e)
         {

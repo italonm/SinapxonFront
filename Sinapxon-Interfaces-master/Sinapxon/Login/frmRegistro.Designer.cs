@@ -108,10 +108,9 @@
             this.lblNickname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.lblNickname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNickname.ForeColor = System.Drawing.Color.White;
-            this.lblNickname.Location = new System.Drawing.Point(678, 57);
-            this.lblNickname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNickname.Location = new System.Drawing.Point(452, 37);
             this.lblNickname.Name = "lblNickname";
-            this.lblNickname.Size = new System.Drawing.Size(121, 29);
+            this.lblNickname.Size = new System.Drawing.Size(79, 20);
             this.lblNickname.TabIndex = 0;
             this.lblNickname.Text = "Nickname";
             // 
@@ -121,10 +120,9 @@
             this.lblPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.Color.White;
-            this.lblPassword.Location = new System.Drawing.Point(56, 218);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPassword.Location = new System.Drawing.Point(37, 142);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(120, 29);
+            this.lblPassword.Size = new System.Drawing.Size(78, 20);
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Text = "Password";
             // 
@@ -134,10 +132,9 @@
             this.lblNombres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.lblNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombres.ForeColor = System.Drawing.Color.White;
-            this.lblNombres.Location = new System.Drawing.Point(56, 55);
-            this.lblNombres.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombres.Location = new System.Drawing.Point(37, 36);
             this.lblNombres.Name = "lblNombres";
-            this.lblNombres.Size = new System.Drawing.Size(113, 29);
+            this.lblNombres.Size = new System.Drawing.Size(73, 20);
             this.lblNombres.TabIndex = 2;
             this.lblNombres.Text = "Nombres";
             // 
@@ -147,10 +144,9 @@
             this.lblApellidoPaterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.lblApellidoPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellidoPaterno.ForeColor = System.Drawing.Color.White;
-            this.lblApellidoPaterno.Location = new System.Drawing.Point(56, 209);
-            this.lblApellidoPaterno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblApellidoPaterno.Location = new System.Drawing.Point(37, 136);
             this.lblApellidoPaterno.Name = "lblApellidoPaterno";
-            this.lblApellidoPaterno.Size = new System.Drawing.Size(190, 29);
+            this.lblApellidoPaterno.Size = new System.Drawing.Size(124, 20);
             this.lblApellidoPaterno.TabIndex = 3;
             this.lblApellidoPaterno.Text = "Apellido paterno";
             // 
@@ -160,10 +156,9 @@
             this.lblApellidoMaterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.lblApellidoMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellidoMaterno.ForeColor = System.Drawing.Color.White;
-            this.lblApellidoMaterno.Location = new System.Drawing.Point(678, 209);
-            this.lblApellidoMaterno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblApellidoMaterno.Location = new System.Drawing.Point(452, 136);
             this.lblApellidoMaterno.Name = "lblApellidoMaterno";
-            this.lblApellidoMaterno.Size = new System.Drawing.Size(196, 29);
+            this.lblApellidoMaterno.Size = new System.Drawing.Size(128, 20);
             this.lblApellidoMaterno.TabIndex = 4;
             this.lblApellidoMaterno.Text = "Apellido materno";
             // 
@@ -173,10 +168,9 @@
             this.lblDni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.lblDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDni.ForeColor = System.Drawing.Color.White;
-            this.lblDni.Location = new System.Drawing.Point(678, 54);
-            this.lblDni.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDni.Location = new System.Drawing.Point(452, 35);
             this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(54, 29);
+            this.lblDni.Size = new System.Drawing.Size(37, 20);
             this.lblDni.TabIndex = 5;
             this.lblDni.Text = "DNI";
             // 
@@ -185,10 +179,9 @@
             this.lblRegistroUsuario.AutoSize = true;
             this.lblRegistroUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistroUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblRegistroUsuario.Location = new System.Drawing.Point(18, 14);
-            this.lblRegistroUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRegistroUsuario.Location = new System.Drawing.Point(12, 9);
             this.lblRegistroUsuario.Name = "lblRegistroUsuario";
-            this.lblRegistroUsuario.Size = new System.Drawing.Size(348, 40);
+            this.lblRegistroUsuario.Size = new System.Drawing.Size(242, 29);
             this.lblRegistroUsuario.TabIndex = 6;
             this.lblRegistroUsuario.Text = "Registro de usuario";
             // 
@@ -198,10 +191,9 @@
             this.lblCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.ForeColor = System.Drawing.Color.White;
-            this.lblCorreo.Location = new System.Drawing.Point(56, 57);
-            this.lblCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCorreo.Location = new System.Drawing.Point(37, 37);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(213, 29);
+            this.lblCorreo.Size = new System.Drawing.Size(138, 20);
             this.lblCorreo.TabIndex = 7;
             this.lblCorreo.Text = "Correo electrónico";
             // 
@@ -211,10 +203,9 @@
             this.txtNickname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNickname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNickname.ForeColor = System.Drawing.Color.White;
-            this.txtNickname.Location = new System.Drawing.Point(684, 92);
-            this.txtNickname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNickname.Location = new System.Drawing.Point(456, 60);
             this.txtNickname.Name = "txtNickname";
-            this.txtNickname.Size = new System.Drawing.Size(513, 28);
+            this.txtNickname.Size = new System.Drawing.Size(342, 19);
             this.txtNickname.TabIndex = 8;
             // 
             // txtPassword
@@ -223,8 +214,7 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.Location = new System.Drawing.Point(62, 258);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPassword.Location = new System.Drawing.Point(41, 168);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
             this.txtPassword.Size = new System.Drawing.Size(513, 28);
@@ -236,10 +226,9 @@
             this.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombres.ForeColor = System.Drawing.Color.White;
-            this.txtNombres.Location = new System.Drawing.Point(60, 88);
-            this.txtNombres.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombres.Location = new System.Drawing.Point(40, 57);
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(513, 28);
+            this.txtNombres.Size = new System.Drawing.Size(342, 19);
             this.txtNombres.TabIndex = 10;
             // 
             // txtApellidoPaterno
@@ -248,10 +237,9 @@
             this.txtApellidoPaterno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApellidoPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidoPaterno.ForeColor = System.Drawing.Color.White;
-            this.txtApellidoPaterno.Location = new System.Drawing.Point(60, 243);
-            this.txtApellidoPaterno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtApellidoPaterno.Location = new System.Drawing.Point(40, 158);
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
-            this.txtApellidoPaterno.Size = new System.Drawing.Size(513, 28);
+            this.txtApellidoPaterno.Size = new System.Drawing.Size(342, 19);
             this.txtApellidoPaterno.TabIndex = 11;
             // 
             // txtApellidoMaterno
@@ -260,10 +248,9 @@
             this.txtApellidoMaterno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApellidoMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidoMaterno.ForeColor = System.Drawing.Color.White;
-            this.txtApellidoMaterno.Location = new System.Drawing.Point(684, 243);
-            this.txtApellidoMaterno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtApellidoMaterno.Location = new System.Drawing.Point(456, 158);
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
-            this.txtApellidoMaterno.Size = new System.Drawing.Size(513, 28);
+            this.txtApellidoMaterno.Size = new System.Drawing.Size(342, 19);
             this.txtApellidoMaterno.TabIndex = 12;
             // 
             // txtDni
@@ -272,10 +259,9 @@
             this.txtDni.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDni.ForeColor = System.Drawing.Color.White;
-            this.txtDni.Location = new System.Drawing.Point(684, 88);
-            this.txtDni.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDni.Location = new System.Drawing.Point(456, 57);
             this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(513, 28);
+            this.txtDni.Size = new System.Drawing.Size(342, 19);
             this.txtDni.TabIndex = 13;
             // 
             // txtCorreo
@@ -284,10 +270,9 @@
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.Color.White;
-            this.txtCorreo.Location = new System.Drawing.Point(60, 92);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCorreo.Location = new System.Drawing.Point(40, 60);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(513, 28);
+            this.txtCorreo.Size = new System.Drawing.Size(342, 19);
             this.txtCorreo.TabIndex = 14;
             // 
             // btnRegistrarse
@@ -295,12 +280,11 @@
             this.btnRegistrarse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.btnRegistrarse.FlatAppearance.BorderSize = 0;
             this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarse.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarse.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarse.Location = new System.Drawing.Point(1631, 835);
-            this.btnRegistrarse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRegistrarse.Location = new System.Drawing.Point(957, 431);
             this.btnRegistrarse.Name = "btnRegistrarse";
-            this.btnRegistrarse.Size = new System.Drawing.Size(150, 46);
+            this.btnRegistrarse.Size = new System.Drawing.Size(215, 50);
             this.btnRegistrarse.TabIndex = 15;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.UseVisualStyleBackColor = false;
@@ -312,10 +296,9 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(678, 218);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(452, 142);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 29);
+            this.label1.Size = new System.Drawing.Size(133, 20);
             this.label1.TabIndex = 16;
             this.label1.Text = "Repetir password";
             // 
@@ -325,8 +308,7 @@
             this.txtRepetirPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRepetirPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRepetirPassword.ForeColor = System.Drawing.Color.White;
-            this.txtRepetirPassword.Location = new System.Drawing.Point(684, 258);
-            this.txtRepetirPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtRepetirPassword.Location = new System.Drawing.Point(456, 168);
             this.txtRepetirPassword.Name = "txtRepetirPassword";
             this.txtRepetirPassword.PasswordChar = '●';
             this.txtRepetirPassword.Size = new System.Drawing.Size(513, 28);
@@ -363,20 +345,19 @@
             this.gbDatosPersonales.Controls.Add(this.pictureBox4);
             this.gbDatosPersonales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosPersonales.ForeColor = System.Drawing.Color.White;
-            this.gbDatosPersonales.Location = new System.Drawing.Point(26, 91);
-            this.gbDatosPersonales.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbDatosPersonales.Location = new System.Drawing.Point(17, 59);
             this.gbDatosPersonales.Name = "gbDatosPersonales";
-            this.gbDatosPersonales.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gbDatosPersonales.Size = new System.Drawing.Size(1763, 525);
+            this.gbDatosPersonales.Size = new System.Drawing.Size(1175, 341);
             this.gbDatosPersonales.TabIndex = 18;
             this.gbDatosPersonales.TabStop = false;
             this.gbDatosPersonales.Text = "Datos personales";
             // 
             // dtpFechaNac
             // 
-            this.dtpFechaNac.Location = new System.Drawing.Point(684, 402);
+            this.dtpFechaNac.Location = new System.Drawing.Point(456, 261);
+            this.dtpFechaNac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(513, 35);
+            this.dtpFechaNac.Size = new System.Drawing.Size(343, 26);
             this.dtpFechaNac.TabIndex = 37;
             // 
             // lblFechaNac
@@ -385,20 +366,18 @@
             this.lblFechaNac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.lblFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaNac.ForeColor = System.Drawing.Color.White;
-            this.lblFechaNac.Location = new System.Drawing.Point(671, 367);
-            this.lblFechaNac.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaNac.Location = new System.Drawing.Point(447, 239);
             this.lblFechaNac.Name = "lblFechaNac";
-            this.lblFechaNac.Size = new System.Drawing.Size(242, 29);
+            this.lblFechaNac.Size = new System.Drawing.Size(159, 20);
             this.lblFechaNac.TabIndex = 35;
             this.lblFechaNac.Text = "Fecha de Nacimiento";
             // 
             // pictureBox20
             // 
             this.pictureBox20.Image = global::Sinapxon.Properties.Resources.ContenedorTXT;
-            this.pictureBox20.Location = new System.Drawing.Point(639, 346);
-            this.pictureBox20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox20.Location = new System.Drawing.Point(426, 225);
             this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(606, 126);
+            this.pictureBox20.Size = new System.Drawing.Size(404, 82);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox20.TabIndex = 36;
             this.pictureBox20.TabStop = false;
@@ -407,10 +386,9 @@
             // 
             this.pictureBox18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.pictureBox18.Image = global::Sinapxon.Properties.Resources.Barra_P_Blanco;
-            this.pictureBox18.Location = new System.Drawing.Point(61, 438);
-            this.pictureBox18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox18.Location = new System.Drawing.Point(41, 285);
             this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(513, 5);
+            this.pictureBox18.Size = new System.Drawing.Size(342, 3);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox18.TabIndex = 34;
             this.pictureBox18.TabStop = false;
@@ -421,10 +399,9 @@
             this.lblTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefono.ForeColor = System.Drawing.Color.White;
-            this.lblTelefono.Location = new System.Drawing.Point(57, 367);
-            this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTelefono.Location = new System.Drawing.Point(38, 239);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(110, 29);
+            this.lblTelefono.Size = new System.Drawing.Size(71, 20);
             this.lblTelefono.TabIndex = 31;
             this.lblTelefono.Text = "Teléfono";
             // 
@@ -434,19 +411,17 @@
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.White;
-            this.txtTelefono.Location = new System.Drawing.Point(61, 401);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTelefono.Location = new System.Drawing.Point(41, 261);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(513, 28);
+            this.txtTelefono.Size = new System.Drawing.Size(342, 19);
             this.txtTelefono.TabIndex = 32;
             // 
             // pictureBox19
             // 
             this.pictureBox19.Image = global::Sinapxon.Properties.Resources.ContenedorTXT;
-            this.pictureBox19.Location = new System.Drawing.Point(25, 346);
-            this.pictureBox19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox19.Location = new System.Drawing.Point(17, 225);
             this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(606, 126);
+            this.pictureBox19.Size = new System.Drawing.Size(404, 82);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox19.TabIndex = 33;
             this.pictureBox19.TabStop = false;
@@ -454,19 +429,19 @@
             // cboPais
             // 
             this.cboPais.FormattingEnabled = true;
-            this.cboPais.Location = new System.Drawing.Point(1297, 93);
+            this.cboPais.Location = new System.Drawing.Point(865, 60);
+            this.cboPais.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboPais.Name = "cboPais";
-            this.cboPais.Size = new System.Drawing.Size(413, 37);
+            this.cboPais.Size = new System.Drawing.Size(277, 28);
             this.cboPais.TabIndex = 30;
             // 
             // pictureBox16
             // 
             this.pictureBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.pictureBox16.Image = global::Sinapxon.Properties.Resources.Barra_P_Blanco;
-            this.pictureBox16.Location = new System.Drawing.Point(1298, 120);
-            this.pictureBox16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox16.Location = new System.Drawing.Point(865, 78);
             this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(273, 10);
+            this.pictureBox16.Size = new System.Drawing.Size(182, 6);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox16.TabIndex = 29;
             this.pictureBox16.TabStop = false;
@@ -475,10 +450,9 @@
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.pictureBox11.Image = global::Sinapxon.Properties.Resources.Barra_P_Blanco;
-            this.pictureBox11.Location = new System.Drawing.Point(684, 280);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox11.Location = new System.Drawing.Point(456, 182);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(513, 5);
+            this.pictureBox11.Size = new System.Drawing.Size(342, 3);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 21;
             this.pictureBox11.TabStop = false;
@@ -487,10 +461,9 @@
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.pictureBox10.Image = global::Sinapxon.Properties.Resources.Barra_P_Blanco;
-            this.pictureBox10.Location = new System.Drawing.Point(60, 280);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox10.Location = new System.Drawing.Point(40, 182);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(513, 5);
+            this.pictureBox10.Size = new System.Drawing.Size(342, 3);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 25;
             this.pictureBox10.TabStop = false;
@@ -501,10 +474,9 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1292, 54);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(861, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 29);
+            this.label2.Size = new System.Drawing.Size(39, 20);
             this.label2.TabIndex = 26;
             this.label2.Text = "País";
             // 
@@ -512,10 +484,9 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.pictureBox9.Image = global::Sinapxon.Properties.Resources.Barra_P_Blanco;
-            this.pictureBox9.Location = new System.Drawing.Point(684, 125);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox9.Location = new System.Drawing.Point(456, 81);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(513, 5);
+            this.pictureBox9.Size = new System.Drawing.Size(342, 3);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 24;
             this.pictureBox9.TabStop = false;
@@ -524,10 +495,9 @@
             // 
             this.pbLineNombres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.pbLineNombres.Image = global::Sinapxon.Properties.Resources.Barra_P_Blanco;
-            this.pbLineNombres.Location = new System.Drawing.Point(62, 125);
-            this.pbLineNombres.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbLineNombres.Location = new System.Drawing.Point(41, 81);
             this.pbLineNombres.Name = "pbLineNombres";
-            this.pbLineNombres.Size = new System.Drawing.Size(513, 5);
+            this.pbLineNombres.Size = new System.Drawing.Size(342, 3);
             this.pbLineNombres.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLineNombres.TabIndex = 20;
             this.pbLineNombres.TabStop = false;
@@ -535,10 +505,9 @@
             // pictureBox17
             // 
             this.pictureBox17.Image = global::Sinapxon.Properties.Resources.ContenedorTXT;
-            this.pictureBox17.Location = new System.Drawing.Point(1253, 40);
-            this.pictureBox17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox17.Location = new System.Drawing.Point(835, 26);
             this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(502, 126);
+            this.pictureBox17.Size = new System.Drawing.Size(335, 82);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox17.TabIndex = 28;
             this.pictureBox17.TabStop = false;
@@ -546,10 +515,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Sinapxon.Properties.Resources.ContenedorTXT;
-            this.pictureBox2.Location = new System.Drawing.Point(639, 40);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(426, 26);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(606, 126);
+            this.pictureBox2.Size = new System.Drawing.Size(404, 82);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
@@ -557,10 +525,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Sinapxon.Properties.Resources.ContenedorTXT;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 40);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 26);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(606, 126);
+            this.pictureBox1.Size = new System.Drawing.Size(404, 82);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
@@ -568,10 +535,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Sinapxon.Properties.Resources.ContenedorTXT;
-            this.pictureBox3.Location = new System.Drawing.Point(24, 188);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox3.Location = new System.Drawing.Point(16, 122);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(606, 126);
+            this.pictureBox3.Size = new System.Drawing.Size(404, 82);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 22;
             this.pictureBox3.TabStop = false;
@@ -579,10 +545,9 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Sinapxon.Properties.Resources.ContenedorTXT;
-            this.pictureBox4.Location = new System.Drawing.Point(639, 188);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox4.Location = new System.Drawing.Point(426, 122);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(606, 126);
+            this.pictureBox4.Size = new System.Drawing.Size(404, 82);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 23;
             this.pictureBox4.TabStop = false;
@@ -607,11 +572,9 @@
             this.gbDatosCuenta.Controls.Add(this.pictureBox8);
             this.gbDatosCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosCuenta.ForeColor = System.Drawing.Color.White;
-            this.gbDatosCuenta.Location = new System.Drawing.Point(26, 663);
-            this.gbDatosCuenta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbDatosCuenta.Location = new System.Drawing.Point(17, 431);
             this.gbDatosCuenta.Name = "gbDatosCuenta";
-            this.gbDatosCuenta.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gbDatosCuenta.Size = new System.Drawing.Size(1281, 363);
+            this.gbDatosCuenta.Size = new System.Drawing.Size(854, 236);
             this.gbDatosCuenta.TabIndex = 19;
             this.gbDatosCuenta.TabStop = false;
             this.gbDatosCuenta.Text = "Datos de la cuenta";
@@ -620,10 +583,9 @@
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.pictureBox15.Image = global::Sinapxon.Properties.Resources.Barra_P_Blanco;
-            this.pictureBox15.Location = new System.Drawing.Point(684, 295);
-            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox15.Location = new System.Drawing.Point(456, 192);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(513, 5);
+            this.pictureBox15.Size = new System.Drawing.Size(342, 3);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 30;
             this.pictureBox15.TabStop = false;
@@ -632,10 +594,9 @@
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.pictureBox14.Image = global::Sinapxon.Properties.Resources.Barra_P_Blanco;
-            this.pictureBox14.Location = new System.Drawing.Point(62, 295);
-            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox14.Location = new System.Drawing.Point(41, 192);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(513, 5);
+            this.pictureBox14.Size = new System.Drawing.Size(342, 3);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 29;
             this.pictureBox14.TabStop = false;
@@ -644,10 +605,9 @@
             // 
             this.pictureBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.pictureBox13.Image = global::Sinapxon.Properties.Resources.Barra_P_Blanco;
-            this.pictureBox13.Location = new System.Drawing.Point(684, 129);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox13.Location = new System.Drawing.Point(456, 84);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(513, 5);
+            this.pictureBox13.Size = new System.Drawing.Size(342, 3);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 28;
             this.pictureBox13.TabStop = false;
@@ -656,10 +616,9 @@
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.pictureBox12.Image = global::Sinapxon.Properties.Resources.Barra_P_Blanco;
-            this.pictureBox12.Location = new System.Drawing.Point(62, 129);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox12.Location = new System.Drawing.Point(41, 84);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(513, 5);
+            this.pictureBox12.Size = new System.Drawing.Size(342, 3);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 26;
             this.pictureBox12.TabStop = false;
@@ -667,10 +626,9 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Sinapxon.Properties.Resources.ContenedorTXT;
-            this.pictureBox5.Location = new System.Drawing.Point(24, 40);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox5.Location = new System.Drawing.Point(16, 26);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(606, 126);
+            this.pictureBox5.Size = new System.Drawing.Size(404, 82);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 24;
             this.pictureBox5.TabStop = false;
@@ -678,10 +636,9 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Sinapxon.Properties.Resources.ContenedorTXT;
-            this.pictureBox6.Location = new System.Drawing.Point(639, 40);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox6.Location = new System.Drawing.Point(426, 26);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(606, 126);
+            this.pictureBox6.Size = new System.Drawing.Size(404, 82);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 25;
             this.pictureBox6.TabStop = false;
@@ -689,10 +646,9 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Sinapxon.Properties.Resources.ContenedorTXT;
-            this.pictureBox7.Location = new System.Drawing.Point(24, 198);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox7.Location = new System.Drawing.Point(16, 129);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(606, 126);
+            this.pictureBox7.Size = new System.Drawing.Size(404, 82);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 26;
             this.pictureBox7.TabStop = false;
@@ -700,10 +656,9 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::Sinapxon.Properties.Resources.ContenedorTXT;
-            this.pictureBox8.Location = new System.Drawing.Point(639, 198);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox8.Location = new System.Drawing.Point(426, 129);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(606, 126);
+            this.pictureBox8.Size = new System.Drawing.Size(404, 82);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 27;
             this.pictureBox8.TabStop = false;
@@ -713,12 +668,11 @@
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(1631, 967);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCancelar.Location = new System.Drawing.Point(957, 592);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(150, 46);
+            this.btnCancelar.Size = new System.Drawing.Size(215, 50);
             this.btnCancelar.TabIndex = 20;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -729,12 +683,11 @@
             this.btnRestablecer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.btnRestablecer.FlatAppearance.BorderSize = 0;
             this.btnRestablecer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestablecer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnRestablecer.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRestablecer.ForeColor = System.Drawing.Color.White;
-            this.btnRestablecer.Location = new System.Drawing.Point(1631, 903);
-            this.btnRestablecer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRestablecer.Location = new System.Drawing.Point(957, 515);
             this.btnRestablecer.Name = "btnRestablecer";
-            this.btnRestablecer.Size = new System.Drawing.Size(150, 46);
+            this.btnRestablecer.Size = new System.Drawing.Size(215, 50);
             this.btnRestablecer.TabIndex = 21;
             this.btnRestablecer.Text = "Restablecer";
             this.btnRestablecer.UseVisualStyleBackColor = false;
@@ -742,17 +695,16 @@
             // 
             // frmRegistro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(27)))), ((int)(((byte)(146)))));
-            this.ClientSize = new System.Drawing.Size(1805, 1050);
+            this.ClientSize = new System.Drawing.Size(1203, 682);
             this.Controls.Add(this.btnRestablecer);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.gbDatosCuenta);
             this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.lblRegistroUsuario);
             this.Controls.Add(this.gbDatosPersonales);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmRegistro";
             this.Text = "frmRegistro";
             this.gbDatosPersonales.ResumeLayout(false);

@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTema = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
@@ -37,8 +39,8 @@
             this.btnAniadirArchivo = new System.Windows.Forms.Button();
             this.btnExaminar = new System.Windows.Forms.Button();
             this.txtBuscarArchivo = new System.Windows.Forms.TextBox();
-            this.btnGuardarTema = new System.Windows.Forms.Button();
             this.panelDatosTema = new System.Windows.Forms.Panel();
+            this.cbTemas = new System.Windows.Forms.ComboBox();
             this.panelTituloTema = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelVideo = new System.Windows.Forms.Panel();
@@ -49,7 +51,8 @@
             this.dgvArchivos = new System.Windows.Forms.DataGridView();
             this.panelTituloArchivosClassroom = new System.Windows.Forms.Panel();
             this.lblArchivosTema = new System.Windows.Forms.Label();
-            this.cbTemas = new System.Windows.Forms.ComboBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.panelDatosTema.SuspendLayout();
             this.panelTituloTema.SuspendLayout();
             this.panelVideo.SuspendLayout();
@@ -62,80 +65,92 @@
             // lblTema
             // 
             this.lblTema.AutoSize = true;
-            this.lblTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTema.Location = new System.Drawing.Point(13, 19);
+            this.lblTema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
+            this.lblTema.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTema.ForeColor = System.Drawing.Color.Black;
+            this.lblTema.Location = new System.Drawing.Point(71, 31);
+            this.lblTema.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTema.Name = "lblTema";
-            this.lblTema.Size = new System.Drawing.Size(92, 36);
+            this.lblTema.Size = new System.Drawing.Size(74, 29);
             this.lblTema.TabIndex = 0;
             this.lblTema.Text = "Tema";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(34, 52);
+            this.lblNombre.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(24, 78);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(175, 25);
+            this.lblNombre.Size = new System.Drawing.Size(130, 19);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre del tema";
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(473, 52);
+            this.lblDescripcion.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Location = new System.Drawing.Point(436, 62);
+            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(125, 25);
+            this.lblDescripcion.Size = new System.Drawing.Size(92, 19);
             this.lblDescripcion.TabIndex = 2;
             this.lblDescripcion.Text = "Descripción";
             // 
             // lblLinkVideo
             // 
             this.lblLinkVideo.AutoSize = true;
-            this.lblLinkVideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLinkVideo.Location = new System.Drawing.Point(34, 56);
+            this.lblLinkVideo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLinkVideo.Location = new System.Drawing.Point(26, 71);
+            this.lblLinkVideo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLinkVideo.Name = "lblLinkVideo";
-            this.lblLinkVideo.Size = new System.Drawing.Size(146, 25);
+            this.lblLinkVideo.Size = new System.Drawing.Size(105, 19);
             this.lblLinkVideo.TabIndex = 3;
             this.lblLinkVideo.Text = "URL del video";
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(478, 90);
+            this.txtDescripcion.Location = new System.Drawing.Point(437, 89);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(391, 87);
+            this.txtDescripcion.Size = new System.Drawing.Size(490, 67);
             this.txtDescripcion.TabIndex = 4;
             // 
             // txtLinkVideo
             // 
             this.txtLinkVideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLinkVideo.Location = new System.Drawing.Point(38, 81);
+            this.txtLinkVideo.Location = new System.Drawing.Point(28, 93);
+            this.txtLinkVideo.Margin = new System.Windows.Forms.Padding(2);
             this.txtLinkVideo.Name = "txtLinkVideo";
-            this.txtLinkVideo.Size = new System.Drawing.Size(831, 26);
+            this.txtLinkVideo.Size = new System.Drawing.Size(899, 22);
             this.txtLinkVideo.TabIndex = 4;
             // 
             // btnAniadirArchivo
             // 
-            this.btnAniadirArchivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.btnAniadirArchivo.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnAniadirArchivo.FlatAppearance.BorderSize = 0;
             this.btnAniadirArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAniadirArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAniadirArchivo.ForeColor = System.Drawing.Color.White;
-            this.btnAniadirArchivo.Location = new System.Drawing.Point(533, 52);
+            this.btnAniadirArchivo.Image = global::Sinapxon.Properties.Resources.baseline_add_circle_white_18dp;
+            this.btnAniadirArchivo.Location = new System.Drawing.Point(632, 68);
+            this.btnAniadirArchivo.Margin = new System.Windows.Forms.Padding(2);
             this.btnAniadirArchivo.Name = "btnAniadirArchivo";
-            this.btnAniadirArchivo.Size = new System.Drawing.Size(160, 35);
+            this.btnAniadirArchivo.Size = new System.Drawing.Size(120, 47);
             this.btnAniadirArchivo.TabIndex = 3;
-            this.btnAniadirArchivo.Text = "Añadir archivo";
+            this.btnAniadirArchivo.Text = "Añadir";
+            this.btnAniadirArchivo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAniadirArchivo.UseVisualStyleBackColor = false;
             // 
             // btnExaminar
             // 
             this.btnExaminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExaminar.Location = new System.Drawing.Point(450, 58);
+            this.btnExaminar.Location = new System.Drawing.Point(338, 82);
+            this.btnExaminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnExaminar.Name = "btnExaminar";
-            this.btnExaminar.Size = new System.Drawing.Size(42, 23);
+            this.btnExaminar.Size = new System.Drawing.Size(41, 22);
             this.btnExaminar.TabIndex = 2;
             this.btnExaminar.Text = "...";
             this.btnExaminar.UseVisualStyleBackColor = true;
@@ -143,25 +158,11 @@
             // txtBuscarArchivo
             // 
             this.txtBuscarArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarArchivo.Location = new System.Drawing.Point(38, 58);
+            this.txtBuscarArchivo.Location = new System.Drawing.Point(28, 82);
+            this.txtBuscarArchivo.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscarArchivo.Name = "txtBuscarArchivo";
-            this.txtBuscarArchivo.Size = new System.Drawing.Size(406, 26);
+            this.txtBuscarArchivo.Size = new System.Drawing.Size(306, 22);
             this.txtBuscarArchivo.TabIndex = 1;
-            // 
-            // btnGuardarTema
-            // 
-            this.btnGuardarTema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
-            this.btnGuardarTema.FlatAppearance.BorderSize = 0;
-            this.btnGuardarTema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarTema.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarTema.Location = new System.Drawing.Point(714, 19);
-            this.btnGuardarTema.Name = "btnGuardarTema";
-            this.btnGuardarTema.Size = new System.Drawing.Size(206, 38);
-            this.btnGuardarTema.TabIndex = 7;
-            this.btnGuardarTema.Text = "Guardar tema";
-            this.btnGuardarTema.UseVisualStyleBackColor = false;
-            this.btnGuardarTema.Click += new System.EventHandler(this.btnGuardarTema_Click);
             // 
             // panelDatosTema
             // 
@@ -171,10 +172,21 @@
             this.panelDatosTema.Controls.Add(this.panelTituloTema);
             this.panelDatosTema.Controls.Add(this.lblDescripcion);
             this.panelDatosTema.Controls.Add(this.lblNombre);
-            this.panelDatosTema.Location = new System.Drawing.Point(18, 63);
+            this.panelDatosTema.Location = new System.Drawing.Point(14, 81);
+            this.panelDatosTema.Margin = new System.Windows.Forms.Padding(2);
             this.panelDatosTema.Name = "panelDatosTema";
-            this.panelDatosTema.Size = new System.Drawing.Size(902, 194);
+            this.panelDatosTema.Size = new System.Drawing.Size(939, 169);
             this.panelDatosTema.TabIndex = 8;
+            // 
+            // cbTemas
+            // 
+            this.cbTemas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbTemas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTemas.FormattingEnabled = true;
+            this.cbTemas.Location = new System.Drawing.Point(30, 105);
+            this.cbTemas.Name = "cbTemas";
+            this.cbTemas.Size = new System.Drawing.Size(283, 28);
+            this.cbTemas.TabIndex = 17;
             // 
             // panelTituloTema
             // 
@@ -182,18 +194,20 @@
             this.panelTituloTema.Controls.Add(this.label1);
             this.panelTituloTema.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTituloTema.Location = new System.Drawing.Point(0, 0);
+            this.panelTituloTema.Margin = new System.Windows.Forms.Padding(2);
             this.panelTituloTema.Name = "panelTituloTema";
-            this.panelTituloTema.Size = new System.Drawing.Size(902, 45);
+            this.panelTituloTema.Size = new System.Drawing.Size(939, 58);
             this.panelTituloTema.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(15, 11);
+            this.label1.Location = new System.Drawing.Point(11, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(346, 31);
+            this.label1.Size = new System.Drawing.Size(251, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Datos generales del tema";
             // 
@@ -203,9 +217,10 @@
             this.panelVideo.Controls.Add(this.txtLinkVideo);
             this.panelVideo.Controls.Add(this.panelTituloVideo);
             this.panelVideo.Controls.Add(this.lblLinkVideo);
-            this.panelVideo.Location = new System.Drawing.Point(18, 278);
+            this.panelVideo.Location = new System.Drawing.Point(14, 264);
+            this.panelVideo.Margin = new System.Windows.Forms.Padding(2);
             this.panelVideo.Name = "panelVideo";
-            this.panelVideo.Size = new System.Drawing.Size(902, 116);
+            this.panelVideo.Size = new System.Drawing.Size(939, 133);
             this.panelVideo.TabIndex = 9;
             // 
             // panelTituloVideo
@@ -214,18 +229,20 @@
             this.panelTituloVideo.Controls.Add(this.label2);
             this.panelTituloVideo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTituloVideo.Location = new System.Drawing.Point(0, 0);
+            this.panelTituloVideo.Margin = new System.Windows.Forms.Padding(2);
             this.panelTituloVideo.Name = "panelTituloVideo";
-            this.panelTituloVideo.Size = new System.Drawing.Size(902, 45);
+            this.panelTituloVideo.Size = new System.Drawing.Size(939, 58);
             this.panelTituloVideo.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(15, 11);
+            this.label2.Location = new System.Drawing.Point(19, 17);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 31);
+            this.label2.Size = new System.Drawing.Size(67, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Video";
             // 
@@ -238,33 +255,54 @@
             this.panelArchivosClassroom.Controls.Add(this.panelTituloArchivosClassroom);
             this.panelArchivosClassroom.Controls.Add(this.btnExaminar);
             this.panelArchivosClassroom.Controls.Add(this.txtBuscarArchivo);
-            this.panelArchivosClassroom.Location = new System.Drawing.Point(18, 414);
+            this.panelArchivosClassroom.Location = new System.Drawing.Point(14, 411);
+            this.panelArchivosClassroom.Margin = new System.Windows.Forms.Padding(2);
             this.panelArchivosClassroom.Name = "panelArchivosClassroom";
-            this.panelArchivosClassroom.Size = new System.Drawing.Size(902, 216);
+            this.panelArchivosClassroom.Size = new System.Drawing.Size(939, 247);
             this.panelArchivosClassroom.TabIndex = 10;
             // 
             // btnQuitarArchivo
             // 
-            this.btnQuitarArchivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.btnQuitarArchivo.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnQuitarArchivo.FlatAppearance.BorderSize = 0;
             this.btnQuitarArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitarArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitarArchivo.ForeColor = System.Drawing.Color.White;
-            this.btnQuitarArchivo.Location = new System.Drawing.Point(709, 52);
+            this.btnQuitarArchivo.Image = global::Sinapxon.Properties.Resources.baseline_remove_circle_white_18dp;
+            this.btnQuitarArchivo.Location = new System.Drawing.Point(807, 68);
+            this.btnQuitarArchivo.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuitarArchivo.Name = "btnQuitarArchivo";
-            this.btnQuitarArchivo.Size = new System.Drawing.Size(160, 35);
+            this.btnQuitarArchivo.Size = new System.Drawing.Size(120, 47);
             this.btnQuitarArchivo.TabIndex = 5;
-            this.btnQuitarArchivo.Text = "Quitar arrchivo";
+            this.btnQuitarArchivo.Text = "Quitar";
+            this.btnQuitarArchivo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQuitarArchivo.UseVisualStyleBackColor = false;
             this.btnQuitarArchivo.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvArchivos
             // 
             this.dgvArchivos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvArchivos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvArchivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArchivos.Location = new System.Drawing.Point(38, 96);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvArchivos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvArchivos.Location = new System.Drawing.Point(28, 123);
+            this.dgvArchivos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvArchivos.Name = "dgvArchivos";
-            this.dgvArchivos.Size = new System.Drawing.Size(831, 104);
+            this.dgvArchivos.Size = new System.Drawing.Size(899, 106);
             this.dgvArchivos.TabIndex = 4;
             // 
             // panelTituloArchivosClassroom
@@ -273,48 +311,71 @@
             this.panelTituloArchivosClassroom.Controls.Add(this.lblArchivosTema);
             this.panelTituloArchivosClassroom.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTituloArchivosClassroom.Location = new System.Drawing.Point(0, 0);
+            this.panelTituloArchivosClassroom.Margin = new System.Windows.Forms.Padding(2);
             this.panelTituloArchivosClassroom.Name = "panelTituloArchivosClassroom";
-            this.panelTituloArchivosClassroom.Size = new System.Drawing.Size(902, 45);
+            this.panelTituloArchivosClassroom.Size = new System.Drawing.Size(939, 58);
             this.panelTituloArchivosClassroom.TabIndex = 0;
             // 
             // lblArchivosTema
             // 
             this.lblArchivosTema.AutoSize = true;
-            this.lblArchivosTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArchivosTema.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArchivosTema.ForeColor = System.Drawing.Color.White;
-            this.lblArchivosTema.Location = new System.Drawing.Point(15, 11);
+            this.lblArchivosTema.Location = new System.Drawing.Point(19, 18);
+            this.lblArchivosTema.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblArchivosTema.Name = "lblArchivosTema";
-            this.lblArchivosTema.Size = new System.Drawing.Size(246, 31);
+            this.lblArchivosTema.Size = new System.Drawing.Size(183, 25);
             this.lblArchivosTema.TabIndex = 0;
             this.lblArchivosTema.Text = "Archivos del tema";
             // 
-            // cbTemas
+            // btnGuardar
             // 
-            this.cbTemas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbTemas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTemas.FormattingEnabled = true;
-            this.cbTemas.Location = new System.Drawing.Point(38, 90);
-            this.cbTemas.Margin = new System.Windows.Forms.Padding(4);
-            this.cbTemas.Name = "cbTemas";
-            this.cbTemas.Size = new System.Drawing.Size(376, 33);
-            this.cbTemas.TabIndex = 17;
+            this.btnGuardar.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Image = global::Sinapxon.Properties.Resources.round_save_white_18dp;
+            this.btnGuardar.Location = new System.Drawing.Point(797, 15);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(156, 48);
+            this.btnGuardar.TabIndex = 6;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.btnAtras.FlatAppearance.BorderSize = 0;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtras.Image = global::Sinapxon.Properties.Resources.round_arrow_left_white_36dp;
+            this.btnAtras.Location = new System.Drawing.Point(14, 19);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(50, 50);
+            this.btnAtras.TabIndex = 21;
+            this.btnAtras.UseVisualStyleBackColor = false;
             // 
             // frmTema
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
-            this.ClientSize = new System.Drawing.Size(948, 642);
+            this.ClientSize = new System.Drawing.Size(964, 681);
+            this.Controls.Add(this.btnAtras);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.panelArchivosClassroom);
             this.Controls.Add(this.panelVideo);
             this.Controls.Add(this.panelDatosTema);
-            this.Controls.Add(this.btnGuardarTema);
             this.Controls.Add(this.lblTema);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmTema";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAniadirTema";
+            this.Text = "Añadir Tema";
             this.panelDatosTema.ResumeLayout(false);
             this.panelDatosTema.PerformLayout();
             this.panelTituloTema.ResumeLayout(false);
@@ -344,7 +405,6 @@
         private System.Windows.Forms.Button btnAniadirArchivo;
         private System.Windows.Forms.Button btnExaminar;
         private System.Windows.Forms.TextBox txtBuscarArchivo;
-        private System.Windows.Forms.Button btnGuardarTema;
         private System.Windows.Forms.Panel panelDatosTema;
         private System.Windows.Forms.Panel panelTituloTema;
         private System.Windows.Forms.Label label1;
@@ -357,5 +417,7 @@
         private System.Windows.Forms.Button btnQuitarArchivo;
         private System.Windows.Forms.DataGridView dgvArchivos;
         private System.Windows.Forms.ComboBox cbTemas;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnAtras;
     }
 }

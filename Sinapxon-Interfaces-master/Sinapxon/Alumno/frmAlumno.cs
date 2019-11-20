@@ -17,7 +17,7 @@ namespace Sinapxon.Alumno
         public frmAlumno()
         {
             InitializeComponent();
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
             lblNombreUsuario.Text = LoginInfo.persona.nombre;
         }
 

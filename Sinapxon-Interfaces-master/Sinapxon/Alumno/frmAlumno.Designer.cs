@@ -45,12 +45,11 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(450, 0);
-            this.panelContenedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelContenedor.Location = new System.Drawing.Point(300, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1307, 1048);
+            this.panelContenedor.Size = new System.Drawing.Size(964, 681);
             this.panelContenedor.TabIndex = 1;
             // 
             // panelLogo
@@ -61,9 +60,8 @@
             this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(450, 277);
+            this.panelLogo.Size = new System.Drawing.Size(300, 180);
             this.panelLogo.TabIndex = 1;
             // 
             // lblRol
@@ -71,10 +69,9 @@
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRol.ForeColor = System.Drawing.Color.White;
-            this.lblRol.Location = new System.Drawing.Point(178, 152);
-            this.lblRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRol.Location = new System.Drawing.Point(119, 99);
             this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(79, 25);
+            this.lblRol.Size = new System.Drawing.Size(53, 16);
             this.lblRol.TabIndex = 2;
             this.lblRol.Text = "Alumno";
             // 
@@ -83,18 +80,16 @@
             this.lblNombreUsuario.AutoSize = true;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblNombreUsuario.Location = new System.Drawing.Point(171, 108);
-            this.lblNombreUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(114, 70);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(270, 37);
+            this.lblNombreUsuario.Size = new System.Drawing.Size(185, 25);
             this.lblNombreUsuario.TabIndex = 1;
             this.lblNombreUsuario.Text = "Nombre Apellido";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Sinapxon.Properties.Resources.baseline_account_circle_Big;
-            this.pictureBox1.Location = new System.Drawing.Point(18, 69);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 45);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(96, 96);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -111,9 +106,8 @@
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(450, 1048);
+            this.panelMenu.Size = new System.Drawing.Size(300, 681);
             this.panelMenu.TabIndex = 0;
             // 
             // btnLogOut
@@ -126,11 +120,10 @@
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
             this.btnLogOut.Image = global::Sinapxon.Properties.Resources.baseline_exit_to_app;
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(0, 971);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 631);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnLogOut.Size = new System.Drawing.Size(450, 77);
+            this.btnLogOut.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnLogOut.Size = new System.Drawing.Size(300, 50);
             this.btnLogOut.TabIndex = 4;
             this.btnLogOut.Text = "          Cerrar sesión";
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -147,11 +140,10 @@
             this.btnExplorar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnExplorar.Image = global::Sinapxon.Properties.Resources.baseline_find_in_page;
             this.btnExplorar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExplorar.Location = new System.Drawing.Point(0, 385);
-            this.btnExplorar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnExplorar.Location = new System.Drawing.Point(0, 250);
             this.btnExplorar.Name = "btnExplorar";
-            this.btnExplorar.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.btnExplorar.Size = new System.Drawing.Size(450, 108);
+            this.btnExplorar.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnExplorar.Size = new System.Drawing.Size(300, 70);
             this.btnExplorar.TabIndex = 3;
             this.btnExplorar.Text = "          Explorar cursos";
             this.btnExplorar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -168,11 +160,10 @@
             this.btnMisClassrooms.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnMisClassrooms.Image = global::Sinapxon.Properties.Resources.baseline_book;
             this.btnMisClassrooms.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMisClassrooms.Location = new System.Drawing.Point(0, 277);
-            this.btnMisClassrooms.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnMisClassrooms.Location = new System.Drawing.Point(0, 180);
             this.btnMisClassrooms.Name = "btnMisClassrooms";
-            this.btnMisClassrooms.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.btnMisClassrooms.Size = new System.Drawing.Size(450, 108);
+            this.btnMisClassrooms.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnMisClassrooms.Size = new System.Drawing.Size(300, 70);
             this.btnMisClassrooms.TabIndex = 2;
             this.btnMisClassrooms.Text = "          Mis classrooms";
             this.btnMisClassrooms.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -181,13 +172,12 @@
             // 
             // frmAlumno
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1757, 1048);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelMenu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAlumno_FormClosed);
