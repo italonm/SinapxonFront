@@ -231,7 +231,7 @@ namespace Sinapxon.Administrador
             else if (estadoAlumno == Estado.Modificar)
             {
                 DBController.actualizarAlumno(alumno);
-                MessageBox.Show("El alumno se ha sido actualizada con exito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El alumno se ha sido actualizado con exito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             estadoComponentes(Estado.Inicial);
