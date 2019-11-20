@@ -283,6 +283,16 @@ namespace Sinapxon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap baseline_person_add_white_18dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_person_add_white_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap baseline_remove_circle_white_18dp {
             get {
                 object obj = ResourceManager.GetObject("baseline_remove_circle_white_18dp", resourceCulture);

@@ -130,9 +130,6 @@
   <data name="round_insert_drive_file_white_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\round_insert_drive_file_white_18dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="baseline_find_in_page" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\baseline_find_in_page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="baseline_account_circle_white_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\baseline_account_circle_white_18dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,6 +148,9 @@
   <data name="guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\guardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="baseline_library_add_white_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\baseline_library_add_white_18dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="baseline_group_white_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\baseline_group_white_18dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,11 +163,11 @@
   <data name="round_edit_white_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\round_edit_white_18dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="baseline_check_circle_white_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\baseline_check_circle_white_18dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="round_cancel_white_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\round_cancel_white_18dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="baseline_get_app_white_18dp1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\baseline_get_app_white_18dp1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="baseline_save_white_24dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\baseline_save_white_24dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -180,6 +180,9 @@
   </data>
   <data name="round_description" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\round_description.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="baseline_add_box_black_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\baseline_add_box_black_18dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="baseline_collections_bookmark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\baseline_collections_bookmark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,8 +229,8 @@
   <data name="round_assignment_turned_in_white_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\round_assignment_turned_in_white_18dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="baseline_get_app_white_18dp1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\baseline_get_app_white_18dp1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="baseline_find_in_page" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\baseline_find_in_page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="round_arrow_left_white_36dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\round_arrow_left_white_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,8 +238,8 @@
   <data name="calificar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calificar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="modificar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\modificar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="baseline_check_circle_white_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\baseline_check_circle_white_18dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="round_arrow_left_black_24dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\round_arrow_left_black_24dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,10 +268,10 @@
   <data name="denegar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\denegar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="baseline_add_box_black_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\baseline_add_box_black_18dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="modificar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\modificar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="baseline_library_add_white_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\baseline_library_add_white_18dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="baseline_person_add_white_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\baseline_person_add_white_18dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
