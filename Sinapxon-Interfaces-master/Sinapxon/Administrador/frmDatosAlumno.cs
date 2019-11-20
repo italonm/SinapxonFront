@@ -18,9 +18,10 @@ namespace Sinapxon.Administrador
         Administrador.AdministradorServicesClient DBController = new Administrador.AdministradorServicesClient();
         private Estado estadoAlumno;
 
-        public frmDatosAlumno(Administrador.alumno alumno)
+        public frmDatosAlumno(Administrador.alumno alumno, frmAdministrador padre)
         {
             InitializeComponent();
+            this.Padre = padre;
             BindingList<Administrador.pais> paises = new BindingList<Administrador.pais>(DBController.listarPaises());
             cboPais.DataSource = paises;
             cboPais.DisplayMember = "nombre";
@@ -53,21 +54,22 @@ namespace Sinapxon.Administrador
                 rbActivo.Checked = false;
                 rbBloqueado.Checked = true;
                 rbInactivo.Checked = false;
-            }        
+            }
             estadoComponentes(Estado.Modificar);
         }
 
-        public frmDatosAlumno()
+        public frmDatosAlumno(frmAdministrador padre)
         {
             InitializeComponent();
             BindingList<Administrador.pais> paises = new BindingList<Administrador.pais>(DBController.listarPaises());
             cboPais.DataSource = paises;
             cboPais.DisplayMember = "nombre";
             cboPais.ValueMember = "id_Pais";
-
+            this.Padre = padre;
             estadoComponentes(Estado.Inicial);
         }
 
+        public frmAdministrador Padre { get => _padre; set => _padre = value; }
         public void limpiarComponentes()
         {
             txtIdAlumno.Text = "";
@@ -95,7 +97,7 @@ namespace Sinapxon.Administrador
                     btnGuardar.Enabled = false;
                     btnModificar.Enabled = false;
                     btnEliminar.Enabled = false;
-                    btnBuscar.Enabled = true;
+                    btnRegresar.Enabled = true;
                     btnCancelar.Enabled = false;
                     gbEstado.Enabled = false;
                     txtApMat.Enabled = false;
@@ -115,7 +117,7 @@ namespace Sinapxon.Administrador
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
                     btnEliminar.Enabled = false;
-                    btnBuscar.Enabled = false;
+                    btnRegresar.Enabled = false;
                     btnCancelar.Enabled = true;
                     gbEstado.Enabled = true;
                     txtApMat.Enabled = true;
@@ -135,7 +137,7 @@ namespace Sinapxon.Administrador
                     btnGuardar.Enabled = false;
                     btnModificar.Enabled = true;
                     btnEliminar.Enabled = true;
-                    btnBuscar.Enabled = false;
+                    btnRegresar.Enabled = false;
                     btnCancelar.Enabled = true;
                     gbEstado.Enabled = false;
                     txtApMat.Enabled = true;
@@ -155,7 +157,7 @@ namespace Sinapxon.Administrador
                     btnGuardar.Enabled = false;
                     btnModificar.Enabled = true;
                     btnEliminar.Enabled = true;
-                    btnBuscar.Enabled = true;
+                    btnRegresar.Enabled = true;
                     btnCancelar.Enabled = true;
                     gbEstado.Enabled = false;
                     txtApMat.Enabled = false;
@@ -173,62 +175,7 @@ namespace Sinapxon.Administrador
             }
         }
 
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            estadoComponentes(Estado.Nuevo);
-            limpiarComponentes();
-            alumno = new Administrador.alumno();
-            estadoAlumno = Estado.Nuevo;
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            frmGestionarAlumno formGestionarAlumno = new frmGestionarAlumno();
-            if (formGestionarAlumno.ShowDialog() == DialogResult.OK)
-            {
-                alumno = formGestionarAlumno.AlSeleccionado;
-                txtIdAlumno.Text = alumno.codigo;
-                txtNombre.Text = alumno.nombre;
-                txtApMat.Text = alumno.apellidoMaterno;
-                txtApPat.Text = alumno.apellidoPaterno;
-                txtDNI.Text = alumno.dni;
-                txtCorreo.Text = alumno.correo;
-                cboPais.Text = alumno.pais.nombre;
-                txtTelf.Text = alumno.telefono;
-                txtNickname.Text = alumno.nickname;
-                txtPassword.Text = alumno.password;
-                dtFechNac.Text = alumno.fecha.ToShortDateString();
-                if (alumno.estado == 0)
-                {
-                    rbActivo.Checked = false;
-                    rbBloqueado.Checked = false;
-                    rbInactivo.Checked = true;
-                }
-                if (alumno.estado == 1)
-                {
-                    rbActivo.Checked = true;
-                    rbBloqueado.Checked = false;
-                    rbInactivo.Checked = false;
-                }
-                if (alumno.estado == 2)
-                {
-                    rbActivo.Checked = false;
-                    rbBloqueado.Checked = true;
-                    rbInactivo.Checked = false;
-                }
-
-            }
-            estadoComponentes(Estado.Modificar);
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            estadoComponentes(Estado.Inicial);
-            limpiarComponentes();
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             if (txtIdAlumno.Text == "")
             {
@@ -284,10 +231,18 @@ namespace Sinapxon.Administrador
             else if (estadoAlumno == Estado.Modificar)
             {
                 DBController.actualizarAlumno(alumno);
-                MessageBox.Show("El alumno se ha sido actualizada con exito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El alumno se ha sido actualizado con exito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             estadoComponentes(Estado.Inicial);
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            estadoComponentes(Estado.Nuevo);
+            limpiarComponentes();
+            alumno = new Administrador.alumno();
+            estadoAlumno = Estado.Nuevo;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -304,6 +259,18 @@ namespace Sinapxon.Administrador
         {
             estadoComponentes(Estado.Nuevo);
             estadoAlumno = Estado.Modificar;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            estadoComponentes(Estado.Inicial);
+            limpiarComponentes();
+        }
+
+        private void btnGenerarContr_Click(object sender, EventArgs e)
+        {
+            frmGestionarAlumno formGestionarAlumno = new frmGestionarAlumno(this.Padre);
+            Padre.openChildForm(formGestionarAlumno);
         }
     }
 }

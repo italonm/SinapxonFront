@@ -17,9 +17,9 @@ namespace Sinapxon.Administrador
         Administrador.AdministradorServicesClient DBController = new Administrador.AdministradorServicesClient();
         private Estado estadoProfesor;
 
-        public frmDatosProfesor(Administrador.profesor profesor)
+        public frmDatosProfesor(Administrador.profesor profesor, frmAdministrador padre)
         {
-            InitializeComponent();
+            InitializeComponent(); this.Padre = padre;
             BindingList<Administrador.pais> paises = new BindingList<Administrador.pais>(DBController.listarPaises());
             cboPais.DataSource = paises;
             cboPais.DisplayMember = "nombre";
@@ -57,18 +57,22 @@ namespace Sinapxon.Administrador
                 rbInactivo.Checked = false;
             }
             estadoComponentes(Estado.Modificar);
-    }
+        }
 
-        public frmDatosProfesor()
+
+        public frmDatosProfesor(frmAdministrador padre)
         {
             InitializeComponent();
-            BindingList<Administrador.pais> paises = new BindingList<Administrador.pais>(DBController.listarPaises()); 
-            cboPais.DataSource = paises;    
+            BindingList<Administrador.pais> paises = new BindingList<Administrador.pais>(DBController.listarPaises());
+            cboPais.DataSource = paises;
             cboPais.DisplayMember = "nombre";
             cboPais.ValueMember = "id_Pais";
-            estadoComponentes(Estado.Inicial);
+            this.Padre = padre;
 
+            estadoComponentes(Estado.Inicial);
         }
+
+        public frmAdministrador Padre { get => _padre; set => _padre = value; }
 
         public void limpiarComponentes()
         {
@@ -99,7 +103,7 @@ namespace Sinapxon.Administrador
                     btnGuardar.Enabled = false;
                     btnModificar.Enabled = false;
                     btnEliminar.Enabled = false;
-                    btnBuscar.Enabled = true;
+                    btnRegresar.Enabled = true;
                     btnCancelar.Enabled = false;
                     gbEstado.Enabled = false;
                     txtAInt.Enabled = false;
@@ -119,7 +123,7 @@ namespace Sinapxon.Administrador
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
                     btnEliminar.Enabled = false;
-                    btnBuscar.Enabled = false;
+                    btnRegresar.Enabled = false;
                     btnCancelar.Enabled = true;
                     gbEstado.Enabled = true;
                     txtAInt.Enabled = true;
@@ -139,7 +143,7 @@ namespace Sinapxon.Administrador
                     btnGuardar.Enabled = false;
                     btnModificar.Enabled = true;
                     btnEliminar.Enabled = true;
-                    btnBuscar.Enabled = false;
+                    btnRegresar.Enabled = false;
                     btnCancelar.Enabled = true;
                     gbEstado.Enabled = false;
                     txtAInt.Enabled = true;
@@ -159,7 +163,7 @@ namespace Sinapxon.Administrador
                     btnGuardar.Enabled = false;
                     btnModificar.Enabled = true;
                     btnEliminar.Enabled = true;
-                    btnBuscar.Enabled = true;
+                    btnRegresar.Enabled = true;
                     btnCancelar.Enabled = true;
                     gbEstado.Enabled = false;
                     txtAInt.Enabled = false;
@@ -177,59 +181,7 @@ namespace Sinapxon.Administrador
             }
         }
 
-
-        public frmAdministrador Padre { get => _padre; set => _padre = value; }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            frmGestionarProfesor formGestionarProfesor = new frmGestionarProfesor();
-            if (formGestionarProfesor.ShowDialog() == DialogResult.OK)
-            {
-                profesor = formGestionarProfesor.PfSeleccionado;
-                txtIdProfesor.Text = profesor.codigo;
-                txtNombre.Text = profesor.nombre;
-                txtApMat.Text = profesor.apellidoMaterno;
-                txtApPat.Text = profesor.apellidoPaterno;
-                txtDNI.Text = profesor.dni;
-                txtCorreo.Text = profesor.correo;
-                cboPais.Text = profesor.pais.nombre;
-                txtGrado.Text = profesor.gradoInstruccion;
-                txtTelf.Text = profesor.telefono;
-                txtNickname.Text = profesor.nickname;
-                txtPassword.Text = profesor.password;
-                txtAInt.Text = profesor.areaInteres;
-                dtFechNac.Text = profesor.fecha.ToShortDateString();
-                if (profesor.estado == 0)
-                {
-                    rbActivo.Checked = false;
-                    rbBloqueado.Checked = false;
-                    rbInactivo.Checked = true;
-                }
-                if (profesor.estado == 1)
-                {
-                    rbActivo.Checked = true;
-                    rbBloqueado.Checked = false;
-                    rbInactivo.Checked = false;
-                }
-                if (profesor.estado == 2)
-                {
-                    rbActivo.Checked = false;
-                    rbBloqueado.Checked = true;
-                    rbInactivo.Checked = false;
-                }
-
-            }
-            estadoComponentes(Estado.Modificar);
-        }
-
-
-        private void btnCancelar_Click_1(object sender, EventArgs e)
-        {
-            estadoComponentes(Estado.Inicial);
-            limpiarComponentes();
-        }
-
-        private void btnNuevo_Click_1(object sender, EventArgs e)
+        private void btnNuevo_Click(object sender, EventArgs e)
         {
             estadoComponentes(Estado.Nuevo);
             limpiarComponentes();
@@ -237,7 +189,7 @@ namespace Sinapxon.Administrador
             estadoProfesor = Estado.Nuevo;
         }
 
-        private void btnGuardar_Click_1(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (txtIdProfesor.Text == "")
             {
@@ -296,13 +248,13 @@ namespace Sinapxon.Administrador
             else if (estadoProfesor == Estado.Modificar)
             {
                 DBController.actualizarProfesor(profesor);
-                MessageBox.Show("El profesor se ha sido actualizada con exito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El profesor se ha sido actualizado con exito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             estadoComponentes(Estado.Inicial);
         }
 
-        private void btnEliminar_Click_1(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (DialogResult.Yes == MessageBox.Show("¿Está seguro que desea eliminar este profesor?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation))
             {
@@ -312,15 +264,27 @@ namespace Sinapxon.Administrador
             }
         }
 
-        private void btnModificar_Click_1(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
             estadoComponentes(Estado.Nuevo);
             estadoProfesor = Estado.Modificar;
         }
 
-        private void btnGenerarContraseña_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
+            estadoComponentes(Estado.Inicial);
+            limpiarComponentes();
+        }
 
+        private void btnGenerarContr_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            frmGestionarProfesor formGestionarProfesor = new frmGestionarProfesor(this.Padre);
+            _padre.openChildForm(formGestionarProfesor);
         }
     }
 }

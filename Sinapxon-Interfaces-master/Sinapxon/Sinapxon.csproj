@@ -116,6 +116,12 @@
     <Compile Include="Administrador\frmListaUsuarios.Designer.cs">
       <DependentUpon>frmListaUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrador\frmRegistrarEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmRegistrarEspecialidad.Designer.cs">
+      <DependentUpon>frmRegistrarEspecialidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\frmSolicitudClassroom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -316,6 +322,9 @@
     <EmbeddedResource Include="Administrador\frmListaUsuarios.resx">
       <DependentUpon>frmListaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmRegistrarEspecialidad.resx">
+      <DependentUpon>frmRegistrarEspecialidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmSolicitudClassroom.resx">
       <DependentUpon>frmSolicitudClassroom.cs</DependentUpon>
     </EmbeddedResource>
@@ -432,6 +441,9 @@
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.eliminarProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.especialidad.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.insertarAlumnoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -450,10 +462,16 @@
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarCursosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarEspecialidadesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarPaisesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarProfesoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarRequisitosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarSolicitudesResponse.datasource">
@@ -811,6 +829,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\round_cancel_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_library_add_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_person_add_white_18dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
