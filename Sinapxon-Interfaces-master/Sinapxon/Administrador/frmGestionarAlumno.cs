@@ -12,7 +12,6 @@ namespace Sinapxon.Administrador
 {
     public partial class frmGestionarAlumno : Form
     {
-        static int i = 0;
         private frmAdministrador _padre = null;
         private Administrador.alumno alSeleccionado;
 
@@ -38,7 +37,9 @@ namespace Sinapxon.Administrador
 
         public frmAdministrador Padre { get => _padre; set => _padre = value; }
 
-        private void dgvProfesores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+
+
+        private void dgvAlumnos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             Administrador.alumno alumnoFila = (Administrador.alumno)dgvAlumnos.Rows[e.RowIndex].DataBoundItem;
             if (alumnoFila != null)
@@ -58,18 +59,20 @@ namespace Sinapxon.Administrador
             dgvAlumnos.DataSource = DBController.listarAlumnos(txtNombre.Text);
         }
 
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmDatosAlumno formDatosAlumno = new frmDatosAlumno(_padre);
+            _padre.openChildForm(formDatosAlumno);
+        }
+
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             alSeleccionado = dgvAlumnos.CurrentRow.DataBoundItem as Administrador.alumno;
-            this.DialogResult = DialogResult.OK;
-            if (i==0) {
-                frmDatosAlumno formDatosAlumno = new frmDatosAlumno(alSeleccionado);
-                i = i+1;
-                _padre.openChildForm(formDatosAlumno);
-            } 
+            frmDatosAlumno formDatosAlumno = new frmDatosAlumno(alSeleccionado, _padre);
+            _padre.openChildForm(formDatosAlumno);
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
         }
