@@ -32,6 +32,8 @@
   <xs:element name="listarPaisesResponse" type="tns:listarPaisesResponse" />
   <xs:element name="listarProfesores" type="tns:listarProfesores" />
   <xs:element name="listarProfesoresResponse" type="tns:listarProfesoresResponse" />
+  <xs:element name="listarSolicitudes" type="tns:listarSolicitudes" />
+  <xs:element name="listarSolicitudesResponse" type="tns:listarSolicitudesResponse" />
   <xs:complexType name="eliminarAlumno">
     <xs:sequence>
       <xs:element minOccurs="0" name="arg0" type="xs:string" />
@@ -214,13 +216,43 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarCurso">
+  <xs:complexType name="listarSolicitudes">
     <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="tns:curso" />
+      <xs:element name="arg0" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarCursoResponse">
-    <xs:sequence />
+  <xs:complexType name="listarSolicitudesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:solicitudClassroom" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="solicitudClassroom">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
+      <xs:element minOccurs="0" name="curso" type="tns:curso" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="estado" type="xs:int" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element name="id_solicitud" type="xs:int" />
+      <xs:element minOccurs="0" name="idioma" type="tns:idioma" />
+      <xs:element minOccurs="0" name="periodo" type="tns:periodo" />
+      <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="idioma">
+    <xs:sequence>
+      <xs:element name="id_idioma" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="periodo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
+      <xs:element minOccurs="0" name="fecha_fin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fecha_inicio" type="xs:dateTime" />
+      <xs:element name="id_periodo" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarCurso">
     <xs:sequence>
@@ -231,6 +263,14 @@
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCurso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:curso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCursoResponse">
+    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="actualizarEspecialidad">
     <xs:sequence>
