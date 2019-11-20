@@ -190,6 +190,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAlumno_FormClosed);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
