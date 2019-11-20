@@ -37,6 +37,7 @@
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnExplorar = new System.Windows.Forms.Button();
             this.btnMisClassrooms = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelMenu.SuspendLayout();
@@ -127,6 +128,7 @@
             this.btnLogOut.Text = "          Cerrar sesión";
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click_1);
             // 
             // btnExplorar
             // 
@@ -175,9 +177,9 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAlumno";
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -196,5 +198,6 @@
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.Button btnLogOut;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

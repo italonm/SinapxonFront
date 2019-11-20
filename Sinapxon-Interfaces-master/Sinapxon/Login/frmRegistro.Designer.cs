@@ -216,7 +216,8 @@
             this.txtPassword.ForeColor = System.Drawing.Color.White;
             this.txtPassword.Location = new System.Drawing.Point(41, 168);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(342, 19);
+            this.txtPassword.PasswordChar = '●';
+            this.txtPassword.Size = new System.Drawing.Size(513, 28);
             this.txtPassword.TabIndex = 9;
             // 
             // txtNombres
@@ -309,7 +310,8 @@
             this.txtRepetirPassword.ForeColor = System.Drawing.Color.White;
             this.txtRepetirPassword.Location = new System.Drawing.Point(456, 168);
             this.txtRepetirPassword.Name = "txtRepetirPassword";
-            this.txtRepetirPassword.Size = new System.Drawing.Size(342, 19);
+            this.txtRepetirPassword.PasswordChar = '●';
+            this.txtRepetirPassword.Size = new System.Drawing.Size(513, 28);
             this.txtRepetirPassword.TabIndex = 17;
             // 
             // gbDatosPersonales

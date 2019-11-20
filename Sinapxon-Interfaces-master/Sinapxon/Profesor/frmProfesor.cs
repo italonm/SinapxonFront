@@ -18,6 +18,7 @@ namespace Sinapxon.Profesor
         public frmProfesor()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
             lblNombreUsuario.Text = LoginInfo.persona.nombre;
             panelSubGestionarUsr.Visible = false;
         }
