@@ -12,7 +12,6 @@ namespace Sinapxon.Administrador
 {
     public partial class frmGestionarProfesor : Form
     {
-        static int i = 0;
         private frmAdministrador _padre = null;
         private Administrador.profesor pfSeleccionado;
 
@@ -54,26 +53,27 @@ namespace Sinapxon.Administrador
             }
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnBuscar_Click_1(object sender, EventArgs e)
         {
             dgvProfesores.DataSource = DBController.listarProfesores(txtNombre.Text);
-        }
-
-        private void btnSalir_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             pfSeleccionado = dgvProfesores.CurrentRow.DataBoundItem as Administrador.profesor;
-            this.DialogResult = DialogResult.OK;
-            if (i == 0)
-            {
-                frmDatosProfesor formDatosProfesor= new frmDatosProfesor(pfSeleccionado);
-                i = i + 1;
-                _padre.openChildForm(formDatosProfesor);
-            }
+            frmDatosProfesor formDatosProfesor = new frmDatosProfesor(pfSeleccionado, _padre);
+            _padre.openChildForm(formDatosProfesor);
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmDatosProfesor formDatosProfesor = new frmDatosProfesor(_padre);
+            _padre.openChildForm(formDatosProfesor);
         }
     }
 }
