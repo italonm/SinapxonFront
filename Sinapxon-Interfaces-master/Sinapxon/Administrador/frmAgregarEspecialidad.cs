@@ -48,7 +48,7 @@ namespace Sinapxon.Administrador
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dgvEspecialidades.DataSource = DBController.listarEspecialidades(txtNombre.Text);
+            dgvEspecialidades.DataSource = DBController.listarEspecialidades(txtBuscar.Text);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

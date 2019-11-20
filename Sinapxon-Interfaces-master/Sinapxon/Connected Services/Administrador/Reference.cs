@@ -15,36 +15,6 @@ namespace Sinapxon.Administrador {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", ConfigurationName="Administrador.AdministradorServices")]
     public interface AdministradorServices {
         
-        // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarCursoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarCursoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        Sinapxon.Administrador.insertarCursoResponse insertarCurso(Sinapxon.Administrador.insertarCursoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarCursoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarCursoResponse")]
-        System.Threading.Tasks.Task<Sinapxon.Administrador.insertarCursoResponse> insertarCursoAsync(Sinapxon.Administrador.insertarCursoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarCursoRequest" +
-            "", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarCursoRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sinapxon.Administrador.actualizarCursoResponse actualizarCurso(Sinapxon.Administrador.actualizarCursoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarCursoRequest" +
-            "", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarCursoRespons" +
-            "e")]
-        System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarCursoResponse> actualizarCursoAsync(Sinapxon.Administrador.actualizarCursoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminaCursoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminaCursoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sinapxon.Administrador.eliminaCursoResponse eliminaCurso(Sinapxon.Administrador.eliminaCursoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminaCursoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminaCursoResponse")]
-        System.Threading.Tasks.Task<Sinapxon.Administrador.eliminaCursoResponse> eliminaCursoAsync(Sinapxon.Administrador.eliminaCursoRequest request);
-        
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarCursosRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarCursosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -55,30 +25,13 @@ namespace Sinapxon.Administrador {
         System.Threading.Tasks.Task<Sinapxon.Administrador.listarCursosResponse> listarCursosAsync(Sinapxon.Administrador.listarCursosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarProfesorReques" +
-            "t", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarProfesorRespon" +
-            "se")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminaCursoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminaCursoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sinapxon.Administrador.eliminarProfesorResponse eliminarProfesor(Sinapxon.Administrador.eliminarProfesorRequest request);
+        Sinapxon.Administrador.eliminaCursoResponse eliminaCurso(Sinapxon.Administrador.eliminaCursoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarProfesorReques" +
-            "t", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarProfesorRespon" +
-            "se")]
-        System.Threading.Tasks.Task<Sinapxon.Administrador.eliminarProfesorResponse> eliminarProfesorAsync(Sinapxon.Administrador.eliminarProfesorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarAlumnoReques" +
-            "t", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarAlumnoRespon" +
-            "se")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sinapxon.Administrador.actualizarAlumnoResponse actualizarAlumno(Sinapxon.Administrador.actualizarAlumnoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarAlumnoReques" +
-            "t", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarAlumnoRespon" +
-            "se")]
-        System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarAlumnoResponse> actualizarAlumnoAsync(Sinapxon.Administrador.actualizarAlumnoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminaCursoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminaCursoResponse")]
+        System.Threading.Tasks.Task<Sinapxon.Administrador.eliminaCursoResponse> eliminaCursoAsync(Sinapxon.Administrador.eliminaCursoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarProfesoresReques" +
@@ -94,26 +47,17 @@ namespace Sinapxon.Administrador {
         System.Threading.Tasks.Task<Sinapxon.Administrador.listarProfesoresResponse> listarProfesoresAsync(Sinapxon.Administrador.listarProfesoresRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarProfesorReques" +
-            "t", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarProfesorRespon" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarRequisitosReques" +
+            "t", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarRequisitosRespon" +
             "se")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sinapxon.Administrador.insertarProfesorResponse insertarProfesor(Sinapxon.Administrador.insertarProfesorRequest request);
+        Sinapxon.Administrador.listarRequisitosResponse listarRequisitos(Sinapxon.Administrador.listarRequisitosRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarProfesorReques" +
-            "t", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarProfesorRespon" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarRequisitosReques" +
+            "t", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarRequisitosRespon" +
             "se")]
-        System.Threading.Tasks.Task<Sinapxon.Administrador.insertarProfesorResponse> insertarProfesorAsync(Sinapxon.Administrador.insertarProfesorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarAlumnosRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarAlumnosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sinapxon.Administrador.listarAlumnosResponse listarAlumnos(Sinapxon.Administrador.listarAlumnosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarAlumnosRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarAlumnosResponse")]
-        System.Threading.Tasks.Task<Sinapxon.Administrador.listarAlumnosResponse> listarAlumnosAsync(Sinapxon.Administrador.listarAlumnosRequest request);
+        System.Threading.Tasks.Task<Sinapxon.Administrador.listarRequisitosResponse> listarRequisitosAsync(Sinapxon.Administrador.listarRequisitosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarAlumnoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarAlumnoResponse" +
@@ -127,6 +71,19 @@ namespace Sinapxon.Administrador {
         System.Threading.Tasks.Task<Sinapxon.Administrador.insertarAlumnoResponse> insertarAlumnoAsync(Sinapxon.Administrador.insertarAlumnoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarProfesorReques" +
+            "t", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarProfesorRespon" +
+            "se")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sinapxon.Administrador.insertarProfesorResponse insertarProfesor(Sinapxon.Administrador.insertarProfesorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarProfesorReques" +
+            "t", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarProfesorRespon" +
+            "se")]
+        System.Threading.Tasks.Task<Sinapxon.Administrador.insertarProfesorResponse> insertarProfesorAsync(Sinapxon.Administrador.insertarProfesorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarAlumnoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarAlumnoResponse" +
             "")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -138,6 +95,54 @@ namespace Sinapxon.Administrador {
         System.Threading.Tasks.Task<Sinapxon.Administrador.eliminarAlumnoResponse> eliminarAlumnoAsync(Sinapxon.Administrador.eliminarAlumnoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarProfesorReques" +
+            "t", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarProfesorRespon" +
+            "se")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sinapxon.Administrador.eliminarProfesorResponse eliminarProfesor(Sinapxon.Administrador.eliminarProfesorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarProfesorReques" +
+            "t", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarProfesorRespon" +
+            "se")]
+        System.Threading.Tasks.Task<Sinapxon.Administrador.eliminarProfesorResponse> eliminarProfesorAsync(Sinapxon.Administrador.eliminarProfesorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarCursoRequest" +
+            "", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarCursoRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sinapxon.Administrador.actualizarCursoResponse actualizarCurso(Sinapxon.Administrador.actualizarCursoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarCursoRequest" +
+            "", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarCursoRespons" +
+            "e")]
+        System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarCursoResponse> actualizarCursoAsync(Sinapxon.Administrador.actualizarCursoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarAlumnosRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarAlumnosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sinapxon.Administrador.listarAlumnosResponse listarAlumnos(Sinapxon.Administrador.listarAlumnosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarAlumnosRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarAlumnosResponse")]
+        System.Threading.Tasks.Task<Sinapxon.Administrador.listarAlumnosResponse> listarAlumnosAsync(Sinapxon.Administrador.listarAlumnosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarAlumnoReques" +
+            "t", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarAlumnoRespon" +
+            "se")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sinapxon.Administrador.actualizarAlumnoResponse actualizarAlumno(Sinapxon.Administrador.actualizarAlumnoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarAlumnoReques" +
+            "t", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarAlumnoRespon" +
+            "se")]
+        System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarAlumnoResponse> actualizarAlumnoAsync(Sinapxon.Administrador.actualizarAlumnoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarPaisesRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarPaisesResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -146,31 +151,26 @@ namespace Sinapxon.Administrador {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarPaisesRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarPaisesResponse")]
         System.Threading.Tasks.Task<Sinapxon.Administrador.listarPaisesResponse> listarPaisesAsync(Sinapxon.Administrador.listarPaisesRequest request);
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarEspecialidad" +
-            "Request", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarEspecialidad" +
-            "Response")]
+        // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarCursoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarCursoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sinapxon.Administrador.actualizarEspecialidadResponse actualizarEspecialidad(Sinapxon.Administrador.actualizarEspecialidadRequest request);
+        Sinapxon.Administrador.insertarCursoResponse insertarCurso(Sinapxon.Administrador.insertarCursoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarEspecialidad" +
-            "Request", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarEspecialidad" +
-            "Response")]
-        System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarEspecialidadResponse> actualizarEspecialidadAsync(Sinapxon.Administrador.actualizarEspecialidadRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarCursoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarCursoResponse")]
+        System.Threading.Tasks.Task<Sinapxon.Administrador.insertarCursoResponse> insertarCursoAsync(Sinapxon.Administrador.insertarCursoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarEspecialidadRe" +
-            "quest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarEspecialidadRe" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarEspecialidadesRe" +
+            "quest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarEspecialidadesRe" +
             "sponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sinapxon.Administrador.eliminarEspecialidadResponse eliminarEspecialidad(Sinapxon.Administrador.eliminarEspecialidadRequest request);
+        Sinapxon.Administrador.listarEspecialidadesResponse listarEspecialidades(Sinapxon.Administrador.listarEspecialidadesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarEspecialidadRe" +
-            "quest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarEspecialidadRe" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarEspecialidadesRe" +
+            "quest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarEspecialidadesRe" +
             "sponse")]
-        System.Threading.Tasks.Task<Sinapxon.Administrador.eliminarEspecialidadResponse> eliminarEspecialidadAsync(Sinapxon.Administrador.eliminarEspecialidadRequest request);
+        System.Threading.Tasks.Task<Sinapxon.Administrador.listarEspecialidadesResponse> listarEspecialidadesAsync(Sinapxon.Administrador.listarEspecialidadesRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarSolicitudesReque" +
@@ -186,17 +186,17 @@ namespace Sinapxon.Administrador {
         System.Threading.Tasks.Task<Sinapxon.Administrador.listarSolicitudesResponse> listarSolicitudesAsync(Sinapxon.Administrador.listarSolicitudesRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarProfesorRequ" +
-            "est", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarProfesorResp" +
-            "onse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarEspecialidadRe" +
+            "quest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarEspecialidadRe" +
+            "sponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sinapxon.Administrador.actualizarProfesorResponse actualizarProfesor(Sinapxon.Administrador.actualizarProfesorRequest request);
+        Sinapxon.Administrador.eliminarEspecialidadResponse eliminarEspecialidad(Sinapxon.Administrador.eliminarEspecialidadRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarProfesorRequ" +
-            "est", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarProfesorResp" +
-            "onse")]
-        System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarProfesorResponse> actualizarProfesorAsync(Sinapxon.Administrador.actualizarProfesorRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarEspecialidadRe" +
+            "quest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarEspecialidadRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<Sinapxon.Administrador.eliminarEspecialidadResponse> eliminarEspecialidadAsync(Sinapxon.Administrador.eliminarEspecialidadRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarEspecialidadRe" +
@@ -210,6 +210,32 @@ namespace Sinapxon.Administrador {
             "quest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarEspecialidadRe" +
             "sponse")]
         System.Threading.Tasks.Task<Sinapxon.Administrador.insertarEspecialidadResponse> insertarEspecialidadAsync(Sinapxon.Administrador.insertarEspecialidadRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarProfesorRequ" +
+            "est", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarProfesorResp" +
+            "onse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sinapxon.Administrador.actualizarProfesorResponse actualizarProfesor(Sinapxon.Administrador.actualizarProfesorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarProfesorRequ" +
+            "est", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarProfesorResp" +
+            "onse")]
+        System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarProfesorResponse> actualizarProfesorAsync(Sinapxon.Administrador.actualizarProfesorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarEspecialidad" +
+            "Request", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarEspecialidad" +
+            "Response")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sinapxon.Administrador.actualizarEspecialidadResponse actualizarEspecialidad(Sinapxon.Administrador.actualizarEspecialidadRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarEspecialidad" +
+            "Request", ReplyAction="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarEspecialidad" +
+            "Response")]
+        System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarEspecialidadResponse> actualizarEspecialidadAsync(Sinapxon.Administrador.actualizarEspecialidadRequest request);
     }
     
     /// <remarks/>
@@ -1385,17 +1411,17 @@ namespace Sinapxon.Administrador {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCurso", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarCursoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCursos", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCursosRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Sinapxon.Administrador.curso arg0;
+        public string arg0;
         
-        public insertarCursoRequest() {
+        public listarCursosRequest() {
         }
         
-        public insertarCursoRequest(Sinapxon.Administrador.curso arg0) {
+        public listarCursosRequest(string arg0) {
             this.arg0 = arg0;
         }
     }
@@ -1403,45 +1429,17 @@ namespace Sinapxon.Administrador {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCursoResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarCursoResponse {
-        
-        public insertarCursoResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarCurso", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarCursoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCursosResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCursosResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Sinapxon.Administrador.curso arg0;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sinapxon.Administrador.curso[] @return;
         
-        public actualizarCursoRequest() {
+        public listarCursosResponse() {
         }
         
-        public actualizarCursoRequest(Sinapxon.Administrador.curso arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarCursoResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarCursoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarCursoResponse() {
-        }
-        
-        public actualizarCursoResponse(int @return) {
+        public listarCursosResponse(Sinapxon.Administrador.curso[] @return) {
             this.@return = @return;
         }
     }
@@ -1485,114 +1483,6 @@ namespace Sinapxon.Administrador {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCursos", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarCursosRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public listarCursosRequest() {
-        }
-        
-        public listarCursosRequest(string arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCursosResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarCursosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Sinapxon.Administrador.curso[] @return;
-        
-        public listarCursosResponse() {
-        }
-        
-        public listarCursosResponse(Sinapxon.Administrador.curso[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProfesor", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarProfesorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public eliminarProfesorRequest() {
-        }
-        
-        public eliminarProfesorRequest(string arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProfesorResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarProfesorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarProfesorResponse() {
-        }
-        
-        public eliminarProfesorResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarAlumno", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarAlumnoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Sinapxon.Administrador.alumno arg0;
-        
-        public actualizarAlumnoRequest() {
-        }
-        
-        public actualizarAlumnoRequest(Sinapxon.Administrador.alumno arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarAlumnoResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarAlumnoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarAlumnoResponse() {
-        }
-        
-        public actualizarAlumnoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarProfesores", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
     public partial class listarProfesoresRequest {
         
@@ -1629,53 +1519,17 @@ namespace Sinapxon.Administrador {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProfesor", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarProfesorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Sinapxon.Administrador.profesor arg0;
-        
-        public insertarProfesorRequest() {
-        }
-        
-        public insertarProfesorRequest(Sinapxon.Administrador.profesor arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProfesorResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarProfesorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarProfesorResponse() {
-        }
-        
-        public insertarProfesorResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAlumnos", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarAlumnosRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarRequisitos", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarRequisitosRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string arg0;
         
-        public listarAlumnosRequest() {
+        public listarRequisitosRequest() {
         }
         
-        public listarAlumnosRequest(string arg0) {
+        public listarRequisitosRequest(string arg0) {
             this.arg0 = arg0;
         }
     }
@@ -1683,17 +1537,17 @@ namespace Sinapxon.Administrador {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAlumnosResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarAlumnosResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarRequisitosResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarRequisitosResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Sinapxon.Administrador.alumno[] @return;
+        public Sinapxon.Administrador.curso[] @return;
         
-        public listarAlumnosResponse() {
+        public listarRequisitosResponse() {
         }
         
-        public listarAlumnosResponse(Sinapxon.Administrador.alumno[] @return) {
+        public listarRequisitosResponse(Sinapxon.Administrador.curso[] @return) {
             this.@return = @return;
         }
     }
@@ -1737,6 +1591,42 @@ namespace Sinapxon.Administrador {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProfesor", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarProfesorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sinapxon.Administrador.profesor arg0;
+        
+        public insertarProfesorRequest() {
+        }
+        
+        public insertarProfesorRequest(Sinapxon.Administrador.profesor arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProfesorResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarProfesorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarProfesorResponse() {
+        }
+        
+        public insertarProfesorResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAlumno", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
     public partial class eliminarAlumnoRequest {
         
@@ -1773,6 +1663,150 @@ namespace Sinapxon.Administrador {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProfesor", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarProfesorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public eliminarProfesorRequest() {
+        }
+        
+        public eliminarProfesorRequest(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProfesorResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarProfesorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarProfesorResponse() {
+        }
+        
+        public eliminarProfesorResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarCurso", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarCursoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sinapxon.Administrador.curso arg0;
+        
+        public actualizarCursoRequest() {
+        }
+        
+        public actualizarCursoRequest(Sinapxon.Administrador.curso arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarCursoResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarCursoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarCursoResponse() {
+        }
+        
+        public actualizarCursoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAlumnos", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarAlumnosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public listarAlumnosRequest() {
+        }
+        
+        public listarAlumnosRequest(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAlumnosResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarAlumnosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sinapxon.Administrador.alumno[] @return;
+        
+        public listarAlumnosResponse() {
+        }
+        
+        public listarAlumnosResponse(Sinapxon.Administrador.alumno[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarAlumno", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarAlumnoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sinapxon.Administrador.alumno arg0;
+        
+        public actualizarAlumnoRequest() {
+        }
+        
+        public actualizarAlumnoRequest(Sinapxon.Administrador.alumno arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarAlumnoResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarAlumnoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarAlumnoResponse() {
+        }
+        
+        public actualizarAlumnoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarPaises", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
     public partial class listarPaisesRequest {
         
@@ -1801,17 +1835,17 @@ namespace Sinapxon.Administrador {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarEspecialidad", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarEspecialidadRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCurso", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarCursoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Sinapxon.Administrador.especialidad arg0;
+        public Sinapxon.Administrador.curso arg0;
         
-        public actualizarEspecialidadRequest() {
+        public insertarCursoRequest() {
         }
         
-        public actualizarEspecialidadRequest(Sinapxon.Administrador.especialidad arg0) {
+        public insertarCursoRequest(Sinapxon.Administrador.curso arg0) {
             this.arg0 = arg0;
         }
     }
@@ -1819,35 +1853,27 @@ namespace Sinapxon.Administrador {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarEspecialidadResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarEspecialidadResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCursoResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarCursoResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarEspecialidadResponse() {
-        }
-        
-        public actualizarEspecialidadResponse(int @return) {
-            this.@return = @return;
+        public insertarCursoResponse() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEspecialidad", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarEspecialidadRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEspecialidades", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarEspecialidadesRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int arg0;
+        public string arg0;
         
-        public eliminarEspecialidadRequest() {
+        public listarEspecialidadesRequest() {
         }
         
-        public eliminarEspecialidadRequest(int arg0) {
+        public listarEspecialidadesRequest(string arg0) {
             this.arg0 = arg0;
         }
     }
@@ -1855,17 +1881,17 @@ namespace Sinapxon.Administrador {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEspecialidadResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarEspecialidadResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEspecialidadesResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarEspecialidadesResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sinapxon.Administrador.especialidad[] @return;
         
-        public eliminarEspecialidadResponse() {
+        public listarEspecialidadesResponse() {
         }
         
-        public eliminarEspecialidadResponse(int @return) {
+        public listarEspecialidadesResponse(Sinapxon.Administrador.especialidad[] @return) {
             this.@return = @return;
         }
     }
@@ -1909,17 +1935,17 @@ namespace Sinapxon.Administrador {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProfesor", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarProfesorRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEspecialidad", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarEspecialidadRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Sinapxon.Administrador.profesor arg0;
+        public int arg0;
         
-        public actualizarProfesorRequest() {
+        public eliminarEspecialidadRequest() {
         }
         
-        public actualizarProfesorRequest(Sinapxon.Administrador.profesor arg0) {
+        public eliminarEspecialidadRequest(int arg0) {
             this.arg0 = arg0;
         }
     }
@@ -1927,17 +1953,17 @@ namespace Sinapxon.Administrador {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProfesorResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarProfesorResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEspecialidadResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarEspecialidadResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public actualizarProfesorResponse() {
+        public eliminarEspecialidadResponse() {
         }
         
-        public actualizarProfesorResponse(int @return) {
+        public eliminarEspecialidadResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1978,6 +2004,78 @@ namespace Sinapxon.Administrador {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProfesor", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarProfesorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sinapxon.Administrador.profesor arg0;
+        
+        public actualizarProfesorRequest() {
+        }
+        
+        public actualizarProfesorRequest(Sinapxon.Administrador.profesor arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProfesorResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarProfesorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarProfesorResponse() {
+        }
+        
+        public actualizarProfesorResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarEspecialidad", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarEspecialidadRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sinapxon.Administrador.especialidad arg0;
+        
+        public actualizarEspecialidadRequest() {
+        }
+        
+        public actualizarEspecialidadRequest(Sinapxon.Administrador.especialidad arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarEspecialidadResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarEspecialidadResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarEspecialidadResponse() {
+        }
+        
+        public actualizarEspecialidadResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface AdministradorServicesChannel : Sinapxon.Administrador.AdministradorServices, System.ServiceModel.IClientChannel {
     }
@@ -2006,48 +2104,26 @@ namespace Sinapxon.Administrador {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sinapxon.Administrador.insertarCursoResponse Sinapxon.Administrador.AdministradorServices.insertarCurso(Sinapxon.Administrador.insertarCursoRequest request) {
-            return base.Channel.insertarCurso(request);
+        Sinapxon.Administrador.listarCursosResponse Sinapxon.Administrador.AdministradorServices.listarCursos(Sinapxon.Administrador.listarCursosRequest request) {
+            return base.Channel.listarCursos(request);
         }
         
-        public void insertarCurso(Sinapxon.Administrador.curso arg0) {
-            Sinapxon.Administrador.insertarCursoRequest inValue = new Sinapxon.Administrador.insertarCursoRequest();
+        public Sinapxon.Administrador.curso[] listarCursos(string arg0) {
+            Sinapxon.Administrador.listarCursosRequest inValue = new Sinapxon.Administrador.listarCursosRequest();
             inValue.arg0 = arg0;
-            Sinapxon.Administrador.insertarCursoResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).insertarCurso(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sinapxon.Administrador.insertarCursoResponse> Sinapxon.Administrador.AdministradorServices.insertarCursoAsync(Sinapxon.Administrador.insertarCursoRequest request) {
-            return base.Channel.insertarCursoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Sinapxon.Administrador.insertarCursoResponse> insertarCursoAsync(Sinapxon.Administrador.curso arg0) {
-            Sinapxon.Administrador.insertarCursoRequest inValue = new Sinapxon.Administrador.insertarCursoRequest();
-            inValue.arg0 = arg0;
-            return ((Sinapxon.Administrador.AdministradorServices)(this)).insertarCursoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sinapxon.Administrador.actualizarCursoResponse Sinapxon.Administrador.AdministradorServices.actualizarCurso(Sinapxon.Administrador.actualizarCursoRequest request) {
-            return base.Channel.actualizarCurso(request);
-        }
-        
-        public int actualizarCurso(Sinapxon.Administrador.curso arg0) {
-            Sinapxon.Administrador.actualizarCursoRequest inValue = new Sinapxon.Administrador.actualizarCursoRequest();
-            inValue.arg0 = arg0;
-            Sinapxon.Administrador.actualizarCursoResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).actualizarCurso(inValue);
+            Sinapxon.Administrador.listarCursosResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).listarCursos(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarCursoResponse> Sinapxon.Administrador.AdministradorServices.actualizarCursoAsync(Sinapxon.Administrador.actualizarCursoRequest request) {
-            return base.Channel.actualizarCursoAsync(request);
+        System.Threading.Tasks.Task<Sinapxon.Administrador.listarCursosResponse> Sinapxon.Administrador.AdministradorServices.listarCursosAsync(Sinapxon.Administrador.listarCursosRequest request) {
+            return base.Channel.listarCursosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarCursoResponse> actualizarCursoAsync(Sinapxon.Administrador.curso arg0) {
-            Sinapxon.Administrador.actualizarCursoRequest inValue = new Sinapxon.Administrador.actualizarCursoRequest();
+        public System.Threading.Tasks.Task<Sinapxon.Administrador.listarCursosResponse> listarCursosAsync(string arg0) {
+            Sinapxon.Administrador.listarCursosRequest inValue = new Sinapxon.Administrador.listarCursosRequest();
             inValue.arg0 = arg0;
-            return ((Sinapxon.Administrador.AdministradorServices)(this)).actualizarCursoAsync(inValue);
+            return ((Sinapxon.Administrador.AdministradorServices)(this)).listarCursosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2074,75 +2150,6 @@ namespace Sinapxon.Administrador {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sinapxon.Administrador.listarCursosResponse Sinapxon.Administrador.AdministradorServices.listarCursos(Sinapxon.Administrador.listarCursosRequest request) {
-            return base.Channel.listarCursos(request);
-        }
-        
-        public Sinapxon.Administrador.curso[] listarCursos(string arg0) {
-            Sinapxon.Administrador.listarCursosRequest inValue = new Sinapxon.Administrador.listarCursosRequest();
-            inValue.arg0 = arg0;
-            Sinapxon.Administrador.listarCursosResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).listarCursos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sinapxon.Administrador.listarCursosResponse> Sinapxon.Administrador.AdministradorServices.listarCursosAsync(Sinapxon.Administrador.listarCursosRequest request) {
-            return base.Channel.listarCursosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Sinapxon.Administrador.listarCursosResponse> listarCursosAsync(string arg0) {
-            Sinapxon.Administrador.listarCursosRequest inValue = new Sinapxon.Administrador.listarCursosRequest();
-            inValue.arg0 = arg0;
-            return ((Sinapxon.Administrador.AdministradorServices)(this)).listarCursosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sinapxon.Administrador.eliminarProfesorResponse Sinapxon.Administrador.AdministradorServices.eliminarProfesor(Sinapxon.Administrador.eliminarProfesorRequest request) {
-            return base.Channel.eliminarProfesor(request);
-        }
-        
-        public int eliminarProfesor(string arg0) {
-            Sinapxon.Administrador.eliminarProfesorRequest inValue = new Sinapxon.Administrador.eliminarProfesorRequest();
-            inValue.arg0 = arg0;
-            Sinapxon.Administrador.eliminarProfesorResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).eliminarProfesor(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sinapxon.Administrador.eliminarProfesorResponse> Sinapxon.Administrador.AdministradorServices.eliminarProfesorAsync(Sinapxon.Administrador.eliminarProfesorRequest request) {
-            return base.Channel.eliminarProfesorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Sinapxon.Administrador.eliminarProfesorResponse> eliminarProfesorAsync(string arg0) {
-            Sinapxon.Administrador.eliminarProfesorRequest inValue = new Sinapxon.Administrador.eliminarProfesorRequest();
-            inValue.arg0 = arg0;
-            return ((Sinapxon.Administrador.AdministradorServices)(this)).eliminarProfesorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sinapxon.Administrador.actualizarAlumnoResponse Sinapxon.Administrador.AdministradorServices.actualizarAlumno(Sinapxon.Administrador.actualizarAlumnoRequest request) {
-            return base.Channel.actualizarAlumno(request);
-        }
-        
-        public int actualizarAlumno(Sinapxon.Administrador.alumno arg0) {
-            Sinapxon.Administrador.actualizarAlumnoRequest inValue = new Sinapxon.Administrador.actualizarAlumnoRequest();
-            inValue.arg0 = arg0;
-            Sinapxon.Administrador.actualizarAlumnoResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).actualizarAlumno(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarAlumnoResponse> Sinapxon.Administrador.AdministradorServices.actualizarAlumnoAsync(Sinapxon.Administrador.actualizarAlumnoRequest request) {
-            return base.Channel.actualizarAlumnoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarAlumnoResponse> actualizarAlumnoAsync(Sinapxon.Administrador.alumno arg0) {
-            Sinapxon.Administrador.actualizarAlumnoRequest inValue = new Sinapxon.Administrador.actualizarAlumnoRequest();
-            inValue.arg0 = arg0;
-            return ((Sinapxon.Administrador.AdministradorServices)(this)).actualizarAlumnoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Sinapxon.Administrador.listarProfesoresResponse Sinapxon.Administrador.AdministradorServices.listarProfesores(Sinapxon.Administrador.listarProfesoresRequest request) {
             return base.Channel.listarProfesores(request);
         }
@@ -2166,49 +2173,26 @@ namespace Sinapxon.Administrador {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sinapxon.Administrador.insertarProfesorResponse Sinapxon.Administrador.AdministradorServices.insertarProfesor(Sinapxon.Administrador.insertarProfesorRequest request) {
-            return base.Channel.insertarProfesor(request);
+        Sinapxon.Administrador.listarRequisitosResponse Sinapxon.Administrador.AdministradorServices.listarRequisitos(Sinapxon.Administrador.listarRequisitosRequest request) {
+            return base.Channel.listarRequisitos(request);
         }
         
-        public int insertarProfesor(Sinapxon.Administrador.profesor arg0) {
-            Sinapxon.Administrador.insertarProfesorRequest inValue = new Sinapxon.Administrador.insertarProfesorRequest();
+        public Sinapxon.Administrador.curso[] listarRequisitos(string arg0) {
+            Sinapxon.Administrador.listarRequisitosRequest inValue = new Sinapxon.Administrador.listarRequisitosRequest();
             inValue.arg0 = arg0;
-            Sinapxon.Administrador.insertarProfesorResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).insertarProfesor(inValue);
+            Sinapxon.Administrador.listarRequisitosResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).listarRequisitos(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sinapxon.Administrador.insertarProfesorResponse> Sinapxon.Administrador.AdministradorServices.insertarProfesorAsync(Sinapxon.Administrador.insertarProfesorRequest request) {
-            return base.Channel.insertarProfesorAsync(request);
+        System.Threading.Tasks.Task<Sinapxon.Administrador.listarRequisitosResponse> Sinapxon.Administrador.AdministradorServices.listarRequisitosAsync(Sinapxon.Administrador.listarRequisitosRequest request) {
+            return base.Channel.listarRequisitosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Sinapxon.Administrador.insertarProfesorResponse> insertarProfesorAsync(Sinapxon.Administrador.profesor arg0) {
-            Sinapxon.Administrador.insertarProfesorRequest inValue = new Sinapxon.Administrador.insertarProfesorRequest();
+        public System.Threading.Tasks.Task<Sinapxon.Administrador.listarRequisitosResponse> listarRequisitosAsync(string arg0) {
+            Sinapxon.Administrador.listarRequisitosRequest inValue = new Sinapxon.Administrador.listarRequisitosRequest();
             inValue.arg0 = arg0;
-            return ((Sinapxon.Administrador.AdministradorServices)(this)).insertarProfesorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sinapxon.Administrador.listarAlumnosResponse Sinapxon.Administrador.AdministradorServices.listarAlumnos(Sinapxon.Administrador.listarAlumnosRequest request) {
-            return base.Channel.listarAlumnos(request);
-        }
-        
-        public Sinapxon.Administrador.alumno[] listarAlumnos(string arg0) {
-            Sinapxon.Administrador.listarAlumnosRequest inValue = new Sinapxon.Administrador.listarAlumnosRequest();
-            inValue.arg0 = arg0;
-            Sinapxon.Administrador.listarAlumnosResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).listarAlumnos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sinapxon.Administrador.listarAlumnosResponse> Sinapxon.Administrador.AdministradorServices.listarAlumnosAsync(Sinapxon.Administrador.listarAlumnosRequest request) {
-            return base.Channel.listarAlumnosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Sinapxon.Administrador.listarAlumnosResponse> listarAlumnosAsync(string arg0) {
-            Sinapxon.Administrador.listarAlumnosRequest inValue = new Sinapxon.Administrador.listarAlumnosRequest();
-            inValue.arg0 = arg0;
-            return ((Sinapxon.Administrador.AdministradorServices)(this)).listarAlumnosAsync(inValue);
+            return ((Sinapxon.Administrador.AdministradorServices)(this)).listarRequisitosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2235,6 +2219,29 @@ namespace Sinapxon.Administrador {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sinapxon.Administrador.insertarProfesorResponse Sinapxon.Administrador.AdministradorServices.insertarProfesor(Sinapxon.Administrador.insertarProfesorRequest request) {
+            return base.Channel.insertarProfesor(request);
+        }
+        
+        public int insertarProfesor(Sinapxon.Administrador.profesor arg0) {
+            Sinapxon.Administrador.insertarProfesorRequest inValue = new Sinapxon.Administrador.insertarProfesorRequest();
+            inValue.arg0 = arg0;
+            Sinapxon.Administrador.insertarProfesorResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).insertarProfesor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sinapxon.Administrador.insertarProfesorResponse> Sinapxon.Administrador.AdministradorServices.insertarProfesorAsync(Sinapxon.Administrador.insertarProfesorRequest request) {
+            return base.Channel.insertarProfesorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sinapxon.Administrador.insertarProfesorResponse> insertarProfesorAsync(Sinapxon.Administrador.profesor arg0) {
+            Sinapxon.Administrador.insertarProfesorRequest inValue = new Sinapxon.Administrador.insertarProfesorRequest();
+            inValue.arg0 = arg0;
+            return ((Sinapxon.Administrador.AdministradorServices)(this)).insertarProfesorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Sinapxon.Administrador.eliminarAlumnoResponse Sinapxon.Administrador.AdministradorServices.eliminarAlumno(Sinapxon.Administrador.eliminarAlumnoRequest request) {
             return base.Channel.eliminarAlumno(request);
         }
@@ -2255,6 +2262,98 @@ namespace Sinapxon.Administrador {
             Sinapxon.Administrador.eliminarAlumnoRequest inValue = new Sinapxon.Administrador.eliminarAlumnoRequest();
             inValue.arg0 = arg0;
             return ((Sinapxon.Administrador.AdministradorServices)(this)).eliminarAlumnoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sinapxon.Administrador.eliminarProfesorResponse Sinapxon.Administrador.AdministradorServices.eliminarProfesor(Sinapxon.Administrador.eliminarProfesorRequest request) {
+            return base.Channel.eliminarProfesor(request);
+        }
+        
+        public int eliminarProfesor(string arg0) {
+            Sinapxon.Administrador.eliminarProfesorRequest inValue = new Sinapxon.Administrador.eliminarProfesorRequest();
+            inValue.arg0 = arg0;
+            Sinapxon.Administrador.eliminarProfesorResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).eliminarProfesor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sinapxon.Administrador.eliminarProfesorResponse> Sinapxon.Administrador.AdministradorServices.eliminarProfesorAsync(Sinapxon.Administrador.eliminarProfesorRequest request) {
+            return base.Channel.eliminarProfesorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sinapxon.Administrador.eliminarProfesorResponse> eliminarProfesorAsync(string arg0) {
+            Sinapxon.Administrador.eliminarProfesorRequest inValue = new Sinapxon.Administrador.eliminarProfesorRequest();
+            inValue.arg0 = arg0;
+            return ((Sinapxon.Administrador.AdministradorServices)(this)).eliminarProfesorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sinapxon.Administrador.actualizarCursoResponse Sinapxon.Administrador.AdministradorServices.actualizarCurso(Sinapxon.Administrador.actualizarCursoRequest request) {
+            return base.Channel.actualizarCurso(request);
+        }
+        
+        public int actualizarCurso(Sinapxon.Administrador.curso arg0) {
+            Sinapxon.Administrador.actualizarCursoRequest inValue = new Sinapxon.Administrador.actualizarCursoRequest();
+            inValue.arg0 = arg0;
+            Sinapxon.Administrador.actualizarCursoResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).actualizarCurso(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarCursoResponse> Sinapxon.Administrador.AdministradorServices.actualizarCursoAsync(Sinapxon.Administrador.actualizarCursoRequest request) {
+            return base.Channel.actualizarCursoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarCursoResponse> actualizarCursoAsync(Sinapxon.Administrador.curso arg0) {
+            Sinapxon.Administrador.actualizarCursoRequest inValue = new Sinapxon.Administrador.actualizarCursoRequest();
+            inValue.arg0 = arg0;
+            return ((Sinapxon.Administrador.AdministradorServices)(this)).actualizarCursoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sinapxon.Administrador.listarAlumnosResponse Sinapxon.Administrador.AdministradorServices.listarAlumnos(Sinapxon.Administrador.listarAlumnosRequest request) {
+            return base.Channel.listarAlumnos(request);
+        }
+        
+        public Sinapxon.Administrador.alumno[] listarAlumnos(string arg0) {
+            Sinapxon.Administrador.listarAlumnosRequest inValue = new Sinapxon.Administrador.listarAlumnosRequest();
+            inValue.arg0 = arg0;
+            Sinapxon.Administrador.listarAlumnosResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).listarAlumnos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sinapxon.Administrador.listarAlumnosResponse> Sinapxon.Administrador.AdministradorServices.listarAlumnosAsync(Sinapxon.Administrador.listarAlumnosRequest request) {
+            return base.Channel.listarAlumnosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sinapxon.Administrador.listarAlumnosResponse> listarAlumnosAsync(string arg0) {
+            Sinapxon.Administrador.listarAlumnosRequest inValue = new Sinapxon.Administrador.listarAlumnosRequest();
+            inValue.arg0 = arg0;
+            return ((Sinapxon.Administrador.AdministradorServices)(this)).listarAlumnosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sinapxon.Administrador.actualizarAlumnoResponse Sinapxon.Administrador.AdministradorServices.actualizarAlumno(Sinapxon.Administrador.actualizarAlumnoRequest request) {
+            return base.Channel.actualizarAlumno(request);
+        }
+        
+        public int actualizarAlumno(Sinapxon.Administrador.alumno arg0) {
+            Sinapxon.Administrador.actualizarAlumnoRequest inValue = new Sinapxon.Administrador.actualizarAlumnoRequest();
+            inValue.arg0 = arg0;
+            Sinapxon.Administrador.actualizarAlumnoResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).actualizarAlumno(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarAlumnoResponse> Sinapxon.Administrador.AdministradorServices.actualizarAlumnoAsync(Sinapxon.Administrador.actualizarAlumnoRequest request) {
+            return base.Channel.actualizarAlumnoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarAlumnoResponse> actualizarAlumnoAsync(Sinapxon.Administrador.alumno arg0) {
+            Sinapxon.Administrador.actualizarAlumnoRequest inValue = new Sinapxon.Administrador.actualizarAlumnoRequest();
+            inValue.arg0 = arg0;
+            return ((Sinapxon.Administrador.AdministradorServices)(this)).actualizarAlumnoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2279,49 +2378,48 @@ namespace Sinapxon.Administrador {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sinapxon.Administrador.actualizarEspecialidadResponse Sinapxon.Administrador.AdministradorServices.actualizarEspecialidad(Sinapxon.Administrador.actualizarEspecialidadRequest request) {
-            return base.Channel.actualizarEspecialidad(request);
+        Sinapxon.Administrador.insertarCursoResponse Sinapxon.Administrador.AdministradorServices.insertarCurso(Sinapxon.Administrador.insertarCursoRequest request) {
+            return base.Channel.insertarCurso(request);
         }
         
-        public int actualizarEspecialidad(Sinapxon.Administrador.especialidad arg0) {
-            Sinapxon.Administrador.actualizarEspecialidadRequest inValue = new Sinapxon.Administrador.actualizarEspecialidadRequest();
+        public void insertarCurso(Sinapxon.Administrador.curso arg0) {
+            Sinapxon.Administrador.insertarCursoRequest inValue = new Sinapxon.Administrador.insertarCursoRequest();
             inValue.arg0 = arg0;
-            Sinapxon.Administrador.actualizarEspecialidadResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).actualizarEspecialidad(inValue);
+            Sinapxon.Administrador.insertarCursoResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).insertarCurso(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sinapxon.Administrador.insertarCursoResponse> Sinapxon.Administrador.AdministradorServices.insertarCursoAsync(Sinapxon.Administrador.insertarCursoRequest request) {
+            return base.Channel.insertarCursoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sinapxon.Administrador.insertarCursoResponse> insertarCursoAsync(Sinapxon.Administrador.curso arg0) {
+            Sinapxon.Administrador.insertarCursoRequest inValue = new Sinapxon.Administrador.insertarCursoRequest();
+            inValue.arg0 = arg0;
+            return ((Sinapxon.Administrador.AdministradorServices)(this)).insertarCursoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sinapxon.Administrador.listarEspecialidadesResponse Sinapxon.Administrador.AdministradorServices.listarEspecialidades(Sinapxon.Administrador.listarEspecialidadesRequest request) {
+            return base.Channel.listarEspecialidades(request);
+        }
+        
+        public Sinapxon.Administrador.especialidad[] listarEspecialidades(string arg0) {
+            Sinapxon.Administrador.listarEspecialidadesRequest inValue = new Sinapxon.Administrador.listarEspecialidadesRequest();
+            inValue.arg0 = arg0;
+            Sinapxon.Administrador.listarEspecialidadesResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).listarEspecialidades(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarEspecialidadResponse> Sinapxon.Administrador.AdministradorServices.actualizarEspecialidadAsync(Sinapxon.Administrador.actualizarEspecialidadRequest request) {
-            return base.Channel.actualizarEspecialidadAsync(request);
+        System.Threading.Tasks.Task<Sinapxon.Administrador.listarEspecialidadesResponse> Sinapxon.Administrador.AdministradorServices.listarEspecialidadesAsync(Sinapxon.Administrador.listarEspecialidadesRequest request) {
+            return base.Channel.listarEspecialidadesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarEspecialidadResponse> actualizarEspecialidadAsync(Sinapxon.Administrador.especialidad arg0) {
-            Sinapxon.Administrador.actualizarEspecialidadRequest inValue = new Sinapxon.Administrador.actualizarEspecialidadRequest();
+        public System.Threading.Tasks.Task<Sinapxon.Administrador.listarEspecialidadesResponse> listarEspecialidadesAsync(string arg0) {
+            Sinapxon.Administrador.listarEspecialidadesRequest inValue = new Sinapxon.Administrador.listarEspecialidadesRequest();
             inValue.arg0 = arg0;
-            return ((Sinapxon.Administrador.AdministradorServices)(this)).actualizarEspecialidadAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sinapxon.Administrador.eliminarEspecialidadResponse Sinapxon.Administrador.AdministradorServices.eliminarEspecialidad(Sinapxon.Administrador.eliminarEspecialidadRequest request) {
-            return base.Channel.eliminarEspecialidad(request);
-        }
-        
-        public int eliminarEspecialidad(int arg0) {
-            Sinapxon.Administrador.eliminarEspecialidadRequest inValue = new Sinapxon.Administrador.eliminarEspecialidadRequest();
-            inValue.arg0 = arg0;
-            Sinapxon.Administrador.eliminarEspecialidadResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).eliminarEspecialidad(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sinapxon.Administrador.eliminarEspecialidadResponse> Sinapxon.Administrador.AdministradorServices.eliminarEspecialidadAsync(Sinapxon.Administrador.eliminarEspecialidadRequest request) {
-            return base.Channel.eliminarEspecialidadAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Sinapxon.Administrador.eliminarEspecialidadResponse> eliminarEspecialidadAsync(int arg0) {
-            Sinapxon.Administrador.eliminarEspecialidadRequest inValue = new Sinapxon.Administrador.eliminarEspecialidadRequest();
-            inValue.arg0 = arg0;
-            return ((Sinapxon.Administrador.AdministradorServices)(this)).eliminarEspecialidadAsync(inValue);
+            return ((Sinapxon.Administrador.AdministradorServices)(this)).listarEspecialidadesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2348,26 +2446,26 @@ namespace Sinapxon.Administrador {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sinapxon.Administrador.actualizarProfesorResponse Sinapxon.Administrador.AdministradorServices.actualizarProfesor(Sinapxon.Administrador.actualizarProfesorRequest request) {
-            return base.Channel.actualizarProfesor(request);
+        Sinapxon.Administrador.eliminarEspecialidadResponse Sinapxon.Administrador.AdministradorServices.eliminarEspecialidad(Sinapxon.Administrador.eliminarEspecialidadRequest request) {
+            return base.Channel.eliminarEspecialidad(request);
         }
         
-        public int actualizarProfesor(Sinapxon.Administrador.profesor arg0) {
-            Sinapxon.Administrador.actualizarProfesorRequest inValue = new Sinapxon.Administrador.actualizarProfesorRequest();
+        public int eliminarEspecialidad(int arg0) {
+            Sinapxon.Administrador.eliminarEspecialidadRequest inValue = new Sinapxon.Administrador.eliminarEspecialidadRequest();
             inValue.arg0 = arg0;
-            Sinapxon.Administrador.actualizarProfesorResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).actualizarProfesor(inValue);
+            Sinapxon.Administrador.eliminarEspecialidadResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).eliminarEspecialidad(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarProfesorResponse> Sinapxon.Administrador.AdministradorServices.actualizarProfesorAsync(Sinapxon.Administrador.actualizarProfesorRequest request) {
-            return base.Channel.actualizarProfesorAsync(request);
+        System.Threading.Tasks.Task<Sinapxon.Administrador.eliminarEspecialidadResponse> Sinapxon.Administrador.AdministradorServices.eliminarEspecialidadAsync(Sinapxon.Administrador.eliminarEspecialidadRequest request) {
+            return base.Channel.eliminarEspecialidadAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarProfesorResponse> actualizarProfesorAsync(Sinapxon.Administrador.profesor arg0) {
-            Sinapxon.Administrador.actualizarProfesorRequest inValue = new Sinapxon.Administrador.actualizarProfesorRequest();
+        public System.Threading.Tasks.Task<Sinapxon.Administrador.eliminarEspecialidadResponse> eliminarEspecialidadAsync(int arg0) {
+            Sinapxon.Administrador.eliminarEspecialidadRequest inValue = new Sinapxon.Administrador.eliminarEspecialidadRequest();
             inValue.arg0 = arg0;
-            return ((Sinapxon.Administrador.AdministradorServices)(this)).actualizarProfesorAsync(inValue);
+            return ((Sinapxon.Administrador.AdministradorServices)(this)).eliminarEspecialidadAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2391,6 +2489,52 @@ namespace Sinapxon.Administrador {
             Sinapxon.Administrador.insertarEspecialidadRequest inValue = new Sinapxon.Administrador.insertarEspecialidadRequest();
             inValue.arg0 = arg0;
             return ((Sinapxon.Administrador.AdministradorServices)(this)).insertarEspecialidadAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sinapxon.Administrador.actualizarProfesorResponse Sinapxon.Administrador.AdministradorServices.actualizarProfesor(Sinapxon.Administrador.actualizarProfesorRequest request) {
+            return base.Channel.actualizarProfesor(request);
+        }
+        
+        public int actualizarProfesor(Sinapxon.Administrador.profesor arg0) {
+            Sinapxon.Administrador.actualizarProfesorRequest inValue = new Sinapxon.Administrador.actualizarProfesorRequest();
+            inValue.arg0 = arg0;
+            Sinapxon.Administrador.actualizarProfesorResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).actualizarProfesor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarProfesorResponse> Sinapxon.Administrador.AdministradorServices.actualizarProfesorAsync(Sinapxon.Administrador.actualizarProfesorRequest request) {
+            return base.Channel.actualizarProfesorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarProfesorResponse> actualizarProfesorAsync(Sinapxon.Administrador.profesor arg0) {
+            Sinapxon.Administrador.actualizarProfesorRequest inValue = new Sinapxon.Administrador.actualizarProfesorRequest();
+            inValue.arg0 = arg0;
+            return ((Sinapxon.Administrador.AdministradorServices)(this)).actualizarProfesorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sinapxon.Administrador.actualizarEspecialidadResponse Sinapxon.Administrador.AdministradorServices.actualizarEspecialidad(Sinapxon.Administrador.actualizarEspecialidadRequest request) {
+            return base.Channel.actualizarEspecialidad(request);
+        }
+        
+        public int actualizarEspecialidad(Sinapxon.Administrador.especialidad arg0) {
+            Sinapxon.Administrador.actualizarEspecialidadRequest inValue = new Sinapxon.Administrador.actualizarEspecialidadRequest();
+            inValue.arg0 = arg0;
+            Sinapxon.Administrador.actualizarEspecialidadResponse retVal = ((Sinapxon.Administrador.AdministradorServices)(this)).actualizarEspecialidad(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarEspecialidadResponse> Sinapxon.Administrador.AdministradorServices.actualizarEspecialidadAsync(Sinapxon.Administrador.actualizarEspecialidadRequest request) {
+            return base.Channel.actualizarEspecialidadAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sinapxon.Administrador.actualizarEspecialidadResponse> actualizarEspecialidadAsync(Sinapxon.Administrador.especialidad arg0) {
+            Sinapxon.Administrador.actualizarEspecialidadRequest inValue = new Sinapxon.Administrador.actualizarEspecialidadRequest();
+            inValue.arg0 = arg0;
+            return ((Sinapxon.Administrador.AdministradorServices)(this)).actualizarEspecialidadAsync(inValue);
         }
     }
 }
