@@ -74,6 +74,14 @@ namespace Sinapxon.Login
         {
 
         }
+
+        private void txtContrasenia_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Button1_Click(sender, e);
+            }
+        }
     }
 
     public static class LoginInfo

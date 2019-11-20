@@ -42,11 +42,14 @@ namespace Sinapxon.Alumno
 
             BindingList<Alumno.classroom> classrooms = 
                 new BindingList<classroom>(DBController.listarClassroomxAlumno(LoginInfo.persona.codigo));
-
-            foreach (Alumno.classroom obj in classrooms)
+            if (classrooms != null)
             {
-                crearElemento(obj);
+                foreach (Alumno.classroom obj in classrooms)
+                    crearElemento(obj);
+ 
+
             }
+            
 
             //crearElemento();
             //crearElemento();
