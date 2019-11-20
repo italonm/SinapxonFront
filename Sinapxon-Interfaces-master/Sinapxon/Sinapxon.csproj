@@ -116,6 +116,12 @@
     <Compile Include="Administrador\frmListaUsuarios.Designer.cs">
       <DependentUpon>frmListaUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrador\frmRegistrarEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmRegistrarEspecialidad.Designer.cs">
+      <DependentUpon>frmRegistrarEspecialidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\frmSolicitudClassroom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmListaUsuarios.resx">
       <DependentUpon>frmListaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmRegistrarEspecialidad.resx">
+      <DependentUpon>frmRegistrarEspecialidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmSolicitudClassroom.resx">
       <DependentUpon>frmSolicitudClassroom.cs</DependentUpon>
@@ -811,6 +820,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\round_cancel_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_library_add_white_18dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

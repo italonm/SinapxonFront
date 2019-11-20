@@ -5,17 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/SinapxonSoftServices/AdministradorServices?xsd=1" namespace="http://services.sinapxon.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="listarProfesores">
-    <part name="parameters" element="tns:listarProfesores" />
+  <message name="insertarCurso">
+    <part name="parameters" element="tns:insertarCurso" />
   </message>
-  <message name="listarProfesoresResponse">
-    <part name="parameters" element="tns:listarProfesoresResponse" />
-  </message>
-  <message name="eliminarProfesor">
-    <part name="parameters" element="tns:eliminarProfesor" />
-  </message>
-  <message name="eliminarProfesorResponse">
-    <part name="parameters" element="tns:eliminarProfesorResponse" />
+  <message name="insertarCursoResponse">
+    <part name="parameters" element="tns:insertarCursoResponse" />
   </message>
   <message name="actualizarCurso">
     <part name="parameters" element="tns:actualizarCurso" />
@@ -23,53 +17,23 @@
   <message name="actualizarCursoResponse">
     <part name="parameters" element="tns:actualizarCursoResponse" />
   </message>
-  <message name="insertarCurso">
-    <part name="parameters" element="tns:insertarCurso" />
-  </message>
-  <message name="insertarCursoResponse">
-    <part name="parameters" element="tns:insertarCursoResponse" />
-  </message>
-  <message name="eliminarAlumno">
-    <part name="parameters" element="tns:eliminarAlumno" />
-  </message>
-  <message name="eliminarAlumnoResponse">
-    <part name="parameters" element="tns:eliminarAlumnoResponse" />
-  </message>
   <message name="eliminaCurso">
     <part name="parameters" element="tns:eliminaCurso" />
   </message>
   <message name="eliminaCursoResponse">
     <part name="parameters" element="tns:eliminaCursoResponse" />
   </message>
-  <message name="insertarProfesor">
-    <part name="parameters" element="tns:insertarProfesor" />
+  <message name="listarCursos">
+    <part name="parameters" element="tns:listarCursos" />
   </message>
-  <message name="insertarProfesorResponse">
-    <part name="parameters" element="tns:insertarProfesorResponse" />
+  <message name="listarCursosResponse">
+    <part name="parameters" element="tns:listarCursosResponse" />
   </message>
-  <message name="listarSolicitudes">
-    <part name="parameters" element="tns:listarSolicitudes" />
+  <message name="eliminarProfesor">
+    <part name="parameters" element="tns:eliminarProfesor" />
   </message>
-  <message name="listarSolicitudesResponse">
-    <part name="parameters" element="tns:listarSolicitudesResponse" />
-  </message>
-  <message name="listarPaises">
-    <part name="parameters" element="tns:listarPaises" />
-  </message>
-  <message name="listarPaisesResponse">
-    <part name="parameters" element="tns:listarPaisesResponse" />
-  </message>
-  <message name="insertarAlumno">
-    <part name="parameters" element="tns:insertarAlumno" />
-  </message>
-  <message name="insertarAlumnoResponse">
-    <part name="parameters" element="tns:insertarAlumnoResponse" />
-  </message>
-  <message name="listarAlumnos">
-    <part name="parameters" element="tns:listarAlumnos" />
-  </message>
-  <message name="listarAlumnosResponse">
-    <part name="parameters" element="tns:listarAlumnosResponse" />
+  <message name="eliminarProfesorResponse">
+    <part name="parameters" element="tns:eliminarProfesorResponse" />
   </message>
   <message name="actualizarAlumno">
     <part name="parameters" element="tns:actualizarAlumno" />
@@ -77,11 +41,41 @@
   <message name="actualizarAlumnoResponse">
     <part name="parameters" element="tns:actualizarAlumnoResponse" />
   </message>
-  <message name="insertarEspecialidad">
-    <part name="parameters" element="tns:insertarEspecialidad" />
+  <message name="listarProfesores">
+    <part name="parameters" element="tns:listarProfesores" />
   </message>
-  <message name="insertarEspecialidadResponse">
-    <part name="parameters" element="tns:insertarEspecialidadResponse" />
+  <message name="listarProfesoresResponse">
+    <part name="parameters" element="tns:listarProfesoresResponse" />
+  </message>
+  <message name="insertarProfesor">
+    <part name="parameters" element="tns:insertarProfesor" />
+  </message>
+  <message name="insertarProfesorResponse">
+    <part name="parameters" element="tns:insertarProfesorResponse" />
+  </message>
+  <message name="listarAlumnos">
+    <part name="parameters" element="tns:listarAlumnos" />
+  </message>
+  <message name="listarAlumnosResponse">
+    <part name="parameters" element="tns:listarAlumnosResponse" />
+  </message>
+  <message name="insertarAlumno">
+    <part name="parameters" element="tns:insertarAlumno" />
+  </message>
+  <message name="insertarAlumnoResponse">
+    <part name="parameters" element="tns:insertarAlumnoResponse" />
+  </message>
+  <message name="eliminarAlumno">
+    <part name="parameters" element="tns:eliminarAlumno" />
+  </message>
+  <message name="eliminarAlumnoResponse">
+    <part name="parameters" element="tns:eliminarAlumnoResponse" />
+  </message>
+  <message name="listarPaises">
+    <part name="parameters" element="tns:listarPaises" />
+  </message>
+  <message name="listarPaisesResponse">
+    <part name="parameters" element="tns:listarPaisesResponse" />
   </message>
   <message name="actualizarEspecialidad">
     <part name="parameters" element="tns:actualizarEspecialidad" />
@@ -95,70 +89,72 @@
   <message name="eliminarEspecialidadResponse">
     <part name="parameters" element="tns:eliminarEspecialidadResponse" />
   </message>
+  <message name="listarSolicitudes">
+    <part name="parameters" element="tns:listarSolicitudes" />
+  </message>
+  <message name="listarSolicitudesResponse">
+    <part name="parameters" element="tns:listarSolicitudesResponse" />
+  </message>
   <message name="actualizarProfesor">
     <part name="parameters" element="tns:actualizarProfesor" />
   </message>
   <message name="actualizarProfesorResponse">
     <part name="parameters" element="tns:actualizarProfesorResponse" />
   </message>
-  <message name="listarCursos">
-    <part name="parameters" element="tns:listarCursos" />
+  <message name="insertarEspecialidad">
+    <part name="parameters" element="tns:insertarEspecialidad" />
   </message>
-  <message name="listarCursosResponse">
-    <part name="parameters" element="tns:listarCursosResponse" />
+  <message name="insertarEspecialidadResponse">
+    <part name="parameters" element="tns:insertarEspecialidadResponse" />
   </message>
   <portType name="AdministradorServices">
-    <operation name="listarProfesores">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarProfesoresRequest" message="tns:listarProfesores" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarProfesoresResponse" message="tns:listarProfesoresResponse" />
-    </operation>
-    <operation name="eliminarProfesor">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarProfesorRequest" message="tns:eliminarProfesor" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarProfesorResponse" message="tns:eliminarProfesorResponse" />
+    <operation name="insertarCurso">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarCursoRequest" message="tns:insertarCurso" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarCursoResponse" message="tns:insertarCursoResponse" />
     </operation>
     <operation name="actualizarCurso">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarCursoRequest" message="tns:actualizarCurso" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarCursoResponse" message="tns:actualizarCursoResponse" />
     </operation>
-    <operation name="insertarCurso">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarCursoRequest" message="tns:insertarCurso" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarCursoResponse" message="tns:insertarCursoResponse" />
-    </operation>
-    <operation name="eliminarAlumno">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarAlumnoRequest" message="tns:eliminarAlumno" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarAlumnoResponse" message="tns:eliminarAlumnoResponse" />
-    </operation>
     <operation name="eliminaCurso">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminaCursoRequest" message="tns:eliminaCurso" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminaCursoResponse" message="tns:eliminaCursoResponse" />
     </operation>
-    <operation name="insertarProfesor">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarProfesorRequest" message="tns:insertarProfesor" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarProfesorResponse" message="tns:insertarProfesorResponse" />
+    <operation name="listarCursos">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarCursosRequest" message="tns:listarCursos" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarCursosResponse" message="tns:listarCursosResponse" />
     </operation>
-    <operation name="listarSolicitudes">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarSolicitudesRequest" message="tns:listarSolicitudes" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarSolicitudesResponse" message="tns:listarSolicitudesResponse" />
-    </operation>
-    <operation name="listarPaises">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarPaisesRequest" message="tns:listarPaises" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarPaisesResponse" message="tns:listarPaisesResponse" />
-    </operation>
-    <operation name="insertarAlumno">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarAlumnoRequest" message="tns:insertarAlumno" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarAlumnoResponse" message="tns:insertarAlumnoResponse" />
-    </operation>
-    <operation name="listarAlumnos">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarAlumnosRequest" message="tns:listarAlumnos" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarAlumnosResponse" message="tns:listarAlumnosResponse" />
+    <operation name="eliminarProfesor">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarProfesorRequest" message="tns:eliminarProfesor" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarProfesorResponse" message="tns:eliminarProfesorResponse" />
     </operation>
     <operation name="actualizarAlumno">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarAlumnoRequest" message="tns:actualizarAlumno" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarAlumnoResponse" message="tns:actualizarAlumnoResponse" />
     </operation>
-    <operation name="insertarEspecialidad">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarEspecialidadRequest" message="tns:insertarEspecialidad" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarEspecialidadResponse" message="tns:insertarEspecialidadResponse" />
+    <operation name="listarProfesores">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarProfesoresRequest" message="tns:listarProfesores" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarProfesoresResponse" message="tns:listarProfesoresResponse" />
+    </operation>
+    <operation name="insertarProfesor">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarProfesorRequest" message="tns:insertarProfesor" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarProfesorResponse" message="tns:insertarProfesorResponse" />
+    </operation>
+    <operation name="listarAlumnos">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarAlumnosRequest" message="tns:listarAlumnos" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarAlumnosResponse" message="tns:listarAlumnosResponse" />
+    </operation>
+    <operation name="insertarAlumno">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarAlumnoRequest" message="tns:insertarAlumno" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarAlumnoResponse" message="tns:insertarAlumnoResponse" />
+    </operation>
+    <operation name="eliminarAlumno">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarAlumnoRequest" message="tns:eliminarAlumno" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarAlumnoResponse" message="tns:eliminarAlumnoResponse" />
+    </operation>
+    <operation name="listarPaises">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarPaisesRequest" message="tns:listarPaises" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarPaisesResponse" message="tns:listarPaisesResponse" />
     </operation>
     <operation name="actualizarEspecialidad">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarEspecialidadRequest" message="tns:actualizarEspecialidad" />
@@ -168,27 +164,22 @@
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarEspecialidadRequest" message="tns:eliminarEspecialidad" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarEspecialidadResponse" message="tns:eliminarEspecialidadResponse" />
     </operation>
+    <operation name="listarSolicitudes">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarSolicitudesRequest" message="tns:listarSolicitudes" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarSolicitudesResponse" message="tns:listarSolicitudesResponse" />
+    </operation>
     <operation name="actualizarProfesor">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarProfesorRequest" message="tns:actualizarProfesor" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarProfesorResponse" message="tns:actualizarProfesorResponse" />
     </operation>
-    <operation name="listarCursos">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarCursosRequest" message="tns:listarCursos" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarCursosResponse" message="tns:listarCursosResponse" />
+    <operation name="insertarEspecialidad">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarEspecialidadRequest" message="tns:insertarEspecialidad" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarEspecialidadResponse" message="tns:insertarEspecialidadResponse" />
     </operation>
   </portType>
   <binding name="AdministradorServicesPortBinding" type="tns:AdministradorServices">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarProfesores">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarProfesor">
+    <operation name="insertarCurso">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -206,24 +197,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarCurso">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarAlumno">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="eliminaCurso">
       <soap:operation soapAction="" />
       <input>
@@ -233,7 +206,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarProfesor">
+    <operation name="listarCursos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -242,34 +215,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarSolicitudes">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarPaises">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarAlumno">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarAlumnos">
+    <operation name="eliminarProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -287,7 +233,52 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarEspecialidad">
+    <operation name="listarProfesores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAlumnos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPaises">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -314,6 +305,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="listarSolicitudes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="actualizarProfesor">
       <soap:operation soapAction="" />
       <input>
@@ -323,7 +323,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarCursos">
+    <operation name="insertarEspecialidad">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
