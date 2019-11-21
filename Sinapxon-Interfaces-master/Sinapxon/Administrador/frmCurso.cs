@@ -15,6 +15,7 @@ namespace Sinapxon.Administrador
         private frmAdministrador _padre = null;
 
         private Administrador.curso curso;
+        private Administrador.curso cursoshow;
         private BindingList<Administrador.curso> cursos;
         private Administrador.curso curSeleccionado;
 
@@ -37,6 +38,7 @@ namespace Sinapxon.Administrador
             txtNombreCurso.Text = curso.nombre;
             txtDescripcion.Text = curso.descripcion;
             cbEspecialidad.Text = curso.especialidad.nombre;
+            curso.cursos = new BindingList<Administrador.curso>(DBController.listarRequisitos(curso.codigo)).ToArray();
             dgvRequisitos.AutoGenerateColumns = false;
             this.cursos  = new BindingList<Administrador.curso>(curso.cursos.ToList()); ;          
             dgvRequisitos.DataSource = new BindingList<Administrador.curso>(DBController.listarRequisitos(curso.codigo));
@@ -58,7 +60,7 @@ namespace Sinapxon.Administrador
             dgvRequisitos.AutoGenerateColumns = false;
             dgvRequisitos.DataSource = new BindingList<Administrador.curso>();
             this.Padre = padre;
-            estadoComponentes(Estado.Nuevo);
+            estadoComponentes(Estado.Actualizar);
         }
 
         public void limpiarComponentes()
@@ -80,13 +82,14 @@ namespace Sinapxon.Administrador
                     btnModificar.Enabled = false;
                     btnEliminar.Enabled = false;
                     btnRegresar.Enabled = true;
-                    btnAgregarRequisito.Enabled = true;
-                    btnQuitarRequisito.Enabled = true;
+                    btnAgregarRequisito.Enabled = false;
+                    btnQuitarRequisito.Enabled =false;
                     btnCancelar.Enabled = false;
                     txtNombreCurso.Enabled = false;
                     txtCodigoCurso.Enabled = false;
                     txtDescripcion.Enabled = false;
                     cbEspecialidad.Enabled = false;
+                    dgvRequisitos.Enabled = false;
                     break;
                 case Estado.Nuevo:
                     btnNuevo.Enabled = false;
@@ -101,6 +104,7 @@ namespace Sinapxon.Administrador
                     txtCodigoCurso.Enabled = true;
                     txtDescripcion.Enabled = true;
                     cbEspecialidad.Enabled = true;
+                    dgvRequisitos.Enabled = true;
                     break;
                 case Estado.Actualizar:
                     btnNuevo.Enabled = false;
@@ -115,6 +119,7 @@ namespace Sinapxon.Administrador
                     txtNombreCurso.Enabled = true;
                     txtDescripcion.Enabled = true;
                     cbEspecialidad.Enabled = true;
+                    dgvRequisitos.Enabled = true;
                     break;
                 case Estado.Modificar:
                     btnNuevo.Enabled = true;
@@ -123,12 +128,13 @@ namespace Sinapxon.Administrador
                     btnEliminar.Enabled = true;
                     btnRegresar.Enabled = true;
                     btnCancelar.Enabled = true;
-                    btnAgregarRequisito.Enabled = true;
-                    btnQuitarRequisito.Enabled = true;
+                    btnAgregarRequisito.Enabled = false;
+                    btnQuitarRequisito.Enabled = false;
                     txtCodigoCurso.Enabled = false;
                     txtNombreCurso.Enabled = false;
                     txtDescripcion.Enabled = false;
                     cbEspecialidad.Enabled = false;
+                    dgvRequisitos.Enabled = false;
                     break;
             }
         }
@@ -172,12 +178,13 @@ namespace Sinapxon.Administrador
                 return;
             }
 
-            curso = new Administrador.curso();
-            curso.codigo = txtCodigoCurso.Text;
-            curso.nombre = txtNombreCurso.Text;
-            curso.descripcion = txtDescripcion.Text;
-            curso.especialidad = (Administrador.especialidad)cbEspecialidad.SelectedItem;
-            curso.cursos = cursos.ToArray();
+            cursoshow = new Administrador.curso();
+            cursoshow.codigo = txtCodigoCurso.Text;
+            cursoshow.nombre = txtNombreCurso.Text;
+            cursoshow.descripcion = txtDescripcion.Text;
+            cursoshow.especialidad = (Administrador.especialidad)cbEspecialidad.SelectedItem;
+            cursoshow.administrador.codigo = this.curso.administrador.codigo;
+            cursoshow.cursos = cursos.ToArray();
 
             if (estadoCurso == Estado.Nuevo)
             {
@@ -186,7 +193,7 @@ namespace Sinapxon.Administrador
             }
             else if (estadoCurso == Estado.Modificar)
             {
-                DBController.actualizarCurso(curso);
+                DBController.actualizarCurso(cursoshow);
                 MessageBox.Show("El curso se ha sido actualizada con exito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
