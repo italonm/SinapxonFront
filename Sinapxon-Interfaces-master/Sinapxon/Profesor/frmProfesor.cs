@@ -71,13 +71,19 @@ namespace Sinapxon.Profesor
 
         private void btnVerSolicitudes_Click(object sender, EventArgs e)
         {
-
+            frmVerMisSolicitudes frmVerMisSolicitudes = new frmVerMisSolicitudes();
+            this.openChildForm(frmVerMisSolicitudes);
         }
 
         private void btnSolicitar_Click(object sender, EventArgs e)
         {
             frmDatosClassroom formDatosClassroom = new frmDatosClassroom();
             this.openChildForm(formDatosClassroom);
+        }
+
+        private void frmProfesor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

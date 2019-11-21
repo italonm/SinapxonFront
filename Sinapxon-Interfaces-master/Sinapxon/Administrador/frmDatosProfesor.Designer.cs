@@ -69,14 +69,13 @@
             this.rbBloqueado = new System.Windows.Forms.RadioButton();
             this.rbInactivo = new System.Windows.Forms.RadioButton();
             this.rbActivo = new System.Windows.Forms.RadioButton();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.btnAtras = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -95,7 +94,7 @@
             this.panel3.Controls.Add(this.lblAreaInteres);
             this.panel3.Controls.Add(this.lblGradoInstruccion);
             this.panel3.Controls.Add(this.txtGrado);
-            this.panel3.Location = new System.Drawing.Point(17, 507);
+            this.panel3.Location = new System.Drawing.Point(17, 500);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(468, 171);
             this.panel3.TabIndex = 66;
@@ -113,11 +112,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(19, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 25);
+            this.label3.Size = new System.Drawing.Size(122, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "Formación";
             // 
@@ -126,26 +125,26 @@
             this.txtAInt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAInt.Location = new System.Drawing.Point(14, 76);
             this.txtAInt.Name = "txtAInt";
-            this.txtAInt.Size = new System.Drawing.Size(431, 26);
+            this.txtAInt.Size = new System.Drawing.Size(442, 26);
             this.txtAInt.TabIndex = 48;
             // 
             // lblAreaInteres
             // 
             this.lblAreaInteres.AutoSize = true;
-            this.lblAreaInteres.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAreaInteres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAreaInteres.Location = new System.Drawing.Point(10, 53);
             this.lblAreaInteres.Name = "lblAreaInteres";
-            this.lblAreaInteres.Size = new System.Drawing.Size(113, 19);
+            this.lblAreaInteres.Size = new System.Drawing.Size(117, 20);
             this.lblAreaInteres.TabIndex = 38;
             this.lblAreaInteres.Text = "Área de interés";
             // 
             // lblGradoInstruccion
             // 
             this.lblGradoInstruccion.AutoSize = true;
-            this.lblGradoInstruccion.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGradoInstruccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGradoInstruccion.Location = new System.Drawing.Point(12, 113);
             this.lblGradoInstruccion.Name = "lblGradoInstruccion";
-            this.lblGradoInstruccion.Size = new System.Drawing.Size(155, 19);
+            this.lblGradoInstruccion.Size = new System.Drawing.Size(158, 20);
             this.lblGradoInstruccion.TabIndex = 39;
             this.lblGradoInstruccion.Text = "Grado de Instrucción";
             // 
@@ -154,7 +153,7 @@
             this.txtGrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGrado.Location = new System.Drawing.Point(14, 136);
             this.txtGrado.Name = "txtGrado";
-            this.txtGrado.Size = new System.Drawing.Size(433, 26);
+            this.txtGrado.Size = new System.Drawing.Size(442, 26);
             this.txtGrado.TabIndex = 49;
             // 
             // panel1
@@ -168,7 +167,7 @@
             this.panel1.Controls.Add(this.txtCorreo);
             this.panel1.Controls.Add(this.lblPassword);
             this.panel1.Controls.Add(this.txtPassword);
-            this.panel1.Location = new System.Drawing.Point(491, 132);
+            this.panel1.Location = new System.Drawing.Point(491, 125);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(445, 264);
             this.panel1.TabIndex = 67;
@@ -188,6 +187,7 @@
             this.btnGenerarContr.Text = "Generar";
             this.btnGenerarContr.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGenerarContr.UseVisualStyleBackColor = false;
+            this.btnGenerarContr.Click += new System.EventHandler(this.btnGenerarContr_Click);
             // 
             // txtNickname
             // 
@@ -200,10 +200,10 @@
             // lblNickname
             // 
             this.lblNickname.AutoSize = true;
-            this.lblNickname.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNickname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNickname.Location = new System.Drawing.Point(10, 118);
             this.lblNickname.Name = "lblNickname";
-            this.lblNickname.Size = new System.Drawing.Size(80, 19);
+            this.lblNickname.Size = new System.Drawing.Size(79, 20);
             this.lblNickname.TabIndex = 54;
             this.lblNickname.Text = "Nickname";
             // 
@@ -220,21 +220,21 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(19, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(186, 25);
+            this.label2.Size = new System.Drawing.Size(210, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Datos de la cuenta";
             // 
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.Location = new System.Drawing.Point(9, 51);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(55, 19);
+            this.lblCorreo.Size = new System.Drawing.Size(57, 20);
             this.lblCorreo.TabIndex = 36;
             this.lblCorreo.Text = "Correo";
             // 
@@ -249,10 +249,10 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.Location = new System.Drawing.Point(9, 188);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(79, 19);
+            this.lblPassword.Size = new System.Drawing.Size(78, 20);
             this.lblPassword.TabIndex = 51;
             this.lblPassword.Text = "Password";
             // 
@@ -286,16 +286,16 @@
             this.panelDatosGenerales.Controls.Add(this.lblTelefono);
             this.panelDatosGenerales.Location = new System.Drawing.Point(17, 124);
             this.panelDatosGenerales.Name = "panelDatosGenerales";
-            this.panelDatosGenerales.Size = new System.Drawing.Size(468, 377);
+            this.panelDatosGenerales.Size = new System.Drawing.Size(468, 368);
             this.panelDatosGenerales.TabIndex = 65;
             // 
             // lblId_Profesor
             // 
             this.lblId_Profesor.AutoSize = true;
-            this.lblId_Profesor.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId_Profesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblId_Profesor.Location = new System.Drawing.Point(12, 48);
             this.lblId_Profesor.Name = "lblId_Profesor";
-            this.lblId_Profesor.Size = new System.Drawing.Size(123, 19);
+            this.lblId_Profesor.Size = new System.Drawing.Size(123, 20);
             this.lblId_Profesor.TabIndex = 49;
             this.lblId_Profesor.Text = "Codigo Profesor";
             // 
@@ -320,21 +320,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(11, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 25);
+            this.label1.Size = new System.Drawing.Size(184, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Datos generales";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(10, 109);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(65, 19);
+            this.lblNombre.Size = new System.Drawing.Size(65, 20);
             this.lblNombre.TabIndex = 30;
             this.lblNombre.Text = "Nombre";
             // 
@@ -349,17 +349,17 @@
             // lblApellidoPaterno
             // 
             this.lblApellidoPaterno.AutoSize = true;
-            this.lblApellidoPaterno.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidoPaterno.Location = new System.Drawing.Point(12, 179);
+            this.lblApellidoPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidoPaterno.Location = new System.Drawing.Point(12, 171);
             this.lblApellidoPaterno.Name = "lblApellidoPaterno";
-            this.lblApellidoPaterno.Size = new System.Drawing.Size(124, 19);
+            this.lblApellidoPaterno.Size = new System.Drawing.Size(124, 20);
             this.lblApellidoPaterno.TabIndex = 31;
             this.lblApellidoPaterno.Text = "Apellido paterno";
             // 
             // txtApPat
             // 
             this.txtApPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApPat.Location = new System.Drawing.Point(14, 202);
+            this.txtApPat.Location = new System.Drawing.Point(14, 194);
             this.txtApPat.Name = "txtApPat";
             this.txtApPat.Size = new System.Drawing.Size(225, 26);
             this.txtApPat.TabIndex = 41;
@@ -367,17 +367,17 @@
             // lblApellidoMaterno
             // 
             this.lblApellidoMaterno.AutoSize = true;
-            this.lblApellidoMaterno.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidoMaterno.Location = new System.Drawing.Point(241, 179);
+            this.lblApellidoMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidoMaterno.Location = new System.Drawing.Point(241, 171);
             this.lblApellidoMaterno.Name = "lblApellidoMaterno";
-            this.lblApellidoMaterno.Size = new System.Drawing.Size(129, 19);
+            this.lblApellidoMaterno.Size = new System.Drawing.Size(128, 20);
             this.lblApellidoMaterno.TabIndex = 32;
             this.lblApellidoMaterno.Text = "Apellido materno";
             // 
             // txtApMat
             // 
             this.txtApMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApMat.Location = new System.Drawing.Point(245, 202);
+            this.txtApMat.Location = new System.Drawing.Point(245, 194);
             this.txtApMat.Name = "txtApMat";
             this.txtApMat.Size = new System.Drawing.Size(211, 26);
             this.txtApMat.TabIndex = 42;
@@ -385,10 +385,10 @@
             // lblDni
             // 
             this.lblDni.AutoSize = true;
-            this.lblDni.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDni.Location = new System.Drawing.Point(241, 109);
             this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(35, 19);
+            this.lblDni.Size = new System.Drawing.Size(37, 20);
             this.lblDni.TabIndex = 34;
             this.lblDni.Text = "DNI";
             // 
@@ -403,17 +403,17 @@
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(12, 237);
+            this.lblFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(12, 229);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(156, 19);
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(157, 20);
             this.lblFechaNacimiento.TabIndex = 33;
             this.lblFechaNacimiento.Text = "Fecha de nacimiento";
             // 
             // txtTelf
             // 
             this.txtTelf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelf.Location = new System.Drawing.Point(14, 336);
+            this.txtTelf.Location = new System.Drawing.Point(14, 328);
             this.txtTelf.Name = "txtTelf";
             this.txtTelf.Size = new System.Drawing.Size(251, 26);
             this.txtTelf.TabIndex = 47;
@@ -421,48 +421,48 @@
             // dtFechNac
             // 
             this.dtFechNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtFechNac.Location = new System.Drawing.Point(14, 270);
+            this.dtFechNac.Location = new System.Drawing.Point(14, 262);
             this.dtFechNac.Name = "dtFechNac";
-            this.dtFechNac.Size = new System.Drawing.Size(433, 26);
+            this.dtFechNac.Size = new System.Drawing.Size(442, 26);
             this.dtFechNac.TabIndex = 43;
             // 
             // cboPais
             // 
             this.cboPais.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPais.FormattingEnabled = true;
-            this.cboPais.Location = new System.Drawing.Point(288, 332);
+            this.cboPais.Location = new System.Drawing.Point(288, 324);
             this.cboPais.Name = "cboPais";
-            this.cboPais.Size = new System.Drawing.Size(157, 28);
+            this.cboPais.Size = new System.Drawing.Size(168, 28);
             this.cboPais.TabIndex = 46;
             // 
             // lblPais
             // 
             this.lblPais.AutoSize = true;
-            this.lblPais.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPais.Location = new System.Drawing.Point(284, 309);
+            this.lblPais.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPais.Location = new System.Drawing.Point(284, 301);
             this.lblPais.Name = "lblPais";
-            this.lblPais.Size = new System.Drawing.Size(40, 19);
+            this.lblPais.Size = new System.Drawing.Size(39, 20);
             this.lblPais.TabIndex = 35;
             this.lblPais.Text = "Pais";
             // 
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(12, 313);
+            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.Location = new System.Drawing.Point(12, 305);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(71, 19);
+            this.lblTelefono.Size = new System.Drawing.Size(71, 20);
             this.lblTelefono.TabIndex = 37;
             this.lblTelefono.Text = "Teléfono";
             // 
             // lblDatosDelProfesor
             // 
             this.lblDatosDelProfesor.AutoSize = true;
-            this.lblDatosDelProfesor.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatosDelProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDatosDelProfesor.ForeColor = System.Drawing.Color.Black;
-            this.lblDatosDelProfesor.Location = new System.Drawing.Point(76, 17);
+            this.lblDatosDelProfesor.Location = new System.Drawing.Point(73, 13);
             this.lblDatosDelProfesor.Name = "lblDatosDelProfesor";
-            this.lblDatosDelProfesor.Size = new System.Drawing.Size(217, 29);
+            this.lblDatosDelProfesor.Size = new System.Drawing.Size(231, 29);
             this.lblDatosDelProfesor.TabIndex = 64;
             this.lblDatosDelProfesor.Text = "Gestionar profesor";
             // 
@@ -472,9 +472,9 @@
             this.gbEstado.Controls.Add(this.rbBloqueado);
             this.gbEstado.Controls.Add(this.rbInactivo);
             this.gbEstado.Controls.Add(this.rbActivo);
-            this.gbEstado.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbEstado.ForeColor = System.Drawing.Color.Black;
-            this.gbEstado.Location = new System.Drawing.Point(491, 417);
+            this.gbEstado.Location = new System.Drawing.Point(491, 395);
             this.gbEstado.Name = "gbEstado";
             this.gbEstado.Size = new System.Drawing.Size(445, 148);
             this.gbEstado.TabIndex = 63;
@@ -484,11 +484,11 @@
             // rbBloqueado
             // 
             this.rbBloqueado.AutoSize = true;
-            this.rbBloqueado.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbBloqueado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbBloqueado.ForeColor = System.Drawing.Color.Black;
             this.rbBloqueado.Location = new System.Drawing.Point(35, 117);
             this.rbBloqueado.Name = "rbBloqueado";
-            this.rbBloqueado.Size = new System.Drawing.Size(103, 23);
+            this.rbBloqueado.Size = new System.Drawing.Size(104, 24);
             this.rbBloqueado.TabIndex = 2;
             this.rbBloqueado.TabStop = true;
             this.rbBloqueado.Text = "Bloqueado";
@@ -497,11 +497,11 @@
             // rbInactivo
             // 
             this.rbInactivo.AutoSize = true;
-            this.rbInactivo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbInactivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbInactivo.ForeColor = System.Drawing.Color.Black;
             this.rbInactivo.Location = new System.Drawing.Point(35, 73);
             this.rbInactivo.Name = "rbInactivo";
-            this.rbInactivo.Size = new System.Drawing.Size(83, 23);
+            this.rbInactivo.Size = new System.Drawing.Size(82, 24);
             this.rbInactivo.TabIndex = 1;
             this.rbInactivo.TabStop = true;
             this.rbInactivo.Text = "Inactivo";
@@ -510,15 +510,28 @@
             // rbActivo
             // 
             this.rbActivo.AutoSize = true;
-            this.rbActivo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbActivo.ForeColor = System.Drawing.Color.Black;
             this.rbActivo.Location = new System.Drawing.Point(35, 36);
             this.rbActivo.Name = "rbActivo";
-            this.rbActivo.Size = new System.Drawing.Size(71, 23);
+            this.rbActivo.Size = new System.Drawing.Size(70, 24);
             this.rbActivo.TabIndex = 0;
             this.rbActivo.TabStop = true;
             this.rbActivo.Text = "Activo";
             this.rbActivo.UseVisualStyleBackColor = true;
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.btnRegresar.FlatAppearance.BorderSize = 0;
+            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegresar.Image = global::Sinapxon.Properties.Resources.round_arrow_left_white_36dp;
+            this.btnRegresar.Location = new System.Drawing.Point(17, 6);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(50, 50);
+            this.btnRegresar.TabIndex = 78;
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // panel5
             // 
@@ -526,136 +539,104 @@
             this.panel5.Controls.Add(this.btnNuevo);
             this.panel5.Controls.Add(this.btnGuardar);
             this.panel5.Controls.Add(this.btnEliminar);
-            this.panel5.Controls.Add(this.btnBuscar);
             this.panel5.Controls.Add(this.btnCancelar);
             this.panel5.Controls.Add(this.btnModificar);
-            this.panel5.Location = new System.Drawing.Point(17, 58);
+            this.panel5.Location = new System.Drawing.Point(17, 66);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(923, 60);
-            this.panel5.TabIndex = 74;
+            this.panel5.Size = new System.Drawing.Size(919, 48);
+            this.panel5.TabIndex = 84;
             // 
             // btnNuevo
             // 
-            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
             this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
             this.btnNuevo.Image = global::Sinapxon.Properties.Resources.round_insert_drive_file_white_18dp;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(24, 0);
+            this.btnNuevo.Location = new System.Drawing.Point(3, 4);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(125, 60);
-            this.btnNuevo.TabIndex = 71;
+            this.btnNuevo.Size = new System.Drawing.Size(104, 42);
+            this.btnNuevo.TabIndex = 75;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Image = global::Sinapxon.Properties.Resources.round_save_white_18dp;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(488, 0);
+            this.btnGuardar.Location = new System.Drawing.Point(183, 3);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(125, 60);
+            this.btnGuardar.Size = new System.Drawing.Size(123, 42);
             this.btnGuardar.TabIndex = 68;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = global::Sinapxon.Properties.Resources.round_delete_white_18dp;
-            this.btnEliminar.Location = new System.Drawing.Point(331, 0);
+            this.btnEliminar.Location = new System.Drawing.Point(381, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(125, 60);
+            this.btnEliminar.Size = new System.Drawing.Size(125, 42);
             this.btnEliminar.TabIndex = 73;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Image = global::Sinapxon.Properties.Resources.baseline_find_in_page;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(654, 0);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(125, 60);
-            this.btnBuscar.TabIndex = 72;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Image = global::Sinapxon.Properties.Resources.round_cancel_white_18dp;
-            this.btnCancelar.Location = new System.Drawing.Point(798, 0);
+            this.btnCancelar.Location = new System.Drawing.Point(792, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(125, 60);
+            this.btnCancelar.Size = new System.Drawing.Size(124, 42);
             this.btnCancelar.TabIndex = 70;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.btnModificar.BackColor = System.Drawing.Color.Transparent;
             this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Image = global::Sinapxon.Properties.Resources.round_edit_white_18dp;
-            this.btnModificar.Location = new System.Drawing.Point(171, 0);
+            this.btnModificar.Location = new System.Drawing.Point(581, 2);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(125, 60);
+            this.btnModificar.Size = new System.Drawing.Size(136, 44);
             this.btnModificar.TabIndex = 69;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
-            // 
-            // btnAtras
-            // 
-            this.btnAtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
-            this.btnAtras.FlatAppearance.BorderSize = 0;
-            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtras.Image = global::Sinapxon.Properties.Resources.round_arrow_left_white_36dp;
-            this.btnAtras.Location = new System.Drawing.Point(17, 2);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(50, 50);
-            this.btnAtras.TabIndex = 78;
-            this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // frmDatosProfesor
             // 
@@ -663,8 +644,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
             this.ClientSize = new System.Drawing.Size(964, 681);
-            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelDatosGenerales);
@@ -696,13 +677,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
@@ -743,8 +717,13 @@
         private System.Windows.Forms.RadioButton rbBloqueado;
         private System.Windows.Forms.RadioButton rbInactivo;
         private System.Windows.Forms.RadioButton rbActivo;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnGenerarContr;
-        private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

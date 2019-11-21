@@ -30,12 +30,16 @@
   <xs:element name="listarAlumnosResponse" type="tns:listarAlumnosResponse" />
   <xs:element name="listarCursos" type="tns:listarCursos" />
   <xs:element name="listarCursosResponse" type="tns:listarCursosResponse" />
+  <xs:element name="listarEspecialidades" type="tns:listarEspecialidades" />
+  <xs:element name="listarEspecialidadesResponse" type="tns:listarEspecialidadesResponse" />
   <xs:element name="listarIdiomasXNombreCodigo" type="tns:listarIdiomasXNombreCodigo" />
   <xs:element name="listarIdiomasXNombreCodigoResponse" type="tns:listarIdiomasXNombreCodigoResponse" />
   <xs:element name="listarPaises" type="tns:listarPaises" />
   <xs:element name="listarPaisesResponse" type="tns:listarPaisesResponse" />
   <xs:element name="listarProfesores" type="tns:listarProfesores" />
   <xs:element name="listarProfesoresResponse" type="tns:listarProfesoresResponse" />
+  <xs:element name="listarRequisitos" type="tns:listarRequisitos" />
+  <xs:element name="listarRequisitosResponse" type="tns:listarRequisitosResponse" />
   <xs:element name="listarSolicitudes" type="tns:listarSolicitudes" />
   <xs:element name="listarSolicitudesResponse" type="tns:listarSolicitudesResponse" />
   <xs:element name="obtenerPeriodo" type="tns:obtenerPeriodo" />
@@ -153,6 +157,16 @@
   <xs:complexType name="listarPaisesResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pais" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarRequisitos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarRequisitosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarAlumnos">
@@ -280,6 +294,14 @@
       <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="insertarCurso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:curso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCursoResponse">
+    <xs:sequence />
+  </xs:complexType>
   <xs:complexType name="actualizarCurso">
     <xs:sequence>
       <xs:element minOccurs="0" name="arg0" type="tns:curso" />
@@ -289,14 +311,6 @@
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarCurso">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="tns:curso" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarCursoResponse">
-    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="cambiarEstadoSolicitud">
     <xs:sequence>
@@ -335,6 +349,16 @@
   <xs:complexType name="insertarEspecialidadResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEspecialidades">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEspecialidadesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:especialidad" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

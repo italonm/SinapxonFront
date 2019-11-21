@@ -65,7 +65,7 @@
             this.label1.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(100, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(298, 29);
+            this.label1.Size = new System.Drawing.Size(320, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Solicitudes de classrooms";
             // 
@@ -111,7 +111,7 @@
             this.btnInspeccionarSolicitud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.btnInspeccionarSolicitud.FlatAppearance.BorderSize = 0;
             this.btnInspeccionarSolicitud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInspeccionarSolicitud.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInspeccionarSolicitud.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInspeccionarSolicitud.ForeColor = System.Drawing.Color.White;
             this.btnInspeccionarSolicitud.Location = new System.Drawing.Point(568, 18);
             this.btnInspeccionarSolicitud.Name = "btnInspeccionarSolicitud";
@@ -222,7 +222,7 @@
             // 
             // tabPageSolAprobadas
             // 
-            this.tabPageSolAprobadas.BackColor = System.Drawing.Color.YellowGreen;
+            this.tabPageSolAprobadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.tabPageSolAprobadas.Controls.Add(this.dgvSolicitudesAprobadas);
             this.tabPageSolAprobadas.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageSolAprobadas.Location = new System.Drawing.Point(4, 32);
@@ -234,7 +234,7 @@
             // 
             // tabPageSolDesaprobadas
             // 
-            this.tabPageSolDesaprobadas.BackColor = System.Drawing.Color.Firebrick;
+            this.tabPageSolDesaprobadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.tabPageSolDesaprobadas.Controls.Add(this.dgvSolicitudesDesaprobadas);
             this.tabPageSolDesaprobadas.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageSolDesaprobadas.Location = new System.Drawing.Point(4, 32);
@@ -265,7 +265,7 @@
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.tabControlSolicitudes);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGestionarClassroom";
             this.Text = "frmGestionarClassroom";
