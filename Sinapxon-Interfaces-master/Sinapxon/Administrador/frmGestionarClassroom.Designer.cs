@@ -30,26 +30,25 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dgvSolicitudesPendientes = new System.Windows.Forms.DataGridView();
-            this.ID_solicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo_curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre_curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnInspeccionarSolicitud = new System.Windows.Forms.Button();
             this.dgvSolicitudesAprobadas = new System.Windows.Forms.DataGridView();
-            this.ID_aprobado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo_curso_aprobado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre_curso_aprobado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Profesor_aprobado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSolicitudesDesaprobadas = new System.Windows.Forms.DataGridView();
-            this.ID_desaprobado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo_curso_desaprobado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre_curso_desaprobado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Profesor_desaprobado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControlSolicitudes = new System.Windows.Forms.TabControl();
             this.tabPageSolPendientes = new System.Windows.Forms.TabPage();
             this.tabPageSolAprobadas = new System.Windows.Forms.TabPage();
             this.tabPageSolDesaprobadas = new System.Windows.Forms.TabPage();
-            this.btnAtras = new System.Windows.Forms.Button();
+            this.ID_solicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo_curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre_curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_aprobado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo_curso_aprobado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre_curso_aprobado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Profesor_aprobado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_desaprobado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo_curso_desaprobado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre_curso_desaprobado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Profesor_desaprobado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudesPendientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudesAprobadas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudesDesaprobadas)).BeginInit();
@@ -65,7 +64,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(100, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(320, 29);
+            this.label1.Size = new System.Drawing.Size(298, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Solicitudes de classrooms";
             // 
@@ -83,35 +82,12 @@
             this.dgvSolicitudesPendientes.TabIndex = 1;
             this.dgvSolicitudesPendientes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvSolicitudesPendientes_CellFormatting);
             // 
-            // ID_solicitud
-            // 
-            this.ID_solicitud.HeaderText = "ID solicitud";
-            this.ID_solicitud.Name = "ID_solicitud";
-            this.ID_solicitud.Width = 80;
-            // 
-            // Codigo_curso
-            // 
-            this.Codigo_curso.HeaderText = "Codigo Curso";
-            this.Codigo_curso.Name = "Codigo_curso";
-            // 
-            // Nombre_curso
-            // 
-            this.Nombre_curso.HeaderText = "Nombre del curso";
-            this.Nombre_curso.Name = "Nombre_curso";
-            this.Nombre_curso.Width = 250;
-            // 
-            // Profesor
-            // 
-            this.Profesor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Profesor.HeaderText = "Profesor";
-            this.Profesor.Name = "Profesor";
-            // 
             // btnInspeccionarSolicitud
             // 
             this.btnInspeccionarSolicitud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.btnInspeccionarSolicitud.FlatAppearance.BorderSize = 0;
             this.btnInspeccionarSolicitud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInspeccionarSolicitud.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInspeccionarSolicitud.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInspeccionarSolicitud.ForeColor = System.Drawing.Color.White;
             this.btnInspeccionarSolicitud.Location = new System.Drawing.Point(568, 18);
             this.btnInspeccionarSolicitud.Name = "btnInspeccionarSolicitud";
@@ -135,29 +111,6 @@
             this.dgvSolicitudesAprobadas.TabIndex = 3;
             this.dgvSolicitudesAprobadas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvSolicitudesAprobadas_CellFormatting);
             // 
-            // ID_aprobado
-            // 
-            this.ID_aprobado.HeaderText = "ID solicitud";
-            this.ID_aprobado.Name = "ID_aprobado";
-            this.ID_aprobado.Width = 80;
-            // 
-            // Codigo_curso_aprobado
-            // 
-            this.Codigo_curso_aprobado.HeaderText = "Codigo del curso";
-            this.Codigo_curso_aprobado.Name = "Codigo_curso_aprobado";
-            // 
-            // Nombre_curso_aprobado
-            // 
-            this.Nombre_curso_aprobado.HeaderText = "Nombre del curso";
-            this.Nombre_curso_aprobado.Name = "Nombre_curso_aprobado";
-            this.Nombre_curso_aprobado.Width = 250;
-            // 
-            // Profesor_aprobado
-            // 
-            this.Profesor_aprobado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Profesor_aprobado.HeaderText = "Profesor";
-            this.Profesor_aprobado.Name = "Profesor_aprobado";
-            // 
             // dgvSolicitudesDesaprobadas
             // 
             this.dgvSolicitudesDesaprobadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -171,29 +124,6 @@
             this.dgvSolicitudesDesaprobadas.Size = new System.Drawing.Size(845, 440);
             this.dgvSolicitudesDesaprobadas.TabIndex = 4;
             this.dgvSolicitudesDesaprobadas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvSolicitudesDesaprobadas_CellFormatting);
-            // 
-            // ID_desaprobado
-            // 
-            this.ID_desaprobado.HeaderText = "ID Solicitud";
-            this.ID_desaprobado.Name = "ID_desaprobado";
-            this.ID_desaprobado.Width = 80;
-            // 
-            // Codigo_curso_desaprobado
-            // 
-            this.Codigo_curso_desaprobado.HeaderText = "Codigo del curso";
-            this.Codigo_curso_desaprobado.Name = "Codigo_curso_desaprobado";
-            // 
-            // Nombre_curso_desaprobado
-            // 
-            this.Nombre_curso_desaprobado.HeaderText = "Nombre del curso";
-            this.Nombre_curso_desaprobado.Name = "Nombre_curso_desaprobado";
-            this.Nombre_curso_desaprobado.Width = 250;
-            // 
-            // Profesor_desaprobado
-            // 
-            this.Profesor_desaprobado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Profesor_desaprobado.HeaderText = "Profesor";
-            this.Profesor_desaprobado.Name = "Profesor_desaprobado";
             // 
             // tabControlSolicitudes
             // 
@@ -244,17 +174,74 @@
             this.tabPageSolDesaprobadas.TabIndex = 2;
             this.tabPageSolDesaprobadas.Text = "Desaprobadas";
             // 
-            // btnAtras
+            // ID_solicitud
             // 
-            this.btnAtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
-            this.btnAtras.FlatAppearance.BorderSize = 0;
-            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtras.Image = global::Sinapxon.Properties.Resources.round_arrow_left_white_36dp;
-            this.btnAtras.Location = new System.Drawing.Point(34, 41);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(50, 50);
-            this.btnAtras.TabIndex = 24;
-            this.btnAtras.UseVisualStyleBackColor = false;
+            this.ID_solicitud.HeaderText = "ID solicitud";
+            this.ID_solicitud.Name = "ID_solicitud";
+            this.ID_solicitud.Width = 80;
+            // 
+            // Codigo_curso
+            // 
+            this.Codigo_curso.HeaderText = "Codigo Curso";
+            this.Codigo_curso.Name = "Codigo_curso";
+            // 
+            // Nombre_curso
+            // 
+            this.Nombre_curso.HeaderText = "Nombre del curso";
+            this.Nombre_curso.Name = "Nombre_curso";
+            this.Nombre_curso.Width = 250;
+            // 
+            // Profesor
+            // 
+            this.Profesor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Profesor.HeaderText = "Profesor";
+            this.Profesor.Name = "Profesor";
+            // 
+            // ID_aprobado
+            // 
+            this.ID_aprobado.HeaderText = "ID solicitud";
+            this.ID_aprobado.Name = "ID_aprobado";
+            this.ID_aprobado.Width = 80;
+            // 
+            // Codigo_curso_aprobado
+            // 
+            this.Codigo_curso_aprobado.HeaderText = "Codigo del curso";
+            this.Codigo_curso_aprobado.Name = "Codigo_curso_aprobado";
+            // 
+            // Nombre_curso_aprobado
+            // 
+            this.Nombre_curso_aprobado.HeaderText = "Nombre del curso";
+            this.Nombre_curso_aprobado.Name = "Nombre_curso_aprobado";
+            this.Nombre_curso_aprobado.Width = 250;
+            // 
+            // Profesor_aprobado
+            // 
+            this.Profesor_aprobado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Profesor_aprobado.HeaderText = "Profesor";
+            this.Profesor_aprobado.Name = "Profesor_aprobado";
+            // 
+            // ID_desaprobado
+            // 
+            this.ID_desaprobado.HeaderText = "ID Solicitud";
+            this.ID_desaprobado.Name = "ID_desaprobado";
+            this.ID_desaprobado.Width = 80;
+            // 
+            // Codigo_curso_desaprobado
+            // 
+            this.Codigo_curso_desaprobado.HeaderText = "Codigo del curso";
+            this.Codigo_curso_desaprobado.Name = "Codigo_curso_desaprobado";
+            // 
+            // Nombre_curso_desaprobado
+            // 
+            this.Nombre_curso_desaprobado.HeaderText = "Nombre del curso";
+            this.Nombre_curso_desaprobado.Name = "Nombre_curso_desaprobado";
+            this.Nombre_curso_desaprobado.Width = 250;
+            // 
+            // Profesor_desaprobado
+            // 
+            this.Profesor_desaprobado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Profesor_desaprobado.HeaderText = "Profesor";
+            this.Profesor_desaprobado.Name = "Profesor_desaprobado";
             // 
             // frmGestionarClassroom
             // 
@@ -262,10 +249,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
             this.ClientSize = new System.Drawing.Size(964, 681);
-            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.tabControlSolicitudes);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGestionarClassroom";
             this.Text = "frmGestionarClassroom";
@@ -304,6 +290,5 @@
         private System.Windows.Forms.TabPage tabPageSolPendientes;
         private System.Windows.Forms.TabPage tabPageSolAprobadas;
         private System.Windows.Forms.TabPage tabPageSolDesaprobadas;
-        private System.Windows.Forms.Button btnAtras;
     }
 }

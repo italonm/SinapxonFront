@@ -14,54 +14,43 @@ namespace Sinapxon.Administrador
     {
         private frmAdministrador _padre = null;
         private Administrador.alumno alSeleccionado;
-        BindingList<Administrador.alumno> backup;
 
 
         Administrador.AdministradorServicesClient DBController = new Administrador.AdministradorServicesClient();
-        
+
         public alumno AlSeleccionado { get => alSeleccionado; set => alSeleccionado = value; }
 
         public frmGestionarAlumno()
         {
             InitializeComponent();
-            
-            dgvAlumno.AutoGenerateColumns = false;
-            dgvAlumno.DataSource = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));
-            dgvAlumno.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvAlumnos.AutoGenerateColumns = false;
+            dgvAlumnos.DataSource = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));
         }
 
         public frmGestionarAlumno(frmAdministrador padre)
         {
             InitializeComponent();
-            
             this.Padre = padre;
-            dgvAlumno.AutoGenerateColumns = false;
-            dgvAlumno.DataSource = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));
-
-            backup = (BindingList<Administrador.alumno>)dgvAlumno.DataSource;
-            
-            BindingList<Administrador.alumno> toShow = new BindingList<Administrador.alumno> ();
-            dgvAlumno.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
+            dgvAlumnos.AutoGenerateColumns = false;
+            dgvAlumnos.DataSource = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));
         }
 
         public frmAdministrador Padre { get => _padre; set => _padre = value; }
 
 
 
-
         private void dgvAlumnos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            Administrador.alumno alumnoFila = (Administrador.alumno)dgvAlumno.Rows[e.RowIndex].DataBoundItem;
+            Administrador.alumno alumnoFila = (Administrador.alumno)dgvAlumnos.Rows[e.RowIndex].DataBoundItem;
             if (alumnoFila != null)
             {
-                dgvAlumno.Rows[e.RowIndex].Cells[0].Value = alumnoFila.codigo.ToString();
-                dgvAlumno.Rows[e.RowIndex].Cells[1].Value = alumnoFila.nombre;
-                dgvAlumno.Rows[e.RowIndex].Cells[2].Value = alumnoFila.apellidoPaterno;
-                dgvAlumno.Rows[e.RowIndex].Cells[3].Value = alumnoFila.apellidoMaterno;
-                dgvAlumno.Rows[e.RowIndex].Cells[4].Value = alumnoFila.dni;
-                dgvAlumno.Rows[e.RowIndex].Cells[5].Value = alumnoFila.telefono.ToString();
-                dgvAlumno.Rows[e.RowIndex].Cells[6].Value = alumnoFila.correo;
+                dgvAlumnos.Rows[e.RowIndex].Cells[0].Value = alumnoFila.codigo.ToString();
+                dgvAlumnos.Rows[e.RowIndex].Cells[1].Value = alumnoFila.nombre;
+                dgvAlumnos.Rows[e.RowIndex].Cells[2].Value = alumnoFila.apellidoPaterno;
+                dgvAlumnos.Rows[e.RowIndex].Cells[3].Value = alumnoFila.apellidoMaterno;
+                dgvAlumnos.Rows[e.RowIndex].Cells[4].Value = alumnoFila.dni;
+                dgvAlumnos.Rows[e.RowIndex].Cells[5].Value = alumnoFila.telefono.ToString();
+                dgvAlumnos.Rows[e.RowIndex].Cells[6].Value = alumnoFila.correo;
             }
         }
 
@@ -83,14 +72,13 @@ namespace Sinapxon.Administrador
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            dgvAlumno.FirstDisplayedScrollingRowIndex = dgvAlumno.RowCount - 1;
             frmDatosAlumno formDatosAlumno = new frmDatosAlumno(_padre);
             _padre.openChildForm(formDatosAlumno);
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            alSeleccionado = dgvAlumno.CurrentRow.DataBoundItem as Administrador.alumno;
+            alSeleccionado = dgvAlumnos.CurrentRow.DataBoundItem as Administrador.alumno;
             frmDatosAlumno formDatosAlumno = new frmDatosAlumno(alSeleccionado, _padre);
             _padre.openChildForm(formDatosAlumno);
         }

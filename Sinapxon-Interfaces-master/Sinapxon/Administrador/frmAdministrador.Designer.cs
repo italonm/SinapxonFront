@@ -59,8 +59,9 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(300, 681);
+            this.panelMenu.Size = new System.Drawing.Size(450, 1048);
             this.panelMenu.TabIndex = 0;
             // 
             // btnLogOut
@@ -73,10 +74,11 @@
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
             this.btnLogOut.Image = global::Sinapxon.Properties.Resources.baseline_exit_to_app;
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(0, 631);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 971);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnLogOut.Size = new System.Drawing.Size(300, 50);
+            this.btnLogOut.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnLogOut.Size = new System.Drawing.Size(450, 77);
             this.btnLogOut.TabIndex = 5;
             this.btnLogOut.Text = "          Cerrar sesión";
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -88,9 +90,10 @@
             this.panelSubGestionarUsr.Controls.Add(this.btnGestionarAlumno);
             this.panelSubGestionarUsr.Controls.Add(this.btnGestionarProfesor);
             this.panelSubGestionarUsr.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubGestionarUsr.Location = new System.Drawing.Point(0, 390);
+            this.panelSubGestionarUsr.Location = new System.Drawing.Point(0, 601);
+            this.panelSubGestionarUsr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelSubGestionarUsr.Name = "panelSubGestionarUsr";
-            this.panelSubGestionarUsr.Size = new System.Drawing.Size(300, 151);
+            this.panelSubGestionarUsr.Size = new System.Drawing.Size(450, 232);
             this.panelSubGestionarUsr.TabIndex = 4;
             // 
             // btnGestionarAlumno
@@ -101,10 +104,11 @@
             this.btnGestionarAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGestionarAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionarAlumno.ForeColor = System.Drawing.Color.Black;
-            this.btnGestionarAlumno.Location = new System.Drawing.Point(0, 70);
+            this.btnGestionarAlumno.Location = new System.Drawing.Point(0, 108);
+            this.btnGestionarAlumno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGestionarAlumno.Name = "btnGestionarAlumno";
-            this.btnGestionarAlumno.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
-            this.btnGestionarAlumno.Size = new System.Drawing.Size(300, 70);
+            this.btnGestionarAlumno.Padding = new System.Windows.Forms.Padding(120, 0, 0, 0);
+            this.btnGestionarAlumno.Size = new System.Drawing.Size(450, 108);
             this.btnGestionarAlumno.TabIndex = 1;
             this.btnGestionarAlumno.Text = "Gestionar alumno";
             this.btnGestionarAlumno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -120,9 +124,10 @@
             this.btnGestionarProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionarProfesor.ForeColor = System.Drawing.Color.Black;
             this.btnGestionarProfesor.Location = new System.Drawing.Point(0, 0);
+            this.btnGestionarProfesor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGestionarProfesor.Name = "btnGestionarProfesor";
-            this.btnGestionarProfesor.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
-            this.btnGestionarProfesor.Size = new System.Drawing.Size(300, 70);
+            this.btnGestionarProfesor.Padding = new System.Windows.Forms.Padding(120, 0, 0, 0);
+            this.btnGestionarProfesor.Size = new System.Drawing.Size(450, 108);
             this.btnGestionarProfesor.TabIndex = 0;
             this.btnGestionarProfesor.Text = "Gestionar profesor";
             this.btnGestionarProfesor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -139,10 +144,11 @@
             this.btnGestionarUsuarios.ForeColor = System.Drawing.Color.White;
             this.btnGestionarUsuarios.Image = global::Sinapxon.Properties.Resources.baseline_group_white_18dp;
             this.btnGestionarUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGestionarUsuarios.Location = new System.Drawing.Point(0, 320);
+            this.btnGestionarUsuarios.Location = new System.Drawing.Point(0, 493);
+            this.btnGestionarUsuarios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGestionarUsuarios.Name = "btnGestionarUsuarios";
-            this.btnGestionarUsuarios.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnGestionarUsuarios.Size = new System.Drawing.Size(300, 70);
+            this.btnGestionarUsuarios.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.btnGestionarUsuarios.Size = new System.Drawing.Size(450, 108);
             this.btnGestionarUsuarios.TabIndex = 3;
             this.btnGestionarUsuarios.Text = "          Gestionar usuarios";
             this.btnGestionarUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -159,10 +165,11 @@
             this.btnGestionarClassrooms.ForeColor = System.Drawing.Color.White;
             this.btnGestionarClassrooms.Image = global::Sinapxon.Properties.Resources.baseline_inbox_white_18dp;
             this.btnGestionarClassrooms.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGestionarClassrooms.Location = new System.Drawing.Point(0, 250);
+            this.btnGestionarClassrooms.Location = new System.Drawing.Point(0, 385);
+            this.btnGestionarClassrooms.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGestionarClassrooms.Name = "btnGestionarClassrooms";
-            this.btnGestionarClassrooms.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnGestionarClassrooms.Size = new System.Drawing.Size(300, 70);
+            this.btnGestionarClassrooms.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.btnGestionarClassrooms.Size = new System.Drawing.Size(450, 108);
             this.btnGestionarClassrooms.TabIndex = 2;
             this.btnGestionarClassrooms.Text = "          Gestionar Classrooms";
             this.btnGestionarClassrooms.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -179,10 +186,11 @@
             this.btnGestionarCursos.ForeColor = System.Drawing.Color.White;
             this.btnGestionarCursos.Image = global::Sinapxon.Properties.Resources.baseline_book;
             this.btnGestionarCursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGestionarCursos.Location = new System.Drawing.Point(0, 180);
+            this.btnGestionarCursos.Location = new System.Drawing.Point(0, 277);
+            this.btnGestionarCursos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGestionarCursos.Name = "btnGestionarCursos";
-            this.btnGestionarCursos.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnGestionarCursos.Size = new System.Drawing.Size(300, 70);
+            this.btnGestionarCursos.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.btnGestionarCursos.Size = new System.Drawing.Size(450, 108);
             this.btnGestionarCursos.TabIndex = 1;
             this.btnGestionarCursos.Text = "          Gestionar cursos";
             this.btnGestionarCursos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -197,8 +205,9 @@
             this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(300, 180);
+            this.panelLogo.Size = new System.Drawing.Size(450, 277);
             this.panelLogo.TabIndex = 0;
             // 
             // lblRol
@@ -206,9 +215,10 @@
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRol.ForeColor = System.Drawing.Color.White;
-            this.lblRol.Location = new System.Drawing.Point(119, 99);
+            this.lblRol.Location = new System.Drawing.Point(178, 152);
+            this.lblRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(91, 16);
+            this.lblRol.Size = new System.Drawing.Size(132, 25);
             this.lblRol.TabIndex = 5;
             this.lblRol.Text = "Administrador";
             // 
@@ -217,16 +227,18 @@
             this.lblNombreUsuario.AutoSize = true;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblNombreUsuario.Location = new System.Drawing.Point(114, 70);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(171, 108);
+            this.lblNombreUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(185, 25);
+            this.lblNombreUsuario.Size = new System.Drawing.Size(270, 37);
             this.lblNombreUsuario.TabIndex = 4;
             this.lblNombreUsuario.Text = "Nombre Apellido";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Sinapxon.Properties.Resources.baseline_account_circle_Big;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 45);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 69);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(96, 96);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -237,21 +249,22 @@
             // 
             this.panelContenedor.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(300, 0);
+            this.panelContenedor.Location = new System.Drawing.Point(450, 0);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(964, 681);
+            this.panelContenedor.Size = new System.Drawing.Size(1446, 1048);
             this.panelContenedor.TabIndex = 1;
             // 
             // frmAdministrador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1896, 1048);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelMenu);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmAdministrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAdministrador_FormClosed);
             this.panelMenu.ResumeLayout(false);
             this.panelSubGestionarUsr.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
