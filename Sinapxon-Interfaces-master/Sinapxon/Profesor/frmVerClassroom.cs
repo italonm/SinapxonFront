@@ -14,6 +14,7 @@ namespace Sinapxon.Profesor
     {
         Profesor.ProfesorServicesClient DBController = new Profesor.ProfesorServicesClient();
         BindingList<Profesor.temaXClassroom> temas;
+        BindingList<Profesor.evaluacion> evaluaciones;
         private frmProfesor _padre;
         public frmVerClassroom(frmProfesor padre)
         {
@@ -22,6 +23,9 @@ namespace Sinapxon.Profesor
             dgvTemas.AutoGenerateColumns = false;
             temas = new BindingList<temaXClassroom>(DBController.listarTemaxClassroom(ClassroomInfo.classroom.codigo));
             dgvTemas.DataSource = temas;
+            //evaluaciones = new BindingList<evaluacion>(DBController.listarEvaluacionesXClassroom(ClassroomInfo.classroom.codigo));
+            //dgvEvaluaciones.DataSource = evaluaciones;
+
         }
 
         private void btnAniadirTema_Click(object sender, EventArgs e)
@@ -62,6 +66,18 @@ namespace Sinapxon.Profesor
                 dgvTemas.Rows[e.RowIndex].Cells["Descripcion"].Value = tema.descripcion;
                 dgvTemas.Rows[e.RowIndex].Cells["Video"].Value = tema.link;
             }
+        }
+
+        private void dgvEvaluaciones_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            /*Profesor.evaluacion evaluacion = (Profesor.evaluacion)dgvTemas.Rows[e.RowIndex].DataBoundItem;
+            if (evaluacion != null)
+            {
+                dgvTemas.Rows[e.RowIndex].Cells["Namee"].Value = evaluacion.nombre;
+                dgvTemas.Rows[e.RowIndex].Cells["Peso"].Value = evaluacion.peso_porcentual;
+                dgvTemas.Rows[e.RowIndex].Cells["Description"].Value = evaluacion.descripcion;
+
+            }*/
         }
     }
 }
