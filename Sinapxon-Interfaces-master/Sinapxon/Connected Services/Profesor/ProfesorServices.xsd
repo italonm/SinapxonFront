@@ -16,6 +16,8 @@
   <xs:element name="listarIdiomasResponse" type="tns:listarIdiomasResponse" />
   <xs:element name="listarPeriodos" type="tns:listarPeriodos" />
   <xs:element name="listarPeriodosResponse" type="tns:listarPeriodosResponse" />
+  <xs:element name="listarSolicitudesClassroomxProfesor" type="tns:listarSolicitudesClassroomxProfesor" />
+  <xs:element name="listarSolicitudesClassroomxProfesorResponse" type="tns:listarSolicitudesClassroomxProfesorResponse" />
   <xs:element name="listarTemas" type="tns:listarTemas" />
   <xs:element name="listarTemasResponse" type="tns:listarTemasResponse" />
   <xs:element name="listarTemaxClassroom" type="tns:listarTemaxClassroom" />
@@ -254,6 +256,16 @@
   <xs:complexType name="listarIdiomasResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:idioma" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarSolicitudesClassroomxProfesor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="solicitudclassroom" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarSolicitudesClassroomxProfesorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:solicitudClassroom" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarEvaluacion">
