@@ -44,19 +44,6 @@ namespace Sinapxon.Login
                 MessageBox.Show("DNI debe ser 8 caracteres de longitud", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            Login.LoginServicesClient dbLogin = new Login.LoginServicesClient();
-            Login.alumno alObtenido = dbLogin.validarNickname(txtNickname.Text);
-            if(alObtenido.codigo != null)
-            {
-                MessageBox.Show("El nickname ya se encuentra registrado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            Login.persona perObtenida= dbLogin.validarCorreo(txtCorreo.Text);
-            if(perObtenida.nombre != null)
-            {
-                MessageBox.Show("El correo ya se encuentra registrado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
             String txtStudID;
             txtStudID = DateTime.Now.Year.ToString() + DateTime.Now.Second;
             alumno.codigo = txtStudID;
@@ -73,9 +60,7 @@ namespace Sinapxon.Login
             alumno.password = txtPassword.Text;
             dbContoller.insertarAlumno(alumno);
             MessageBox.Show("Se ha registrado exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
-            frmLogin formLogin = new frmLogin();
-            formLogin.Show();
+
         }
 
         private void btnRestablecer_Click(object sender, EventArgs e)
@@ -90,8 +75,6 @@ namespace Sinapxon.Login
             txtRepetirPassword.Text = "";
             txtTelefono.Text = "";            
             dtpFechaNac.ResetText();
-            this.ActiveControl = txtNombres;
-            txtNombres.Focus();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -105,20 +88,6 @@ namespace Sinapxon.Login
             else
             {
                 this.Activate();
-            }
-        }
-
-        private void frmRegistro_Load(object sender, EventArgs e)
-        {
-            this.ActiveControl = txtNombres;
-            txtNombres.Focus();
-        }
-
-        private void txtRepetirPassword_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnRegistrarse_Click(sender, e);
             }
         }
     }

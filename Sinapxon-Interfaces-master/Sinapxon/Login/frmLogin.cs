@@ -26,11 +26,6 @@ namespace Sinapxon.Login
             Login.LoginServicesClient DBController = new Login.LoginServicesClient() ;
             LoginInfo.persona = DBController.validarLogin(txtUsuario.Text, txtContrasenia.Text);
             //LoginInfo.codigo = result.Substring(0, 6);
-            if (LoginInfo.persona.nombre == null)
-            {
-                MessageBox.Show("Los datos ingresados son incorrectos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
             String tipo = LoginInfo.persona.tipo;
             if (string.Equals(tipo, "D"))
             {

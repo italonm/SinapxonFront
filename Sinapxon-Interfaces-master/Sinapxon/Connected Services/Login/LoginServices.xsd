@@ -6,17 +6,6 @@
   <xs:element name="validarCorreoResponse" type="tns:validarCorreoResponse" />
   <xs:element name="validarLogin" type="tns:validarLogin" />
   <xs:element name="validarLoginResponse" type="tns:validarLoginResponse" />
-  <xs:element name="validarNickname" type="tns:validarNickname" />
-  <xs:element name="validarNicknameResponse" type="tns:validarNicknameResponse" />
-  <xs:complexType name="actualizarPassword">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="codigo" type="xs:string" />
-      <xs:element minOccurs="0" name="password" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="actualizarPasswordResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="validarLogin">
     <xs:sequence>
       <xs:element minOccurs="0" name="nickname" type="xs:string" />
@@ -35,6 +24,15 @@
       <xs:element minOccurs="0" name="tipo" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="actualizarPassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarPasswordResponse">
+    <xs:sequence />
+  </xs:complexType>
   <xs:complexType name="validarCorreo">
     <xs:sequence>
       <xs:element minOccurs="0" name="correo" type="xs:string" />
@@ -43,38 +41,6 @@
   <xs:complexType name="validarCorreoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:persona" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="validarNickname">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nickname" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="validarNicknameResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:alumno" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="alumno">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
-      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
-      <xs:element minOccurs="0" name="codigo" type="xs:string" />
-      <xs:element minOccurs="0" name="correo" type="xs:string" />
-      <xs:element minOccurs="0" name="dni" type="xs:string" />
-      <xs:element name="estado" type="xs:int" />
-      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="nickname" type="xs:string" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-      <xs:element minOccurs="0" name="pais" type="tns:pais" />
-      <xs:element minOccurs="0" name="password" type="xs:string" />
-      <xs:element minOccurs="0" name="telefono" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="pais">
-    <xs:sequence>
-      <xs:element name="id_pais" type="xs:int" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>
