@@ -14,6 +14,7 @@ namespace Sinapxon.Administrador
     {
         private frmAdministrador _padre = null;
         private Administrador.alumno alSeleccionado;
+        BindingList<Administrador.alumno> backup;
 
 
         Administrador.AdministradorServicesClient DBController = new Administrador.AdministradorServicesClient();
@@ -23,18 +24,25 @@ namespace Sinapxon.Administrador
         public frmGestionarAlumno()
         {
             InitializeComponent();
-            dgvAlumno.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            
             dgvAlumno.AutoGenerateColumns = false;
             dgvAlumno.DataSource = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));
+            dgvAlumno.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         public frmGestionarAlumno(frmAdministrador padre)
         {
             InitializeComponent();
-            dgvAlumno.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            
             this.Padre = padre;
             dgvAlumno.AutoGenerateColumns = false;
             dgvAlumno.DataSource = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));
+
+            backup = (BindingList<Administrador.alumno>)dgvAlumno.DataSource;
+            
+            BindingList<Administrador.alumno> toShow = new BindingList<Administrador.alumno> ();
+            dgvAlumno.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
         }
 
         public frmAdministrador Padre { get => _padre; set => _padre = value; }
@@ -59,7 +67,18 @@ namespace Sinapxon.Administrador
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dgvAlumno.DataSource = DBController.listarAlumnos(txtNombre.Text);
+            //dgvAlumno.DataSource = DBController.listarAlumnos(txtNombre.Text);
+            BindingList<Administrador.alumno> toShow = new BindingList<Administrador.alumno>();
+            foreach (Administrador.alumno al in backup)
+            {
+                String chi = al.nombre + " " + al.apellidoPaterno + " " + al.apellidoMaterno;
+                if (chi.Contains(txtNombre.Text))
+                {
+                    toShow.Add(al);
+                }
+            }
+            if (txtNombre.Text != " ") dgvAlumno.DataSource = toShow;
+            else dgvAlumno.DataSource = backup;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

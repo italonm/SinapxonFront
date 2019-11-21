@@ -14,7 +14,7 @@ namespace Sinapxon.Administrador
     {
         private frmAdministrador _padre = null;
         private Administrador.profesor pfSeleccionado;
-
+        BindingList<Administrador.profesor> backup;
 
         Administrador.AdministradorServicesClient DBController = new Administrador.AdministradorServicesClient();
 
@@ -22,19 +22,25 @@ namespace Sinapxon.Administrador
 
         public frmGestionarProfesor()
         {
-            dgvProfesores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             InitializeComponent();
             dgvProfesores.AutoGenerateColumns = false;
             dgvProfesores.DataSource = new BindingList<Administrador.profesor>(DBController.listarProfesores(""));
+            dgvProfesores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         public frmGestionarProfesor(frmAdministrador padre)
         {
-            dgvProfesores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            
             InitializeComponent();
             this.Padre = padre;
             dgvProfesores.AutoGenerateColumns = false;
             dgvProfesores.DataSource = new BindingList<Administrador.profesor>(DBController.listarProfesores(""));
+
+            backup = (BindingList<Administrador.profesor>)dgvProfesores.DataSource;
+
+            BindingList<Administrador.profesor> toShow = new BindingList<Administrador.profesor>();
+
+            dgvProfesores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         public frmAdministrador Padre { get => _padre; set => _padre = value; }
@@ -57,7 +63,18 @@ namespace Sinapxon.Administrador
 
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
-            dgvProfesores.DataSource = DBController.listarProfesores(txtNombre.Text);
+            //dgvProfesores.DataSource = DBController.listarProfesores(txtNombre.Text);
+            BindingList<Administrador.profesor> toShow = new BindingList<Administrador.profesor>();
+            foreach (Administrador.profesor pf in backup)
+            {
+                String chi = pf.nombre + " " + pf.apellidoPaterno + " " + pf.apellidoMaterno;
+                if (chi.Contains(txtNombre.Text))
+                {
+                    toShow.Add(pf);
+                }
+            }
+            if (txtNombre.Text != " ") dgvProfesores.DataSource = toShow;
+            else dgvProfesores.DataSource = backup;
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)

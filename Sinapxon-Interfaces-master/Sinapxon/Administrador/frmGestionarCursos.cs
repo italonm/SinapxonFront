@@ -14,12 +14,15 @@ namespace Sinapxon.Administrador
     public partial class frmGestionarCursos : Form
     {
         private frmAdministrador _padre = null;
+        BindingList<Administrador.curso> backup;
         private Administrador.curso curSeleccionado;
         private Administrador.AdministradorServicesClient DBController = new AdministradorServicesClient();
         private String codigoAdmin;
 
         public frmGestionarCursos()
         {
+            dgvCursos.AutoGenerateColumns = false;
+            dgvCursos.DataSource = new BindingList<Administrador.curso>(DBController.listarCursos(""));
             dgvCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.codigoAdmin = LoginInfo.persona.codigo;
         }
@@ -31,6 +34,11 @@ namespace Sinapxon.Administrador
             this.Padre = padre;
             dgvCursos.AutoGenerateColumns = false;
             dgvCursos.DataSource = new BindingList<Administrador.curso>(DBController.listarCursos(""));
+
+            backup = (BindingList<Administrador.curso>)dgvCursos.DataSource;
+
+            BindingList<Administrador.curso> toShow = new BindingList<Administrador.curso>();
+
             dgvCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
@@ -49,7 +57,18 @@ namespace Sinapxon.Administrador
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dgvCursos.DataSource = DBController.listarCursos(txtNombre.Text);
+            //dgvCursos.DataSource = DBController.listarCursos(txtNombre.Text);
+            BindingList<Administrador.curso> toShow = new BindingList<Administrador.curso>();
+            foreach (Administrador.curso cur in backup)
+            {
+                String chi = cur.codigo + " " + cur.nombre + " " + cur.descripcion;
+                if (chi.Contains(txtNombre.Text))
+                {
+                    toShow.Add(cur);
+                }
+            }
+            if (txtNombre.Text != " ") dgvCursos.DataSource = toShow;
+            else dgvCursos.DataSource = backup;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

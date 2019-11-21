@@ -78,8 +78,9 @@
             // dgvProfesores
             // 
             this.dgvProfesores.AllowUserToAddRows = false;
+            this.dgvProfesores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgvProfesores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -213,39 +214,41 @@
             this.Codigo.HeaderText = "Codigo";
             this.Codigo.Name = "Codigo";
             this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 65;
             // 
             // Nombre
             // 
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 150;
+            this.Nombre.Width = 69;
             // 
             // Apellido_paterno
             // 
             this.Apellido_paterno.HeaderText = "Apellido Paterno";
             this.Apellido_paterno.Name = "Apellido_paterno";
             this.Apellido_paterno.ReadOnly = true;
-            this.Apellido_paterno.Width = 150;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Apellido Materno";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 150;
+            this.Column1.Width = 102;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "DNI";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Width = 51;
             // 
             // Telefono
             // 
             this.Telefono.HeaderText = "Telefono";
             this.Telefono.Name = "Telefono";
             this.Telefono.ReadOnly = true;
+            this.Telefono.Width = 74;
             // 
             // Correo
             // 

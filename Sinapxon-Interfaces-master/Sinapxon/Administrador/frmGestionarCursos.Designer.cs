@@ -181,6 +181,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCursos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvCursos.GridColor = System.Drawing.Color.DarkSlateBlue;
             this.dgvCursos.Location = new System.Drawing.Point(41, 170);
             this.dgvCursos.Name = "dgvCursos";
             this.dgvCursos.ReadOnly = true;

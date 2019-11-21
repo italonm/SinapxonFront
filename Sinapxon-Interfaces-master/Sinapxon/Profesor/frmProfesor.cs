@@ -71,7 +71,8 @@ namespace Sinapxon.Profesor
 
         private void btnVerSolicitudes_Click(object sender, EventArgs e)
         {
-
+            frmVerMisSolicitudes frmVerMisSolicitudes = new frmVerMisSolicitudes();
+            this.openChildForm(frmVerMisSolicitudes);
         }
 
         private void btnSolicitar_Click(object sender, EventArgs e)
