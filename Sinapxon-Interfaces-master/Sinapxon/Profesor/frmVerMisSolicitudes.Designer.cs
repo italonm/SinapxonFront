@@ -42,10 +42,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel1.Location = new System.Drawing.Point(14, 120);
+            this.panel1.Location = new System.Drawing.Point(10, 98);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(928, 516);
+            this.panel1.Size = new System.Drawing.Size(696, 419);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -53,10 +53,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(87, 50);
+            this.label1.Location = new System.Drawing.Point(65, 41);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 36);
+            this.label1.Size = new System.Drawing.Size(191, 29);
             this.label1.TabIndex = 3;
             this.label1.Text = "Mis Solicitudes";
             // 
@@ -68,10 +68,10 @@
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtras.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAtras.Image = global::Sinapxon.Properties.Resources.round_arrow_left_white_36dp;
-            this.btnAtras.Location = new System.Drawing.Point(14, 36);
+            this.btnAtras.Location = new System.Drawing.Point(10, 29);
             this.btnAtras.Margin = new System.Windows.Forms.Padding(2);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(50, 50);
+            this.btnAtras.Size = new System.Drawing.Size(38, 41);
             this.btnAtras.TabIndex = 33;
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
@@ -80,9 +80,10 @@
             // 
             this.cbEstados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbEstados.FormattingEnabled = true;
-            this.cbEstados.Location = new System.Drawing.Point(557, 67);
+            this.cbEstados.Location = new System.Drawing.Point(303, 49);
+            this.cbEstados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbEstados.Name = "cbEstados";
-            this.cbEstados.Size = new System.Drawing.Size(215, 24);
+            this.cbEstados.Size = new System.Drawing.Size(276, 21);
             this.cbEstados.TabIndex = 34;
             // 
             // btnBuscar
@@ -93,10 +94,10 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(805, 36);
+            this.btnBuscar.Location = new System.Drawing.Point(603, 41);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(137, 55);
+            this.btnBuscar.Size = new System.Drawing.Size(103, 45);
             this.btnBuscar.TabIndex = 35;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -104,16 +105,17 @@
             // 
             // frmVerMisSolicitudes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(964, 681);
+            this.ClientSize = new System.Drawing.Size(723, 553);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.cbEstados);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmVerMisSolicitudes";
             this.Text = "frmVerMisSolicitudes";
             this.ResumeLayout(false);

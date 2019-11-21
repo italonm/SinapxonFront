@@ -37,7 +37,8 @@ namespace Sinapxon.Administrador
             txtDescripcion.Text = curso.descripcion;
             cbEspecialidad.Text = curso.especialidad.nombre;
             dgvRequisitos.AutoGenerateColumns = false;
-            dgvRequisitos.DataSource = new BindingList<Administrador.curso>(DBController.listarRequisitos(curso.codigo));
+            this.cursos  = new BindingList<Administrador.curso>(DBController.listarRequisitos(curso.codigo));
+            dgvRequisitos.DataSource = this.cursos;
 
             estadoComponentes(Estado.Modificar);
         }
@@ -91,7 +92,7 @@ namespace Sinapxon.Administrador
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
                     btnEliminar.Enabled = false;
-                    btnRegresar.Enabled = false;
+                    btnRegresar.Enabled = true;
                     btnCancelar.Enabled = true;
                     btnAgregarRequisito.Enabled = true;
                     btnQuitarRequisito.Enabled = true;
@@ -105,7 +106,7 @@ namespace Sinapxon.Administrador
                     btnGuardar.Enabled = false;
                     btnModificar.Enabled = true;
                     btnEliminar.Enabled = true;
-                    btnRegresar.Enabled = false;
+                    btnRegresar.Enabled = true;
                     btnCancelar.Enabled = true;
                     btnAgregarRequisito.Enabled = true;
                     btnQuitarRequisito.Enabled = true;
@@ -138,8 +139,9 @@ namespace Sinapxon.Administrador
             Administrador.curso cursoFila = (Administrador.curso)dgvRequisitos.Rows[e.RowIndex].DataBoundItem;
             if (cursoFila != null)
             {
-                dgvRequisitos.Rows[e.RowIndex].Cells[0].Value = cursoFila.codigo.ToString();
+                dgvRequisitos.Rows[e.RowIndex].Cells[0].Value = cursoFila.codigo;
                 dgvRequisitos.Rows[e.RowIndex].Cells[1].Value = cursoFila.nombre;
+                dgvRequisitos.Rows[e.RowIndex].Cells[2].Value = cursoFila.descripcion;
             }
         }
 
@@ -174,7 +176,7 @@ namespace Sinapxon.Administrador
             curso.nombre = txtNombreCurso.Text;
             curso.descripcion = txtDescripcion.Text;
             curso.especialidad = (Administrador.especialidad)cbEspecialidad.SelectedItem;
-            curso.cursos = cursos.ToArray();
+            curso.cursos = this.cursos.ToArray();
 
             if (estadoCurso == Estado.Nuevo)
             {
@@ -217,10 +219,12 @@ namespace Sinapxon.Administrador
             frmAgregarRequisito formAgregarRequisito = new frmAgregarRequisito();
             if (formAgregarRequisito.ShowDialog() == DialogResult.OK)
             {
-                curSeleccionado = formAgregarRequisito.CurSeleccionado;
+                //curSeleccionado = formAgregarRequisito.CurSeleccionado;
+                curSeleccionado = (Administrador.curso)dgvRequisitos.CurrentRow.DataBoundItem;
             }
             //Administrador.curso cursoreq = new Administrador.curso();
-            cursos.Add(curSeleccionado);
+            this.cursos.Add(curSeleccionado);
+            dgvRequisitos.DataSource = this.cursos;
             curSeleccionado = null;
         }
 
@@ -233,6 +237,7 @@ namespace Sinapxon.Administrador
             }
             Administrador.curso curreq = (Administrador.curso)dgvRequisitos.CurrentRow.DataBoundItem;
             cursos.Remove(curreq);
+            dgvRequisitos.DataSource = this.cursos;
         }
 
         private void btnAgregarEsp_Click(object sender, EventArgs e)

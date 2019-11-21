@@ -73,5 +73,10 @@ namespace Sinapxon.Profesor
             DBController.insertarTemaxClassroom(temaxClassroom);
             this.Close();
         }
+
+        private void btnAniadirArchivo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

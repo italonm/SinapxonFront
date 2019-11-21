@@ -117,7 +117,7 @@ namespace Sinapxon.Administrador
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
                     btnEliminar.Enabled = false;
-                    btnRegresar.Enabled = false;
+                    btnRegresar.Enabled = true;
                     btnCancelar.Enabled = true;
                     gbEstado.Enabled = true;
                     txtApMat.Enabled = true;
@@ -137,7 +137,7 @@ namespace Sinapxon.Administrador
                     btnGuardar.Enabled = false;
                     btnModificar.Enabled = true;
                     btnEliminar.Enabled = true;
-                    btnRegresar.Enabled = false;
+                    btnRegresar.Enabled = true;
                     btnCancelar.Enabled = true;
                     gbEstado.Enabled = false;
                     txtApMat.Enabled = true;
