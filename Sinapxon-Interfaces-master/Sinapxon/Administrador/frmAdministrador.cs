@@ -76,10 +76,5 @@ namespace Sinapxon.Administrador
             frmLogin formLogin = new frmLogin();
             formLogin.Show();
         }
-
-        private void frmAdministrador_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }

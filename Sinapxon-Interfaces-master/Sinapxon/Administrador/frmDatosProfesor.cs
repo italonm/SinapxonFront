@@ -278,13 +278,32 @@ namespace Sinapxon.Administrador
 
         private void btnGenerarContr_Click(object sender, EventArgs e)
         {
-            
+            txtPassword.Text = GenerarNuevaContrasenia();
+            txtPassword.UseSystemPasswordChar = true;
         }
+        public string GenerarNuevaContrasenia()
+        {
+            Random rd = new Random(DateTime.Now.Millisecond);
+            int nuevaContrasenia = rd.Next(100000, 9999999);
+            return nuevaContrasenia.ToString();
 
+        }
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             frmGestionarProfesor formGestionarProfesor = new frmGestionarProfesor(this.Padre);
             _padre.openChildForm(formGestionarProfesor);
+        }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.UseSystemPasswordChar == false)
+            {
+                txtPassword.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = false;
+            }
         }
     }
 }

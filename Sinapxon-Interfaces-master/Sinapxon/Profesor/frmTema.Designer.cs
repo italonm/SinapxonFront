@@ -358,6 +358,7 @@
             this.btnAtras.Size = new System.Drawing.Size(50, 50);
             this.btnAtras.TabIndex = 21;
             this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // frmTema
             // 

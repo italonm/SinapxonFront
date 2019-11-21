@@ -211,7 +211,7 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
+            this.panelContenedor.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(300, 0);
             this.panelContenedor.Name = "panelContenedor";
@@ -227,7 +227,6 @@
             this.Controls.Add(this.panelMenu);
             this.Name = "frmProfesor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmProfesor_FormClosed);
             this.panelMenu.ResumeLayout(false);
             this.panelSubGestionarUsr.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);

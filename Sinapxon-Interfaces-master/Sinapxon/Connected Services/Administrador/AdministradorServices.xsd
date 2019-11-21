@@ -291,6 +291,7 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="idioma">
+<<<<<<< HEAD
     <xs:sequence>
       <xs:element name="id_idioma" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
@@ -307,12 +308,22 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarCurso">
+=======
+>>>>>>> emmaraq
     <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="tns:curso" />
+      <xs:element name="id_idioma" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarCursoResponse">
-    <xs:sequence />
+  <xs:complexType name="listarIdiomasXNombreCodigo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarIdiomasXNombreCodigoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:idioma" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarCurso">
     <xs:sequence>
@@ -323,6 +334,14 @@
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCurso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:curso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCursoResponse">
+    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="cambiarEstadoSolicitud">
     <xs:sequence>

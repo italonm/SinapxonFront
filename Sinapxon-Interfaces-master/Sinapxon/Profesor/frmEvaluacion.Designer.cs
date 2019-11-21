@@ -60,23 +60,23 @@
             // lblEvaluacion
             // 
             this.lblEvaluacion.AutoSize = true;
-            this.lblEvaluacion.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEvaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEvaluacion.ForeColor = System.Drawing.Color.Black;
             this.lblEvaluacion.Location = new System.Drawing.Point(81, 29);
             this.lblEvaluacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEvaluacion.Name = "lblEvaluacion";
-            this.lblEvaluacion.Size = new System.Drawing.Size(130, 29);
+            this.lblEvaluacion.Size = new System.Drawing.Size(140, 29);
             this.lblEvaluacion.TabIndex = 0;
             this.lblEvaluacion.Text = "Evaluación";
             // 
             // lblPeso
             // 
             this.lblPeso.AutoSize = true;
-            this.lblPeso.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPeso.Location = new System.Drawing.Point(333, 72);
             this.lblPeso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(44, 19);
+            this.lblPeso.Size = new System.Drawing.Size(45, 20);
             this.lblPeso.TabIndex = 5;
             this.lblPeso.Text = "Peso";
             // 
@@ -111,22 +111,22 @@
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.Location = new System.Drawing.Point(13, 231);
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(92, 19);
+            this.lblDescripcion.Size = new System.Drawing.Size(92, 20);
             this.lblDescripcion.TabIndex = 1;
             this.lblDescripcion.Text = "Descripción";
             // 
             // lblNombreEvaluacion
             // 
             this.lblNombreEvaluacion.AutoSize = true;
-            this.lblNombreEvaluacion.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreEvaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreEvaluacion.Location = new System.Drawing.Point(13, 72);
             this.lblNombreEvaluacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreEvaluacion.Name = "lblNombreEvaluacion";
-            this.lblNombreEvaluacion.Size = new System.Drawing.Size(184, 19);
+            this.lblNombreEvaluacion.Size = new System.Drawing.Size(182, 20);
             this.lblNombreEvaluacion.TabIndex = 0;
             this.lblNombreEvaluacion.Text = "Nombre de la evaluación";
             // 
@@ -161,11 +161,11 @@
             // lblTemas
             // 
             this.lblTemas.AutoSize = true;
-            this.lblTemas.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTemas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTemas.Location = new System.Drawing.Point(13, 141);
             this.lblTemas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTemas.Name = "lblTemas";
-            this.lblTemas.Size = new System.Drawing.Size(160, 19);
+            this.lblTemas.Size = new System.Drawing.Size(158, 20);
             this.lblTemas.TabIndex = 7;
             this.lblTemas.Text = "Temas del classroom";
             this.lblTemas.Click += new System.EventHandler(this.label1_Click);
@@ -212,7 +212,7 @@
             this.btnQuitarEvaluacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.btnQuitarEvaluacion.FlatAppearance.BorderSize = 0;
             this.btnQuitarEvaluacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuitarEvaluacion.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarEvaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitarEvaluacion.ForeColor = System.Drawing.Color.White;
             this.btnQuitarEvaluacion.Image = global::Sinapxon.Properties.Resources.baseline_remove_circle_white_18dp;
             this.btnQuitarEvaluacion.Location = new System.Drawing.Point(242, 79);
@@ -229,7 +229,7 @@
             this.btnAgregarEntregable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.btnAgregarEntregable.FlatAppearance.BorderSize = 0;
             this.btnAgregarEntregable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarEntregable.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarEntregable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarEntregable.ForeColor = System.Drawing.Color.White;
             this.btnAgregarEntregable.Image = global::Sinapxon.Properties.Resources.baseline_add_circle_white_18dp;
             this.btnAgregarEntregable.Location = new System.Drawing.Point(13, 79);
@@ -295,7 +295,7 @@
             this.butGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.butGuardar.FlatAppearance.BorderSize = 0;
             this.butGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butGuardar.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butGuardar.ForeColor = System.Drawing.Color.White;
             this.butGuardar.Image = global::Sinapxon.Properties.Resources.round_save_white_18dp;
             this.butGuardar.Location = new System.Drawing.Point(779, 21);
@@ -319,6 +319,7 @@
             this.btnAtras.Size = new System.Drawing.Size(50, 50);
             this.btnAtras.TabIndex = 21;
             this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // frmEvaluacion
             // 

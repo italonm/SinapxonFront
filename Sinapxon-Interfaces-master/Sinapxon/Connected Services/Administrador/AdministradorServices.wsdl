@@ -80,8 +80,44 @@
   <message name="insertarCurso">
     <part name="parameters" element="tns:insertarCurso" />
   </message>
-  <message name="insertarCursoResponse">
-    <part name="parameters" element="tns:insertarCursoResponse" />
+  <message name="insertarEspecialidadResponse">
+    <part name="parameters" element="tns:insertarEspecialidadResponse" />
+  </message>
+  <message name="listarSolicitudes">
+    <part name="parameters" element="tns:listarSolicitudes" />
+  </message>
+  <message name="listarSolicitudesResponse">
+    <part name="parameters" element="tns:listarSolicitudesResponse" />
+  </message>
+  <message name="eliminarEspecialidad">
+    <part name="parameters" element="tns:eliminarEspecialidad" />
+  </message>
+  <message name="eliminarEspecialidadResponse">
+    <part name="parameters" element="tns:eliminarEspecialidadResponse" />
+  </message>
+  <message name="actualizarEspecialidad">
+    <part name="parameters" element="tns:actualizarEspecialidad" />
+  </message>
+  <message name="actualizarEspecialidadResponse">
+    <part name="parameters" element="tns:actualizarEspecialidadResponse" />
+  </message>
+  <message name="cambiarEstadoSolicitud">
+    <part name="parameters" element="tns:cambiarEstadoSolicitud" />
+  </message>
+  <message name="cambiarEstadoSolicitudResponse">
+    <part name="parameters" element="tns:cambiarEstadoSolicitudResponse" />
+  </message>
+  <message name="listarIdiomasXNombreCodigo">
+    <part name="parameters" element="tns:listarIdiomasXNombreCodigo" />
+  </message>
+  <message name="listarIdiomasXNombreCodigoResponse">
+    <part name="parameters" element="tns:listarIdiomasXNombreCodigoResponse" />
+  </message>
+  <message name="actualizarProfesor">
+    <part name="parameters" element="tns:actualizarProfesor" />
+  </message>
+  <message name="actualizarProfesorResponse">
+    <part name="parameters" element="tns:actualizarProfesorResponse" />
   </message>
   <message name="actualizarCurso">
     <part name="parameters" element="tns:actualizarCurso" />
@@ -134,8 +170,8 @@
   <message name="obtenerPeriodo">
     <part name="parameters" element="tns:obtenerPeriodo" />
   </message>
-  <message name="obtenerPeriodoResponse">
-    <part name="parameters" element="tns:obtenerPeriodoResponse" />
+  <message name="listarCursosResponse">
+    <part name="parameters" element="tns:listarCursosResponse" />
   </message>
   <message name="listarCursosSin">
     <part name="parameters" element="tns:listarCursosSin" />
@@ -195,6 +231,30 @@
     <operation name="insertarCurso">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarCursoRequest" message="tns:insertarCurso" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/insertarCursoResponse" message="tns:insertarCursoResponse" />
+    </operation>
+    <operation name="listarSolicitudes">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarSolicitudesRequest" message="tns:listarSolicitudes" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarSolicitudesResponse" message="tns:listarSolicitudesResponse" />
+    </operation>
+    <operation name="eliminarEspecialidad">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarEspecialidadRequest" message="tns:eliminarEspecialidad" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/eliminarEspecialidadResponse" message="tns:eliminarEspecialidadResponse" />
+    </operation>
+    <operation name="actualizarEspecialidad">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarEspecialidadRequest" message="tns:actualizarEspecialidad" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarEspecialidadResponse" message="tns:actualizarEspecialidadResponse" />
+    </operation>
+    <operation name="cambiarEstadoSolicitud">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/cambiarEstadoSolicitudRequest" message="tns:cambiarEstadoSolicitud" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/cambiarEstadoSolicitudResponse" message="tns:cambiarEstadoSolicitudResponse" />
+    </operation>
+    <operation name="listarIdiomasXNombreCodigo">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarIdiomasXNombreCodigoRequest" message="tns:listarIdiomasXNombreCodigo" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/listarIdiomasXNombreCodigoResponse" message="tns:listarIdiomasXNombreCodigoResponse" />
+    </operation>
+    <operation name="actualizarProfesor">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarProfesorRequest" message="tns:actualizarProfesor" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarProfesorResponse" message="tns:actualizarProfesorResponse" />
     </operation>
     <operation name="actualizarCurso">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AdministradorServices/actualizarCursoRequest" message="tns:actualizarCurso" />

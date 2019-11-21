@@ -19,8 +19,6 @@ namespace Sinapxon.Administrador
         private BindingList<Administrador.solicitudClassroom> solicitudClassroomsAprobados;
         private BindingList<Administrador.solicitudClassroom> solicitudClassroomsDesaprobados;
 
-        private Administrador.solicitudClassroom solicitudSeleccionado;
-
         public frmGestionarClassroom()
         {
             InitializeComponent();
@@ -53,12 +51,11 @@ namespace Sinapxon.Administrador
             try
             {
                 solicitudClassroomsDesaprobados = new BindingList<Administrador.solicitudClassroom>(DBController.listarSolicitudes(0));
+                dgvSolicitudesDesaprobadas.DataSource = solicitudClassroomsDesaprobados;
             }
-            catch (ArgumentNullException e)
+            catch (Exception)
             {
-                solicitudClassroomsDesaprobados = new BindingList<Administrador.solicitudClassroom>();
             }
-            dgvSolicitudesDesaprobadas.DataSource = solicitudClassroomsDesaprobados;
             //solicitudClassroomsDesaprobados = new BindingList<Administrador.solicitudClassroom>(DBController.listarSolicitudes(0));
             //dgvSolicitudesDesaprobadas.DataSource = solicitudClassroomsDesaprobados;
         }
@@ -67,25 +64,8 @@ namespace Sinapxon.Administrador
 
         private void button1_Click(object sender, EventArgs e)
         {
-            solicitudSeleccionado = dgvSolicitudesPendientes.CurrentRow.DataBoundItem as Administrador.solicitudClassroom;
-
-            frmSolicitudClassroom formSolicitudClassroom = new frmSolicitudClassroom(solicitudSeleccionado);
-            if(formSolicitudClassroom.ShowDialog() == DialogResult.OK)
-            {
-                solicitudClassroomsPendientes = new BindingList<Administrador.solicitudClassroom>(DBController.listarSolicitudes(2));
-                solicitudClassroomsAprobados = new BindingList<Administrador.solicitudClassroom>(DBController.listarSolicitudes(1));
-                try
-                {
-                    solicitudClassroomsDesaprobados = new BindingList<Administrador.solicitudClassroom>(DBController.listarSolicitudes(0));
-                }
-                catch(ArgumentNullException)
-                {
-
-                }
-                dgvSolicitudesPendientes.DataSource = solicitudClassroomsPendientes;
-                dgvSolicitudesAprobadas.DataSource = solicitudClassroomsAprobados;
-                dgvSolicitudesDesaprobadas.DataSource = solicitudClassroomsDesaprobados;
-            }
+            frmSolicitudClassroom formSolicitudClassroom = new frmSolicitudClassroom();
+            formSolicitudClassroom.Visible = true;
         }
 
         private void dgvSolicitudesPendientes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
