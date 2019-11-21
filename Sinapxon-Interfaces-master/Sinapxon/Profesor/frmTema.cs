@@ -73,5 +73,10 @@ namespace Sinapxon.Profesor
             DBController.insertarTemaxClassroom(temaxClassroom);
             this.Close();
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

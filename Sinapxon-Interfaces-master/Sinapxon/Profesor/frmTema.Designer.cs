@@ -66,45 +66,45 @@
             // 
             this.lblTema.AutoSize = true;
             this.lblTema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
-            this.lblTema.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTema.ForeColor = System.Drawing.Color.Black;
             this.lblTema.Location = new System.Drawing.Point(71, 31);
             this.lblTema.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTema.Name = "lblTema";
-            this.lblTema.Size = new System.Drawing.Size(74, 29);
+            this.lblTema.Size = new System.Drawing.Size(80, 29);
             this.lblTema.TabIndex = 0;
             this.lblTema.Text = "Tema";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(24, 78);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(130, 19);
+            this.lblNombre.Size = new System.Drawing.Size(130, 20);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre del tema";
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.Location = new System.Drawing.Point(436, 62);
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(92, 19);
+            this.lblDescripcion.Size = new System.Drawing.Size(92, 20);
             this.lblDescripcion.TabIndex = 2;
             this.lblDescripcion.Text = "Descripción";
             // 
             // lblLinkVideo
             // 
             this.lblLinkVideo.AutoSize = true;
-            this.lblLinkVideo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLinkVideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLinkVideo.Location = new System.Drawing.Point(26, 71);
             this.lblLinkVideo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLinkVideo.Name = "lblLinkVideo";
-            this.lblLinkVideo.Size = new System.Drawing.Size(105, 19);
+            this.lblLinkVideo.Size = new System.Drawing.Size(108, 20);
             this.lblLinkVideo.TabIndex = 3;
             this.lblLinkVideo.Text = "URL del video";
             // 
@@ -202,12 +202,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(11, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(251, 25);
+            this.label1.Size = new System.Drawing.Size(281, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Datos generales del tema";
             // 
@@ -237,12 +237,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(19, 17);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 25);
+            this.label2.Size = new System.Drawing.Size(72, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Video";
             // 
@@ -319,12 +319,12 @@
             // lblArchivosTema
             // 
             this.lblArchivosTema.AutoSize = true;
-            this.lblArchivosTema.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArchivosTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArchivosTema.ForeColor = System.Drawing.Color.White;
             this.lblArchivosTema.Location = new System.Drawing.Point(19, 18);
             this.lblArchivosTema.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblArchivosTema.Name = "lblArchivosTema";
-            this.lblArchivosTema.Size = new System.Drawing.Size(183, 25);
+            this.lblArchivosTema.Size = new System.Drawing.Size(200, 25);
             this.lblArchivosTema.TabIndex = 0;
             this.lblArchivosTema.Text = "Archivos del tema";
             // 
@@ -333,7 +333,7 @@
             this.btnGuardar.BackColor = System.Drawing.Color.SlateBlue;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Image = global::Sinapxon.Properties.Resources.round_save_white_18dp;
             this.btnGuardar.Location = new System.Drawing.Point(797, 15);
@@ -357,6 +357,7 @@
             this.btnAtras.Size = new System.Drawing.Size(50, 50);
             this.btnAtras.TabIndex = 21;
             this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // frmTema
             // 
