@@ -44,6 +44,8 @@ namespace Sinapxon.Administrador
 
         private void btnAprobar_Click(object sender, EventArgs e)
         {
+            DBController.crearClassroom_y_asignarProfesor(_solicitudClassroom);
+            MessageBox.Show("Se agrego el classroom correctamente", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.DialogResult = DialogResult.OK;
         }
 
