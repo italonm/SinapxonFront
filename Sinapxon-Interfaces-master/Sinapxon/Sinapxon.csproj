@@ -110,12 +110,6 @@
     <Compile Include="Administrador\frmGestionarProfesor.Designer.cs">
       <DependentUpon>frmGestionarProfesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\frmListaUsuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmListaUsuarios.Designer.cs">
-      <DependentUpon>frmListaUsuarios.cs</DependentUpon>
-    </Compile>
     <Compile Include="Administrador\frmRegistrarEspecialidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -325,9 +319,6 @@
     <EmbeddedResource Include="Administrador\frmGestionarProfesor.resx">
       <DependentUpon>frmGestionarProfesor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmListaUsuarios.resx">
-      <DependentUpon>frmListaUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmRegistrarEspecialidad.resx">
       <DependentUpon>frmRegistrarEspecialidad.cs</DependentUpon>
     </EmbeddedResource>
@@ -435,6 +426,9 @@
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.alumno.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.cambiarEstadoSolicitudResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.curso.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -450,7 +444,10 @@
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.eliminarProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Administrador\Sinapxon.Administrador.especialidad.datasource">
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.especialidad1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.idioma.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.insertarAlumnoResponse.datasource">
@@ -471,7 +468,10 @@
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarCursosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarEspecialidadesResponse.datasource">
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarEspecialidadesResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarIdiomasXNombreCodigoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarPaisesResponse.datasource">
@@ -486,7 +486,13 @@
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarSolicitudesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.obtenerPeriodoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.pais.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.periodo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.profesor.datasource">
@@ -509,12 +515,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarCursosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarPaisesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\Alumno\Sinapxon.Alumno.pais.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Login\LoginServices.wsdl" />
