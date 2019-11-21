@@ -251,6 +251,7 @@
             this.Controls.Add(this.panelMenu);
             this.Name = "frmAdministrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAdministrador_FormClosed);
             this.panelMenu.ResumeLayout(false);
             this.panelSubGestionarUsr.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);

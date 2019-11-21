@@ -79,5 +79,10 @@ namespace Sinapxon.Profesor
             frmDatosClassroom formDatosClassroom = new frmDatosClassroom();
             this.openChildForm(formDatosClassroom);
         }
+
+        private void frmProfesor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

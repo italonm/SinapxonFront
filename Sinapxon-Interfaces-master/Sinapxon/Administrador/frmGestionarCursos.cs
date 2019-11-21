@@ -20,11 +20,13 @@ namespace Sinapxon.Administrador
 
         public frmGestionarCursos()
         {
+            dgvCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.codigoAdmin = LoginInfo.persona.codigo;
         }
 
         public frmGestionarCursos(frmAdministrador padre)
         {
+            dgvCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             InitializeComponent();
             this.codigoAdmin = LoginInfo.persona.codigo;
             this.Padre = padre;
@@ -52,7 +54,7 @@ namespace Sinapxon.Administrador
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            dgvCursos.FirstDisplayedScrollingColumnIndex = dgvCursos.RowCount - 1;
+            dgvCursos.FirstDisplayedScrollingRowIndex = dgvCursos.RowCount - 1;
             frmCurso formCurso = new frmCurso("Añadir", this.codigoAdmin, _padre);
             Padre.openChildForm(formCurso);
         }

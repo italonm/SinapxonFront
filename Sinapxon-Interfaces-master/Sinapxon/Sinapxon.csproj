@@ -110,12 +110,6 @@
     <Compile Include="Administrador\frmGestionarProfesor.Designer.cs">
       <DependentUpon>frmGestionarProfesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\frmListaUsuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmListaUsuarios.Designer.cs">
-      <DependentUpon>frmListaUsuarios.cs</DependentUpon>
-    </Compile>
     <Compile Include="Administrador\frmRegistrarEspecialidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -318,9 +312,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmGestionarProfesor.resx">
       <DependentUpon>frmGestionarProfesor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmListaUsuarios.resx">
-      <DependentUpon>frmListaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmRegistrarEspecialidad.resx">
       <DependentUpon>frmRegistrarEspecialidad.cs</DependentUpon>

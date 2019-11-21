@@ -22,6 +22,7 @@ namespace Sinapxon.Administrador
 
         public frmGestionarProfesor()
         {
+            dgvProfesores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             InitializeComponent();
             dgvProfesores.AutoGenerateColumns = false;
             dgvProfesores.DataSource = new BindingList<Administrador.profesor>(DBController.listarProfesores(""));
@@ -29,6 +30,7 @@ namespace Sinapxon.Administrador
 
         public frmGestionarProfesor(frmAdministrador padre)
         {
+            dgvProfesores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             InitializeComponent();
             this.Padre = padre;
             dgvProfesores.AutoGenerateColumns = false;
@@ -72,7 +74,7 @@ namespace Sinapxon.Administrador
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            dgvProfesores.FirstDisplayedScrollingColumnIndex = dgvProfesores.RowCount - 1;
+            dgvProfesores.FirstDisplayedScrollingRowIndex = dgvProfesores.RowCount - 1;
             frmDatosProfesor formDatosProfesor = new frmDatosProfesor(_padre);
             _padre.openChildForm(formDatosProfesor);
         }
