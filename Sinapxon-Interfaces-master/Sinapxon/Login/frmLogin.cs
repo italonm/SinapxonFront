@@ -27,6 +27,11 @@ namespace Sinapxon.Login
             LoginInfo.persona = DBController.validarLogin(txtUsuario.Text, txtContrasenia.Text);
             //LoginInfo.codigo = result.Substring(0, 6);
             String tipo = LoginInfo.persona.tipo;
+            if (LoginInfo.persona.nombre == null)
+            {
+                MessageBox.Show("Los datos ingresados son incorrectos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (string.Equals(tipo, "D"))
             {
                 frmAdministrador formAdministrador = new frmAdministrador();
@@ -123,6 +128,11 @@ namespace Sinapxon.Login
                 txtContrasenia.UseSystemPasswordChar = false;
                 txtContrasenia.ForeColor = Color.Gray;
             }
+        }
+
+        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 
