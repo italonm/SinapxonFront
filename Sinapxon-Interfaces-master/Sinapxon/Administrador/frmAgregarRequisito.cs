@@ -23,7 +23,7 @@ namespace Sinapxon.Administrador
         {
             InitializeComponent();
             dgvCursos.AutoGenerateColumns = false;
-            dgvCursos.DataSource = new BindingList<Administrador.curso>(DBController.listarCursos(""));
+            dgvCursos.DataSource = new BindingList<Administrador.curso>(DBController.listarCursosSin(""));
         }
 
         private void dgvCursos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

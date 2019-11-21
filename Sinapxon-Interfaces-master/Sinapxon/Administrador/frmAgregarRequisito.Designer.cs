@@ -51,9 +51,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 29);
+            this.label1.Size = new System.Drawing.Size(298, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Lista de cursos";
+            this.label1.Text = "Lista de cursos requisito";
             // 
             // panelEspecialidad
             // 
@@ -127,7 +127,6 @@
             this.dgvCursos.Location = new System.Drawing.Point(31, 133);
             this.dgvCursos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvCursos.Name = "dgvCursos";
-            this.dgvCursos.ReadOnly = true;
             this.dgvCursos.Size = new System.Drawing.Size(1080, 306);
             this.dgvCursos.TabIndex = 3;
             this.dgvCursos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvCursos_CellFormatting);
@@ -136,21 +135,18 @@
             // 
             this.Column1.HeaderText = "Código";
             this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
             this.Column1.Width = 200;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Nombre";
             this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             this.Column2.Width = 420;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Descripción";
             this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
             this.Column3.Width = 420;
             // 
             // btnAgregar

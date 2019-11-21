@@ -61,8 +61,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(55, 49);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(100, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(298, 29);
             this.label1.TabIndex = 0;
@@ -130,7 +130,7 @@
             this.tabControlSolicitudes.Controls.Add(this.tabPageSolPendientes);
             this.tabControlSolicitudes.Controls.Add(this.tabPageSolAprobadas);
             this.tabControlSolicitudes.Controls.Add(this.tabPageSolDesaprobadas);
-            this.tabControlSolicitudes.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlSolicitudes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlSolicitudes.Location = new System.Drawing.Point(34, 136);
             this.tabControlSolicitudes.Name = "tabControlSolicitudes";
             this.tabControlSolicitudes.SelectedIndex = 0;
@@ -142,33 +142,35 @@
             this.tabPageSolPendientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.tabPageSolPendientes.Controls.Add(this.dgvSolicitudesPendientes);
             this.tabPageSolPendientes.Controls.Add(this.btnInspeccionarSolicitud);
-            this.tabPageSolPendientes.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageSolPendientes.Location = new System.Drawing.Point(4, 22);
+            this.tabPageSolPendientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageSolPendientes.Location = new System.Drawing.Point(4, 33);
             this.tabPageSolPendientes.Name = "tabPageSolPendientes";
             this.tabPageSolPendientes.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSolPendientes.Size = new System.Drawing.Size(899, 507);
+            this.tabPageSolPendientes.Size = new System.Drawing.Size(899, 496);
             this.tabPageSolPendientes.TabIndex = 0;
             this.tabPageSolPendientes.Text = "Pendientes";
             // 
             // tabPageSolAprobadas
             // 
-            this.tabPageSolAprobadas.BackColor = System.Drawing.Color.YellowGreen;
+            this.tabPageSolAprobadas.BackColor = System.Drawing.Color.DarkGray;
             this.tabPageSolAprobadas.Controls.Add(this.dgvSolicitudesAprobadas);
-            this.tabPageSolAprobadas.Location = new System.Drawing.Point(4, 22);
+            this.tabPageSolAprobadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageSolAprobadas.Location = new System.Drawing.Point(4, 33);
             this.tabPageSolAprobadas.Name = "tabPageSolAprobadas";
             this.tabPageSolAprobadas.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSolAprobadas.Size = new System.Drawing.Size(899, 507);
+            this.tabPageSolAprobadas.Size = new System.Drawing.Size(899, 496);
             this.tabPageSolAprobadas.TabIndex = 1;
             this.tabPageSolAprobadas.Text = "Aprobadas";
             // 
             // tabPageSolDesaprobadas
             // 
-            this.tabPageSolDesaprobadas.BackColor = System.Drawing.Color.Firebrick;
+            this.tabPageSolDesaprobadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tabPageSolDesaprobadas.Controls.Add(this.dgvSolicitudesDesaprobadas);
-            this.tabPageSolDesaprobadas.Location = new System.Drawing.Point(4, 22);
+            this.tabPageSolDesaprobadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageSolDesaprobadas.Location = new System.Drawing.Point(4, 33);
             this.tabPageSolDesaprobadas.Name = "tabPageSolDesaprobadas";
             this.tabPageSolDesaprobadas.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSolDesaprobadas.Size = new System.Drawing.Size(899, 507);
+            this.tabPageSolDesaprobadas.Size = new System.Drawing.Size(899, 496);
             this.tabPageSolDesaprobadas.TabIndex = 2;
             this.tabPageSolDesaprobadas.Text = "Desaprobadas";
             // 

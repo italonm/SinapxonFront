@@ -36,16 +36,16 @@
             this.panelEntregables = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnAsignarPuntaje = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panelTituloEntregables = new System.Windows.Forms.Panel();
             this.lblEntregables = new System.Windows.Forms.Label();
             this.panelArchivos = new System.Windows.Forms.Panel();
+            this.btnDescargar = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.panelTituloArchivos = new System.Windows.Forms.Panel();
             this.lblArchivos = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnDescargar = new System.Windows.Forms.Button();
-            this.btnAsignarPuntaje = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
             this.panelAlumnos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -61,11 +61,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(107, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(430, 29);
+            this.label1.Size = new System.Drawing.Size(463, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Calificación - Nombre de la evaluación";
             // 
@@ -126,20 +126,38 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(19, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 19);
+            this.label2.Size = new System.Drawing.Size(70, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Puntaje";
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(89, 71);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 27);
+            this.textBox1.Size = new System.Drawing.Size(100, 26);
             this.textBox1.TabIndex = 4;
+            // 
+            // btnAsignarPuntaje
+            // 
+            this.btnAsignarPuntaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.btnAsignarPuntaje.FlatAppearance.BorderSize = 0;
+            this.btnAsignarPuntaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsignarPuntaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsignarPuntaje.ForeColor = System.Drawing.Color.White;
+            this.btnAsignarPuntaje.Image = global::Sinapxon.Properties.Resources.round_assignment_turned_in_white_18dp;
+            this.btnAsignarPuntaje.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAsignarPuntaje.Location = new System.Drawing.Point(244, 64);
+            this.btnAsignarPuntaje.Name = "btnAsignarPuntaje";
+            this.btnAsignarPuntaje.Size = new System.Drawing.Size(181, 45);
+            this.btnAsignarPuntaje.TabIndex = 3;
+            this.btnAsignarPuntaje.Text = "Asignar puntaje";
+            this.btnAsignarPuntaje.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAsignarPuntaje.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAsignarPuntaje.UseVisualStyleBackColor = false;
             // 
             // dataGridView2
             // 
@@ -181,6 +199,22 @@
             this.panelArchivos.Name = "panelArchivos";
             this.panelArchivos.Size = new System.Drawing.Size(440, 297);
             this.panelArchivos.TabIndex = 2;
+            // 
+            // btnDescargar
+            // 
+            this.btnDescargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.btnDescargar.FlatAppearance.BorderSize = 0;
+            this.btnDescargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDescargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDescargar.ForeColor = System.Drawing.Color.White;
+            this.btnDescargar.Image = global::Sinapxon.Properties.Resources.baseline_get_app_white_18dp1;
+            this.btnDescargar.Location = new System.Drawing.Point(245, 64);
+            this.btnDescargar.Name = "btnDescargar";
+            this.btnDescargar.Size = new System.Drawing.Size(180, 45);
+            this.btnDescargar.TabIndex = 6;
+            this.btnDescargar.Text = "Descargar";
+            this.btnDescargar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDescargar.UseVisualStyleBackColor = false;
             // 
             // dataGridView3
             // 
@@ -229,39 +263,6 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnDescargar
-            // 
-            this.btnDescargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
-            this.btnDescargar.FlatAppearance.BorderSize = 0;
-            this.btnDescargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDescargar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDescargar.ForeColor = System.Drawing.Color.White;
-            this.btnDescargar.Image = global::Sinapxon.Properties.Resources.baseline_get_app_white_18dp1;
-            this.btnDescargar.Location = new System.Drawing.Point(265, 63);
-            this.btnDescargar.Name = "btnDescargar";
-            this.btnDescargar.Size = new System.Drawing.Size(160, 45);
-            this.btnDescargar.TabIndex = 6;
-            this.btnDescargar.Text = "Descargar";
-            this.btnDescargar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDescargar.UseVisualStyleBackColor = false;
-            // 
-            // btnAsignarPuntaje
-            // 
-            this.btnAsignarPuntaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
-            this.btnAsignarPuntaje.FlatAppearance.BorderSize = 0;
-            this.btnAsignarPuntaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAsignarPuntaje.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAsignarPuntaje.ForeColor = System.Drawing.Color.White;
-            this.btnAsignarPuntaje.Image = global::Sinapxon.Properties.Resources.round_assignment_turned_in_white_18dp;
-            this.btnAsignarPuntaje.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAsignarPuntaje.Location = new System.Drawing.Point(255, 62);
-            this.btnAsignarPuntaje.Name = "btnAsignarPuntaje";
-            this.btnAsignarPuntaje.Size = new System.Drawing.Size(170, 45);
-            this.btnAsignarPuntaje.TabIndex = 3;
-            this.btnAsignarPuntaje.Text = "Asignar puntaje";
-            this.btnAsignarPuntaje.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAsignarPuntaje.UseVisualStyleBackColor = false;
-            // 
             // btnAtras
             // 
             this.btnAtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
@@ -286,7 +287,7 @@
             this.Controls.Add(this.panelEntregables);
             this.Controls.Add(this.panelAlumnos);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmCalificar";
             this.Text = "Registro de Calificación";
             this.panelAlumnos.ResumeLayout(false);

@@ -17,7 +17,10 @@ namespace Sinapxon.Administrador
         private Administrador.AdministradorServicesClient DBController = new AdministradorServicesClient();
         public frmGestionarCursos()
         {
-            InitializeComponent();
+            dgvCursos.AutoGenerateColumns = false;
+            dgvCursos.DataSource = new BindingList<Administrador.curso>(DBController.listarCursosSin(""));
+            dgvCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.codigoAdmin = LoginInfo.persona.codigo;
         }
 
         public frmGestionarCursos(frmAdministrador padre)
@@ -25,8 +28,7 @@ namespace Sinapxon.Administrador
             InitializeComponent();
             this.Padre = padre;
             dgvCursos.AutoGenerateColumns = false;
-            dgvCursos.DataSource = new BindingList<Administrador.curso>(DBController.listarCursos(""));
-        }
+            dgvCursos.DataSource = new BindingList<Administrador.curso>(DBController.listarCursosSin(""));
 
         public frmAdministrador Padre { get => _padre; set => _padre = value; }
 

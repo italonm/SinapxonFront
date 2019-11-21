@@ -56,7 +56,18 @@ namespace Sinapxon.Administrador
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dgvAlumnos.DataSource = DBController.listarAlumnos(txtNombre.Text);
+            //dgvAlumno.DataSource = DBController.listarAlumnos(txtNombre.Text);
+            BindingList<Administrador.alumno> toShow = new BindingList<Administrador.alumno>();
+            foreach (Administrador.alumno al in backup)
+            {
+                String chi = al.nombre + " " + al.apellidoPaterno + " " + al.apellidoMaterno+ " " + al.codigo + " " + al.dni; ;
+                if (chi.Contains(txtNombre.Text))
+                {
+                    toShow.Add(al);
+                }
+            }
+            if (txtNombre.Text != " ") dgvAlumno.DataSource = toShow;
+            else dgvAlumno.DataSource = backup;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

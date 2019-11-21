@@ -227,8 +227,13 @@
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
+<<<<<<< HEAD
+            this.txtPassword.Size = new System.Drawing.Size(341, 19);
+            this.txtPassword.TabIndex = 9;
+=======
             this.txtPassword.Size = new System.Drawing.Size(511, 28);
             this.txtPassword.TabIndex = 2;
+>>>>>>> emmaraq
             // 
             // txtNombres
             // 
@@ -329,9 +334,14 @@
             this.txtRepetirPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtRepetirPassword.Name = "txtRepetirPassword";
             this.txtRepetirPassword.PasswordChar = '●';
+<<<<<<< HEAD
+            this.txtRepetirPassword.Size = new System.Drawing.Size(323, 19);
+            this.txtRepetirPassword.TabIndex = 17;
+=======
             this.txtRepetirPassword.Size = new System.Drawing.Size(512, 28);
             this.txtRepetirPassword.TabIndex = 3;
             this.txtRepetirPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRepetirPassword_KeyDown);
+>>>>>>> emmaraq
             // 
             // gbDatosPersonales
             // 
@@ -375,7 +385,12 @@
             // 
             // dtpFechaNac
             // 
+<<<<<<< HEAD
+            this.dtpFechaNac.Location = new System.Drawing.Point(456, 261);
+            this.dtpFechaNac.Margin = new System.Windows.Forms.Padding(2);
+=======
             this.dtpFechaNac.Location = new System.Drawing.Point(684, 402);
+>>>>>>> emmaraq
             this.dtpFechaNac.Name = "dtpFechaNac";
             this.dtpFechaNac.Size = new System.Drawing.Size(512, 35);
             this.dtpFechaNac.TabIndex = 5;
@@ -455,7 +470,12 @@
             // cboPais
             // 
             this.cboPais.FormattingEnabled = true;
+<<<<<<< HEAD
+            this.cboPais.Location = new System.Drawing.Point(865, 60);
+            this.cboPais.Margin = new System.Windows.Forms.Padding(2);
+=======
             this.cboPais.Location = new System.Drawing.Point(1298, 92);
+>>>>>>> emmaraq
             this.cboPais.Name = "cboPais";
             this.cboPais.Size = new System.Drawing.Size(414, 37);
             this.cboPais.TabIndex = 6;
