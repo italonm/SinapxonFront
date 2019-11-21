@@ -159,7 +159,7 @@ namespace Sinapxon.Profesor
         private void btnVerClassroom_Click(object sender, EventArgs e, string codClassroom)
         {
             ClassroomInfo.classroom.codigo = codClassroom;
-            frmVerClassroom formVerClassroom = new frmVerClassroom();
+            frmVerClassroom formVerClassroom = new frmVerClassroom(_padre);
             _padre.openChildForm(formVerClassroom);
         }
 
