@@ -238,7 +238,6 @@
             // 
             // dgvRequisitos
             // 
-            this.dgvRequisitos.AllowUserToAddRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -262,6 +261,7 @@
             this.dgvRequisitos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRequisitos.Location = new System.Drawing.Point(20, 123);
             this.dgvRequisitos.Name = "dgvRequisitos";
+            this.dgvRequisitos.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -278,17 +278,20 @@
             // 
             this.Column1.HeaderText = "Código";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Nombre";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Width = 270;
             // 
             // Descripción
             // 
             this.Descripción.HeaderText = "Descripción";
             this.Descripción.Name = "Descripción";
+            this.Descripción.ReadOnly = true;
             // 
             // btnAgregarRequisito
             // 

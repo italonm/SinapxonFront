@@ -30,6 +30,7 @@ namespace Sinapxon.Administrador
             cbEspecialidad.DataSource = especialidades;
             cbEspecialidad.DisplayMember = "nombre";
             cbEspecialidad.ValueMember = "id_especialidad";
+            this.curso = new Administrador.curso ();
             this.curso = curso;
             this.cursos = new BindingList<Administrador.curso>();
             txtCodigoCurso.Text = curso.codigo;
@@ -37,8 +38,8 @@ namespace Sinapxon.Administrador
             txtDescripcion.Text = curso.descripcion;
             cbEspecialidad.Text = curso.especialidad.nombre;
             dgvRequisitos.AutoGenerateColumns = false;
-            this.cursos  = new BindingList<Administrador.curso>(DBController.listarRequisitos(curso.codigo));
-            dgvRequisitos.DataSource = this.cursos;
+            this.cursos  = new BindingList<Administrador.curso>(curso.cursos.ToList()); ;          
+            dgvRequisitos.DataSource = new BindingList<Administrador.curso>(DBController.listarRequisitos(curso.codigo));
 
             estadoComponentes(Estado.Modificar);
         }
@@ -219,13 +220,35 @@ namespace Sinapxon.Administrador
             frmAgregarRequisito formAgregarRequisito = new frmAgregarRequisito();
             if (formAgregarRequisito.ShowDialog() == DialogResult.OK)
             {
+                curSeleccionado = formAgregarRequisito.CurSeleccionado;
+                this.cursos = new BindingList<Administrador.curso>(this.curso.cursos.ToList());
+                dgvRequisitos.AutoGenerateColumns = false;
+                dgvRequisitos.DataSource = this.cursos;
+                estadoComponentes(Estado.Actualizar);
+            }
+
+
+            if (curSeleccionado == null)
+            {
+                MessageBox.Show("No se ha seleccionado un curso requisito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            cursos.Add(curSeleccionado);
+            curSeleccionado = null;
+
+
+
+
+
+            /*if (formAgregarRequisito.ShowDialog() == DialogResult.OK)
+            {
                 //curSeleccionado = formAgregarRequisito.CurSeleccionado;
                 curSeleccionado = (Administrador.curso)dgvRequisitos.CurrentRow.DataBoundItem;
             }
             //Administrador.curso cursoreq = new Administrador.curso();
             this.cursos.Add(curSeleccionado);
             dgvRequisitos.DataSource = this.cursos;
-            curSeleccionado = null;
+            curSeleccionado = null;*/
         }
 
         private void btnQuitarRequisito_Click(object sender, EventArgs e)

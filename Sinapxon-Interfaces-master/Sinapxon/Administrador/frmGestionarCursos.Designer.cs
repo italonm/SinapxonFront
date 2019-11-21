@@ -184,7 +184,6 @@
             this.dgvCursos.GridColor = System.Drawing.Color.DarkSlateBlue;
             this.dgvCursos.Location = new System.Drawing.Point(41, 170);
             this.dgvCursos.Name = "dgvCursos";
-            this.dgvCursos.ReadOnly = true;
             this.dgvCursos.Size = new System.Drawing.Size(882, 443);
             this.dgvCursos.TabIndex = 36;
             this.dgvCursos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvCursos_CellFormatting);
@@ -193,13 +192,11 @@
             // 
             this.Codigo.HeaderText = "Codigo";
             this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
             // 
             // Nombre
             // 
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
             this.Nombre.Width = 150;
             // 
             // Descripcion
@@ -207,7 +204,6 @@
             this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Descripcion.HeaderText = "Descripcion";
             this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
             // 
             // lblGestionarCurso
             // 

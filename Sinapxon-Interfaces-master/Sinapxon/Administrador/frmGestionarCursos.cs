@@ -22,7 +22,7 @@ namespace Sinapxon.Administrador
         public frmGestionarCursos()
         {
             dgvCursos.AutoGenerateColumns = false;
-            dgvCursos.DataSource = new BindingList<Administrador.curso>(DBController.listarCursosSin(""));
+            dgvCursos.DataSource = new BindingList<Administrador.curso>(DBController.listarCursos(""));
             dgvCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.codigoAdmin = LoginInfo.persona.codigo;
         }
@@ -33,7 +33,7 @@ namespace Sinapxon.Administrador
             this.codigoAdmin = LoginInfo.persona.codigo;
             this.Padre = padre;
             dgvCursos.AutoGenerateColumns = false;
-            dgvCursos.DataSource = new BindingList<Administrador.curso>(DBController.listarCursosSin(""));
+            dgvCursos.DataSource = new BindingList<Administrador.curso>(DBController.listarCursos(""));
 
             backup = (BindingList<Administrador.curso>)dgvCursos.DataSource;
 
