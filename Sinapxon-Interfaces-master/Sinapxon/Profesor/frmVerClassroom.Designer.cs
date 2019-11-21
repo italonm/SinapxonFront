@@ -28,6 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
+=======
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+>>>>>>> etoile3
             this.lblClassroom = new System.Windows.Forms.Label();
             this.panelTemas = new System.Windows.Forms.Panel();
             this.dgvTemas = new System.Windows.Forms.DataGridView();
@@ -67,7 +74,11 @@
             this.lblClassroom.ForeColor = System.Drawing.Color.Black;
             this.lblClassroom.Location = new System.Drawing.Point(85, 28);
             this.lblClassroom.Name = "lblClassroom";
+<<<<<<< HEAD
             this.lblClassroom.Size = new System.Drawing.Size(165, 36);
+=======
+            this.lblClassroom.Size = new System.Drawing.Size(138, 29);
+>>>>>>> etoile3
             this.lblClassroom.TabIndex = 0;
             this.lblClassroom.Text = "Classroom";
             // 
@@ -87,11 +98,31 @@
             // dgvTemas
             // 
             this.dgvTemas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+<<<<<<< HEAD
             this.dgvTemas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTemas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
             this.Descripcion,
             this.Video});
+=======
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTemas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvTemas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTemas.DefaultCellStyle = dataGridViewCellStyle2;
+>>>>>>> etoile3
             this.dgvTemas.Location = new System.Drawing.Point(15, 136);
             this.dgvTemas.Name = "dgvTemas";
             this.dgvTemas.Size = new System.Drawing.Size(420, 420);
@@ -159,7 +190,7 @@
             this.btnEditarTema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarTema.ForeColor = System.Drawing.Color.White;
-            this.btnEditarTema.Image = global::Sinapxon.Properties.Resources.editar;
+            this.btnEditarTema.Image = global::Sinapxon.Properties.Resources.round_edit_white_18dp;
             this.btnEditarTema.Location = new System.Drawing.Point(150, 75);
             this.btnEditarTema.Name = "btnEditarTema";
             this.btnEditarTema.Size = new System.Drawing.Size(140, 55);
@@ -190,7 +221,7 @@
             this.btnCalificarEvaluacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalificarEvaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalificarEvaluacion.ForeColor = System.Drawing.Color.White;
-            this.btnCalificarEvaluacion.Image = global::Sinapxon.Properties.Resources.calificar;
+            this.btnCalificarEvaluacion.Image = global::Sinapxon.Properties.Resources.round_assignment;
             this.btnCalificarEvaluacion.Location = new System.Drawing.Point(249, 66);
             this.btnCalificarEvaluacion.Name = "btnCalificarEvaluacion";
             this.btnCalificarEvaluacion.Size = new System.Drawing.Size(185, 49);
@@ -203,11 +234,31 @@
             // dgvEvaluaciones
             // 
             this.dgvEvaluaciones.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+<<<<<<< HEAD
             this.dgvEvaluaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEvaluaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Namee,
             this.Peso,
             this.Description});
+=======
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEvaluaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvEvaluaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEvaluaciones.DefaultCellStyle = dataGridViewCellStyle4;
+>>>>>>> etoile3
             this.dgvEvaluaciones.Location = new System.Drawing.Point(16, 180);
             this.dgvEvaluaciones.Name = "dgvEvaluaciones";
             this.dgvEvaluaciones.Size = new System.Drawing.Size(420, 376);
@@ -275,7 +326,7 @@
             this.btnEditarEvaluacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarEvaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarEvaluacion.ForeColor = System.Drawing.Color.White;
-            this.btnEditarEvaluacion.Image = global::Sinapxon.Properties.Resources.editar;
+            this.btnEditarEvaluacion.Image = global::Sinapxon.Properties.Resources.round_edit_white_18dp;
             this.btnEditarEvaluacion.Location = new System.Drawing.Point(16, 121);
             this.btnEditarEvaluacion.Name = "btnEditarEvaluacion";
             this.btnEditarEvaluacion.Size = new System.Drawing.Size(185, 53);

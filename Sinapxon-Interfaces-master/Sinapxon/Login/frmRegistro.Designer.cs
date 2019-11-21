@@ -217,7 +217,7 @@
             this.txtPassword.Location = new System.Drawing.Point(41, 168);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
-            this.txtPassword.Size = new System.Drawing.Size(513, 28);
+            this.txtPassword.Size = new System.Drawing.Size(341, 19);
             this.txtPassword.TabIndex = 9;
             // 
             // txtNombres
@@ -280,7 +280,7 @@
             this.btnRegistrarse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.btnRegistrarse.FlatAppearance.BorderSize = 0;
             this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarse.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarse.ForeColor = System.Drawing.Color.White;
             this.btnRegistrarse.Location = new System.Drawing.Point(957, 431);
             this.btnRegistrarse.Name = "btnRegistrarse";
@@ -311,7 +311,7 @@
             this.txtRepetirPassword.Location = new System.Drawing.Point(456, 168);
             this.txtRepetirPassword.Name = "txtRepetirPassword";
             this.txtRepetirPassword.PasswordChar = '●';
-            this.txtRepetirPassword.Size = new System.Drawing.Size(513, 28);
+            this.txtRepetirPassword.Size = new System.Drawing.Size(323, 19);
             this.txtRepetirPassword.TabIndex = 17;
             // 
             // gbDatosPersonales
@@ -355,7 +355,7 @@
             // dtpFechaNac
             // 
             this.dtpFechaNac.Location = new System.Drawing.Point(456, 261);
-            this.dtpFechaNac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaNac.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaNac.Name = "dtpFechaNac";
             this.dtpFechaNac.Size = new System.Drawing.Size(343, 26);
             this.dtpFechaNac.TabIndex = 37;
@@ -430,7 +430,7 @@
             // 
             this.cboPais.FormattingEnabled = true;
             this.cboPais.Location = new System.Drawing.Point(865, 60);
-            this.cboPais.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboPais.Margin = new System.Windows.Forms.Padding(2);
             this.cboPais.Name = "cboPais";
             this.cboPais.Size = new System.Drawing.Size(277, 28);
             this.cboPais.TabIndex = 30;
@@ -668,7 +668,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Location = new System.Drawing.Point(957, 592);
             this.btnCancelar.Name = "btnCancelar";
@@ -683,7 +683,7 @@
             this.btnRestablecer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.btnRestablecer.FlatAppearance.BorderSize = 0;
             this.btnRestablecer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestablecer.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestablecer.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRestablecer.ForeColor = System.Drawing.Color.White;
             this.btnRestablecer.Location = new System.Drawing.Point(957, 515);
             this.btnRestablecer.Name = "btnRestablecer";

@@ -71,7 +71,7 @@ namespace Sinapxon.Administrador
             BindingList<Administrador.alumno> toShow = new BindingList<Administrador.alumno>();
             foreach (Administrador.alumno al in backup)
             {
-                String chi = al.nombre + " " + al.apellidoPaterno + " " + al.apellidoMaterno;
+                String chi = al.nombre + " " + al.apellidoPaterno + " " + al.apellidoMaterno+ " " + al.codigo + " " + al.dni; ;
                 if (chi.Contains(txtNombre.Text))
                 {
                     toShow.Add(al);

@@ -135,14 +135,15 @@
             this.btnAniadirArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAniadirArchivo.ForeColor = System.Drawing.Color.White;
             this.btnAniadirArchivo.Image = global::Sinapxon.Properties.Resources.baseline_add_circle_white_18dp;
-            this.btnAniadirArchivo.Location = new System.Drawing.Point(632, 68);
+            this.btnAniadirArchivo.Location = new System.Drawing.Point(634, 68);
             this.btnAniadirArchivo.Margin = new System.Windows.Forms.Padding(2);
             this.btnAniadirArchivo.Name = "btnAniadirArchivo";
-            this.btnAniadirArchivo.Size = new System.Drawing.Size(120, 47);
+            this.btnAniadirArchivo.Size = new System.Drawing.Size(145, 47);
             this.btnAniadirArchivo.TabIndex = 3;
             this.btnAniadirArchivo.Text = "Añadir";
             this.btnAniadirArchivo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAniadirArchivo.UseVisualStyleBackColor = false;
+            this.btnAniadirArchivo.Click += new System.EventHandler(this.btnAniadirArchivo_Click);
             // 
             // btnExaminar
             // 
@@ -269,10 +270,10 @@
             this.btnQuitarArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitarArchivo.ForeColor = System.Drawing.Color.White;
             this.btnQuitarArchivo.Image = global::Sinapxon.Properties.Resources.baseline_remove_circle_white_18dp;
-            this.btnQuitarArchivo.Location = new System.Drawing.Point(807, 68);
+            this.btnQuitarArchivo.Location = new System.Drawing.Point(783, 68);
             this.btnQuitarArchivo.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuitarArchivo.Name = "btnQuitarArchivo";
-            this.btnQuitarArchivo.Size = new System.Drawing.Size(120, 47);
+            this.btnQuitarArchivo.Size = new System.Drawing.Size(144, 47);
             this.btnQuitarArchivo.TabIndex = 5;
             this.btnQuitarArchivo.Text = "Quitar";
             this.btnQuitarArchivo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

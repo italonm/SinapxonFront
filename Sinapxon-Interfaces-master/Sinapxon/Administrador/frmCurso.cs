@@ -15,6 +15,7 @@ namespace Sinapxon.Administrador
         private frmAdministrador _padre = null;
 
         private Administrador.curso curso;
+        private Administrador.curso cursoshow;
         private BindingList<Administrador.curso> cursos;
         private Administrador.curso curSeleccionado;
 
@@ -30,13 +31,16 @@ namespace Sinapxon.Administrador
             cbEspecialidad.DataSource = especialidades;
             cbEspecialidad.DisplayMember = "nombre";
             cbEspecialidad.ValueMember = "id_especialidad";
+            this.curso = new Administrador.curso ();
             this.curso = curso;
             this.cursos = new BindingList<Administrador.curso>();
             txtCodigoCurso.Text = curso.codigo;
             txtNombreCurso.Text = curso.nombre;
             txtDescripcion.Text = curso.descripcion;
             cbEspecialidad.Text = curso.especialidad.nombre;
+            curso.cursos = new BindingList<Administrador.curso>(DBController.listarRequisitos(curso.codigo)).ToArray();
             dgvRequisitos.AutoGenerateColumns = false;
+            this.cursos  = new BindingList<Administrador.curso>(curso.cursos.ToList()); ;          
             dgvRequisitos.DataSource = new BindingList<Administrador.curso>(DBController.listarRequisitos(curso.codigo));
 
             estadoComponentes(Estado.Modificar);
@@ -56,7 +60,7 @@ namespace Sinapxon.Administrador
             dgvRequisitos.AutoGenerateColumns = false;
             dgvRequisitos.DataSource = new BindingList<Administrador.curso>();
             this.Padre = padre;
-            estadoComponentes(Estado.Nuevo);
+            estadoComponentes(Estado.Actualizar);
         }
 
         public void limpiarComponentes()
@@ -78,20 +82,21 @@ namespace Sinapxon.Administrador
                     btnModificar.Enabled = false;
                     btnEliminar.Enabled = false;
                     btnRegresar.Enabled = true;
-                    btnAgregarRequisito.Enabled = true;
-                    btnQuitarRequisito.Enabled = true;
+                    btnAgregarRequisito.Enabled = false;
+                    btnQuitarRequisito.Enabled =false;
                     btnCancelar.Enabled = false;
                     txtNombreCurso.Enabled = false;
                     txtCodigoCurso.Enabled = false;
                     txtDescripcion.Enabled = false;
                     cbEspecialidad.Enabled = false;
+                    dgvRequisitos.Enabled = false;
                     break;
                 case Estado.Nuevo:
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
                     btnEliminar.Enabled = false;
-                    btnRegresar.Enabled = false;
+                    btnRegresar.Enabled = true;
                     btnCancelar.Enabled = true;
                     btnAgregarRequisito.Enabled = true;
                     btnQuitarRequisito.Enabled = true;
@@ -99,23 +104,10 @@ namespace Sinapxon.Administrador
                     txtCodigoCurso.Enabled = true;
                     txtDescripcion.Enabled = true;
                     cbEspecialidad.Enabled = true;
+                    dgvRequisitos.Enabled = true;
                     break;
                 case Estado.Actualizar:
                     btnNuevo.Enabled = false;
-                    btnGuardar.Enabled = false;
-                    btnModificar.Enabled = true;
-                    btnEliminar.Enabled = true;
-                    btnRegresar.Enabled = false;
-                    btnCancelar.Enabled = true;
-                    btnAgregarRequisito.Enabled = true;
-                    btnQuitarRequisito.Enabled = true;
-                    txtCodigoCurso.Enabled = false;
-                    txtNombreCurso.Enabled = true;
-                    txtDescripcion.Enabled = true;
-                    cbEspecialidad.Enabled = true;
-                    break;
-                case Estado.Modificar:
-                    btnNuevo.Enabled = true;
                     btnGuardar.Enabled = false;
                     btnModificar.Enabled = true;
                     btnEliminar.Enabled = true;
@@ -124,9 +116,25 @@ namespace Sinapxon.Administrador
                     btnAgregarRequisito.Enabled = true;
                     btnQuitarRequisito.Enabled = true;
                     txtCodigoCurso.Enabled = false;
+                    txtNombreCurso.Enabled = true;
+                    txtDescripcion.Enabled = true;
+                    cbEspecialidad.Enabled = true;
+                    dgvRequisitos.Enabled = true;
+                    break;
+                case Estado.Modificar:
+                    btnNuevo.Enabled = true;
+                    btnGuardar.Enabled = false;
+                    btnModificar.Enabled = true;
+                    btnEliminar.Enabled = true;
+                    btnRegresar.Enabled = true;
+                    btnCancelar.Enabled = true;
+                    btnAgregarRequisito.Enabled = false;
+                    btnQuitarRequisito.Enabled = false;
+                    txtCodigoCurso.Enabled = false;
                     txtNombreCurso.Enabled = false;
                     txtDescripcion.Enabled = false;
                     cbEspecialidad.Enabled = false;
+                    dgvRequisitos.Enabled = false;
                     break;
             }
         }
@@ -138,8 +146,9 @@ namespace Sinapxon.Administrador
             Administrador.curso cursoFila = (Administrador.curso)dgvRequisitos.Rows[e.RowIndex].DataBoundItem;
             if (cursoFila != null)
             {
-                dgvRequisitos.Rows[e.RowIndex].Cells[0].Value = cursoFila.codigo.ToString();
+                dgvRequisitos.Rows[e.RowIndex].Cells[0].Value = cursoFila.codigo;
                 dgvRequisitos.Rows[e.RowIndex].Cells[1].Value = cursoFila.nombre;
+                dgvRequisitos.Rows[e.RowIndex].Cells[2].Value = cursoFila.descripcion;
             }
         }
 
@@ -169,12 +178,13 @@ namespace Sinapxon.Administrador
                 return;
             }
 
-            curso = new Administrador.curso();
-            curso.codigo = txtCodigoCurso.Text;
-            curso.nombre = txtNombreCurso.Text;
-            curso.descripcion = txtDescripcion.Text;
-            curso.especialidad = (Administrador.especialidad)cbEspecialidad.SelectedItem;
-            curso.cursos = cursos.ToArray();
+            cursoshow = new Administrador.curso();
+            cursoshow.codigo = txtCodigoCurso.Text;
+            cursoshow.nombre = txtNombreCurso.Text;
+            cursoshow.descripcion = txtDescripcion.Text;
+            cursoshow.especialidad = (Administrador.especialidad)cbEspecialidad.SelectedItem;
+            cursoshow.administrador.codigo = this.curso.administrador.codigo;
+            cursoshow.cursos = cursos.ToArray();
 
             if (estadoCurso == Estado.Nuevo)
             {
@@ -183,7 +193,7 @@ namespace Sinapxon.Administrador
             }
             else if (estadoCurso == Estado.Modificar)
             {
-                DBController.actualizarCurso(curso);
+                DBController.actualizarCurso(cursoshow);
                 MessageBox.Show("El curso se ha sido actualizada con exito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
@@ -218,8 +228,16 @@ namespace Sinapxon.Administrador
             if (formAgregarRequisito.ShowDialog() == DialogResult.OK)
             {
                 curSeleccionado = formAgregarRequisito.CurSeleccionado;
+                this.cursos = new BindingList<Administrador.curso>(this.curso.cursos.ToList());
+                dgvRequisitos.AutoGenerateColumns = false;
+                dgvRequisitos.DataSource = this.cursos;
+                estadoComponentes(Estado.Actualizar);
             }
-            //Administrador.curso cursoreq = new Administrador.curso();
+            if (curSeleccionado == null)
+            {
+                MessageBox.Show("No se ha seleccionado un curso requisito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             cursos.Add(curSeleccionado);
             curSeleccionado = null;
         }
@@ -233,6 +251,7 @@ namespace Sinapxon.Administrador
             }
             Administrador.curso curreq = (Administrador.curso)dgvRequisitos.CurrentRow.DataBoundItem;
             cursos.Remove(curreq);
+            dgvRequisitos.DataSource = this.cursos;
         }
 
         private void btnAgregarEsp_Click(object sender, EventArgs e)
