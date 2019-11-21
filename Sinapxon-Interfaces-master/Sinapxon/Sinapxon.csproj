@@ -444,6 +444,9 @@
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.eliminarProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.especialidad1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.idioma.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -463,6 +466,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarCursosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarEspecialidadesResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarIdiomasXNombreCodigoResponse.datasource">
