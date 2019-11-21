@@ -26,12 +26,12 @@ namespace Sinapxon.Administrador
 
         public frmGestionarCursos(frmAdministrador padre)
         {
-            dgvCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             InitializeComponent();
             this.codigoAdmin = LoginInfo.persona.codigo;
             this.Padre = padre;
             dgvCursos.AutoGenerateColumns = false;
             dgvCursos.DataSource = new BindingList<Administrador.curso>(DBController.listarCursos(""));
+            dgvCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         public frmAdministrador Padre { get => _padre; set => _padre = value; }
