@@ -44,6 +44,19 @@ namespace Sinapxon.Login
                 MessageBox.Show("DNI debe ser 8 caracteres de longitud", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            Login.LoginServicesClient dbLogin = new Login.LoginServicesClient();
+            Login.alumno alumObt = dbLogin.validarNickname(txtNickname.Text);
+            Login.persona perObt = dbLogin.validarCorreo(txtCorreo.Text);
+            if (alumObt.codigo != null)
+            {
+                MessageBox.Show("El nickname ya se encuentra registrado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (perObt.nombre != null)
+            {
+                MessageBox.Show("El correo ya se encuentra registrado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             String txtStudID;
             txtStudID = DateTime.Now.Year.ToString() + DateTime.Now.Second;
             alumno.codigo = txtStudID;
