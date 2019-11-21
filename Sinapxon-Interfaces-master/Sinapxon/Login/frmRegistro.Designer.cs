@@ -227,7 +227,7 @@
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
-            this.txtPassword.Size = new System.Drawing.Size(770, 28);
+            this.txtPassword.Size = new System.Drawing.Size(511, 28);
             this.txtPassword.TabIndex = 2;
             // 
             // txtNombres
@@ -329,7 +329,7 @@
             this.txtRepetirPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtRepetirPassword.Name = "txtRepetirPassword";
             this.txtRepetirPassword.PasswordChar = '●';
-            this.txtRepetirPassword.Size = new System.Drawing.Size(770, 28);
+            this.txtRepetirPassword.Size = new System.Drawing.Size(512, 28);
             this.txtRepetirPassword.TabIndex = 3;
             this.txtRepetirPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRepetirPassword_KeyDown);
             // 

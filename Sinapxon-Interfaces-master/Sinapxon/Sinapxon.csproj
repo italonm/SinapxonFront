@@ -426,6 +426,9 @@
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.alumno.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.cambiarEstadoSolicitudResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.curso.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -442,6 +445,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.especialidad.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.idioma.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.insertarAlumnoResponse.datasource">
@@ -465,6 +471,9 @@
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarEspecialidadesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarIdiomasXNombreCodigoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarPaisesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -477,7 +486,13 @@
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarSolicitudesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.obtenerPeriodoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.pais.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.periodo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.profesor.datasource">
