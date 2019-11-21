@@ -14,60 +14,83 @@ namespace Sinapxon.Administrador
     {
         private frmAdministrador _padre = null;
         private Administrador.alumno alSeleccionado;
+        BindingList<Administrador.alumno> backup;
 
 
         Administrador.AdministradorServicesClient DBController = new Administrador.AdministradorServicesClient();
-
+        
         public alumno AlSeleccionado { get => alSeleccionado; set => alSeleccionado = value; }
 
         public frmGestionarAlumno()
         {
             InitializeComponent();
-            dgvAlumnos.AutoGenerateColumns = false;
-            dgvAlumnos.DataSource = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));
+            
+            dgvAlumno.AutoGenerateColumns = false;
+            dgvAlumno.DataSource = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));
+            dgvAlumno.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         public frmGestionarAlumno(frmAdministrador padre)
         {
             InitializeComponent();
+            
             this.Padre = padre;
-            dgvAlumnos.AutoGenerateColumns = false;
-            dgvAlumnos.DataSource = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));
+            dgvAlumno.AutoGenerateColumns = false;
+            dgvAlumno.DataSource = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));
+
+            backup = (BindingList<Administrador.alumno>)dgvAlumno.DataSource;
+            
+            BindingList<Administrador.alumno> toShow = new BindingList<Administrador.alumno> ();
+            dgvAlumno.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
         }
 
         public frmAdministrador Padre { get => _padre; set => _padre = value; }
 
 
 
+
         private void dgvAlumnos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            Administrador.alumno alumnoFila = (Administrador.alumno)dgvAlumnos.Rows[e.RowIndex].DataBoundItem;
+            Administrador.alumno alumnoFila = (Administrador.alumno)dgvAlumno.Rows[e.RowIndex].DataBoundItem;
             if (alumnoFila != null)
             {
-                dgvAlumnos.Rows[e.RowIndex].Cells[0].Value = alumnoFila.codigo.ToString();
-                dgvAlumnos.Rows[e.RowIndex].Cells[1].Value = alumnoFila.nombre;
-                dgvAlumnos.Rows[e.RowIndex].Cells[2].Value = alumnoFila.apellidoPaterno;
-                dgvAlumnos.Rows[e.RowIndex].Cells[3].Value = alumnoFila.apellidoMaterno;
-                dgvAlumnos.Rows[e.RowIndex].Cells[4].Value = alumnoFila.dni;
-                dgvAlumnos.Rows[e.RowIndex].Cells[5].Value = alumnoFila.telefono.ToString();
-                dgvAlumnos.Rows[e.RowIndex].Cells[6].Value = alumnoFila.correo;
+                dgvAlumno.Rows[e.RowIndex].Cells[0].Value = alumnoFila.codigo.ToString();
+                dgvAlumno.Rows[e.RowIndex].Cells[1].Value = alumnoFila.nombre;
+                dgvAlumno.Rows[e.RowIndex].Cells[2].Value = alumnoFila.apellidoPaterno;
+                dgvAlumno.Rows[e.RowIndex].Cells[3].Value = alumnoFila.apellidoMaterno;
+                dgvAlumno.Rows[e.RowIndex].Cells[4].Value = alumnoFila.dni;
+                dgvAlumno.Rows[e.RowIndex].Cells[5].Value = alumnoFila.telefono.ToString();
+                dgvAlumno.Rows[e.RowIndex].Cells[6].Value = alumnoFila.correo;
             }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dgvAlumnos.DataSource = DBController.listarAlumnos(txtNombre.Text);
+            //dgvAlumno.DataSource = DBController.listarAlumnos(txtNombre.Text);
+            BindingList<Administrador.alumno> toShow = new BindingList<Administrador.alumno>();
+            foreach (Administrador.alumno al in backup)
+            {
+                String chi = al.nombre + " " + al.apellidoPaterno + " " + al.apellidoMaterno;
+                if (chi.Contains(txtNombre.Text))
+                {
+                    toShow.Add(al);
+                }
+            }
+            if (txtNombre.Text != " ") dgvAlumno.DataSource = toShow;
+            else dgvAlumno.DataSource = backup;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            dgvAlumno.FirstDisplayedScrollingRowIndex = dgvAlumno.RowCount - 1;
             frmDatosAlumno formDatosAlumno = new frmDatosAlumno(_padre);
             _padre.openChildForm(formDatosAlumno);
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            alSeleccionado = dgvAlumnos.CurrentRow.DataBoundItem as Administrador.alumno;
+            alSeleccionado = dgvAlumno.CurrentRow.DataBoundItem as Administrador.alumno;
             frmDatosAlumno formDatosAlumno = new frmDatosAlumno(alSeleccionado, _padre);
             _padre.openChildForm(formDatosAlumno);
         }
