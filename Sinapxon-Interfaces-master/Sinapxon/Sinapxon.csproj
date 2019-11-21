@@ -526,12 +526,6 @@
     <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarCursosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarPaisesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\Alumno\Sinapxon.Alumno.pais.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\Login\LoginServices.wsdl" />
     <None Include="Connected Services\Login\LoginServices.xsd">
       <SubType>Designer</SubType>
