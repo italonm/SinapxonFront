@@ -228,14 +228,13 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Apellido Paterno";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 109;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.HeaderText = "Apellido Materno";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 111;
+            this.dataGridViewTextBoxColumn3.Width = 102;
             // 
             // dataGridViewTextBoxColumn5
             // 

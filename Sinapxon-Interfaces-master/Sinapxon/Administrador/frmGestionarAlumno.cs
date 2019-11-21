@@ -24,15 +24,16 @@ namespace Sinapxon.Administrador
         public frmGestionarAlumno()
         {
             InitializeComponent();
-            dgvAlumno.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            
             dgvAlumno.AutoGenerateColumns = false;
             dgvAlumno.DataSource = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));
+            dgvAlumno.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         public frmGestionarAlumno(frmAdministrador padre)
         {
             InitializeComponent();
-            dgvAlumno.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            
             this.Padre = padre;
             dgvAlumno.AutoGenerateColumns = false;
             dgvAlumno.DataSource = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));
@@ -40,7 +41,8 @@ namespace Sinapxon.Administrador
             backup = (BindingList<Administrador.alumno>)dgvAlumno.DataSource;
             
             BindingList<Administrador.alumno> toShow = new BindingList<Administrador.alumno> ();
-            
+            dgvAlumno.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
         }
 
         public frmAdministrador Padre { get => _padre; set => _padre = value; }
