@@ -177,7 +177,7 @@ namespace Sinapxon.Administrador
             curso.nombre = txtNombreCurso.Text;
             curso.descripcion = txtDescripcion.Text;
             curso.especialidad = (Administrador.especialidad)cbEspecialidad.SelectedItem;
-            curso.cursos = this.cursos.ToArray();
+            curso.cursos = cursos.ToArray();
 
             if (estadoCurso == Estado.Nuevo)
             {
@@ -226,8 +226,6 @@ namespace Sinapxon.Administrador
                 dgvRequisitos.DataSource = this.cursos;
                 estadoComponentes(Estado.Actualizar);
             }
-
-
             if (curSeleccionado == null)
             {
                 MessageBox.Show("No se ha seleccionado un curso requisito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -235,20 +233,6 @@ namespace Sinapxon.Administrador
             }
             cursos.Add(curSeleccionado);
             curSeleccionado = null;
-
-
-
-
-
-            /*if (formAgregarRequisito.ShowDialog() == DialogResult.OK)
-            {
-                //curSeleccionado = formAgregarRequisito.CurSeleccionado;
-                curSeleccionado = (Administrador.curso)dgvRequisitos.CurrentRow.DataBoundItem;
-            }
-            //Administrador.curso cursoreq = new Administrador.curso();
-            this.cursos.Add(curSeleccionado);
-            dgvRequisitos.DataSource = this.cursos;
-            curSeleccionado = null;*/
         }
 
         private void btnQuitarRequisito_Click(object sender, EventArgs e)
