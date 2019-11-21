@@ -515,6 +515,9 @@
     <None Include="Connected Services\Login\Sinapxon.Login.actualizarPasswordResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Login\Sinapxon.Login.alumno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Login\Sinapxon.Login.persona.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -522,6 +525,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Login\Sinapxon.Login.validarLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Login\Sinapxon.Login.validarNicknameResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Profesor\ProfesorServices.wsdl" />

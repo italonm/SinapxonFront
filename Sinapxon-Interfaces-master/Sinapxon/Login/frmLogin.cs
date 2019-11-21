@@ -26,6 +26,11 @@ namespace Sinapxon.Login
             Login.LoginServicesClient DBController = new Login.LoginServicesClient() ;
             LoginInfo.persona = DBController.validarLogin(txtUsuario.Text, txtContrasenia.Text);
             //LoginInfo.codigo = result.Substring(0, 6);
+            if (LoginInfo.persona.nombre == null)
+            {
+                MessageBox.Show("Los datos ingresados son incorrectos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             String tipo = LoginInfo.persona.tipo;
             if (string.Equals(tipo, "D"))
             {
@@ -80,6 +85,48 @@ namespace Sinapxon.Login
             if (e.KeyCode == Keys.Enter)
             {
                 Button1_Click(sender, e);
+            }
+        }
+
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            String usuario = txtUsuario.Text;
+            if (usuario.ToLower().Trim().Equals("usuario"))
+            {
+                txtUsuario.Text = "";
+                txtUsuario.ForeColor = Color.White;
+            }
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            String usuario = txtUsuario.Text;
+            if (usuario.ToLower().Trim().Equals("usuario") || usuario.Trim().Equals(""))
+            {
+                txtUsuario.Text = "usuario";
+                txtUsuario.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtContrasenia_Enter(object sender, EventArgs e)
+        {
+            String password = txtContrasenia.Text;
+            if (password.ToLower().Trim().Equals("contraseña"))
+            {
+                txtContrasenia.Text = "";
+                txtContrasenia.UseSystemPasswordChar = true;
+                txtContrasenia.ForeColor = Color.White;
+            }
+        }
+
+        private void txtContrasenia_Leave(object sender, EventArgs e)
+        {
+            String password = txtContrasenia.Text;
+            if (password.ToLower().Trim().Equals("usuario") || password.Trim().Equals(""))
+            {
+                txtContrasenia.Text = "contraseña";
+                txtContrasenia.UseSystemPasswordChar = false;
+                txtContrasenia.ForeColor = Color.Gray;
             }
         }
     }
