@@ -272,11 +272,5 @@ namespace Sinapxon.Administrador
             frmGestionarAlumno formGestionarAlumno = new frmGestionarAlumno(this.Padre);
             Padre.openChildForm(formGestionarAlumno);
         }
-
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            frmGestionarAlumno formGestionarAlumno = new frmGestionarAlumno(this.Padre);
-            _padre.openChildForm(formGestionarAlumno);
-        }
     }
 }

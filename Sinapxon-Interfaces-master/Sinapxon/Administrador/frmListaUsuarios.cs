@@ -10,19 +10,20 @@ using System.Windows.Forms;
 
 namespace Sinapxon.Administrador
 {
-    public partial class frmSolicitudClassroom : Form
+    public partial class frmListaUsuarios : Form
     {
-        public frmSolicitudClassroom()
+        public frmListaUsuarios()
         {
             InitializeComponent();
         }
 
-        private void btnDenegar_Click(object sender, EventArgs e)
+        public frmListaUsuarios(string tipo)
         {
-            this.Close();
+            InitializeComponent();
+            lblTitulo.Text = "Lista de " + tipo;
         }
 
-        private void btnAprobar_Click(object sender, EventArgs e)
+        private void btnCargarProfesor_Click(object sender, EventArgs e)
         {
             this.Close();
         }
