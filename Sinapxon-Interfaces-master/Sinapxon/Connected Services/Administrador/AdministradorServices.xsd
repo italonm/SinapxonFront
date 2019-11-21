@@ -247,10 +247,10 @@
   </xs:complexType>
   <xs:complexType name="insertarProfesor">
     <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="tns:profesor" />
+      <xs:element minOccurs="0" name="arg0" type="tns:alumno" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarProfesorResponse">
+  <xs:complexType name="actualizarAlumnoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -293,6 +293,14 @@
       <xs:element minOccurs="0" name="periodo" type="tns:periodo" />
       <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCurso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:curso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCursoResponse">
+    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="insertarCurso">
     <xs:sequence>
