@@ -28,13 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
-=======
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
->>>>>>> etoile3
             this.lblClassroom = new System.Windows.Forms.Label();
             this.panelTemas = new System.Windows.Forms.Panel();
             this.dgvTemas = new System.Windows.Forms.DataGridView();
@@ -74,11 +71,7 @@
             this.lblClassroom.ForeColor = System.Drawing.Color.Black;
             this.lblClassroom.Location = new System.Drawing.Point(85, 28);
             this.lblClassroom.Name = "lblClassroom";
-<<<<<<< HEAD
-            this.lblClassroom.Size = new System.Drawing.Size(165, 36);
-=======
             this.lblClassroom.Size = new System.Drawing.Size(138, 29);
->>>>>>> etoile3
             this.lblClassroom.TabIndex = 0;
             this.lblClassroom.Text = "Classroom";
             // 
@@ -98,13 +91,11 @@
             // dgvTemas
             // 
             this.dgvTemas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-<<<<<<< HEAD
             this.dgvTemas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTemas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
             this.Descripcion,
             this.Video});
-=======
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -122,7 +113,6 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTemas.DefaultCellStyle = dataGridViewCellStyle2;
->>>>>>> etoile3
             this.dgvTemas.Location = new System.Drawing.Point(15, 136);
             this.dgvTemas.Name = "dgvTemas";
             this.dgvTemas.Size = new System.Drawing.Size(420, 420);
@@ -234,13 +224,11 @@
             // dgvEvaluaciones
             // 
             this.dgvEvaluaciones.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-<<<<<<< HEAD
             this.dgvEvaluaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEvaluaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Namee,
             this.Peso,
             this.Description});
-=======
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -258,7 +246,6 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEvaluaciones.DefaultCellStyle = dataGridViewCellStyle4;
->>>>>>> etoile3
             this.dgvEvaluaciones.Location = new System.Drawing.Point(16, 180);
             this.dgvEvaluaciones.Name = "dgvEvaluaciones";
             this.dgvEvaluaciones.Size = new System.Drawing.Size(420, 376);

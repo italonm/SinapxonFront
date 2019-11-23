@@ -74,15 +74,14 @@ namespace Sinapxon.Profesor
             this.Close();
         }
 
-<<<<<<< HEAD
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
-=======
+        }
+
         private void btnAniadirArchivo_Click(object sender, EventArgs e)
         {
 
->>>>>>> etoile3
         }
     }
 }

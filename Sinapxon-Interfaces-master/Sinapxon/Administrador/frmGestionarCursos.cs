@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sinapxon.Login;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +21,7 @@ namespace Sinapxon.Administrador
             dgvCursos.AutoGenerateColumns = false;
             dgvCursos.DataSource = new BindingList<Administrador.curso>(DBController.listarCursosSin(""));
             dgvCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            this.codigoAdmin = LoginInfo.persona.codigo;
+            //this.codigoAdmin = LoginInfo.persona.codigo;
         }
 
         public frmGestionarCursos(frmAdministrador padre)
@@ -29,6 +30,7 @@ namespace Sinapxon.Administrador
             this.Padre = padre;
             dgvCursos.AutoGenerateColumns = false;
             dgvCursos.DataSource = new BindingList<Administrador.curso>(DBController.listarCursosSin(""));
+        }
 
         public frmAdministrador Padre { get => _padre; set => _padre = value; }
 
