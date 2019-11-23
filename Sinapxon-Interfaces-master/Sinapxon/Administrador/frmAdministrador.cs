@@ -40,7 +40,7 @@ namespace Sinapxon.Administrador
 
         private void btnGestionarCursos_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmGestionarCursos(this));
+            //openChildForm(new frmGestionarCursos(this));
         }
 
         private void btnGestionarClassrooms_Click(object sender, EventArgs e)
@@ -62,12 +62,12 @@ namespace Sinapxon.Administrador
 
         private void btnGestionarProfesor_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmGestionarProfesor(this));
+            //openChildForm(new frmGestionarProfesor(this));
         }
 
         private void btnGestionarAlumno_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmGestionarAlumno(this));
+            //openChildForm(new frmGestionarAlumno(this));
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
