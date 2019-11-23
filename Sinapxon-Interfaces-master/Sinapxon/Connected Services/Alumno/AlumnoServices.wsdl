@@ -5,31 +5,31 @@
       <xsd:import schemaLocation="http://localhost:8080/SinapxonSoftServices/AlumnoServices?xsd=1" namespace="http://services.sinapxon.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="listarCursos">
-    <part name="parameters" element="tns:listarCursos" />
-  </message>
-  <message name="listarCursosResponse">
-    <part name="parameters" element="tns:listarCursosResponse" />
-  </message>
   <message name="listarClassroomxAlumno">
     <part name="parameters" element="tns:listarClassroomxAlumno" />
   </message>
   <message name="listarClassroomxAlumnoResponse">
     <part name="parameters" element="tns:listarClassroomxAlumnoResponse" />
   </message>
+  <message name="listarCursos">
+    <part name="parameters" element="tns:listarCursos" />
+  </message>
+  <message name="listarCursosResponse">
+    <part name="parameters" element="tns:listarCursosResponse" />
+  </message>
   <portType name="AlumnoServices">
-    <operation name="listarCursos">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarCursosRequest" message="tns:listarCursos" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarCursosResponse" message="tns:listarCursosResponse" />
-    </operation>
     <operation name="listarClassroomxAlumno">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomxAlumnoRequest" message="tns:listarClassroomxAlumno" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomxAlumnoResponse" message="tns:listarClassroomxAlumnoResponse" />
     </operation>
+    <operation name="listarCursos">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarCursosRequest" message="tns:listarCursos" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarCursosResponse" message="tns:listarCursosResponse" />
+    </operation>
   </portType>
   <binding name="AlumnoServicesPortBinding" type="tns:AlumnoServices">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarCursos">
+    <operation name="listarClassroomxAlumno">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -38,7 +38,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarClassroomxAlumno">
+    <operation name="listarCursos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

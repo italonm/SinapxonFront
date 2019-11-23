@@ -44,8 +44,8 @@
   <message name="insertarCurso">
     <part name="parameters" element="tns:insertarCurso" />
   </message>
-  <message name="insertarCursoResponse">
-    <part name="parameters" element="tns:insertarCursoResponse" />
+  <message name="actualizarProfesorResponse">
+    <part name="parameters" element="tns:actualizarProfesorResponse" />
   </message>
   <message name="obtenerPeriodo">
     <part name="parameters" element="tns:obtenerPeriodo" />
@@ -56,8 +56,8 @@
   <message name="actualizarCurso">
     <part name="parameters" element="tns:actualizarCurso" />
   </message>
-  <message name="actualizarCursoResponse">
-    <part name="parameters" element="tns:actualizarCursoResponse" />
+  <message name="listarEspecialidadesResponse">
+    <part name="parameters" element="tns:listarEspecialidadesResponse" />
   </message>
   <message name="insertarProfesor">
     <part name="parameters" element="tns:insertarProfesor" />
@@ -68,8 +68,8 @@
   <message name="listarProfesores">
     <part name="parameters" element="tns:listarProfesores" />
   </message>
-  <message name="listarProfesoresResponse">
-    <part name="parameters" element="tns:listarProfesoresResponse" />
+  <message name="listarCursosSinResponse">
+    <part name="parameters" element="tns:listarCursosSinResponse" />
   </message>
   <message name="listarRequisitos">
     <part name="parameters" element="tns:listarRequisitos" />
@@ -80,8 +80,8 @@
   <message name="insertarEspecialidad">
     <part name="parameters" element="tns:insertarEspecialidad" />
   </message>
-  <message name="insertarEspecialidadResponse">
-    <part name="parameters" element="tns:insertarEspecialidadResponse" />
+  <message name="insertarCursoResponse">
+    <part name="parameters" element="tns:insertarCursoResponse" />
   </message>
   <message name="actualizarEspecialidad">
     <part name="parameters" element="tns:actualizarEspecialidad" />
@@ -110,8 +110,8 @@
   <message name="cambiarEstadoSolicitud">
     <part name="parameters" element="tns:cambiarEstadoSolicitud" />
   </message>
-  <message name="cambiarEstadoSolicitudResponse">
-    <part name="parameters" element="tns:cambiarEstadoSolicitudResponse" />
+  <message name="listarAlumnosResponse">
+    <part name="parameters" element="tns:listarAlumnosResponse" />
   </message>
   <message name="crearClassroom_y_asignarProfesor">
     <part name="parameters" element="tns:crearClassroom_y_asignarProfesor" />
@@ -338,7 +338,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarRequisitos">
+    <operation name="insertarProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

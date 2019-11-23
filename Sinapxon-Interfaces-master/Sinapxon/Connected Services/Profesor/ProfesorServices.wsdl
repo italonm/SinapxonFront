@@ -5,17 +5,47 @@
       <xsd:import schemaLocation="http://localhost:8080/SinapxonSoftServices/ProfesorServices?xsd=1" namespace="http://services.sinapxon.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="listarIdiomas">
-    <part name="parameters" element="tns:listarIdiomas" />
+  <message name="listarSolicitudesClassroomxProfesor">
+    <part name="parameters" element="tns:listarSolicitudesClassroomxProfesor" />
   </message>
-  <message name="listarIdiomasResponse">
-    <part name="parameters" element="tns:listarIdiomasResponse" />
+  <message name="listarSolicitudesClassroomxProfesorResponse">
+    <part name="parameters" element="tns:listarSolicitudesClassroomxProfesorResponse" />
   </message>
-  <message name="listarCursos">
-    <part name="parameters" element="tns:listarCursos" />
+  <message name="listarClassroomxProfesor">
+    <part name="parameters" element="tns:listarClassroomxProfesor" />
   </message>
-  <message name="listarCursosResponse">
-    <part name="parameters" element="tns:listarCursosResponse" />
+  <message name="listarClassroomxProfesorResponse">
+    <part name="parameters" element="tns:listarClassroomxProfesorResponse" />
+  </message>
+  <message name="insertarSolicitudClassroom">
+    <part name="parameters" element="tns:insertarSolicitudClassroom" />
+  </message>
+  <message name="insertarSolicitudClassroomResponse">
+    <part name="parameters" element="tns:insertarSolicitudClassroomResponse" />
+  </message>
+  <message name="listarTemaxClassroom">
+    <part name="parameters" element="tns:listarTemaxClassroom" />
+  </message>
+  <message name="listarTemaxClassroomResponse">
+    <part name="parameters" element="tns:listarTemaxClassroomResponse" />
+  </message>
+  <message name="insertarEvaluacion">
+    <part name="parameters" element="tns:insertarEvaluacion" />
+  </message>
+  <message name="insertarEvaluacionResponse">
+    <part name="parameters" element="tns:insertarEvaluacionResponse" />
+  </message>
+  <message name="insertarTemaxClassroom">
+    <part name="parameters" element="tns:insertarTemaxClassroom" />
+  </message>
+  <message name="insertarTemaxClassroomResponse">
+    <part name="parameters" element="tns:insertarTemaxClassroomResponse" />
+  </message>
+  <message name="listarAlumnoXClassroom">
+    <part name="parameters" element="tns:listarAlumnoXClassroom" />
+  </message>
+  <message name="listarAlumnoXClassroomResponse">
+    <part name="parameters" element="tns:listarAlumnoXClassroomResponse" />
   </message>
   <message name="listarTemas">
     <part name="parameters" element="tns:listarTemas" />
@@ -29,56 +59,46 @@
   <message name="listarPeriodosResponse">
     <part name="parameters" element="tns:listarPeriodosResponse" />
   </message>
-  <message name="insertarEvaluacion">
-    <part name="parameters" element="tns:insertarEvaluacion" />
+  <message name="listarCursos">
+    <part name="parameters" element="tns:listarCursos" />
   </message>
-  <message name="insertarEvaluacionResponse">
-    <part name="parameters" element="tns:insertarEvaluacionResponse" />
+  <message name="listarCursosResponse">
+    <part name="parameters" element="tns:listarCursosResponse" />
   </message>
-  <message name="listarAlumnoXClassroom">
-    <part name="parameters" element="tns:listarAlumnoXClassroom" />
+  <message name="listarIdiomas">
+    <part name="parameters" element="tns:listarIdiomas" />
   </message>
-  <message name="listarAlumnoXClassroomResponse">
-    <part name="parameters" element="tns:listarAlumnoXClassroomResponse" />
-  </message>
-  <message name="listarTemaxClassroom">
-    <part name="parameters" element="tns:listarTemaxClassroom" />
-  </message>
-  <message name="listarTemaxClassroomResponse">
-    <part name="parameters" element="tns:listarTemaxClassroomResponse" />
-  </message>
-  <message name="insertarSolicitudClassroom">
-    <part name="parameters" element="tns:insertarSolicitudClassroom" />
-  </message>
-  <message name="insertarSolicitudClassroomResponse">
-    <part name="parameters" element="tns:insertarSolicitudClassroomResponse" />
-  </message>
-  <message name="listarClassroomxProfesor">
-    <part name="parameters" element="tns:listarClassroomxProfesor" />
-  </message>
-  <message name="listarClassroomxProfesorResponse">
-    <part name="parameters" element="tns:listarClassroomxProfesorResponse" />
-  </message>
-  <message name="insertarTemaxClassroom">
-    <part name="parameters" element="tns:insertarTemaxClassroom" />
-  </message>
-  <message name="insertarTemaxClassroomResponse">
-    <part name="parameters" element="tns:insertarTemaxClassroomResponse" />
-  </message>
-  <message name="listarSolicitudesClassroomxProfesor">
-    <part name="parameters" element="tns:listarSolicitudesClassroomxProfesor" />
-  </message>
-  <message name="listarSolicitudesClassroomxProfesorResponse">
-    <part name="parameters" element="tns:listarSolicitudesClassroomxProfesorResponse" />
+  <message name="listarIdiomasResponse">
+    <part name="parameters" element="tns:listarIdiomasResponse" />
   </message>
   <portType name="ProfesorServices">
-    <operation name="listarIdiomas">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarIdiomasRequest" message="tns:listarIdiomas" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarIdiomasResponse" message="tns:listarIdiomasResponse" />
+    <operation name="listarSolicitudesClassroomxProfesor">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarSolicitudesClassroomxProfesorRequest" message="tns:listarSolicitudesClassroomxProfesor" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarSolicitudesClassroomxProfesorResponse" message="tns:listarSolicitudesClassroomxProfesorResponse" />
     </operation>
-    <operation name="listarCursos">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarCursosRequest" message="tns:listarCursos" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarCursosResponse" message="tns:listarCursosResponse" />
+    <operation name="listarClassroomxProfesor">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarClassroomxProfesorRequest" message="tns:listarClassroomxProfesor" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarClassroomxProfesorResponse" message="tns:listarClassroomxProfesorResponse" />
+    </operation>
+    <operation name="insertarSolicitudClassroom">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/insertarSolicitudClassroomRequest" message="tns:insertarSolicitudClassroom" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/insertarSolicitudClassroomResponse" message="tns:insertarSolicitudClassroomResponse" />
+    </operation>
+    <operation name="listarTemaxClassroom">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarTemaxClassroomRequest" message="tns:listarTemaxClassroom" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarTemaxClassroomResponse" message="tns:listarTemaxClassroomResponse" />
+    </operation>
+    <operation name="insertarEvaluacion">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/insertarEvaluacionRequest" message="tns:insertarEvaluacion" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/insertarEvaluacionResponse" message="tns:insertarEvaluacionResponse" />
+    </operation>
+    <operation name="insertarTemaxClassroom">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/insertarTemaxClassroomRequest" message="tns:insertarTemaxClassroom" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/insertarTemaxClassroomResponse" message="tns:insertarTemaxClassroomResponse" />
+    </operation>
+    <operation name="listarAlumnoXClassroom">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarAlumnoXClassroomRequest" message="tns:listarAlumnoXClassroom" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarAlumnoXClassroomResponse" message="tns:listarAlumnoXClassroomResponse" />
     </operation>
     <operation name="listarTemas">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarTemasRequest" message="tns:listarTemas" />
@@ -88,38 +108,18 @@
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarPeriodosRequest" message="tns:listarPeriodos" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarPeriodosResponse" message="tns:listarPeriodosResponse" />
     </operation>
-    <operation name="insertarEvaluacion">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/insertarEvaluacionRequest" message="tns:insertarEvaluacion" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/insertarEvaluacionResponse" message="tns:insertarEvaluacionResponse" />
+    <operation name="listarCursos">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarCursosRequest" message="tns:listarCursos" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarCursosResponse" message="tns:listarCursosResponse" />
     </operation>
-    <operation name="listarAlumnoXClassroom">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarAlumnoXClassroomRequest" message="tns:listarAlumnoXClassroom" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarAlumnoXClassroomResponse" message="tns:listarAlumnoXClassroomResponse" />
-    </operation>
-    <operation name="listarTemaxClassroom">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarTemaxClassroomRequest" message="tns:listarTemaxClassroom" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarTemaxClassroomResponse" message="tns:listarTemaxClassroomResponse" />
-    </operation>
-    <operation name="insertarSolicitudClassroom">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/insertarSolicitudClassroomRequest" message="tns:insertarSolicitudClassroom" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/insertarSolicitudClassroomResponse" message="tns:insertarSolicitudClassroomResponse" />
-    </operation>
-    <operation name="listarClassroomxProfesor">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarClassroomxProfesorRequest" message="tns:listarClassroomxProfesor" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarClassroomxProfesorResponse" message="tns:listarClassroomxProfesorResponse" />
-    </operation>
-    <operation name="insertarTemaxClassroom">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/insertarTemaxClassroomRequest" message="tns:insertarTemaxClassroom" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/insertarTemaxClassroomResponse" message="tns:insertarTemaxClassroomResponse" />
-    </operation>
-    <operation name="listarSolicitudesClassroomxProfesor">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarSolicitudesClassroomxProfesorRequest" message="tns:listarSolicitudesClassroomxProfesor" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarSolicitudesClassroomxProfesorResponse" message="tns:listarSolicitudesClassroomxProfesorResponse" />
+    <operation name="listarIdiomas">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarIdiomasRequest" message="tns:listarIdiomas" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/ProfesorServices/listarIdiomasResponse" message="tns:listarIdiomasResponse" />
     </operation>
   </portType>
   <binding name="ProfesorServicesPortBinding" type="tns:ProfesorServices">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarIdiomas">
+    <operation name="listarSolicitudesClassroomxProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -128,7 +128,52 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarCursos">
+    <operation name="listarClassroomxProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarSolicitudClassroom">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTemaxClassroom">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarEvaluacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarTemaxClassroom">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAlumnoXClassroom">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -155,7 +200,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarEvaluacion">
+    <operation name="listarCursos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -164,52 +209,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarAlumnoXClassroom">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarTemaxClassroom">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarSolicitudClassroom">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarClassroomxProfesor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarTemaxClassroom">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarSolicitudesClassroomxProfesor">
+    <operation name="listarIdiomas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

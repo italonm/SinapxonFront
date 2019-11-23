@@ -56,65 +56,17 @@
     <Compile Include="Administrador\frmAdministrador.Designer.cs">
       <DependentUpon>frmAdministrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\frmCurso.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmCurso.Designer.cs">
-      <DependentUpon>frmCurso.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmAgregarEspecialidad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmAgregarEspecialidad.Designer.cs">
-      <DependentUpon>frmAgregarEspecialidad.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmAgregarRequisito.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmAgregarRequisito.Designer.cs">
-      <DependentUpon>frmAgregarRequisito.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmDatosAlumno.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmDatosAlumno.Designer.cs">
-      <DependentUpon>frmDatosAlumno.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmDatosProfesor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmDatosProfesor.Designer.cs">
-      <DependentUpon>frmDatosProfesor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmGestionarAlumno.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmGestionarAlumno.Designer.cs">
-      <DependentUpon>frmGestionarAlumno.cs</DependentUpon>
-    </Compile>
     <Compile Include="Administrador\frmGestionarClassroom.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administrador\frmGestionarClassroom.Designer.cs">
       <DependentUpon>frmGestionarClassroom.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\frmGestionarCursos.cs">
+    <Compile Include="Administrador\frmListaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrador\frmGestionarCursos.Designer.cs">
-      <DependentUpon>frmGestionarCursos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmGestionarProfesor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmGestionarProfesor.Designer.cs">
-      <DependentUpon>frmGestionarProfesor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmRegistrarEspecialidad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmRegistrarEspecialidad.Designer.cs">
-      <DependentUpon>frmRegistrarEspecialidad.cs</DependentUpon>
+    <Compile Include="Administrador\frmListaUsuarios.Designer.cs">
+      <DependentUpon>frmListaUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Administrador\frmSolicitudClassroom.cs">
       <SubType>Form</SubType>
@@ -275,12 +227,6 @@
     <Compile Include="Profesor\frmProfesor.Designer.cs">
       <DependentUpon>frmProfesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Profesor\frmVerMisSolicitudes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Profesor\frmVerMisSolicitudes.Designer.cs">
-      <DependentUpon>frmVerMisSolicitudes.cs</DependentUpon>
-    </Compile>
     <Compile Include="Profesor\frmVerNotas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,35 +238,11 @@
     <EmbeddedResource Include="Administrador\frmAdministrador.resx">
       <DependentUpon>frmAdministrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmCurso.resx">
-      <DependentUpon>frmCurso.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmAgregarEspecialidad.resx">
-      <DependentUpon>frmAgregarEspecialidad.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmAgregarRequisito.resx">
-      <DependentUpon>frmAgregarRequisito.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmDatosAlumno.resx">
-      <DependentUpon>frmDatosAlumno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmDatosProfesor.resx">
-      <DependentUpon>frmDatosProfesor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmGestionarAlumno.resx">
-      <DependentUpon>frmGestionarAlumno.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmGestionarClassroom.resx">
       <DependentUpon>frmGestionarClassroom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmGestionarCursos.resx">
-      <DependentUpon>frmGestionarCursos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmGestionarProfesor.resx">
-      <DependentUpon>frmGestionarProfesor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmRegistrarEspecialidad.resx">
-      <DependentUpon>frmRegistrarEspecialidad.cs</DependentUpon>
+    <EmbeddedResource Include="Administrador\frmListaUsuarios.resx">
+      <DependentUpon>frmListaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmSolicitudClassroom.resx">
       <DependentUpon>frmSolicitudClassroom.cs</DependentUpon>
@@ -391,9 +313,6 @@
     <EmbeddedResource Include="Profesor\frmProfesor.resx">
       <DependentUpon>frmProfesor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Profesor\frmVerMisSolicitudes.resx">
-      <DependentUpon>frmVerMisSolicitudes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Profesor\frmVerNotas.resx">
       <DependentUpon>frmVerNotas.cs</DependentUpon>
     </EmbeddedResource>
@@ -447,7 +366,7 @@
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.eliminarProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Administrador\Sinapxon.Administrador.especialidad1.datasource">
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.especialidad.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.idioma.datasource">
@@ -469,6 +388,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarCursosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarCursosSinResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarEspecialidadesResponse1.datasource">
@@ -527,6 +449,9 @@
     <None Include="Connected Services\Login\Sinapxon.Login.actualizarPasswordResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Login\Sinapxon.Login.alumno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Login\Sinapxon.Login.persona.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -534,6 +459,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Login\Sinapxon.Login.validarLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Login\Sinapxon.Login.validarNicknameResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Profesor\ProfesorServices.wsdl" />

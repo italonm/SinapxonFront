@@ -32,6 +32,8 @@
   <xs:element name="listarAlumnosResponse" type="tns:listarAlumnosResponse" />
   <xs:element name="listarCursos" type="tns:listarCursos" />
   <xs:element name="listarCursosResponse" type="tns:listarCursosResponse" />
+  <xs:element name="listarCursosSin" type="tns:listarCursosSin" />
+  <xs:element name="listarCursosSinResponse" type="tns:listarCursosSinResponse" />
   <xs:element name="listarEspecialidades" type="tns:listarEspecialidades" />
   <xs:element name="listarEspecialidadesResponse" type="tns:listarEspecialidadesResponse" />
   <xs:element name="listarIdiomasXNombreCodigo" type="tns:listarIdiomasXNombreCodigo" />
@@ -124,12 +126,12 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarCursos">
+  <xs:complexType name="listarCursosSin">
     <xs:sequence>
       <xs:element minOccurs="0" name="arg0" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarCursosResponse">
+  <xs:complexType name="listarCursosSinResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
     </xs:sequence>
@@ -151,6 +153,16 @@
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
       <xs:element name="id_especialidad" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCursos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCursosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarPaises">
@@ -257,20 +269,14 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarIdiomasXNombreCodigo">
+  <xs:complexType name="actualizarAlumno">
     <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg0" type="tns:alumno" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarIdiomasXNombreCodigoResponse">
+  <xs:complexType name="actualizarAlumnoResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:idioma" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="idioma">
-    <xs:sequence>
-      <xs:element name="id_idioma" type="xs:int" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarSolicitudes">
@@ -296,13 +302,21 @@
       <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarCurso">
+  <xs:complexType name="idioma">
     <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="tns:curso" />
+      <xs:element name="id_idioma" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarCursoResponse">
-    <xs:sequence />
+  <xs:complexType name="listarIdiomasXNombreCodigo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarIdiomasXNombreCodigoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:idioma" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarCurso">
     <xs:sequence>
@@ -313,6 +327,14 @@
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCurso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:curso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCursoResponse">
+    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="cambiarEstadoSolicitud">
     <xs:sequence>

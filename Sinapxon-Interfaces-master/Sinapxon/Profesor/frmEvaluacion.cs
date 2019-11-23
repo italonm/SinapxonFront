@@ -39,5 +39,10 @@ namespace Sinapxon.Profesor
             DBController.insertarEvaluacion(evaluacion, ClassroomInfo.classroom.codigo, codTema);
             this.Close();
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
