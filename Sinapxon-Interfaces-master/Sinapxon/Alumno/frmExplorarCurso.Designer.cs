@@ -30,23 +30,23 @@
         {
             this.lblNombreCurso = new System.Windows.Forms.Label();
             this.panelRequisitos = new System.Windows.Forms.Panel();
+            this.panelTituloRequisitos = new System.Windows.Forms.Panel();
+            this.lblRequisitos = new System.Windows.Forms.Label();
             this.panelClassrooms = new System.Windows.Forms.Panel();
+            this.panelTituloClassrooms = new System.Windows.Forms.Panel();
+            this.lblClasrooms = new System.Windows.Forms.Label();
             this.lblNumeroAlumnos = new System.Windows.Forms.Label();
             this.pbUsuarios = new System.Windows.Forms.PictureBox();
             this.btnVerClassroom = new System.Windows.Forms.Button();
             this.lblNombreProfesor = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblClasrooms = new System.Windows.Forms.Label();
-            this.panelTituloRequisitos = new System.Windows.Forms.Panel();
-            this.lblRequisitos = new System.Windows.Forms.Label();
-            this.panelTituloClassrooms = new System.Windows.Forms.Panel();
             this.btnAtras = new System.Windows.Forms.Button();
             this.panelRequisitos.SuspendLayout();
+            this.panelTituloRequisitos.SuspendLayout();
             this.panelClassrooms.SuspendLayout();
+            this.panelTituloClassrooms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelTituloRequisitos.SuspendLayout();
-            this.panelTituloClassrooms.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNombreCurso
@@ -70,6 +70,27 @@
             this.panelRequisitos.Size = new System.Drawing.Size(363, 553);
             this.panelRequisitos.TabIndex = 3;
             // 
+            // panelTituloRequisitos
+            // 
+            this.panelTituloRequisitos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
+            this.panelTituloRequisitos.Controls.Add(this.lblRequisitos);
+            this.panelTituloRequisitos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTituloRequisitos.Location = new System.Drawing.Point(0, 0);
+            this.panelTituloRequisitos.Name = "panelTituloRequisitos";
+            this.panelTituloRequisitos.Size = new System.Drawing.Size(363, 58);
+            this.panelTituloRequisitos.TabIndex = 0;
+            // 
+            // lblRequisitos
+            // 
+            this.lblRequisitos.AutoSize = true;
+            this.lblRequisitos.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRequisitos.ForeColor = System.Drawing.Color.White;
+            this.lblRequisitos.Location = new System.Drawing.Point(18, 17);
+            this.lblRequisitos.Name = "lblRequisitos";
+            this.lblRequisitos.Size = new System.Drawing.Size(113, 25);
+            this.lblRequisitos.TabIndex = 5;
+            this.lblRequisitos.Text = "Requisitos";
+            // 
             // panelClassrooms
             // 
             this.panelClassrooms.AutoScroll = true;
@@ -84,6 +105,27 @@
             this.panelClassrooms.Name = "panelClassrooms";
             this.panelClassrooms.Size = new System.Drawing.Size(537, 553);
             this.panelClassrooms.TabIndex = 4;
+            // 
+            // panelTituloClassrooms
+            // 
+            this.panelTituloClassrooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
+            this.panelTituloClassrooms.Controls.Add(this.lblClasrooms);
+            this.panelTituloClassrooms.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTituloClassrooms.Location = new System.Drawing.Point(0, 0);
+            this.panelTituloClassrooms.Name = "panelTituloClassrooms";
+            this.panelTituloClassrooms.Size = new System.Drawing.Size(537, 58);
+            this.panelTituloClassrooms.TabIndex = 5;
+            // 
+            // lblClasrooms
+            // 
+            this.lblClasrooms.AutoSize = true;
+            this.lblClasrooms.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClasrooms.ForeColor = System.Drawing.Color.White;
+            this.lblClasrooms.Location = new System.Drawing.Point(25, 17);
+            this.lblClasrooms.Name = "lblClasrooms";
+            this.lblClasrooms.Size = new System.Drawing.Size(126, 25);
+            this.lblClasrooms.TabIndex = 0;
+            this.lblClasrooms.Text = "Classrooms";
             // 
             // lblNumeroAlumnos
             // 
@@ -115,7 +157,6 @@
             this.btnVerClassroom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerClassroom.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerClassroom.ForeColor = System.Drawing.Color.White;
-            this.btnVerClassroom.Image = global::Sinapxon.Properties.Resources.ver;
             this.btnVerClassroom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVerClassroom.Location = new System.Drawing.Point(325, 96);
             this.btnVerClassroom.Name = "btnVerClassroom";
@@ -148,48 +189,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // lblClasrooms
-            // 
-            this.lblClasrooms.AutoSize = true;
-            this.lblClasrooms.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClasrooms.ForeColor = System.Drawing.Color.White;
-            this.lblClasrooms.Location = new System.Drawing.Point(25, 17);
-            this.lblClasrooms.Name = "lblClasrooms";
-            this.lblClasrooms.Size = new System.Drawing.Size(126, 25);
-            this.lblClasrooms.TabIndex = 0;
-            this.lblClasrooms.Text = "Classrooms";
-            // 
-            // panelTituloRequisitos
-            // 
-            this.panelTituloRequisitos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
-            this.panelTituloRequisitos.Controls.Add(this.lblRequisitos);
-            this.panelTituloRequisitos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTituloRequisitos.Location = new System.Drawing.Point(0, 0);
-            this.panelTituloRequisitos.Name = "panelTituloRequisitos";
-            this.panelTituloRequisitos.Size = new System.Drawing.Size(363, 58);
-            this.panelTituloRequisitos.TabIndex = 0;
-            // 
-            // lblRequisitos
-            // 
-            this.lblRequisitos.AutoSize = true;
-            this.lblRequisitos.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRequisitos.ForeColor = System.Drawing.Color.White;
-            this.lblRequisitos.Location = new System.Drawing.Point(18, 17);
-            this.lblRequisitos.Name = "lblRequisitos";
-            this.lblRequisitos.Size = new System.Drawing.Size(113, 25);
-            this.lblRequisitos.TabIndex = 5;
-            this.lblRequisitos.Text = "Requisitos";
-            // 
-            // panelTituloClassrooms
-            // 
-            this.panelTituloClassrooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
-            this.panelTituloClassrooms.Controls.Add(this.lblClasrooms);
-            this.panelTituloClassrooms.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTituloClassrooms.Location = new System.Drawing.Point(0, 0);
-            this.panelTituloClassrooms.Name = "panelTituloClassrooms";
-            this.panelTituloClassrooms.Size = new System.Drawing.Size(537, 58);
-            this.panelTituloClassrooms.TabIndex = 5;
-            // 
             // btnAtras
             // 
             this.btnAtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
@@ -201,6 +200,7 @@
             this.btnAtras.Size = new System.Drawing.Size(50, 50);
             this.btnAtras.TabIndex = 23;
             this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // frmExplorarCurso
             // 
@@ -217,14 +217,14 @@
             this.Name = "frmExplorarCurso";
             this.Text = "frmExplorarCurso";
             this.panelRequisitos.ResumeLayout(false);
-            this.panelClassrooms.ResumeLayout(false);
-            this.panelClassrooms.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTituloRequisitos.ResumeLayout(false);
             this.panelTituloRequisitos.PerformLayout();
+            this.panelClassrooms.ResumeLayout(false);
+            this.panelClassrooms.PerformLayout();
             this.panelTituloClassrooms.ResumeLayout(false);
             this.panelTituloClassrooms.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
