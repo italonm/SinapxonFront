@@ -193,6 +193,14 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:periodo" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarTemas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTemasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:tema" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarAlumnoXClassroom">
     <xs:sequence>
       <xs:element minOccurs="0" name="codigo" type="xs:string" />
@@ -203,13 +211,13 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:alumno" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarTemas">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarTemasResponse">
+  <xs:complexType name="insertarTemaxClassroom">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:tema" />
+      <xs:element minOccurs="0" name="tema" type="tns:temaXClassroom" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarTemaxClassroomResponse">
+    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarClassroomxProfesor">
     <xs:sequence>
@@ -221,14 +229,6 @@
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:classroom" />
     </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarTemaxClassroom">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="tema" type="tns:temaXClassroom" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarTemaxClassroomResponse">
-    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="insertarSolicitudClassroom">
     <xs:sequence>
@@ -261,6 +261,14 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:solicitudClassroom" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarIdiomas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarIdiomasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:idioma" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarEvaluacion">
     <xs:sequence>
       <xs:element minOccurs="0" name="evaluacion" type="tns:evaluacion" />
@@ -270,13 +278,5 @@
   </xs:complexType>
   <xs:complexType name="insertarEvaluacionResponse">
     <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarIdiomas">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarIdiomasResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:idioma" />
-    </xs:sequence>
   </xs:complexType>
 </xs:schema>
