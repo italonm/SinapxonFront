@@ -348,6 +348,9 @@
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.cambiarEstadoSolicitudResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.crearClassroom_y_asignarProfesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.curso.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -778,6 +781,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\baseline_person_add_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_mood_bad_white_48dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

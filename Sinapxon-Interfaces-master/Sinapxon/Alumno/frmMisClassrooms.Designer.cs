@@ -33,10 +33,14 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.panelContenido = new System.Windows.Forms.Panel();
+            this.lblSincursos = new System.Windows.Forms.Label();
+            this.btnAtras = new System.Windows.Forms.Button();
+            this.pbSinCursos = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnAtras = new System.Windows.Forms.Button();
+            this.panelContenido.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSinCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -45,10 +49,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(100, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 29);
+            this.label1.Size = new System.Drawing.Size(187, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Mis Classrooms";
             // 
@@ -85,11 +89,47 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContenido.AutoScroll = true;
             this.panelContenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
+            this.panelContenido.Controls.Add(this.pbSinCursos);
+            this.panelContenido.Controls.Add(this.lblSincursos);
             this.panelContenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelContenido.Location = new System.Drawing.Point(33, 152);
             this.panelContenido.Name = "panelContenido";
             this.panelContenido.Size = new System.Drawing.Size(882, 500);
             this.panelContenido.TabIndex = 11;
+            // 
+            // lblSincursos
+            // 
+            this.lblSincursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSincursos.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSincursos.ForeColor = System.Drawing.Color.White;
+            this.lblSincursos.Location = new System.Drawing.Point(245, 168);
+            this.lblSincursos.Name = "lblSincursos";
+            this.lblSincursos.Size = new System.Drawing.Size(527, 114);
+            this.lblSincursos.TabIndex = 0;
+            this.lblSincursos.Text = "Oh! parece que no tienes cursos, ve a la ventana explorar cursos para poder ingre" +
+    "sar a un curso";
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.btnAtras.FlatAppearance.BorderSize = 0;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtras.Image = global::Sinapxon.Properties.Resources.round_arrow_left_white_36dp;
+            this.btnAtras.Location = new System.Drawing.Point(33, 2);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(50, 50);
+            this.btnAtras.TabIndex = 24;
+            this.btnAtras.UseVisualStyleBackColor = false;
+            // 
+            // pbSinCursos
+            // 
+            this.pbSinCursos.Image = global::Sinapxon.Properties.Resources.round_mood_bad_white_48dp;
+            this.pbSinCursos.Location = new System.Drawing.Point(143, 171);
+            this.pbSinCursos.Name = "pbSinCursos";
+            this.pbSinCursos.Size = new System.Drawing.Size(96, 96);
+            this.pbSinCursos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbSinCursos.TabIndex = 1;
+            this.pbSinCursos.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -125,18 +165,6 @@
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
-            // btnAtras
-            // 
-            this.btnAtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
-            this.btnAtras.FlatAppearance.BorderSize = 0;
-            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtras.Image = global::Sinapxon.Properties.Resources.round_arrow_left_white_36dp;
-            this.btnAtras.Location = new System.Drawing.Point(33, 2);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(50, 50);
-            this.btnAtras.TabIndex = 24;
-            this.btnAtras.UseVisualStyleBackColor = false;
-            // 
             // frmMisClassrooms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,6 +182,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMisClassrooms";
             this.Text = "frmMisCursos";
+            this.panelContenido.ResumeLayout(false);
+            this.panelContenido.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSinCursos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -171,5 +202,7 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Panel panelContenido;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.PictureBox pbSinCursos;
+        private System.Windows.Forms.Label lblSincursos;
     }
 }

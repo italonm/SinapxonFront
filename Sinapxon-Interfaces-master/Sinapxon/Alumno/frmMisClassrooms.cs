@@ -16,6 +16,7 @@ namespace Sinapxon.Alumno
         private bool _irClassroom = false;
         private int altura = 0, boxAltura = 174;
         private frmAlumno _padre = null;
+        private BindingList<Alumno.classroom> classrooms;
 
         private Alumno.AlumnoServicesClient DBController = new AlumnoServicesClient();
         
@@ -26,8 +27,7 @@ namespace Sinapxon.Alumno
         {
             InitializeComponent();
             this.BringToFront();
-            BindingList<Alumno.classroom> classrooms =
-                new BindingList<classroom>(DBController.listarClassroomxAlumno(LoginInfo.persona.codigo));
+            classrooms = new BindingList<classroom>(DBController.listarClassroomxAlumno(LoginInfo.persona.codigo));
 
             foreach (Alumno.classroom obj in classrooms)
             {
@@ -39,22 +39,26 @@ namespace Sinapxon.Alumno
         {
             InitializeComponent();
             this.BringToFront();
+            _padre = padre;
 
-            BindingList<Alumno.classroom> classrooms = 
-                new BindingList<classroom>(DBController.listarClassroomxAlumno(LoginInfo.persona.codigo));
+            lblSincursos.Hide();
+            pbSinCursos.Hide();
+
+            try
+            {
+                classrooms = new BindingList<classroom>(DBController.listarClassroomxAlumno(LoginInfo.persona.codigo));
+            }
+            catch (ArgumentNullException)
+            {
+                lblSincursos.Show();
+                pbSinCursos.Show();
+            }
+
             if (classrooms != null)
             {
                 foreach (Alumno.classroom obj in classrooms)
                     crearElemento(obj);
- 
-
             }
-            
-
-            //crearElemento();
-            //crearElemento();
-            //crearElemento();
-            _padre = padre;
         }
 
         public void crearElemento(Alumno.classroom clsroom)

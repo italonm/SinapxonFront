@@ -115,7 +115,8 @@ namespace Sinapxon.Alumno
             btnVerCurs.Size = new System.Drawing.Size(182, 49);
             btnVerCurs.Text = "Ver curso";
             btnVerCurs.UseVisualStyleBackColor = false;
-            btnVerCurs.Click += new System.EventHandler(this.BtnVerCurso_Click);
+            //btnVerCurs.Click += new System.EventHandler(this.BtnVerCurso_Click);
+            btnVerCurs.Click += new System.EventHandler((sender, e) => this.BtnVerCurso_Click(sender, e, curso));
             panelContenedorCursos.Controls.Add(btnVerCurs);
 
             /*
@@ -135,10 +136,16 @@ namespace Sinapxon.Alumno
             altura = altura + boxAltura;
         }
 
-        private void BtnVerCurso_Click(object sender, EventArgs e)
+        private void BtnVerCurso_Click(object sender, EventArgs e, Alumno.curso curso)
         {
+            ALUMNO_CursoInfo.cursoInfo = curso;
             frmExplorarCurso formExplorarCurso = new frmExplorarCurso();
             _padre.openChildForm(formExplorarCurso);
         }
+    }
+
+    public static class ALUMNO_CursoInfo
+    {
+        public static Alumno.curso cursoInfo;
     }
 }
