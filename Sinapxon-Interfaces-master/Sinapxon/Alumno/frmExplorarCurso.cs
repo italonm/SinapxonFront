@@ -13,13 +13,46 @@ namespace Sinapxon.Alumno
     public partial class frmExplorarCurso : Form
     {
         private int altura = 0, boxAltura = 113;
+        private int reqAltura = 0, distancia = 80;
+
         public frmExplorarCurso()
         {
             InitializeComponent();
+            lblNombreCurso.Text = ALUMNO_CursoInfo.cursoInfo.codigo + " - " + ALUMNO_CursoInfo.cursoInfo.nombre;
+            int numRequisitos = 0;
+            try
+            {
+                numRequisitos = ALUMNO_CursoInfo.cursoInfo.cursos.Length;
+            }
+            catch (Exception) {numRequisitos = 0; }
+            for (int i = 0; i < numRequisitos; i++)
+            {
+                generarListaRequisitos(ALUMNO_CursoInfo.cursoInfo.cursos[i]);
+            }
+
             generarBloqueClassroom();
             generarBloqueClassroom();
         }
 
+
+        private void generarListaRequisitos(Alumno.curso cursoRequisito)
+        {
+            // 
+            // lblRequisito
+            // 
+            Label lblRequisito = new Label();
+            lblRequisito.AutoSize = false;
+            lblRequisito.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblRequisito.Location = new System.Drawing.Point(50, 82 + reqAltura);
+            lblRequisito.Name = "lblRequisito";
+            lblRequisito.Size = new System.Drawing.Size(320, 80);
+            lblRequisito.TabIndex = 1;
+            lblRequisito.Text = "●  "+cursoRequisito.nombre;
+
+            panelRequisitos.Controls.Add(lblRequisito);
+
+            reqAltura = reqAltura + distancia;
+        }
 
         private void generarBloqueClassroom()
         {
@@ -69,11 +102,11 @@ namespace Sinapxon.Alumno
             btnVerClassroom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             btnVerClassroom.FlatAppearance.BorderSize = 0;
             btnVerClassroom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnVerClassroom.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnVerClassroom.Font = new System.Drawing.Font("Roboto", 12.0F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             btnVerClassroom.ForeColor = System.Drawing.Color.White;
-            btnVerClassroom.Location = new System.Drawing.Point(358, 92+altura);
+            btnVerClassroom.Location = new System.Drawing.Point(325, 96 + altura);
             btnVerClassroom.Name = "btnVisualizarClassroom";
-            btnVerClassroom.Size = new System.Drawing.Size(125, 41);
+            btnVerClassroom.Size = new System.Drawing.Size(162, 41);
             btnVerClassroom.Text = "Ver classroom";
             btnVerClassroom.UseVisualStyleBackColor = false;
             btnVerClassroom.Click += new System.EventHandler(this.BtnVerClassroom_Click);
@@ -94,6 +127,11 @@ namespace Sinapxon.Alumno
             altura = altura + boxAltura;
         }
 
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void BtnVerClassroom_Click(object sender, EventArgs e)
         {
             frmExplorarClassroom formExplorarClassroom = new frmExplorarClassroom();
@@ -101,4 +139,5 @@ namespace Sinapxon.Alumno
             formExplorarClassroom.Visible = true;
         }
     }
+
 }
