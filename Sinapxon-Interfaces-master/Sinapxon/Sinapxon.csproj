@@ -348,6 +348,9 @@
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.cambiarEstadoSolicitudResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.crearClassroom_y_asignarProfesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.curso.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
