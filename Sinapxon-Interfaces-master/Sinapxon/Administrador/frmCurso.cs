@@ -16,6 +16,7 @@ namespace Sinapxon.Administrador
     {
         private frmAdministrador _padre = null;
         private int tipo;
+        private int tipoX;
         private Administrador.curso curso;
         private BindingList<Administrador.curso> cursos;
         private BindingList<Administrador.curso> listado;
@@ -32,6 +33,7 @@ namespace Sinapxon.Administrador
         {
             //Inicializo Formulario
             tipo = 1;
+            tipoX = 1;
             InitializeComponent();
             this.Padre = padre;
             lblTitulo.Text = "Editar Curso";
@@ -81,6 +83,7 @@ namespace Sinapxon.Administrador
         public frmCurso(frmAdministrador padre)
         {
             tipo = 2;
+            tipoX = 2;
             //Inicializo Formulario
             InitializeComponent();
             this.Padre = padre;

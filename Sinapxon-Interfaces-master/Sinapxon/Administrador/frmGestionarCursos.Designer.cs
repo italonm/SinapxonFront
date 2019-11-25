@@ -39,7 +39,6 @@
             this.lblCódgio = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblGestionarCurso = new System.Windows.Forms.Label();
             this.dgvCursos = new System.Windows.Forms.DataGridView();
@@ -107,7 +106,6 @@
             this.panel1.Controls.Add(this.lblCódgio);
             this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Controls.Add(this.txtCodigo);
-            this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Location = new System.Drawing.Point(41, 64);
             this.panel1.Name = "panel1";
@@ -119,7 +117,7 @@
             this.lblCódgio.AutoSize = true;
             this.lblCódgio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCódgio.ForeColor = System.Drawing.Color.White;
-            this.lblCódgio.Location = new System.Drawing.Point(372, 11);
+            this.lblCódgio.Location = new System.Drawing.Point(581, 11);
             this.lblCódgio.Name = "lblCódgio";
             this.lblCódgio.Size = new System.Drawing.Size(71, 24);
             this.lblCódgio.TabIndex = 30;
@@ -130,7 +128,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(24, 11);
+            this.lblNombre.Location = new System.Drawing.Point(73, 11);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(79, 24);
             this.lblNombre.TabIndex = 29;
@@ -141,37 +139,18 @@
             this.txtCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(376, 40);
+            this.txtCodigo.Location = new System.Drawing.Point(585, 40);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(293, 22);
             this.txtCodigo.TabIndex = 28;
             this.txtCodigo.TextChanged += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnBuscar.Image = global::Sinapxon.Properties.Resources.round_search;
-            this.btnBuscar.Location = new System.Drawing.Point(803, 17);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(144, 48);
-            this.btnBuscar.TabIndex = 27;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(28, 40);
+            this.txtNombre.Location = new System.Drawing.Point(77, 40);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(293, 22);
             this.txtNombre.TabIndex = 23;
@@ -328,7 +307,6 @@
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblGestionarCurso;
         private System.Windows.Forms.DataGridView dgvCursos;

@@ -23,20 +23,7 @@ namespace Sinapxon.Administrador
         private int index = 0;
         public frmAdministrador Padre { get => _padre; set => _padre = value; }
 
-        public frmGestionarCursos()
-        {
-            
-            InitializeComponent();
-
-            //Inicializao dgvCursos:con todos los cursos
-            dgvCursos.AutoGenerateColumns = false;
-            dgvCursos.DataSource = new BindingList<Administrador.curso>(DBController.listarCursosSin(""));
-            dgvCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-            //Doy espacio al curso seleccionado
-            curSeleccionado = new Administrador.curso();
-        }
-
+        //INICIANDO FORMULARIO
         public frmGestionarCursos(frmAdministrador padre)
         {
             InitializeComponent();
@@ -77,6 +64,7 @@ namespace Sinapxon.Administrador
         {
             toShow = new BindingList<Administrador.curso>();
             index = 0;
+
             //Hago búsqueda por código y nombre del curso
             foreach (Administrador.curso cur in backup)
             {
