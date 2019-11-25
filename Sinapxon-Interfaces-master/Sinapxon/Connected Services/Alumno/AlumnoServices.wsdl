@@ -11,6 +11,18 @@
   <message name="listarCursosResponse">
     <part name="parameters" element="tns:listarCursosResponse" />
   </message>
+  <message name="listarClassroomsxCurso">
+    <part name="parameters" element="tns:listarClassroomsxCurso" />
+  </message>
+  <message name="listarClassroomsxCursoResponse">
+    <part name="parameters" element="tns:listarClassroomsxCursoResponse" />
+  </message>
+  <message name="insertarAlumnoAlClassroom">
+    <part name="parameters" element="tns:insertarAlumnoAlClassroom" />
+  </message>
+  <message name="insertarAlumnoAlClassroomResponse">
+    <part name="parameters" element="tns:insertarAlumnoAlClassroomResponse" />
+  </message>
   <message name="listarClassroomxAlumno">
     <part name="parameters" element="tns:listarClassroomxAlumno" />
   </message>
@@ -22,6 +34,14 @@
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarCursosRequest" message="tns:listarCursos" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarCursosResponse" message="tns:listarCursosResponse" />
     </operation>
+    <operation name="listarClassroomsxCurso">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsxCursoRequest" message="tns:listarClassroomsxCurso" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsxCursoResponse" message="tns:listarClassroomsxCursoResponse" />
+    </operation>
+    <operation name="insertarAlumnoAlClassroom">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/insertarAlumnoAlClassroomRequest" message="tns:insertarAlumnoAlClassroom" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/insertarAlumnoAlClassroomResponse" message="tns:insertarAlumnoAlClassroomResponse" />
+    </operation>
     <operation name="listarClassroomxAlumno">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomxAlumnoRequest" message="tns:listarClassroomxAlumno" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomxAlumnoResponse" message="tns:listarClassroomxAlumnoResponse" />
@@ -30,6 +50,24 @@
   <binding name="AlumnoServicesPortBinding" type="tns:AlumnoServices">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <operation name="listarCursos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarClassroomsxCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAlumnoAlClassroom">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

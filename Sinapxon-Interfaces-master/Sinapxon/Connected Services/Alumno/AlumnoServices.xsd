@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.sinapxon.pucp.edu.pe/" targetNamespace="http://services.sinapxon.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="insertarAlumnoAlClassroom" type="tns:insertarAlumnoAlClassroom" />
+  <xs:element name="insertarAlumnoAlClassroomResponse" type="tns:insertarAlumnoAlClassroomResponse" />
+  <xs:element name="listarClassroomsxCurso" type="tns:listarClassroomsxCurso" />
+  <xs:element name="listarClassroomsxCursoResponse" type="tns:listarClassroomsxCursoResponse" />
   <xs:element name="listarClassroomxAlumno" type="tns:listarClassroomxAlumno" />
   <xs:element name="listarClassroomxAlumnoResponse" type="tns:listarClassroomxAlumnoResponse" />
   <xs:element name="listarCursos" type="tns:listarCursos" />
@@ -157,6 +161,16 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarClassroomsxCurso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="curso" type="tns:curso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarClassroomsxCursoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:classroom" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarCursos">
     <xs:sequence>
       <xs:element minOccurs="0" name="arg0" type="xs:string" />
@@ -165,6 +179,17 @@
   <xs:complexType name="listarCursosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAlumnoAlClassroom">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigALumno" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoClassroom" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAlumnoAlClassroomResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>
