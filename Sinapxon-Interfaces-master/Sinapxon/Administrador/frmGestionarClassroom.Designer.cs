@@ -61,15 +61,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(29, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(298, 29);
+            this.label1.Size = new System.Drawing.Size(320, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Solicitudes de classrooms";
             // 
             // dgvSolicitudesPendientes
             // 
+            this.dgvSolicitudesPendientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvSolicitudesPendientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSolicitudesPendientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_solicitud,
@@ -110,7 +113,7 @@
             this.btnInspeccionarSolicitud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.btnInspeccionarSolicitud.FlatAppearance.BorderSize = 0;
             this.btnInspeccionarSolicitud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInspeccionarSolicitud.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInspeccionarSolicitud.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInspeccionarSolicitud.ForeColor = System.Drawing.Color.White;
             this.btnInspeccionarSolicitud.Location = new System.Drawing.Point(568, 18);
             this.btnInspeccionarSolicitud.Name = "btnInspeccionarSolicitud";
@@ -122,6 +125,9 @@
             // 
             // dgvSolicitudesAprobadas
             // 
+            this.dgvSolicitudesAprobadas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvSolicitudesAprobadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSolicitudesAprobadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_aprobado,
@@ -159,6 +165,9 @@
             // 
             // dgvSolicitudesDesaprobadas
             // 
+            this.dgvSolicitudesDesaprobadas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvSolicitudesDesaprobadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSolicitudesDesaprobadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_desaprobado,
@@ -196,10 +205,13 @@
             // 
             // tabControlSolicitudes
             // 
+            this.tabControlSolicitudes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlSolicitudes.Controls.Add(this.tabPageSolPendientes);
             this.tabControlSolicitudes.Controls.Add(this.tabPageSolAprobadas);
             this.tabControlSolicitudes.Controls.Add(this.tabPageSolDesaprobadas);
-            this.tabControlSolicitudes.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlSolicitudes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlSolicitudes.Location = new System.Drawing.Point(34, 136);
             this.tabControlSolicitudes.Name = "tabControlSolicitudes";
             this.tabControlSolicitudes.SelectedIndex = 0;
@@ -211,11 +223,11 @@
             this.tabPageSolPendientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.tabPageSolPendientes.Controls.Add(this.dgvSolicitudesPendientes);
             this.tabPageSolPendientes.Controls.Add(this.btnInspeccionarSolicitud);
-            this.tabPageSolPendientes.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageSolPendientes.Location = new System.Drawing.Point(4, 32);
+            this.tabPageSolPendientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageSolPendientes.Location = new System.Drawing.Point(4, 33);
             this.tabPageSolPendientes.Name = "tabPageSolPendientes";
             this.tabPageSolPendientes.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSolPendientes.Size = new System.Drawing.Size(899, 497);
+            this.tabPageSolPendientes.Size = new System.Drawing.Size(899, 496);
             this.tabPageSolPendientes.TabIndex = 0;
             this.tabPageSolPendientes.Text = "Pendientes";
             // 
@@ -223,11 +235,11 @@
             // 
             this.tabPageSolAprobadas.BackColor = System.Drawing.Color.DarkGray;
             this.tabPageSolAprobadas.Controls.Add(this.dgvSolicitudesAprobadas);
-            this.tabPageSolAprobadas.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageSolAprobadas.Location = new System.Drawing.Point(4, 32);
+            this.tabPageSolAprobadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageSolAprobadas.Location = new System.Drawing.Point(4, 33);
             this.tabPageSolAprobadas.Name = "tabPageSolAprobadas";
             this.tabPageSolAprobadas.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSolAprobadas.Size = new System.Drawing.Size(899, 497);
+            this.tabPageSolAprobadas.Size = new System.Drawing.Size(899, 496);
             this.tabPageSolAprobadas.TabIndex = 1;
             this.tabPageSolAprobadas.Text = "Aprobadas";
             // 
@@ -235,11 +247,11 @@
             // 
             this.tabPageSolDesaprobadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tabPageSolDesaprobadas.Controls.Add(this.dgvSolicitudesDesaprobadas);
-            this.tabPageSolDesaprobadas.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageSolDesaprobadas.Location = new System.Drawing.Point(4, 32);
+            this.tabPageSolDesaprobadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageSolDesaprobadas.Location = new System.Drawing.Point(4, 33);
             this.tabPageSolDesaprobadas.Name = "tabPageSolDesaprobadas";
             this.tabPageSolDesaprobadas.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSolDesaprobadas.Size = new System.Drawing.Size(899, 497);
+            this.tabPageSolDesaprobadas.Size = new System.Drawing.Size(899, 496);
             this.tabPageSolDesaprobadas.TabIndex = 2;
             this.tabPageSolDesaprobadas.Text = "Desaprobadas";
             // 
@@ -251,7 +263,7 @@
             this.ClientSize = new System.Drawing.Size(964, 681);
             this.Controls.Add(this.tabControlSolicitudes);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGestionarClassroom";
             this.Text = "frmGestionarClassroom";
