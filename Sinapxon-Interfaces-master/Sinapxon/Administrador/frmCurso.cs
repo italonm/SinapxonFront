@@ -224,28 +224,38 @@ namespace Sinapxon.Administrador
         //GUARDAR
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            
+
             if (txtCodigoCurso.Text == "")
             {
                 MessageBox.Show("Debe asignar un código al curso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            if (txtNombreCurso.Text == "")
+            else
             {
-                MessageBox.Show("Debe colocar el nombre del curso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                if (txtNombreCurso.Text == "")
+                {
+                    MessageBox.Show("Debe colocar el nombre del curso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    if (txtDescripcion.Text == "")
+                    {
+                        MessageBox.Show("Debe llenar la descripción del curso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    else
+                    {
+                        if (cbEspecialidad.Text == "")
+                        {
+                            MessageBox.Show("Debe elegir una especialidad", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
+                }
             }
-            if (txtDescripcion.Text == "")
-            {
-                MessageBox.Show("Debe llenar la descripción del curso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (cbEspecialidad.Text == "")
-            {
-                MessageBox.Show("Debe elegir una especialidad", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            
+            
 
             String nombaux = txtNombreCurso.Text.ToLower();
             nombaux = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(nombaux);
