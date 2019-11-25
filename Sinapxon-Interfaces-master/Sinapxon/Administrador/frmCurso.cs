@@ -259,20 +259,18 @@ namespace Sinapxon.Administrador
                  String cl = curaux.codigo.ToUpper();
                 if (tipoX == 2)
                 {
-                    if ((string.Equals(cl, cb)) && !(string.Equals(nl, nb)))
+                    if (string.Equals(cl, cb))
                     {
                         MessageBox.Show("Ya existe un curso registrado con el código ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-                    else if (!(string.Equals(cl, cb)) && (string.Equals(nl, nb)))
+                    else
                     {
-                        MessageBox.Show("Ya existe un curso registrado con el nombre ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                    else if ((string.Equals(cl, cb)) && (string.Equals(nl, nb)))
-                    {
-                        MessageBox.Show("Ya existe un curso registrado con el código y nombre ingresados", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
+                        if (string.Equals(nl, nb))
+                        {
+                            MessageBox.Show("Ya existe un curso registrado con el nombre ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
                     }
                 }
                 else
