@@ -44,6 +44,9 @@
             this.panelTituloRequisitos = new System.Windows.Forms.Panel();
             this.lblRequisitos = new System.Windows.Forms.Label();
             this.dgvRequisitos = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAgregarRequisito = new System.Windows.Forms.Button();
             this.panelDatosCurso = new System.Windows.Forms.Panel();
             this.btnAgregarEsp = new System.Windows.Forms.Button();
@@ -58,9 +61,6 @@
             this.txtCodigoCurso = new System.Windows.Forms.TextBox();
             this.lblEspecialidad = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5.SuspendLayout();
             this.panelRequisitos.SuspendLayout();
             this.panelTituloRequisitos.SuspendLayout();
@@ -298,6 +298,28 @@
             this.dgvRequisitos.TabIndex = 10;
             this.dgvRequisitos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvRequisitos_CellFormatting);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Código";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 200;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 250F;
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 350;
+            // 
+            // Descripción
+            // 
+            this.Descripción.HeaderText = "Descripción";
+            this.Descripción.Name = "Descripción";
+            this.Descripción.ReadOnly = true;
+            this.Descripción.Width = 550;
+            // 
             // btnAgregarRequisito
             // 
             this.btnAgregarRequisito.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -469,28 +491,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(82, 29);
             this.lblTitulo.TabIndex = 83;
             this.lblTitulo.Text = "Curso";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Código";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 200;
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 250F;
-            this.Column2.HeaderText = "Nombre";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 350;
-            // 
-            // Descripción
-            // 
-            this.Descripción.HeaderText = "Descripción";
-            this.Descripción.Name = "Descripción";
-            this.Descripción.ReadOnly = true;
-            this.Descripción.Width = 550;
             // 
             // frmCurso
             // 

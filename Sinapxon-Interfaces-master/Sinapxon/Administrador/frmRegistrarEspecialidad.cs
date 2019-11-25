@@ -21,7 +21,8 @@ namespace Sinapxon.Administrador
         Administrador.AdministradorServicesClient DBController = new Administrador.AdministradorServicesClient();
         private String codigoAdmin;
         private Estado estadoEspecialidad;
-        int tipo;
+        private int tipo;
+        private int tipoX;
 
         //==============================================================================================================================================================
         //AL SELECCIONAR UNA ESPECIALIDAD
@@ -33,6 +34,7 @@ namespace Sinapxon.Administrador
             especaux = new Administrador.especialidad();
             especaux = espSelec;
             tipo = 1;
+            tipoX = 1;
             this.codigoAdmin = espSelec.administrador.codigo;
             txtIdEspecialidad.Text = espSelec.id_especialidad.ToString();
             txtNombre.Text = espSelec.nombre;
@@ -48,6 +50,7 @@ namespace Sinapxon.Administrador
             lblTitulo.Text = "Añadir Especialidad";
             this.Text = "Añadir Especialidad";
             tipo = 2;
+            tipoX = 2;
             estadoComponentes(Estado.Inicial);
         }
         //==============================================================================================================================================================
@@ -134,20 +137,31 @@ namespace Sinapxon.Administrador
                 MessageBox.Show("Debe colocar el nombre de la especialidad", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (estadoEspecialidad== Estado.Actualizar)
+            listado = new BindingList<Administrador.especialidad>(DBController.listarEspecialidades(""));
+            foreach (Administrador.especialidad especaux in listado)
             {
-                listado = new BindingList<Administrador.especialidad>(DBController.listarEspecialidades(""));
-                foreach (Administrador.especialidad especaux in listado)
+                String nb = nombreaux.ToUpper();
+                String nl = especaux.nombre.ToUpper();
+                int cl = especaux.id_especialidad;               
+                if (tipoX == 2)
                 {
-                    String nb = nombreaux.ToUpper();
-                    String nl = especaux.nombre.ToUpper();
                     if (string.Equals(nl, nb))
                     {
-                        MessageBox.Show("Ya existe un curso registrado con el código ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Ya existe un curso registrado con el nombre ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-                }               
-            }
+                }
+                else
+                {
+                    int cb = Int32.Parse(txtIdEspecialidad.Text);
+                    if (!(string.Equals(cl, cb)) && (string.Equals(nl, nb)))
+                    {
+                        MessageBox.Show("Ya existe un curso registrado con el nombre ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+            }         
+            
             Administrador.administrador admin = new Administrador.administrador();
 
             especialidad = new Administrador.especialidad();           
@@ -160,10 +174,12 @@ namespace Sinapxon.Administrador
                 especialidad.administrador = admin;
                 DBController.insertarEspecialidad(especialidad);
                 MessageBox.Show("La especialidad se ha registrado con exito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tipoX = 1;
             }
             else if (estadoEspecialidad == Estado.Modificar)
             {
-                admin.codigo = codigoAdmin;
+                if (tipo == 1) admin.codigo = codigoAdmin;
+                if (tipo == 2) admin.codigo = LoginInfo.persona.codigo;
                 especialidad.id_especialidad = Int32.Parse(txtIdEspecialidad.Text); 
                 especialidad.administrador = admin;
                 DBController.actualizarEspecialidad(especialidad);
