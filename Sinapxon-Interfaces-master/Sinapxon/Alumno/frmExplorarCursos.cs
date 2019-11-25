@@ -140,7 +140,7 @@ namespace Sinapxon.Alumno
         {
             ALUMNO_CursoInfo.cursoInfo = curso;
             frmExplorarCurso formExplorarCurso = new frmExplorarCurso();
-            _padre.openChildForm(formExplorarCurso);
+            _padre.openChildForm_withoutClosing(formExplorarCurso);
         }
     }
 
