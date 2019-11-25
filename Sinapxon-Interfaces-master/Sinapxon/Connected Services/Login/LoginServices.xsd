@@ -8,15 +8,6 @@
   <xs:element name="validarLoginResponse" type="tns:validarLoginResponse" />
   <xs:element name="validarNickname" type="tns:validarNickname" />
   <xs:element name="validarNicknameResponse" type="tns:validarNicknameResponse" />
-  <xs:complexType name="actualizarPassword">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="codigo" type="xs:string" />
-      <xs:element minOccurs="0" name="password" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="actualizarPasswordResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="validarLogin">
     <xs:sequence>
       <xs:element minOccurs="0" name="nickname" type="xs:string" />
@@ -34,6 +25,15 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" name="tipo" type="xs:string" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarPassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarPasswordResponse">
+    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="validarCorreo">
     <xs:sequence>

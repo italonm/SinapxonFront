@@ -15,13 +15,14 @@ namespace Sinapxon.Login {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", ConfigurationName="Login.LoginServices")]
     public interface LoginServices {
         
-        // CODEGEN: El parámetro 'codigo' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/LoginServices/actualizarPasswordRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/LoginServices/actualizarPasswordResponse")]
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/LoginServices/validarNicknameRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/LoginServices/validarNicknameResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        Sinapxon.Login.actualizarPasswordResponse actualizarPassword(Sinapxon.Login.actualizarPasswordRequest request);
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sinapxon.Login.validarNicknameResponse validarNickname(Sinapxon.Login.validarNicknameRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/LoginServices/actualizarPasswordRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/LoginServices/actualizarPasswordResponse")]
-        System.Threading.Tasks.Task<Sinapxon.Login.actualizarPasswordResponse> actualizarPasswordAsync(Sinapxon.Login.actualizarPasswordRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/LoginServices/validarNicknameRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/LoginServices/validarNicknameResponse")]
+        System.Threading.Tasks.Task<Sinapxon.Login.validarNicknameResponse> validarNicknameAsync(Sinapxon.Login.validarNicknameRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/LoginServices/validarLoginRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/LoginServices/validarLoginResponse")]
@@ -33,15 +34,6 @@ namespace Sinapxon.Login {
         System.Threading.Tasks.Task<Sinapxon.Login.validarLoginResponse> validarLoginAsync(Sinapxon.Login.validarLoginRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/LoginServices/validarNicknameRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/LoginServices/validarNicknameResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sinapxon.Login.validarNicknameResponse validarNickname(Sinapxon.Login.validarNicknameRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/LoginServices/validarNicknameRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/LoginServices/validarNicknameResponse")]
-        System.Threading.Tasks.Task<Sinapxon.Login.validarNicknameResponse> validarNicknameAsync(Sinapxon.Login.validarNicknameRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/LoginServices/validarCorreoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/LoginServices/validarCorreoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -49,149 +41,18 @@ namespace Sinapxon.Login {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/LoginServices/validarCorreoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/LoginServices/validarCorreoResponse")]
         System.Threading.Tasks.Task<Sinapxon.Login.validarCorreoResponse> validarCorreoAsync(Sinapxon.Login.validarCorreoRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPassword", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarPasswordRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string codigo;
+        // CODEGEN: El parámetro 'codigo' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/LoginServices/actualizarPasswordRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/LoginServices/actualizarPasswordResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        Sinapxon.Login.actualizarPasswordResponse actualizarPassword(Sinapxon.Login.actualizarPasswordRequest request);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string password;
-        
-        public actualizarPasswordRequest() {
-        }
-        
-        public actualizarPasswordRequest(string codigo, string password) {
-            this.codigo = codigo;
-            this.password = password;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPasswordResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarPasswordResponse {
-        
-        public actualizarPasswordResponse() {
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/LoginServices/actualizarPasswordRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/LoginServices/actualizarPasswordResponse")]
+        System.Threading.Tasks.Task<Sinapxon.Login.actualizarPasswordResponse> actualizarPasswordAsync(Sinapxon.Login.actualizarPasswordRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/")]
-    public partial class persona : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string codigoField;
-        
-        private string nombreField;
-        
-        private string tipoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string codigo {
-            get {
-                return this.codigoField;
-            }
-            set {
-                this.codigoField = value;
-                this.RaisePropertyChanged("codigo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string tipo {
-            get {
-                return this.tipoField;
-            }
-            set {
-                this.tipoField = value;
-                this.RaisePropertyChanged("tipo");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/")]
-    public partial class pais : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int id_paisField;
-        
-        private string nombreField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int id_pais {
-            get {
-                return this.id_paisField;
-            }
-            set {
-                this.id_paisField = value;
-                this.RaisePropertyChanged("id_pais");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -390,6 +251,148 @@ namespace Sinapxon.Login {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/")]
+    public partial class pais : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int id_paisField;
+        
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int id_pais {
+            get {
+                return this.id_paisField;
+            }
+            set {
+                this.id_paisField = value;
+                this.RaisePropertyChanged("id_pais");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/")]
+    public partial class persona : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string codigoField;
+        
+        private string nombreField;
+        
+        private string tipoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string codigo {
+            get {
+                return this.codigoField;
+            }
+            set {
+                this.codigoField = value;
+                this.RaisePropertyChanged("codigo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string tipo {
+            get {
+                return this.tipoField;
+            }
+            set {
+                this.tipoField = value;
+                this.RaisePropertyChanged("tipo");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validarNickname", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class validarNicknameRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nickname;
+        
+        public validarNicknameRequest() {
+        }
+        
+        public validarNicknameRequest(string nickname) {
+            this.nickname = nickname;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validarNicknameResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class validarNicknameResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sinapxon.Login.alumno @return;
+        
+        public validarNicknameResponse() {
+        }
+        
+        public validarNicknameResponse(Sinapxon.Login.alumno @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -434,42 +437,6 @@ namespace Sinapxon.Login {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="validarNickname", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class validarNicknameRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nickname;
-        
-        public validarNicknameRequest() {
-        }
-        
-        public validarNicknameRequest(string nickname) {
-            this.nickname = nickname;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="validarNicknameResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class validarNicknameResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Sinapxon.Login.alumno @return;
-        
-        public validarNicknameResponse() {
-        }
-        
-        public validarNicknameResponse(Sinapxon.Login.alumno @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="validarCorreo", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
     public partial class validarCorreoRequest {
         
@@ -503,6 +470,39 @@ namespace Sinapxon.Login {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPassword", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarPasswordRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string codigo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string password;
+        
+        public actualizarPasswordRequest() {
+        }
+        
+        public actualizarPasswordRequest(string codigo, string password) {
+            this.codigo = codigo;
+            this.password = password;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPasswordResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarPasswordResponse {
+        
+        public actualizarPasswordResponse() {
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface LoginServicesChannel : Sinapxon.Login.LoginServices, System.ServiceModel.IClientChannel {
     }
@@ -531,27 +531,26 @@ namespace Sinapxon.Login {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sinapxon.Login.actualizarPasswordResponse Sinapxon.Login.LoginServices.actualizarPassword(Sinapxon.Login.actualizarPasswordRequest request) {
-            return base.Channel.actualizarPassword(request);
+        Sinapxon.Login.validarNicknameResponse Sinapxon.Login.LoginServices.validarNickname(Sinapxon.Login.validarNicknameRequest request) {
+            return base.Channel.validarNickname(request);
         }
         
-        public void actualizarPassword(string codigo, string password) {
-            Sinapxon.Login.actualizarPasswordRequest inValue = new Sinapxon.Login.actualizarPasswordRequest();
-            inValue.codigo = codigo;
-            inValue.password = password;
-            Sinapxon.Login.actualizarPasswordResponse retVal = ((Sinapxon.Login.LoginServices)(this)).actualizarPassword(inValue);
+        public Sinapxon.Login.alumno validarNickname(string nickname) {
+            Sinapxon.Login.validarNicknameRequest inValue = new Sinapxon.Login.validarNicknameRequest();
+            inValue.nickname = nickname;
+            Sinapxon.Login.validarNicknameResponse retVal = ((Sinapxon.Login.LoginServices)(this)).validarNickname(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sinapxon.Login.actualizarPasswordResponse> Sinapxon.Login.LoginServices.actualizarPasswordAsync(Sinapxon.Login.actualizarPasswordRequest request) {
-            return base.Channel.actualizarPasswordAsync(request);
+        System.Threading.Tasks.Task<Sinapxon.Login.validarNicknameResponse> Sinapxon.Login.LoginServices.validarNicknameAsync(Sinapxon.Login.validarNicknameRequest request) {
+            return base.Channel.validarNicknameAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Sinapxon.Login.actualizarPasswordResponse> actualizarPasswordAsync(string codigo, string password) {
-            Sinapxon.Login.actualizarPasswordRequest inValue = new Sinapxon.Login.actualizarPasswordRequest();
-            inValue.codigo = codigo;
-            inValue.password = password;
-            return ((Sinapxon.Login.LoginServices)(this)).actualizarPasswordAsync(inValue);
+        public System.Threading.Tasks.Task<Sinapxon.Login.validarNicknameResponse> validarNicknameAsync(string nickname) {
+            Sinapxon.Login.validarNicknameRequest inValue = new Sinapxon.Login.validarNicknameRequest();
+            inValue.nickname = nickname;
+            return ((Sinapxon.Login.LoginServices)(this)).validarNicknameAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -580,29 +579,6 @@ namespace Sinapxon.Login {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sinapxon.Login.validarNicknameResponse Sinapxon.Login.LoginServices.validarNickname(Sinapxon.Login.validarNicknameRequest request) {
-            return base.Channel.validarNickname(request);
-        }
-        
-        public Sinapxon.Login.alumno validarNickname(string nickname) {
-            Sinapxon.Login.validarNicknameRequest inValue = new Sinapxon.Login.validarNicknameRequest();
-            inValue.nickname = nickname;
-            Sinapxon.Login.validarNicknameResponse retVal = ((Sinapxon.Login.LoginServices)(this)).validarNickname(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sinapxon.Login.validarNicknameResponse> Sinapxon.Login.LoginServices.validarNicknameAsync(Sinapxon.Login.validarNicknameRequest request) {
-            return base.Channel.validarNicknameAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Sinapxon.Login.validarNicknameResponse> validarNicknameAsync(string nickname) {
-            Sinapxon.Login.validarNicknameRequest inValue = new Sinapxon.Login.validarNicknameRequest();
-            inValue.nickname = nickname;
-            return ((Sinapxon.Login.LoginServices)(this)).validarNicknameAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Sinapxon.Login.validarCorreoResponse Sinapxon.Login.LoginServices.validarCorreo(Sinapxon.Login.validarCorreoRequest request) {
             return base.Channel.validarCorreo(request);
         }
@@ -623,6 +599,30 @@ namespace Sinapxon.Login {
             Sinapxon.Login.validarCorreoRequest inValue = new Sinapxon.Login.validarCorreoRequest();
             inValue.correo = correo;
             return ((Sinapxon.Login.LoginServices)(this)).validarCorreoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sinapxon.Login.actualizarPasswordResponse Sinapxon.Login.LoginServices.actualizarPassword(Sinapxon.Login.actualizarPasswordRequest request) {
+            return base.Channel.actualizarPassword(request);
+        }
+        
+        public void actualizarPassword(string codigo, string password) {
+            Sinapxon.Login.actualizarPasswordRequest inValue = new Sinapxon.Login.actualizarPasswordRequest();
+            inValue.codigo = codigo;
+            inValue.password = password;
+            Sinapxon.Login.actualizarPasswordResponse retVal = ((Sinapxon.Login.LoginServices)(this)).actualizarPassword(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sinapxon.Login.actualizarPasswordResponse> Sinapxon.Login.LoginServices.actualizarPasswordAsync(Sinapxon.Login.actualizarPasswordRequest request) {
+            return base.Channel.actualizarPasswordAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sinapxon.Login.actualizarPasswordResponse> actualizarPasswordAsync(string codigo, string password) {
+            Sinapxon.Login.actualizarPasswordRequest inValue = new Sinapxon.Login.actualizarPasswordRequest();
+            inValue.codigo = codigo;
+            inValue.password = password;
+            return ((Sinapxon.Login.LoginServices)(this)).actualizarPasswordAsync(inValue);
         }
     }
 }

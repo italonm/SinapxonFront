@@ -41,7 +41,7 @@ namespace Sinapxon.Login
             }
             else if (string.Equals(tipo, "A"))
             {
-                frmAlumno formAlumno = new frmAlumno();
+                frmAlumno formAlumno = new frmAlumno(); LoginInfo.pswrd = txtContrasenia.Text;
                 formAlumno.Visible = true;
                 this.Visible = true;
             }
@@ -139,5 +139,6 @@ namespace Sinapxon.Login
     public static class LoginInfo
     {
         public static Login.persona persona;
+        public static String pswrd;
     }
 }
