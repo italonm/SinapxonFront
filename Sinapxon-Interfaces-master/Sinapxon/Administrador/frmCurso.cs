@@ -249,14 +249,16 @@ namespace Sinapxon.Administrador
                 return;
             }
 
-            if (estadoCurso == Estado.Actualizar) { 
-                listado = new BindingList<Administrador.curso>(DBController.listarCursosSin(""));
-                foreach (Administrador.curso curaux in listado)
+
+            listado = new BindingList<Administrador.curso>(DBController.listarCursosSin(""));
+            foreach (Administrador.curso curaux in listado)
+            {
+                 String nb = nombaux.ToUpper();
+                 String cb = codigoaux.ToUpper();
+                 String nl = curaux.nombre.ToUpper();
+                 String cl = curaux.codigo.ToUpper();
+                if (tipoX == 2)
                 {
-                    String nb = nombaux.ToUpper();
-                    String cb = codigoaux.ToUpper();
-                    String nl = curaux.nombre.ToUpper();
-                    String cl = curaux.codigo.ToUpper();
                     if ((string.Equals(cl, cb)) && !(string.Equals(nl, nb)))
                     {
                         MessageBox.Show("Ya existe un curso registrado con el código ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -270,6 +272,14 @@ namespace Sinapxon.Administrador
                     else if ((string.Equals(cl, cb)) && (string.Equals(nl, nb)))
                     {
                         MessageBox.Show("Ya existe un curso registrado con el código y nombre ingresados", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+                else
+                {
+                    if (!(string.Equals(cl, cb)) && (string.Equals(nl, nb)))
+                    {
+                        MessageBox.Show("Ya existe un curso registrado con el nombre ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                 }
@@ -291,24 +301,18 @@ namespace Sinapxon.Administrador
                 cur.administrador = admin;
                 cur.estado = 1;
                 DBController.insertarCurso(cur);
-                if (txtDescripcion.Text == " " & cur.cursos.Count() == 0)
-                {
-                    MessageBox.Show("El curso se ha registrado con exito, no presenta requisitos ni descripción", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (cur.cursos.Count() == 0)
+                if (cur.cursos.Count() == 0)
                 {
                     MessageBox.Show("El curso se ha registrado con exito, no presenta requisitos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else if (txtDescripcion.Text == " ")
-                {
-                    MessageBox.Show("El curso se ha registrado con exito, no presenta descripción", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
                 else MessageBox.Show("El curso se ha registrado con exito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tipoX = 1;
             }
             //ACTUALIZAR CURSO SELECCIONADO
             else if (estadoCurso == Estado.Modificar)
             {
-                admin.codigo = curso.administrador.codigo;
+                if (tipo == 1) admin.codigo = curso.administrador.codigo;
+                if (tipo == 2) admin.codigo = codigoAdmin;
                 cur.administrador = admin;
                 cur.estado = curso.estado;
                 DBController.actualizarCurso(cur);
@@ -352,6 +356,7 @@ namespace Sinapxon.Administrador
         private void btnModificar_Click(object sender, EventArgs e)
         {
             estadoComponentes(Estado.Nuevo);
+            if (tipoX == 1) txtCodigoCurso.Enabled = false;
             btnEliminar.Enabled = true;
             estadoCurso = Estado.Modificar;
         }
@@ -419,6 +424,11 @@ namespace Sinapxon.Administrador
         {
             frmGestionarCursos formGestionarCurso = new frmGestionarCursos(this.Padre);
             Padre.openChildForm(formGestionarCurso);
+        }
+
+        private void panel5_Resize(object sender, EventArgs e)
+        {
+            
         }
     }
 }
