@@ -260,12 +260,13 @@ namespace Sinapxon.Administrador
             String nombaux = txtNombreCurso.Text.ToLower();
             nombaux = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(nombaux);
             String codigoaux = txtCodigoCurso.Text.ToUpper();
+            String nb = nombaux.ToUpper();
+            String cb = codigoaux.ToUpper();
 
             listado = new BindingList<Administrador.curso>(DBController.listarCursosSin(""));
             foreach (Administrador.curso curaux in listado)
             {
-                 String nb = nombaux.ToUpper();
-                 String cb = codigoaux.ToUpper();
+                 
                  String nl = curaux.nombre.ToUpper();
                  String cl = curaux.codigo.ToUpper();
                 if (tipoX == 2)
