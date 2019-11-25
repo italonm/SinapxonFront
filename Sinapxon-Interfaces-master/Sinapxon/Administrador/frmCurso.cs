@@ -224,9 +224,7 @@ namespace Sinapxon.Administrador
         //GUARDAR
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            String nombaux = txtNombreCurso.Text.ToLower();
-            nombaux =  CultureInfo.CurrentCulture.TextInfo.ToTitleCase(nombaux);
-            String codigoaux = txtCodigoCurso.Text.ToUpper();
+            
             if (txtCodigoCurso.Text == "")
             {
                 MessageBox.Show("Debe asignar un código al curso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -249,6 +247,9 @@ namespace Sinapxon.Administrador
                 return;
             }
 
+            String nombaux = txtNombreCurso.Text.ToLower();
+            nombaux = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(nombaux);
+            String codigoaux = txtCodigoCurso.Text.ToUpper();
 
             listado = new BindingList<Administrador.curso>(DBController.listarCursosSin(""));
             foreach (Administrador.curso curaux in listado)
@@ -314,17 +315,9 @@ namespace Sinapxon.Administrador
                 cur.administrador = admin;
                 cur.estado = curso.estado;
                 DBController.actualizarCurso(cur);
-                if(txtDescripcion.Text == " " & cur.cursos.Count() == 0)
-                {
-                    MessageBox.Show("El curso se ha actualizado con exito, no presenta requisitos ni descripción", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (cur.cursos.Count() == 0)
+                if (cur.cursos.Count() == 0)
                 {
                     MessageBox.Show("El curso se ha actualizado con exito, no presenta requisitos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (txtDescripcion.Text == " ")
-                {
-                    MessageBox.Show("El curso se ha actualizado con exito, no presenta descripción", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else MessageBox.Show("El curso se ha sido actualizado con exito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

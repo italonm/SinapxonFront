@@ -130,13 +130,16 @@ namespace Sinapxon.Administrador
         //GUARDAR
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            String nombreaux = txtNombre.Text.ToLower();
-            nombreaux = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(nombreaux);
+            
             if (txtNombre.Text == "")
             {
                 MessageBox.Show("Debe colocar el nombre de la especialidad", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            String nombreaux = txtNombre.Text.ToLower();
+            nombreaux = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(nombreaux);
+
             listado = new BindingList<Administrador.especialidad>(DBController.listarEspecialidades(""));
             foreach (Administrador.especialidad especaux in listado)
             {
@@ -172,7 +175,7 @@ namespace Sinapxon.Administrador
             {
                 admin.codigo = LoginInfo.persona.codigo;
                 especialidad.administrador = admin;
-                DBController.insertarEspecialidad(especialidad);
+                txtIdEspecialidad.Text = "" + DBController.insertarEspecialidad(especialidad);
                 MessageBox.Show("La especialidad se ha registrado con exito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tipoX = 1;
             }
