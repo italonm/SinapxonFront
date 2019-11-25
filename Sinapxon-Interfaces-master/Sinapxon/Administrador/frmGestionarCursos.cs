@@ -95,6 +95,7 @@ namespace Sinapxon.Administrador
 
             if (txtNombre.Text == "" & txtCodigo.Text == "")
             {
+                busq = 0;
                 index += 1;
                 BindingList<Administrador.curso> bdl = new BindingList<Administrador.curso>();
                 for (int n_ = (index - 1) * 20; n_ < index * 20; n_++)
