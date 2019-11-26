@@ -228,7 +228,7 @@ namespace Sinapxon.Administrador
                     MessageBox.Show("El código no es válido/n Ingrese números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                if (Int32.Parse(txtIdAlumno.Text) > 999999)
+                if (Int32.Parse(txtIdAlumno.Text) > 999999 || 100000 > Int32.Parse(txtIdAlumno.Text))
                 {
                     MessageBox.Show("El código no es válido/n Ingrese 6 máximo números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -293,31 +293,35 @@ namespace Sinapxon.Administrador
                                                 return;
                                             }
                                         }
+                                        if (txtCorreo.Text == "")
+                                        {
+                                            MessageBox.Show("Debe ingresar un correo electrónico", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                            return;
+                                        }
                                         else
                                         {
-                                            if (txtCorreo.Text == "")
+                                            String expresion;
+                                            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+                                            if (Regex.IsMatch(txtCorreo.Text, expresion))
                                             {
-                                                MessageBox.Show("Debe ingresar un correo electrónico", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                                return;
+                                                 if (Regex.Replace(txtCorreo.Text, expresion, String.Empty).Length != 0)
+                                                 {
+                                                    MessageBox.Show("El correo electrónico no es válido/n Ingrese números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                                    return;
+                                                 }
                                             }
                                             else
                                             {
-                                                String expresion;
-                                                expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-                                                if (Regex.IsMatch(txtCorreo.Text, expresion))
-                                                {
-                                                    if (Regex.Replace(txtCorreo.Text, expresion, String.Empty).Length != 0)
-                                                    {
-                                                        MessageBox.Show("El correo electrónico no es válido/n Ingrese números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                                        return;
-                                                    }
-                                                }
-                                                else
-                                                {
-                                                    MessageBox.Show("El correo electrónico no es válido/n Ingrese números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                                    return;
-                                                }
+                                                MessageBox.Show("El correo electrónico no es válido/n Ingrese números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                                return;
                                             }
+
+                                            if (txtNickname.Text == "")
+                                            {
+                                                MessageBox.Show("Debe ingresar un nickname", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                                return;
+                                            }
+                                            
                                         }
                                     }
                                 }
@@ -475,11 +479,8 @@ namespace Sinapxon.Administrador
                 MessageBox.Show("El alumno ha sido eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 estadoComponentes(Estado.Inicial);
             }
-            if (tipo == 2)
-            {
-                btnNuevo.Enabled = false;
-            }
-            limpiarComponentes();
+            frmGestionarAlumno formGestionarAlumno = new frmGestionarAlumno(this.Padre);
+            _padre.openChildForm(formGestionarAlumno);
         }
 
         //==============================================================================================================================================================

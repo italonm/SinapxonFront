@@ -76,5 +76,11 @@ namespace Sinapxon.Administrador
             frmLogin formLogin = new frmLogin();
             formLogin.Show();
         }
+
+        private void btnEspecialidad_Click(object sender, EventArgs e)
+        {
+            frmAgregarEspecialidad formAgregarEspecialidad = new frmAgregarEspecialidad();
+            formAgregarEspecialidad.Visible = true;
+        }
     }
 }

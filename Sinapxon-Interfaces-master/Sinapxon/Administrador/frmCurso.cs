@@ -126,7 +126,6 @@ namespace Sinapxon.Administrador
                     btnAgregarRequisito.Enabled = false;
                     btnQuitarRequisito.Enabled = false;
                     btnCancelar.Enabled = false;
-                    btnAgregarEsp.Enabled = false;
                     txtNombreCurso.Enabled = false;
                     txtCodigoCurso.Enabled = false;
                     txtDescripcion.Enabled = false;
@@ -142,7 +141,6 @@ namespace Sinapxon.Administrador
                     btnCancelar.Enabled = true;
                     btnAgregarRequisito.Enabled = true;
                     btnQuitarRequisito.Enabled = true;
-                    btnAgregarEsp.Enabled = true;
                     txtNombreCurso.Enabled = true;
                     txtCodigoCurso.Enabled = true;
                     txtDescripcion.Enabled = true;
@@ -158,7 +156,6 @@ namespace Sinapxon.Administrador
                     btnCancelar.Enabled = false;
                     btnAgregarRequisito.Enabled = false;
                     btnQuitarRequisito.Enabled = false;
-                    btnAgregarEsp.Enabled = false;
                     txtCodigoCurso.Enabled = false;
                     txtNombreCurso.Enabled = false;
                     txtDescripcion.Enabled = false;
@@ -174,7 +171,6 @@ namespace Sinapxon.Administrador
                     btnCancelar.Enabled = false;
                     btnAgregarRequisito.Enabled = false;
                     btnQuitarRequisito.Enabled = false;
-                    btnAgregarEsp.Enabled = false;
                     txtCodigoCurso.Enabled = false;
                     txtNombreCurso.Enabled = false;
                     txtDescripcion.Enabled = false;
@@ -232,6 +228,23 @@ namespace Sinapxon.Administrador
             }
             else
             {
+                try
+                {
+                    int id_al = Int32.Parse(txtCodigoCurso.Text);
+                    MessageBox.Show("El código no es válido/n Tiene que ingresar caracteres alfanuméricos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                catch
+                {
+                    
+                }
+                int tam = txtCodigoCurso.Text.Length;
+                if (tam>6 || tam<6)
+                {
+                    MessageBox.Show("El código debe tener tener 6 caracteres", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 if (txtNombreCurso.Text == "")
                 {
                     MessageBox.Show("Debe colocar el nombre del curso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -239,16 +252,16 @@ namespace Sinapxon.Administrador
                 }
                 else
                 {
-                    if (txtDescripcion.Text == "")
+                    if (cbEspecialidad.Text == "")
                     {
-                        MessageBox.Show("Debe llenar la descripción del curso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Debe elegir una especialidad", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     else
                     {
-                        if (cbEspecialidad.Text == "")
+                        if (txtDescripcion.Text == "")
                         {
-                            MessageBox.Show("Debe elegir una especialidad", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Debe llenar la descripción del curso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             return;
                         }
                     }
@@ -346,11 +359,8 @@ namespace Sinapxon.Administrador
                 MessageBox.Show("El curso ha sido eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 estadoComponentes(Estado.Inicial);
             }
-            if (tipo==1)
-            {
-                btnNuevo.Enabled = false;
-            }
-            limpiarComponentes();
+            frmGestionarCursos formGestionarCurso = new frmGestionarCursos(this.Padre);
+            Padre.openChildForm(formGestionarCurso);
         }
 
         //==============================================================================================================================================================
@@ -417,14 +427,6 @@ namespace Sinapxon.Administrador
             }
             Administrador.curso curSeleccionado = (Administrador.curso)dgvRequisitos.CurrentRow.DataBoundItem;
             cursos.Remove(curSeleccionado);
-        }
-
-        //==============================================================================================================================================================
-        //GESTIONAR: CREAR O MODIFICAR ESPECIALIDADES
-        private void btnAgregarEsp_Click(object sender, EventArgs e)
-        {
-            frmAgregarEspecialidad formAgregarEspecialidad = new frmAgregarEspecialidad();
-            formAgregarEspecialidad.Visible = true;
         }
 
         //==============================================================================================================================================================

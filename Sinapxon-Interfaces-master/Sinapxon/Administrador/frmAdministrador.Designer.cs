@@ -41,6 +41,7 @@
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.btnEspecialidad = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelSubGestionarUsr.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -50,6 +51,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(27)))), ((int)(((byte)(146)))));
+            this.panelMenu.Controls.Add(this.btnEspecialidad);
             this.panelMenu.Controls.Add(this.btnLogOut);
             this.panelMenu.Controls.Add(this.panelSubGestionarUsr);
             this.panelMenu.Controls.Add(this.btnGestionarUsuarios);
@@ -90,7 +92,7 @@
             this.panelSubGestionarUsr.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubGestionarUsr.Location = new System.Drawing.Point(0, 390);
             this.panelSubGestionarUsr.Name = "panelSubGestionarUsr";
-            this.panelSubGestionarUsr.Size = new System.Drawing.Size(300, 151);
+            this.panelSubGestionarUsr.Size = new System.Drawing.Size(300, 144);
             this.panelSubGestionarUsr.TabIndex = 4;
             // 
             // btnGestionarAlumno
@@ -242,6 +244,26 @@
             this.panelContenedor.Size = new System.Drawing.Size(964, 681);
             this.panelContenedor.TabIndex = 1;
             // 
+            // btnEspecialidad
+            // 
+            this.btnEspecialidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.btnEspecialidad.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEspecialidad.FlatAppearance.BorderSize = 0;
+            this.btnEspecialidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEspecialidad.ForeColor = System.Drawing.Color.White;
+            this.btnEspecialidad.Image = global::Sinapxon.Properties.Resources.baseline_book;
+            this.btnEspecialidad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEspecialidad.Location = new System.Drawing.Point(0, 534);
+            this.btnEspecialidad.Name = "btnEspecialidad";
+            this.btnEspecialidad.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnEspecialidad.Size = new System.Drawing.Size(300, 70);
+            this.btnEspecialidad.TabIndex = 6;
+            this.btnEspecialidad.Text = "          Gestionar Especialidad";
+            this.btnEspecialidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEspecialidad.UseVisualStyleBackColor = false;
+            this.btnEspecialidad.Click += new System.EventHandler(this.btnEspecialidad_Click);
+            // 
             // frmAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,5 +297,6 @@
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Button btnEspecialidad;
     }
 }

@@ -101,7 +101,7 @@ namespace Sinapxon.Administrador
             }
         }
 
-        private void btnCrear_Click(object sender, EventArgs e)
+        private void btnCrear_Click_1(object sender, EventArgs e)
         {
             frmRegistrarEspecialidad formRegEspecialidad = new frmRegistrarEspecialidad();
             this.Close();
