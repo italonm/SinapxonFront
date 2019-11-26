@@ -41,11 +41,17 @@
   <message name="listarClassrooms_Alumno_PeriodoResponse">
     <part name="parameters" element="tns:listarClassrooms_Alumno_PeriodoResponse" />
   </message>
-  <message name="listarClassroomsxCurso">
-    <part name="parameters" element="tns:listarClassroomsxCurso" />
+  <message name="listarTemaxClassroom">
+    <part name="parameters" element="tns:listarTemaxClassroom" />
   </message>
-  <message name="listarClassroomsxCursoResponse">
-    <part name="parameters" element="tns:listarClassroomsxCursoResponse" />
+  <message name="listarTemaxClassroomResponse">
+    <part name="parameters" element="tns:listarTemaxClassroomResponse" />
+  </message>
+  <message name="listarEvaluacionesXClassroom">
+    <part name="parameters" element="tns:listarEvaluacionesXClassroom" />
+  </message>
+  <message name="listarEvaluacionesXClassroomResponse">
+    <part name="parameters" element="tns:listarEvaluacionesXClassroomResponse" />
   </message>
   <portType name="AlumnoServices">
     <operation name="listarClassroomsXAlumno_X_Periodo">
@@ -72,14 +78,27 @@
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassrooms_Alumno_PeriodoRequest" message="tns:listarClassrooms_Alumno_Periodo" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassrooms_Alumno_PeriodoResponse" message="tns:listarClassrooms_Alumno_PeriodoResponse" />
     </operation>
-    <operation name="listarClassroomsxCurso">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsxCursoRequest" message="tns:listarClassroomsxCurso" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsxCursoResponse" message="tns:listarClassroomsxCursoResponse" />
+    <operation name="listarTemaxClassroom">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarTemaxClassroomRequest" message="tns:listarTemaxClassroom" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarTemaxClassroomResponse" message="tns:listarTemaxClassroomResponse" />
+    </operation>
+    <operation name="listarEvaluacionesXClassroom">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarEvaluacionesXClassroomRequest" message="tns:listarEvaluacionesXClassroom" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarEvaluacionesXClassroomResponse" message="tns:listarEvaluacionesXClassroomResponse" />
     </operation>
   </portType>
   <binding name="AlumnoServicesPortBinding" type="tns:AlumnoServices">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <operation name="listarClassroomsXAlumno_X_Periodo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCursos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -133,7 +152,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarClassroomsxCurso">
+    <operation name="listarTemaxClassroom">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEvaluacionesXClassroom">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
