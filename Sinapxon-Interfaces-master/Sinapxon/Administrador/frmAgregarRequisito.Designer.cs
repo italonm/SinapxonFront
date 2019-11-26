@@ -38,8 +38,6 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCódgio = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.dgvCursos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +45,7 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.btnAnterior = new System.Windows.Forms.Button();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.panelEspecialidad.SuspendLayout();
             this.panelBusquda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
@@ -75,11 +74,10 @@
             // panelBusquda
             // 
             this.panelBusquda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
+            this.panelBusquda.Controls.Add(this.txtNombre);
             this.panelBusquda.Controls.Add(this.lblNombre);
             this.panelBusquda.Controls.Add(this.lblCódgio);
             this.panelBusquda.Controls.Add(this.txtCodigo);
-            this.panelBusquda.Controls.Add(this.txtNombre);
-            this.panelBusquda.Controls.Add(this.btnBuscar);
             this.panelBusquda.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBusquda.Location = new System.Drawing.Point(0, 0);
             this.panelBusquda.Name = "panelBusquda";
@@ -102,7 +100,7 @@
             this.lblCódgio.AutoSize = true;
             this.lblCódgio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCódgio.ForeColor = System.Drawing.Color.White;
-            this.lblCódgio.Location = new System.Drawing.Point(374, 15);
+            this.lblCódgio.Location = new System.Drawing.Point(489, 17);
             this.lblCódgio.Name = "lblCódgio";
             this.lblCódgio.Size = new System.Drawing.Size(71, 24);
             this.lblCódgio.TabIndex = 32;
@@ -113,38 +111,11 @@
             this.txtCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(378, 44);
+            this.txtCodigo.Location = new System.Drawing.Point(493, 44);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(283, 22);
+            this.txtCodigo.Size = new System.Drawing.Size(357, 22);
             this.txtCodigo.TabIndex = 31;
             this.txtCodigo.TextChanged += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(21, 46);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(293, 20);
-            this.txtNombre.TabIndex = 1;
-            this.txtNombre.TextChanged += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Image = global::Sinapxon.Properties.Resources.round_search;
-            this.btnBuscar.Location = new System.Drawing.Point(715, 16);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(144, 48);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dgvCursos
             // 
@@ -258,6 +229,17 @@
             this.btnAnterior.UseVisualStyleBackColor = false;
             this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
+            // txtNombre
+            // 
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(21, 44);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(357, 22);
+            this.txtNombre.TabIndex = 34;
+            this.txtNombre.TextChanged += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // frmAgregarRequisito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,8 +270,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelEspecialidad;
         private System.Windows.Forms.Panel panelBusquda;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dgvCursos;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -300,5 +280,6 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Button btnSiguiente;
         private System.Windows.Forms.Button btnAnterior;
+        private System.Windows.Forms.TextBox txtNombre;
     }
 }
