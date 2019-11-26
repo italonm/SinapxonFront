@@ -128,9 +128,17 @@ namespace Sinapxon.Administrador
         //AGREGAR
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            dgvCursos.FirstDisplayedScrollingRowIndex = dgvCursos.RowCount - 1;
-            frmCurso formCurso = new frmCurso( _padre);
-            Padre.openChildForm(formCurso);
+            try
+            {
+                dgvCursos.FirstDisplayedScrollingRowIndex = dgvCursos.RowCount - 1;
+                frmCurso formCurso = new frmCurso(_padre);
+                Padre.openChildForm(formCurso);
+            }
+            catch
+            {
+                frmCurso formCurso = new frmCurso(_padre);
+                Padre.openChildForm(formCurso);
+            }
         }
 
         //=============================================================================================================================================

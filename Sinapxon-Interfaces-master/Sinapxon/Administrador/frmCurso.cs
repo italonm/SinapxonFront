@@ -373,7 +373,7 @@ namespace Sinapxon.Administrador
                 btnNuevo.Enabled = false;
             }
             if(estadoCurso== Estado.Modificar) {
-                dgvRequisitos.DataSource = curso.cursos;
+                dgvRequisitos.DataSource = cur.cursos;
             }
         }
 
