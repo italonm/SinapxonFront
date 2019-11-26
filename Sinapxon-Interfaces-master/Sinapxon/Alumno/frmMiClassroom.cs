@@ -193,7 +193,12 @@ namespace Sinapxon.Alumno
         {
             frmEvaluacion formEvaluacion = new frmEvaluacion();
             //formEvaluacion.Visible = true;
-            _padre.openChildForm(formEvaluacion);
+            _padre.openChildForm_withoutClosing(formEvaluacion);
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void btnVerTema_Click(object sender, EventArgs e)
