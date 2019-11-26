@@ -145,9 +145,18 @@ namespace Sinapxon.Administrador
         //SELECCIONAR
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            curSeleccionado = dgvCursos.CurrentRow.DataBoundItem as Administrador.curso;
-            frmCurso formCurso = new frmCurso(curSeleccionado, _padre);
-            Padre.openChildForm(formCurso);
+            try
+            {
+                curSeleccionado = dgvCursos.CurrentRow.DataBoundItem as Administrador.curso;
+                frmCurso formCurso = new frmCurso(curSeleccionado, _padre);
+                Padre.openChildForm(formCurso);
+            }
+            catch
+            {
+                MessageBox.Show("Debe seleccionar un curso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
         }
 
         //=============================================================================================================================================

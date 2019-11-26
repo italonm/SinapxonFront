@@ -86,11 +86,19 @@ namespace Sinapxon.Administrador
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            espSeleccionado = dgvEspecialidades.CurrentRow.DataBoundItem as Administrador.especialidad;
-            this.DialogResult = DialogResult.OK;
-            frmRegistrarEspecialidad formRegEspecialidad = new frmRegistrarEspecialidad(espSeleccionado);
-            this.Close();
-            formRegEspecialidad.Visible = true;
+            try
+            {
+                espSeleccionado = dgvEspecialidades.CurrentRow.DataBoundItem as Administrador.especialidad;
+                this.DialogResult = DialogResult.OK;
+                frmRegistrarEspecialidad formRegEspecialidad = new frmRegistrarEspecialidad(espSeleccionado);
+                this.Close();
+                formRegEspecialidad.Visible = true;
+            }
+            catch
+            {
+                MessageBox.Show("Debe seleccionar una especialidad", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
 
         private void btnCrear_Click(object sender, EventArgs e)

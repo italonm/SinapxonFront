@@ -342,11 +342,11 @@ namespace Sinapxon.Administrador
         {
             if (DialogResult.Yes == MessageBox.Show("¿Está seguro que desea eliminar este curso?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation))
             {
-                DBController.eliminaCurso(curso.codigo);
+                DBController.eliminaCurso(txtCodigoCurso.Text);
                 MessageBox.Show("El curso ha sido eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 estadoComponentes(Estado.Inicial);
             }
-            if (tipo==2)
+            if (tipo==1)
             {
                 btnNuevo.Enabled = false;
             }
@@ -373,7 +373,14 @@ namespace Sinapxon.Administrador
                 btnNuevo.Enabled = false;
             }
             if(estadoCurso== Estado.Modificar) {
-                dgvRequisitos.DataSource = cur.cursos;
+                try
+                {
+                    dgvRequisitos.DataSource = cur.cursos;
+                }
+                catch
+                {
+
+                }
             }
         }
 

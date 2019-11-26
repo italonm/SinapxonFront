@@ -197,11 +197,11 @@ namespace Sinapxon.Administrador
         {
             if (DialogResult.Yes == MessageBox.Show("¿Está seguro que desea eliminar esta espacialidad?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation))
             {
-                DBController.eliminarEspecialidad(especaux.id_especialidad);
+                DBController.eliminarEspecialidad(Int32.Parse(txtIdEspecialidad.Text));
                 MessageBox.Show("La especialidad se ha sido eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 estadoComponentes(Estado.Inicial);
             }
-            if (tipo == 2)
+            if (tipo == 1)
             {
                 btnNuevo.Enabled = false;
             }
