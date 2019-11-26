@@ -481,6 +481,9 @@
     <None Include="Connected Services\Alumno\Sinapxon.Alumno.curso.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.evaluacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Alumno\Sinapxon.Alumno.insertarAlumnoAlClassroomResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -499,10 +502,19 @@
     <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarCursosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarEvaluacionesXClassroomResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarPeriodosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarTemaxClassroomResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Alumno\Sinapxon.Alumno.periodo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.temaXClassroom.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Login\LoginServices.wsdl" />

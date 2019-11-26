@@ -16,26 +16,64 @@ namespace Sinapxon.Alumno
         private int alturaEvaluaciones = 0;
         private frmAlumno _padre = null;
 
+        private Alumno.AlumnoServicesClient DBController = new AlumnoServicesClient();
+
+        //private BindingList<Alumno.tema> temas;
+        BindingList<Alumno.temaXClassroom> temaXC;
+        private BindingList<Alumno.evaluacion> evaluaciones;
+
         public frmMiClassroom()
         {
             InitializeComponent();
-            agregarTema();
-            agregarTema();
-            agregarTema();
-            agregarEvaluacion();
+            //agregarTema();
+            //agregarTema();
+            //agregarTema();
+            //agregarEvaluacion();
         }
 
         public frmMiClassroom(frmAlumno padre)
         {
             _padre = padre;
             InitializeComponent();
-            agregarTema();
-            agregarTema();
-            agregarTema();
-            agregarEvaluacion();
+            lblTitulo.Text = ALUMNO_ClassroomSeleccionado.classroomSeleccionado.codigo.ToString() +"    "+ ALUMNO_ClassroomSeleccionado.classroomSeleccionado.curso.nombre;
+            
+            //Listar temas
+            try
+            {
+                temaXC = new BindingList<temaXClassroom>(DBController.listarTemaxClassroom(ALUMNO_ClassroomSeleccionado.classroomSeleccionado.codigo));
+            }
+            catch (Exception)
+            {
+                temaXC = new BindingList<temaXClassroom>();
+                
+            }
+            foreach(Alumno.temaXClassroom temaXClassroom in temaXC)
+            {
+                agregarTema(temaXClassroom);
+            }
+
+            //Listar evaluaciones
+            try
+            {
+                evaluaciones = new BindingList<evaluacion>(DBController.listarEvaluacionesXClassroom(ALUMNO_ClassroomSeleccionado.classroomSeleccionado.codigo));
+            }
+            catch (Exception)
+            {
+                evaluaciones = new BindingList<evaluacion>();
+            }
+            foreach(Alumno.evaluacion eval in evaluaciones)
+            {
+                agregarEvaluacion(eval);
+            }
+
+            
+            //agregarTema();
+            //agregarTema();
+            //agregarTema();
+            //agregarEvaluacion();
         }
 
-        private void agregarTema()
+        private void agregarTema(Alumno.temaXClassroom tma)
         {
             //
             // lbl Nombre del tema
@@ -47,7 +85,8 @@ namespace Sinapxon.Alumno
             lblNombTema.Location = new Point(76, 66 + alturaTemas);
             lblNombTema.Name = "lblNombreTema";
             lblNombTema.Size = new Size(300, 23);
-            lblNombTema.Text = "Nombre del tema";
+            //lblNombTema.Text = "Nombre del tema";
+            lblNombTema.Text = tma.nombre;
             lblNombTema.Visible = true;
             tabPageTema.Controls.Add(lblNombTema);
 
@@ -111,7 +150,7 @@ namespace Sinapxon.Alumno
             alturaTemas = alturaTemas + boxAltura;
         }
 
-        private void agregarEvaluacion()
+        private void agregarEvaluacion(Alumno.evaluacion eval)
         {
             //
             // lbl Nombre de la evaluacion
@@ -123,7 +162,8 @@ namespace Sinapxon.Alumno
             lblNombEval.Location = new Point(76, 66 + alturaEvaluaciones);
             lblNombEval.Name = "lblNombreEvaluacion";
             lblNombEval.Size = new Size(300, 23);
-            lblNombEval.Text = "Nombre de la evaluación";
+            //lblNombEval.Text = "Nombre de la evaluación";
+            lblNombEval.Text = eval.nombre;
             lblNombEval.Visible = true;
             tabPageEvaluacion.Controls.Add(lblNombEval);
 

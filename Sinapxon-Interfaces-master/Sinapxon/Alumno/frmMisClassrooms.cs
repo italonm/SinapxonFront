@@ -177,7 +177,9 @@ namespace Sinapxon.Alumno
             btnIrClassrom.Size = new System.Drawing.Size(182, 49);
             btnIrClassrom.Text = "Ir al classroom";
             btnIrClassrom.UseVisualStyleBackColor = false;
-            btnIrClassrom.Click += new System.EventHandler(this.BtnIrClassroom_Click);
+            //btnIrClassrom.Click += new System.EventHandler(this.BtnIrClassroom_Click);
+            //btnIrClassrom.Click += new System.EventHandler((sender, e) => this.BtnIrClassroom_Click(sender, e, clsroom));
+            btnIrClassrom.Click += new System.EventHandler((sender, e) => this.BtnIrClassroom_Click(sender, e, clsroom));
             panelContenido.Controls.Add(btnIrClassrom);
 
             /*
@@ -236,10 +238,17 @@ namespace Sinapxon.Alumno
             this.Close();
         }
 
-        private void BtnIrClassroom_Click(object sender, EventArgs e)
+        private void BtnIrClassroom_Click(object sender, EventArgs e, Alumno.classroom classrum)
         {
+            ALUMNO_ClassroomSeleccionado.classroomSeleccionado = classrum;
             frmMiClassroom formMiClassroom = new frmMiClassroom(_padre);
             _padre.openChildForm_withoutClosing(formMiClassroom);
         }
     }
+
+    public static class ALUMNO_ClassroomSeleccionado
+    {
+        public static Alumno.classroom classroomSeleccionado;
+    }
+
 }

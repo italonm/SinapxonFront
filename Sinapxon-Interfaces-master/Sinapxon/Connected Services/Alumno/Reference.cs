@@ -16,6 +16,19 @@ namespace Sinapxon.Alumno {
     public interface AlumnoServices {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsXAlumno_X_Per" +
+            "iodoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsXAlumno_X_Per" +
+            "iodoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse listarClassroomsXAlumno_X_Periodo(Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsXAlumno_X_Per" +
+            "iodoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsXAlumno_X_Per" +
+            "iodoResponse")]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse> listarClassroomsXAlumno_X_PeriodoAsync(Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarCursosRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarCursosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -86,453 +99,26 @@ namespace Sinapxon.Alumno {
         System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassrooms_Alumno_PeriodoResponse> listarClassrooms_Alumno_PeriodoAsync(Sinapxon.Alumno.listarClassrooms_Alumno_PeriodoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsXAlumno_X_Per" +
-            "iodoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsXAlumno_X_Per" +
-            "iodoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarTemaxClassroomRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarTemaxClassroomResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse listarClassroomsXAlumno_X_Periodo(Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest request);
+        Sinapxon.Alumno.listarTemaxClassroomResponse listarTemaxClassroom(Sinapxon.Alumno.listarTemaxClassroomRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsXAlumno_X_Per" +
-            "iodoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsXAlumno_X_Per" +
-            "iodoResponse")]
-        System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse> listarClassroomsXAlumno_X_PeriodoAsync(Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest request);
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/")]
-    public partial class curso : object, System.ComponentModel.INotifyPropertyChanged {
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarTemaxClassroomRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarTemaxClassroomResponse")]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.listarTemaxClassroomResponse> listarTemaxClassroomAsync(Sinapxon.Alumno.listarTemaxClassroomRequest request);
         
-        private administrador administradorField;
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarEvaluacionesXClassroomR" +
+            "equest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarEvaluacionesXClassroomR" +
+            "esponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sinapxon.Alumno.listarEvaluacionesXClassroomResponse listarEvaluacionesXClassroom(Sinapxon.Alumno.listarEvaluacionesXClassroomRequest request);
         
-        private string codigoField;
-        
-        private curso[] cursosField;
-        
-        private string descripcionField;
-        
-        private especialidad especialidadField;
-        
-        private int estadoField;
-        
-        private string nombreField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public administrador administrador {
-            get {
-                return this.administradorField;
-            }
-            set {
-                this.administradorField = value;
-                this.RaisePropertyChanged("administrador");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string codigo {
-            get {
-                return this.codigoField;
-            }
-            set {
-                this.codigoField = value;
-                this.RaisePropertyChanged("codigo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("cursos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
-        public curso[] cursos {
-            get {
-                return this.cursosField;
-            }
-            set {
-                this.cursosField = value;
-                this.RaisePropertyChanged("cursos");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string descripcion {
-            get {
-                return this.descripcionField;
-            }
-            set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public especialidad especialidad {
-            get {
-                return this.especialidadField;
-            }
-            set {
-                this.especialidadField = value;
-                this.RaisePropertyChanged("especialidad");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int estado {
-            get {
-                return this.estadoField;
-            }
-            set {
-                this.estadoField = value;
-                this.RaisePropertyChanged("estado");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/")]
-    public partial class administrador : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string apellidoMaternoField;
-        
-        private string apellidoPaternoField;
-        
-        private string codigoField;
-        
-        private string correoField;
-        
-        private string dniField;
-        
-        private System.DateTime fechaField;
-        
-        private bool fechaFieldSpecified;
-        
-        private string nicknameField;
-        
-        private string nombreField;
-        
-        private pais paisField;
-        
-        private string passwordField;
-        
-        private string telefonoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string apellidoMaterno {
-            get {
-                return this.apellidoMaternoField;
-            }
-            set {
-                this.apellidoMaternoField = value;
-                this.RaisePropertyChanged("apellidoMaterno");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string apellidoPaterno {
-            get {
-                return this.apellidoPaternoField;
-            }
-            set {
-                this.apellidoPaternoField = value;
-                this.RaisePropertyChanged("apellidoPaterno");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string codigo {
-            get {
-                return this.codigoField;
-            }
-            set {
-                this.codigoField = value;
-                this.RaisePropertyChanged("codigo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string correo {
-            get {
-                return this.correoField;
-            }
-            set {
-                this.correoField = value;
-                this.RaisePropertyChanged("correo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string dni {
-            get {
-                return this.dniField;
-            }
-            set {
-                this.dniField = value;
-                this.RaisePropertyChanged("dni");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public System.DateTime fecha {
-            get {
-                return this.fechaField;
-            }
-            set {
-                this.fechaField = value;
-                this.RaisePropertyChanged("fecha");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaSpecified {
-            get {
-                return this.fechaFieldSpecified;
-            }
-            set {
-                this.fechaFieldSpecified = value;
-                this.RaisePropertyChanged("fechaSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string nickname {
-            get {
-                return this.nicknameField;
-            }
-            set {
-                this.nicknameField = value;
-                this.RaisePropertyChanged("nickname");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public pais pais {
-            get {
-                return this.paisField;
-            }
-            set {
-                this.paisField = value;
-                this.RaisePropertyChanged("pais");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string password {
-            get {
-                return this.passwordField;
-            }
-            set {
-                this.passwordField = value;
-                this.RaisePropertyChanged("password");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public string telefono {
-            get {
-                return this.telefonoField;
-            }
-            set {
-                this.telefonoField = value;
-                this.RaisePropertyChanged("telefono");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/")]
-    public partial class pais : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int id_paisField;
-        
-        private string nombreField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int id_pais {
-            get {
-                return this.id_paisField;
-            }
-            set {
-                this.id_paisField = value;
-                this.RaisePropertyChanged("id_pais");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/")]
-    public partial class tema : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private classroom classroomField;
-        
-        private string descripcionField;
-        
-        private int id_temaField;
-        
-        private string linkField;
-        
-        private string nombreField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public classroom classroom {
-            get {
-                return this.classroomField;
-            }
-            set {
-                this.classroomField = value;
-                this.RaisePropertyChanged("classroom");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string descripcion {
-            get {
-                return this.descripcionField;
-            }
-            set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int id_tema {
-            get {
-                return this.id_temaField;
-            }
-            set {
-                this.id_temaField = value;
-                this.RaisePropertyChanged("id_tema");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string link {
-            get {
-                return this.linkField;
-            }
-            set {
-                this.linkField = value;
-                this.RaisePropertyChanged("link");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarEvaluacionesXClassroomR" +
+            "equest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarEvaluacionesXClassroomR" +
+            "esponse")]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.listarEvaluacionesXClassroomResponse> listarEvaluacionesXClassroomAsync(Sinapxon.Alumno.listarEvaluacionesXClassroomRequest request);
     }
     
     /// <remarks/>
@@ -1001,21 +587,21 @@ namespace Sinapxon.Alumno {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/")]
-    public partial class idioma : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class pais : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private int id_idiomaField;
+        private int id_paisField;
         
         private string nombreField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int id_idioma {
+        public int id_pais {
             get {
-                return this.id_idiomaField;
+                return this.id_paisField;
             }
             set {
-                this.id_idiomaField = value;
-                this.RaisePropertyChanged("id_idioma");
+                this.id_paisField = value;
+                this.RaisePropertyChanged("id_pais");
             }
         }
         
@@ -1047,91 +633,63 @@ namespace Sinapxon.Alumno {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/")]
-    public partial class periodo : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class tema : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private administrador administradorField;
+        private classroom classroomField;
         
-        private System.DateTime fecha_finField;
+        private string descripcionField;
         
-        private bool fecha_finFieldSpecified;
+        private int id_temaField;
         
-        private System.DateTime fecha_inicioField;
-        
-        private bool fecha_inicioFieldSpecified;
-        
-        private int id_periodoField;
+        private string linkField;
         
         private string nombreField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public administrador administrador {
+        public classroom classroom {
             get {
-                return this.administradorField;
+                return this.classroomField;
             }
             set {
-                this.administradorField = value;
-                this.RaisePropertyChanged("administrador");
+                this.classroomField = value;
+                this.RaisePropertyChanged("classroom");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime fecha_fin {
+        public string descripcion {
             get {
-                return this.fecha_finField;
+                return this.descripcionField;
             }
             set {
-                this.fecha_finField = value;
-                this.RaisePropertyChanged("fecha_fin");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fecha_finSpecified {
-            get {
-                return this.fecha_finFieldSpecified;
-            }
-            set {
-                this.fecha_finFieldSpecified = value;
-                this.RaisePropertyChanged("fecha_finSpecified");
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime fecha_inicio {
+        public int id_tema {
             get {
-                return this.fecha_inicioField;
+                return this.id_temaField;
             }
             set {
-                this.fecha_inicioField = value;
-                this.RaisePropertyChanged("fecha_inicio");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fecha_inicioSpecified {
-            get {
-                return this.fecha_inicioFieldSpecified;
-            }
-            set {
-                this.fecha_inicioFieldSpecified = value;
-                this.RaisePropertyChanged("fecha_inicioSpecified");
+                this.id_temaField = value;
+                this.RaisePropertyChanged("id_tema");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int id_periodo {
+        public string link {
             get {
-                return this.id_periodoField;
+                return this.linkField;
             }
             set {
-                this.id_periodoField = value;
-                this.RaisePropertyChanged("id_periodo");
+                this.linkField = value;
+                this.RaisePropertyChanged("link");
             }
         }
         
@@ -1144,6 +702,224 @@ namespace Sinapxon.Alumno {
             set {
                 this.nombreField = value;
                 this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/")]
+    public partial class evaluacion : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private classroom classroomField;
+        
+        private string descripcionField;
+        
+        private int id_evaluacionField;
+        
+        private string nombreField;
+        
+        private float peso_porcentualField;
+        
+        private temaXClassroom temaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public classroom classroom {
+            get {
+                return this.classroomField;
+            }
+            set {
+                this.classroomField = value;
+                this.RaisePropertyChanged("classroom");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int id_evaluacion {
+            get {
+                return this.id_evaluacionField;
+            }
+            set {
+                this.id_evaluacionField = value;
+                this.RaisePropertyChanged("id_evaluacion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public float peso_porcentual {
+            get {
+                return this.peso_porcentualField;
+            }
+            set {
+                this.peso_porcentualField = value;
+                this.RaisePropertyChanged("peso_porcentual");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public temaXClassroom tema {
+            get {
+                return this.temaField;
+            }
+            set {
+                this.temaField = value;
+                this.RaisePropertyChanged("tema");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/")]
+    public partial class temaXClassroom : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private classroom classroomField;
+        
+        private string descripcionField;
+        
+        private evaluacion evaluacionField;
+        
+        private int id_temaField;
+        
+        private string linkField;
+        
+        private string nombreField;
+        
+        private tema temaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public classroom classroom {
+            get {
+                return this.classroomField;
+            }
+            set {
+                this.classroomField = value;
+                this.RaisePropertyChanged("classroom");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public evaluacion evaluacion {
+            get {
+                return this.evaluacionField;
+            }
+            set {
+                this.evaluacionField = value;
+                this.RaisePropertyChanged("evaluacion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int id_tema {
+            get {
+                return this.id_temaField;
+            }
+            set {
+                this.id_temaField = value;
+                this.RaisePropertyChanged("id_tema");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string link {
+            get {
+                return this.linkField;
+            }
+            set {
+                this.linkField = value;
+                this.RaisePropertyChanged("link");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public tema tema {
+            get {
+                return this.temaField;
+            }
+            set {
+                this.temaField = value;
+                this.RaisePropertyChanged("tema");
             }
         }
         
@@ -1391,84 +1167,96 @@ namespace Sinapxon.Alumno {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/")]
-    public partial class temaXClassroom : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class periodo : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private classroom classroomField;
+        private administrador administradorField;
         
-        private string descripcionField;
+        private System.DateTime fecha_finField;
         
-        private evaluacion evaluacionField;
+        private bool fecha_finFieldSpecified;
         
-        private int id_temaField;
+        private System.DateTime fecha_inicioField;
         
-        private string linkField;
+        private bool fecha_inicioFieldSpecified;
+        
+        private int id_periodoField;
         
         private string nombreField;
         
-        private tema temaField;
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public classroom classroom {
+        public administrador administrador {
             get {
-                return this.classroomField;
+                return this.administradorField;
             }
             set {
-                this.classroomField = value;
-                this.RaisePropertyChanged("classroom");
+                this.administradorField = value;
+                this.RaisePropertyChanged("administrador");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string descripcion {
+        public System.DateTime fecha_fin {
             get {
-                return this.descripcionField;
+                return this.fecha_finField;
             }
             set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
+                this.fecha_finField = value;
+                this.RaisePropertyChanged("fecha_fin");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fecha_finSpecified {
+            get {
+                return this.fecha_finFieldSpecified;
+            }
+            set {
+                this.fecha_finFieldSpecified = value;
+                this.RaisePropertyChanged("fecha_finSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public evaluacion evaluacion {
+        public System.DateTime fecha_inicio {
             get {
-                return this.evaluacionField;
+                return this.fecha_inicioField;
             }
             set {
-                this.evaluacionField = value;
-                this.RaisePropertyChanged("evaluacion");
+                this.fecha_inicioField = value;
+                this.RaisePropertyChanged("fecha_inicio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fecha_inicioSpecified {
+            get {
+                return this.fecha_inicioFieldSpecified;
+            }
+            set {
+                this.fecha_inicioFieldSpecified = value;
+                this.RaisePropertyChanged("fecha_inicioSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int id_tema {
+        public int id_periodo {
             get {
-                return this.id_temaField;
+                return this.id_periodoField;
             }
             set {
-                this.id_temaField = value;
-                this.RaisePropertyChanged("id_tema");
+                this.id_periodoField = value;
+                this.RaisePropertyChanged("id_periodo");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string link {
-            get {
-                return this.linkField;
-            }
-            set {
-                this.linkField = value;
-                this.RaisePropertyChanged("link");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public string nombre {
             get {
                 return this.nombreField;
@@ -1476,18 +1264,6 @@ namespace Sinapxon.Alumno {
             set {
                 this.nombreField = value;
                 this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public tema tema {
-            get {
-                return this.temaField;
-            }
-            set {
-                this.temaField = value;
-                this.RaisePropertyChanged("tema");
             }
         }
         
@@ -1507,58 +1283,130 @@ namespace Sinapxon.Alumno {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/")]
-    public partial class evaluacion : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class administrador : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private classroom classroomField;
+        private string apellidoMaternoField;
         
-        private string descripcionField;
+        private string apellidoPaternoField;
         
-        private int id_evaluacionField;
+        private string codigoField;
+        
+        private string correoField;
+        
+        private string dniField;
+        
+        private System.DateTime fechaField;
+        
+        private bool fechaFieldSpecified;
+        
+        private string nicknameField;
         
         private string nombreField;
         
-        private float peso_porcentualField;
+        private pais paisField;
         
-        private temaXClassroom temaField;
+        private string passwordField;
+        
+        private string telefonoField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public classroom classroom {
+        public string apellidoMaterno {
             get {
-                return this.classroomField;
+                return this.apellidoMaternoField;
             }
             set {
-                this.classroomField = value;
-                this.RaisePropertyChanged("classroom");
+                this.apellidoMaternoField = value;
+                this.RaisePropertyChanged("apellidoMaterno");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string descripcion {
+        public string apellidoPaterno {
             get {
-                return this.descripcionField;
+                return this.apellidoPaternoField;
             }
             set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
+                this.apellidoPaternoField = value;
+                this.RaisePropertyChanged("apellidoPaterno");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int id_evaluacion {
+        public string codigo {
             get {
-                return this.id_evaluacionField;
+                return this.codigoField;
             }
             set {
-                this.id_evaluacionField = value;
-                this.RaisePropertyChanged("id_evaluacion");
+                this.codigoField = value;
+                this.RaisePropertyChanged("codigo");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string correo {
+            get {
+                return this.correoField;
+            }
+            set {
+                this.correoField = value;
+                this.RaisePropertyChanged("correo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string dni {
+            get {
+                return this.dniField;
+            }
+            set {
+                this.dniField = value;
+                this.RaisePropertyChanged("dni");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public System.DateTime fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+                this.RaisePropertyChanged("fecha");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaSpecified {
+            get {
+                return this.fechaFieldSpecified;
+            }
+            set {
+                this.fechaFieldSpecified = value;
+                this.RaisePropertyChanged("fechaSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string nickname {
+            get {
+                return this.nicknameField;
+            }
+            set {
+                this.nicknameField = value;
+                this.RaisePropertyChanged("nickname");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public string nombre {
             get {
                 return this.nombreField;
@@ -1570,26 +1418,84 @@ namespace Sinapxon.Alumno {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public float peso_porcentual {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public pais pais {
             get {
-                return this.peso_porcentualField;
+                return this.paisField;
             }
             set {
-                this.peso_porcentualField = value;
-                this.RaisePropertyChanged("peso_porcentual");
+                this.paisField = value;
+                this.RaisePropertyChanged("pais");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public temaXClassroom tema {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public string password {
             get {
-                return this.temaField;
+                return this.passwordField;
             }
             set {
-                this.temaField = value;
-                this.RaisePropertyChanged("tema");
+                this.passwordField = value;
+                this.RaisePropertyChanged("password");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public string telefono {
+            get {
+                return this.telefonoField;
+            }
+            set {
+                this.telefonoField = value;
+                this.RaisePropertyChanged("telefono");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/")]
+    public partial class idioma : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int id_idiomaField;
+        
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int id_idioma {
+            get {
+                return this.id_idiomaField;
+            }
+            set {
+                this.id_idiomaField = value;
+                this.RaisePropertyChanged("id_idioma");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
             }
         }
         
@@ -1674,6 +1580,163 @@ namespace Sinapxon.Alumno {
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/")]
+    public partial class curso : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private administrador administradorField;
+        
+        private string codigoField;
+        
+        private curso[] cursosField;
+        
+        private string descripcionField;
+        
+        private especialidad especialidadField;
+        
+        private int estadoField;
+        
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public administrador administrador {
+            get {
+                return this.administradorField;
+            }
+            set {
+                this.administradorField = value;
+                this.RaisePropertyChanged("administrador");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string codigo {
+            get {
+                return this.codigoField;
+            }
+            set {
+                this.codigoField = value;
+                this.RaisePropertyChanged("codigo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("cursos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+        public curso[] cursos {
+            get {
+                return this.cursosField;
+            }
+            set {
+                this.cursosField = value;
+                this.RaisePropertyChanged("cursos");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public especialidad especialidad {
+            get {
+                return this.especialidadField;
+            }
+            set {
+                this.especialidadField = value;
+                this.RaisePropertyChanged("especialidad");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int estado {
+            get {
+                return this.estadoField;
+            }
+            set {
+                this.estadoField = value;
+                this.RaisePropertyChanged("estado");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClassroomsXAlumno_X_Periodo", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarClassroomsXAlumno_X_PeriodoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string codigoAlumno;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_perido;
+        
+        public listarClassroomsXAlumno_X_PeriodoRequest() {
+        }
+        
+        public listarClassroomsXAlumno_X_PeriodoRequest(string codigoAlumno, int id_perido) {
+            this.codigoAlumno = codigoAlumno;
+            this.id_perido = id_perido;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClassroomsXAlumno_X_PeriodoResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarClassroomsXAlumno_X_PeriodoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sinapxon.Alumno.classroom[] @return;
+        
+        public listarClassroomsXAlumno_X_PeriodoResponse() {
+        }
+        
+        public listarClassroomsXAlumno_X_PeriodoResponse(Sinapxon.Alumno.classroom[] @return) {
+            this.@return = @return;
         }
     }
     
@@ -1898,40 +1961,71 @@ namespace Sinapxon.Alumno {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClassroomsXAlumno_X_Periodo", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarClassroomsXAlumno_X_PeriodoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTemaxClassroom", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTemaxClassroomRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string codigoAlumno;
+        public string arg0;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_perido;
-        
-        public listarClassroomsXAlumno_X_PeriodoRequest() {
+        public listarTemaxClassroomRequest() {
         }
         
-        public listarClassroomsXAlumno_X_PeriodoRequest(string codigoAlumno, int id_perido) {
-            this.codigoAlumno = codigoAlumno;
-            this.id_perido = id_perido;
+        public listarTemaxClassroomRequest(string arg0) {
+            this.arg0 = arg0;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClassroomsXAlumno_X_PeriodoResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarClassroomsXAlumno_X_PeriodoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTemaxClassroomResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTemaxClassroomResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Sinapxon.Alumno.classroom[] @return;
+        public Sinapxon.Alumno.temaXClassroom[] @return;
         
-        public listarClassroomsXAlumno_X_PeriodoResponse() {
+        public listarTemaxClassroomResponse() {
         }
         
-        public listarClassroomsXAlumno_X_PeriodoResponse(Sinapxon.Alumno.classroom[] @return) {
+        public listarTemaxClassroomResponse(Sinapxon.Alumno.temaXClassroom[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEvaluacionesXClassroom", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarEvaluacionesXClassroomRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string codigo;
+        
+        public listarEvaluacionesXClassroomRequest() {
+        }
+        
+        public listarEvaluacionesXClassroomRequest(string codigo) {
+            this.codigo = codigo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEvaluacionesXClassroomResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarEvaluacionesXClassroomResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sinapxon.Alumno.evaluacion[] @return;
+        
+        public listarEvaluacionesXClassroomResponse() {
+        }
+        
+        public listarEvaluacionesXClassroomResponse(Sinapxon.Alumno.evaluacion[] @return) {
             this.@return = @return;
         }
     }
@@ -1961,6 +2055,31 @@ namespace Sinapxon.Alumno {
         
         public AlumnoServicesClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse Sinapxon.Alumno.AlumnoServices.listarClassroomsXAlumno_X_Periodo(Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest request) {
+            return base.Channel.listarClassroomsXAlumno_X_Periodo(request);
+        }
+        
+        public Sinapxon.Alumno.classroom[] listarClassroomsXAlumno_X_Periodo(string codigoAlumno, int id_perido) {
+            Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest inValue = new Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest();
+            inValue.codigoAlumno = codigoAlumno;
+            inValue.id_perido = id_perido;
+            Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse retVal = ((Sinapxon.Alumno.AlumnoServices)(this)).listarClassroomsXAlumno_X_Periodo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse> Sinapxon.Alumno.AlumnoServices.listarClassroomsXAlumno_X_PeriodoAsync(Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest request) {
+            return base.Channel.listarClassroomsXAlumno_X_PeriodoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse> listarClassroomsXAlumno_X_PeriodoAsync(string codigoAlumno, int id_perido) {
+            Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest inValue = new Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest();
+            inValue.codigoAlumno = codigoAlumno;
+            inValue.id_perido = id_perido;
+            return ((Sinapxon.Alumno.AlumnoServices)(this)).listarClassroomsXAlumno_X_PeriodoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2104,28 +2223,49 @@ namespace Sinapxon.Alumno {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse Sinapxon.Alumno.AlumnoServices.listarClassroomsXAlumno_X_Periodo(Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest request) {
-            return base.Channel.listarClassroomsXAlumno_X_Periodo(request);
+        Sinapxon.Alumno.listarTemaxClassroomResponse Sinapxon.Alumno.AlumnoServices.listarTemaxClassroom(Sinapxon.Alumno.listarTemaxClassroomRequest request) {
+            return base.Channel.listarTemaxClassroom(request);
         }
         
-        public Sinapxon.Alumno.classroom[] listarClassroomsXAlumno_X_Periodo(string codigoAlumno, int id_perido) {
-            Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest inValue = new Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest();
-            inValue.codigoAlumno = codigoAlumno;
-            inValue.id_perido = id_perido;
-            Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse retVal = ((Sinapxon.Alumno.AlumnoServices)(this)).listarClassroomsXAlumno_X_Periodo(inValue);
+        public Sinapxon.Alumno.temaXClassroom[] listarTemaxClassroom(string arg0) {
+            Sinapxon.Alumno.listarTemaxClassroomRequest inValue = new Sinapxon.Alumno.listarTemaxClassroomRequest();
+            inValue.arg0 = arg0;
+            Sinapxon.Alumno.listarTemaxClassroomResponse retVal = ((Sinapxon.Alumno.AlumnoServices)(this)).listarTemaxClassroom(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse> Sinapxon.Alumno.AlumnoServices.listarClassroomsXAlumno_X_PeriodoAsync(Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest request) {
-            return base.Channel.listarClassroomsXAlumno_X_PeriodoAsync(request);
+        System.Threading.Tasks.Task<Sinapxon.Alumno.listarTemaxClassroomResponse> Sinapxon.Alumno.AlumnoServices.listarTemaxClassroomAsync(Sinapxon.Alumno.listarTemaxClassroomRequest request) {
+            return base.Channel.listarTemaxClassroomAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse> listarClassroomsXAlumno_X_PeriodoAsync(string codigoAlumno, int id_perido) {
-            Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest inValue = new Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest();
-            inValue.codigoAlumno = codigoAlumno;
-            inValue.id_perido = id_perido;
-            return ((Sinapxon.Alumno.AlumnoServices)(this)).listarClassroomsXAlumno_X_PeriodoAsync(inValue);
+        public System.Threading.Tasks.Task<Sinapxon.Alumno.listarTemaxClassroomResponse> listarTemaxClassroomAsync(string arg0) {
+            Sinapxon.Alumno.listarTemaxClassroomRequest inValue = new Sinapxon.Alumno.listarTemaxClassroomRequest();
+            inValue.arg0 = arg0;
+            return ((Sinapxon.Alumno.AlumnoServices)(this)).listarTemaxClassroomAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sinapxon.Alumno.listarEvaluacionesXClassroomResponse Sinapxon.Alumno.AlumnoServices.listarEvaluacionesXClassroom(Sinapxon.Alumno.listarEvaluacionesXClassroomRequest request) {
+            return base.Channel.listarEvaluacionesXClassroom(request);
+        }
+        
+        public Sinapxon.Alumno.evaluacion[] listarEvaluacionesXClassroom(string codigo) {
+            Sinapxon.Alumno.listarEvaluacionesXClassroomRequest inValue = new Sinapxon.Alumno.listarEvaluacionesXClassroomRequest();
+            inValue.codigo = codigo;
+            Sinapxon.Alumno.listarEvaluacionesXClassroomResponse retVal = ((Sinapxon.Alumno.AlumnoServices)(this)).listarEvaluacionesXClassroom(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.listarEvaluacionesXClassroomResponse> Sinapxon.Alumno.AlumnoServices.listarEvaluacionesXClassroomAsync(Sinapxon.Alumno.listarEvaluacionesXClassroomRequest request) {
+            return base.Channel.listarEvaluacionesXClassroomAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sinapxon.Alumno.listarEvaluacionesXClassroomResponse> listarEvaluacionesXClassroomAsync(string codigo) {
+            Sinapxon.Alumno.listarEvaluacionesXClassroomRequest inValue = new Sinapxon.Alumno.listarEvaluacionesXClassroomRequest();
+            inValue.codigo = codigo;
+            return ((Sinapxon.Alumno.AlumnoServices)(this)).listarEvaluacionesXClassroomAsync(inValue);
         }
     }
 }
