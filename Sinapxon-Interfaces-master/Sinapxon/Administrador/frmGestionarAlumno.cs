@@ -23,15 +23,15 @@ namespace Sinapxon.Administrador
 
         public frmGestionarAlumno(frmAdministrador padre)
         {
-            InitializeComponent();
-            
+            InitializeComponent();           
             this.Padre = padre;
+
             //Inicializao dgvAlumnos:con todos los alumnos
             dgvAlumno.AutoGenerateColumns = false;
             index += 1;
             backup = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));      
             BindingList<Administrador.alumno> bdl = new BindingList<Administrador.alumno> ();
-               for (int n_ = (index - 1) * 20; n_ < index * 20; n_++)
+            for (int n_ = (index - 1) * 20; n_ < index * 20; n_++)
             {
                 bdl.Add(backup[n_]);
             }
@@ -39,8 +39,9 @@ namespace Sinapxon.Administrador
             BindingList<Administrador.alumno> toShow = new BindingList<Administrador.alumno>();
             dgvAlumno.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-            //Doy espacio al curso seleccionado
+            //Doy espacio al alumno seleccionado
             alSeleccionado = new Administrador.alumno();
+
             rbActivo.Checked = false;
             rbInactivo.Checked = false;
             rbBloqueado.Checked = false;
@@ -125,7 +126,7 @@ namespace Sinapxon.Administrador
                 busq = 0;
                 index += 1;
                 BindingList<Administrador.alumno> bdl = new BindingList<Administrador.alumno>();
-                for (int n_ = (index - 1) * 20; n_ < index * 20; n_++)
+                for (int n_ = (index - 1) * 20; n_<backup.Count() && n_ < index * 20; n_++)
                 {
                     bdl.Add(backup[n_]);
                 }
