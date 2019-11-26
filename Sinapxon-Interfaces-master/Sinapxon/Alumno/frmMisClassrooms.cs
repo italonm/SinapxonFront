@@ -16,7 +16,9 @@ namespace Sinapxon.Alumno
         private bool _irClassroom = false;
         private int altura = 0, boxAltura = 174;
         private frmAlumno _padre = null;
+
         private BindingList<Alumno.classroom> classrooms;
+        private BindingList<Alumno.periodo> periodos;
 
         private Alumno.AlumnoServicesClient DBController = new AlumnoServicesClient();
         
@@ -43,6 +45,11 @@ namespace Sinapxon.Alumno
 
             lblSincursos.Hide();
             pbSinCursos.Hide();
+
+            periodos = new BindingList<Alumno.periodo>(DBController.listarPeriodos());
+            cbPerido.DataSource = periodos;
+            cbPerido.DisplayMember = "nombre";
+            cbPerido.ValueMember = "id_periodo";
 
             try
             {
@@ -200,10 +207,39 @@ namespace Sinapxon.Alumno
 
         }
 
+        private void btnIr_Click(object sender, EventArgs e)
+        {
+            //txtPeridoID.Text = ((Alumno.periodo)cbPerido.SelectedItem).id_periodo.ToString() + " - "+ LoginInfo.persona.codigo;
+
+            panelContenido.Controls.Clear();
+            try
+            {
+                classrooms = new BindingList<Alumno.classroom>
+                (DBController.listarClassroomsXAlumno_X_Periodo(LoginInfo.persona.codigo,
+                    ((Alumno.periodo)cbPerido.SelectedItem).id_periodo)
+                );
+                altura = 0;
+            }
+            catch (Exception)
+            {
+                classrooms = null;
+            }
+            if (classrooms != null)
+            {
+                foreach (Alumno.classroom obj in classrooms)
+                    crearElemento(obj);
+            }
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void BtnIrClassroom_Click(object sender, EventArgs e)
         {
             frmMiClassroom formMiClassroom = new frmMiClassroom(_padre);
-            _padre.openChildForm(formMiClassroom);
+            _padre.openChildForm_withoutClosing(formMiClassroom);
         }
     }
 }
