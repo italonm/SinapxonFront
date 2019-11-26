@@ -80,8 +80,8 @@
   <message name="listarCursos">
     <part name="parameters" element="tns:listarCursos" />
   </message>
-  <message name="listarCursosResponse">
-    <part name="parameters" element="tns:listarCursosResponse" />
+  <message name="listarProfesoresResponse">
+    <part name="parameters" element="tns:listarProfesoresResponse" />
   </message>
   <message name="eliminaCurso">
     <part name="parameters" element="tns:eliminaCurso" />

@@ -71,6 +71,9 @@ namespace Sinapxon.Login
             SmtpServer.EnableSsl = true;
             SmtpServer.Send(mail);
             MessageBox.Show("Correo enviado, revise su bandeja de entrada");
+            this.Close();
+            frmLogin formLogin = new frmLogin();
+            formLogin.Show();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -84,6 +87,20 @@ namespace Sinapxon.Login
             else
             {
                 this.Activate();
+            }
+        }
+
+        private void frmOvlideContrasenia_Load(object sender, EventArgs e)
+        {
+            this.ActiveControl = txtCorreo;
+            txtCorreo.Focus();
+        }
+
+        private void txtCorreo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnEnviar_Click(sender, e);
             }
         }
     }
