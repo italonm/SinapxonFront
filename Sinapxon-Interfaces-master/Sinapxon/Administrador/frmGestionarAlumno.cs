@@ -174,9 +174,17 @@ namespace Sinapxon.Administrador
         //SELECCIONAR
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            alSeleccionado = dgvAlumno.CurrentRow.DataBoundItem as Administrador.alumno;
-            frmDatosAlumno formDatosAlumno = new frmDatosAlumno(alSeleccionado, _padre);
-            _padre.openChildForm(formDatosAlumno);
+            try
+            {
+                alSeleccionado = dgvAlumno.CurrentRow.DataBoundItem as Administrador.alumno;
+                frmDatosAlumno formDatosAlumno = new frmDatosAlumno(alSeleccionado, _padre);
+                _padre.openChildForm(formDatosAlumno);
+            }
+            catch
+            {
+                MessageBox.Show("Debe seleccionar un alumno", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
 
         //=============================================================================================================================================
