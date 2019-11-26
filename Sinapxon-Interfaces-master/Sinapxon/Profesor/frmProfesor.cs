@@ -18,7 +18,7 @@ namespace Sinapxon.Profesor
         public frmProfesor()
         {
             InitializeComponent();
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
             lblNombreUsuario.Text = LoginInfo.persona.nombre;
             panelSubGestionarUsr.Visible = false;
         }
@@ -71,7 +71,8 @@ namespace Sinapxon.Profesor
 
         private void btnVerSolicitudes_Click(object sender, EventArgs e)
         {
-
+            frmVerSolicitudes frmVerSolicitudes = new frmVerSolicitudes();
+            this.openChildForm(frmVerSolicitudes);
         }
 
         private void btnSolicitar_Click(object sender, EventArgs e)

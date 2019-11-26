@@ -111,11 +111,11 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(437, 89);
+            this.txtDescripcion.Location = new System.Drawing.Point(408, 84);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(490, 67);
+            this.txtDescripcion.Size = new System.Drawing.Size(394, 67);
             this.txtDescripcion.TabIndex = 4;
             // 
             // txtLinkVideo
@@ -124,7 +124,7 @@
             this.txtLinkVideo.Location = new System.Drawing.Point(28, 93);
             this.txtLinkVideo.Margin = new System.Windows.Forms.Padding(2);
             this.txtLinkVideo.Name = "txtLinkVideo";
-            this.txtLinkVideo.Size = new System.Drawing.Size(899, 22);
+            this.txtLinkVideo.Size = new System.Drawing.Size(774, 22);
             this.txtLinkVideo.TabIndex = 4;
             // 
             // btnAniadirArchivo
@@ -135,7 +135,7 @@
             this.btnAniadirArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAniadirArchivo.ForeColor = System.Drawing.Color.White;
             this.btnAniadirArchivo.Image = global::Sinapxon.Properties.Resources.baseline_add_circle_white_18dp;
-            this.btnAniadirArchivo.Location = new System.Drawing.Point(634, 68);
+            this.btnAniadirArchivo.Location = new System.Drawing.Point(458, 68);
             this.btnAniadirArchivo.Margin = new System.Windows.Forms.Padding(2);
             this.btnAniadirArchivo.Name = "btnAniadirArchivo";
             this.btnAniadirArchivo.Size = new System.Drawing.Size(145, 47);
@@ -143,7 +143,6 @@
             this.btnAniadirArchivo.Text = "Añadir";
             this.btnAniadirArchivo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAniadirArchivo.UseVisualStyleBackColor = false;
-            this.btnAniadirArchivo.Click += new System.EventHandler(this.btnAniadirArchivo_Click);
             // 
             // btnExaminar
             // 
@@ -173,10 +172,10 @@
             this.panelDatosTema.Controls.Add(this.panelTituloTema);
             this.panelDatosTema.Controls.Add(this.lblDescripcion);
             this.panelDatosTema.Controls.Add(this.lblNombre);
-            this.panelDatosTema.Location = new System.Drawing.Point(14, 81);
+            this.panelDatosTema.Location = new System.Drawing.Point(14, 91);
             this.panelDatosTema.Margin = new System.Windows.Forms.Padding(2);
             this.panelDatosTema.Name = "panelDatosTema";
-            this.panelDatosTema.Size = new System.Drawing.Size(939, 169);
+            this.panelDatosTema.Size = new System.Drawing.Size(832, 169);
             this.panelDatosTema.TabIndex = 8;
             // 
             // cbTemas
@@ -197,7 +196,7 @@
             this.panelTituloTema.Location = new System.Drawing.Point(0, 0);
             this.panelTituloTema.Margin = new System.Windows.Forms.Padding(2);
             this.panelTituloTema.Name = "panelTituloTema";
-            this.panelTituloTema.Size = new System.Drawing.Size(939, 58);
+            this.panelTituloTema.Size = new System.Drawing.Size(832, 58);
             this.panelTituloTema.TabIndex = 0;
             // 
             // label1
@@ -218,10 +217,10 @@
             this.panelVideo.Controls.Add(this.txtLinkVideo);
             this.panelVideo.Controls.Add(this.panelTituloVideo);
             this.panelVideo.Controls.Add(this.lblLinkVideo);
-            this.panelVideo.Location = new System.Drawing.Point(14, 264);
+            this.panelVideo.Location = new System.Drawing.Point(14, 274);
             this.panelVideo.Margin = new System.Windows.Forms.Padding(2);
             this.panelVideo.Name = "panelVideo";
-            this.panelVideo.Size = new System.Drawing.Size(939, 133);
+            this.panelVideo.Size = new System.Drawing.Size(832, 133);
             this.panelVideo.TabIndex = 9;
             // 
             // panelTituloVideo
@@ -232,7 +231,7 @@
             this.panelTituloVideo.Location = new System.Drawing.Point(0, 0);
             this.panelTituloVideo.Margin = new System.Windows.Forms.Padding(2);
             this.panelTituloVideo.Name = "panelTituloVideo";
-            this.panelTituloVideo.Size = new System.Drawing.Size(939, 58);
+            this.panelTituloVideo.Size = new System.Drawing.Size(832, 58);
             this.panelTituloVideo.TabIndex = 0;
             // 
             // label2
@@ -256,10 +255,10 @@
             this.panelArchivosClassroom.Controls.Add(this.panelTituloArchivosClassroom);
             this.panelArchivosClassroom.Controls.Add(this.btnExaminar);
             this.panelArchivosClassroom.Controls.Add(this.txtBuscarArchivo);
-            this.panelArchivosClassroom.Location = new System.Drawing.Point(14, 411);
+            this.panelArchivosClassroom.Location = new System.Drawing.Point(14, 425);
             this.panelArchivosClassroom.Margin = new System.Windows.Forms.Padding(2);
             this.panelArchivosClassroom.Name = "panelArchivosClassroom";
-            this.panelArchivosClassroom.Size = new System.Drawing.Size(939, 247);
+            this.panelArchivosClassroom.Size = new System.Drawing.Size(832, 222);
             this.panelArchivosClassroom.TabIndex = 10;
             // 
             // btnQuitarArchivo
@@ -270,7 +269,7 @@
             this.btnQuitarArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitarArchivo.ForeColor = System.Drawing.Color.White;
             this.btnQuitarArchivo.Image = global::Sinapxon.Properties.Resources.baseline_remove_circle_white_18dp;
-            this.btnQuitarArchivo.Location = new System.Drawing.Point(783, 68);
+            this.btnQuitarArchivo.Location = new System.Drawing.Point(658, 68);
             this.btnQuitarArchivo.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuitarArchivo.Name = "btnQuitarArchivo";
             this.btnQuitarArchivo.Size = new System.Drawing.Size(144, 47);
@@ -278,7 +277,6 @@
             this.btnQuitarArchivo.Text = "Quitar";
             this.btnQuitarArchivo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQuitarArchivo.UseVisualStyleBackColor = false;
-            this.btnQuitarArchivo.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvArchivos
             // 
@@ -300,10 +298,10 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvArchivos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvArchivos.Location = new System.Drawing.Point(28, 123);
+            this.dgvArchivos.Location = new System.Drawing.Point(28, 131);
             this.dgvArchivos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvArchivos.Name = "dgvArchivos";
-            this.dgvArchivos.Size = new System.Drawing.Size(899, 106);
+            this.dgvArchivos.Size = new System.Drawing.Size(774, 78);
             this.dgvArchivos.TabIndex = 4;
             // 
             // panelTituloArchivosClassroom
@@ -314,7 +312,7 @@
             this.panelTituloArchivosClassroom.Location = new System.Drawing.Point(0, 0);
             this.panelTituloArchivosClassroom.Margin = new System.Windows.Forms.Padding(2);
             this.panelTituloArchivosClassroom.Name = "panelTituloArchivosClassroom";
-            this.panelTituloArchivosClassroom.Size = new System.Drawing.Size(939, 58);
+            this.panelTituloArchivosClassroom.Size = new System.Drawing.Size(832, 58);
             this.panelTituloArchivosClassroom.TabIndex = 0;
             // 
             // lblArchivosTema
@@ -337,7 +335,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Image = global::Sinapxon.Properties.Resources.round_save_white_18dp;
-            this.btnGuardar.Location = new System.Drawing.Point(797, 15);
+            this.btnGuardar.Location = new System.Drawing.Point(660, 17);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(156, 48);
@@ -365,7 +363,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
-            this.ClientSize = new System.Drawing.Size(964, 681);
+            this.ClientSize = new System.Drawing.Size(857, 681);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.panelArchivosClassroom);

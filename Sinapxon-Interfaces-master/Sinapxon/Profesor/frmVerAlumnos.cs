@@ -14,10 +14,12 @@ namespace Sinapxon.Profesor
     {
         Profesor.ProfesorServicesClient DBController = new Profesor.ProfesorServicesClient();
         private BindingList<Profesor.alumno> alumnos;
+        private frmProfesor _profesor;
         int altura = 0;
-        public frmVerAlumnos()
+        public frmVerAlumnos(frmProfesor profesor)
         {
             InitializeComponent();
+            _profesor = profesor;
             alumnos = new BindingList<Profesor.alumno>(DBController.listarAlumnoXClassroom(ClassroomInfo.classroom.codigo));
             foreach (Profesor.alumno a in alumnos) {
 
@@ -92,6 +94,12 @@ namespace Sinapxon.Profesor
             AlumnoInfo.alumnno.codigo = codAlumno;
             frmVerNotas frmVerNotas = new frmVerNotas();
             frmVerNotas.Visible = true;
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            frmGestionarMisClassrooms frmGestionarMisClassrooms = new frmGestionarMisClassrooms(_profesor);
+            _profesor.openChildForm(frmGestionarMisClassrooms);
         }
     }
     public static class AlumnoInfo
