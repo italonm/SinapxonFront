@@ -363,14 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Connected Services\Administrador\AdministradorServices.wsdl" />
     <None Include="Connected Services\Administrador\AdministradorServices.xsd">
       <SubType>Designer</SubType>
@@ -391,6 +386,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.cambiarEstadoSolicitudResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.crearClassroom_y_asignarProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.curso.datasource">
@@ -537,6 +535,9 @@
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.curso.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.evaluacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.idioma.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -556,6 +557,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarCursosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarEvaluacionesXClassroomResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarIdiomasResponse.datasource">
@@ -589,6 +593,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
