@@ -768,18 +768,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\Alumno\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\Alumno\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\Alumno\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Connected Services\Administrador\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -874,6 +862,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ojoIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Alumno\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Alumno\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Alumno\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
