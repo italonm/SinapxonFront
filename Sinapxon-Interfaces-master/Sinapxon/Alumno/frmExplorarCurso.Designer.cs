@@ -46,11 +46,11 @@
             // 
             this.lblNombreCurso.AutoSize = true;
             this.lblNombreCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
-            this.lblNombreCurso.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreCurso.ForeColor = System.Drawing.Color.Black;
             this.lblNombreCurso.Location = new System.Drawing.Point(95, 40);
             this.lblNombreCurso.Name = "lblNombreCurso";
-            this.lblNombreCurso.Size = new System.Drawing.Size(207, 29);
+            this.lblNombreCurso.Size = new System.Drawing.Size(222, 29);
             this.lblNombreCurso.TabIndex = 0;
             this.lblNombreCurso.Text = "Nombre del curso";
             // 
@@ -76,11 +76,11 @@
             // lblRequisitos
             // 
             this.lblRequisitos.AutoSize = true;
-            this.lblRequisitos.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRequisitos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRequisitos.ForeColor = System.Drawing.Color.White;
             this.lblRequisitos.Location = new System.Drawing.Point(18, 17);
             this.lblRequisitos.Name = "lblRequisitos";
-            this.lblRequisitos.Size = new System.Drawing.Size(113, 25);
+            this.lblRequisitos.Size = new System.Drawing.Size(123, 25);
             this.lblRequisitos.TabIndex = 5;
             this.lblRequisitos.Text = "Requisitos";
             // 
@@ -89,7 +89,7 @@
             this.panelClassrooms.AutoScroll = true;
             this.panelClassrooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelClassrooms.Controls.Add(this.panelTituloClassrooms);
-            this.panelClassrooms.Location = new System.Drawing.Point(395, 94);
+            this.panelClassrooms.Location = new System.Drawing.Point(405, 94);
             this.panelClassrooms.Name = "panelClassrooms";
             this.panelClassrooms.Size = new System.Drawing.Size(537, 553);
             this.panelClassrooms.TabIndex = 4;
@@ -107,11 +107,11 @@
             // lblClasrooms
             // 
             this.lblClasrooms.AutoSize = true;
-            this.lblClasrooms.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClasrooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClasrooms.ForeColor = System.Drawing.Color.White;
             this.lblClasrooms.Location = new System.Drawing.Point(25, 17);
             this.lblClasrooms.Name = "lblClasrooms";
-            this.lblClasrooms.Size = new System.Drawing.Size(126, 25);
+            this.lblClasrooms.Size = new System.Drawing.Size(135, 25);
             this.lblClasrooms.TabIndex = 0;
             this.lblClasrooms.Text = "Classrooms";
             // 
@@ -138,7 +138,7 @@
             this.Controls.Add(this.panelClassrooms);
             this.Controls.Add(this.panelRequisitos);
             this.Controls.Add(this.lblNombreCurso);
-            this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmExplorarCurso";
             this.Text = "frmExplorarCurso";
