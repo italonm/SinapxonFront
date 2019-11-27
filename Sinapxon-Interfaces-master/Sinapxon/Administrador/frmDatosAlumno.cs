@@ -94,6 +94,7 @@ namespace Sinapxon.Administrador
             cboPais.ValueMember = "id_Pais";
 
             estadoComponentes(Estado.Inicial);
+            rbActivo.Checked = true;
         }
 
 
@@ -472,6 +473,7 @@ namespace Sinapxon.Administrador
             limpiarComponentes();
             alumno = new Administrador.alumno();
             estadoAlumno = Estado.Nuevo;
+            rbActivo.Checked = true;
         }
 
         //==============================================================================================================================================================
