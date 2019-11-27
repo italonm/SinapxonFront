@@ -52,16 +52,23 @@ namespace Sinapxon.Administrador
         //DGV
         private void dgvAlumnos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            Administrador.alumno alumFila = (Administrador.alumno)dgvAlumno.Rows[e.RowIndex].DataBoundItem;
-            if (alumFila != null)
+            try
             {
-                dgvAlumno.Rows[e.RowIndex].Cells[0].Value = alumFila.codigo;
-                dgvAlumno.Rows[e.RowIndex].Cells[1].Value = alumFila.nombre;
-                dgvAlumno.Rows[e.RowIndex].Cells[2].Value = alumFila.apellidoPaterno;
-                dgvAlumno.Rows[e.RowIndex].Cells[3].Value = alumFila.apellidoMaterno;
-                dgvAlumno.Rows[e.RowIndex].Cells[4].Value = alumFila.dni;
-                dgvAlumno.Rows[e.RowIndex].Cells[5].Value = alumFila.telefono;
-                dgvAlumno.Rows[e.RowIndex].Cells[6].Value = alumFila.correo;
+                Administrador.alumno alumFila = (Administrador.alumno)dgvAlumno.Rows[e.RowIndex].DataBoundItem;
+                if (alumFila != null)
+                {
+                    dgvAlumno.Rows[e.RowIndex].Cells[0].Value = alumFila.codigo;
+                    dgvAlumno.Rows[e.RowIndex].Cells[1].Value = alumFila.nombre;
+                    dgvAlumno.Rows[e.RowIndex].Cells[2].Value = alumFila.apellidoPaterno;
+                    dgvAlumno.Rows[e.RowIndex].Cells[3].Value = alumFila.apellidoMaterno;
+                    dgvAlumno.Rows[e.RowIndex].Cells[4].Value = alumFila.dni;
+                    dgvAlumno.Rows[e.RowIndex].Cells[5].Value = alumFila.telefono;
+                    dgvAlumno.Rows[e.RowIndex].Cells[6].Value = alumFila.correo;
+                }
+            }
+            catch
+            {
+
             }
         }
 
@@ -134,6 +141,12 @@ namespace Sinapxon.Administrador
             }
             else
             {
+                if (toShow.Count() == 0)
+                {
+                    MessageBox.Show("No se encontraron resultados, ingrese datos válidos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 index += 1;
                 BindingList<Administrador.alumno> bdl = new BindingList<Administrador.alumno>();
                 busq = 1;
@@ -142,14 +155,6 @@ namespace Sinapxon.Administrador
                     bdl.Add(toShow[n_]);
                 }
                 dgvAlumno.DataSource = bdl;
-
-                if (toShow.Count() == 0)
-                {
-                
-                    MessageBox.Show("No se encontraron resultados, ingrese datos válidos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                    
-                }
             }
         }
 

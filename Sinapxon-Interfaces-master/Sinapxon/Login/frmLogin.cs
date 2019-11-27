@@ -136,6 +136,18 @@ namespace Sinapxon.Login
         {
             Application.Exit();
         }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            if (txtContrasenia.UseSystemPasswordChar == false)
+            {
+                txtContrasenia.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtContrasenia.UseSystemPasswordChar = false;
+            }
+        }
     }
 
     public static class LoginInfo

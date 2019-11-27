@@ -62,7 +62,7 @@ namespace Sinapxon.Administrador
 
         private void btnGestionarProfesor_Click(object sender, EventArgs e)
         {
-            //openChildForm(new frmGestionarProfesor(this));
+            openChildForm(new frmGestionarProfesor(this));
         }
 
         private void btnGestionarAlumno_Click(object sender, EventArgs e)
@@ -79,8 +79,7 @@ namespace Sinapxon.Administrador
 
         private void btnEspecialidad_Click(object sender, EventArgs e)
         {
-            frmAgregarEspecialidad formAgregarEspecialidad = new frmAgregarEspecialidad();
-            formAgregarEspecialidad.Visible = true;
+            openChildForm(new frmAgregarEspecialidad(this));
         }
     }
 }

@@ -26,15 +26,19 @@ namespace Sinapxon.Administrador
 
         //==============================================================================================================================================================
         //AL SELECCIONAR UNA ESPECIALIDAD
-        public frmRegistrarEspecialidad(Administrador.especialidad espSelec)
+        public frmRegistrarEspecialidad(Administrador.especialidad espSelec, frmAdministrador padre)
         {
-            InitializeComponent();
-            lblTitulo.Text = "Editar Especialidad";
-            this.Text = "Editar Especialidad";
-            especaux = new Administrador.especialidad();
-            especaux = espSelec;
             tipo = 1;
             tipoX = 1;
+
+            //Inicializo Formulario
+            InitializeComponent();
+            lblTitulo.Text = "Editar Especialidad";
+            this.Padre = padre;
+
+            especaux = new Administrador.especialidad();
+            especaux = espSelec;
+
             this.codigoAdmin = espSelec.administrador.codigo;
             txtIdEspecialidad.Text = espSelec.id_especialidad.ToString();
             txtNombre.Text = espSelec.nombre;
@@ -44,13 +48,17 @@ namespace Sinapxon.Administrador
 
         //==============================================================================================================================================================
         //AL CREAR UNA ESPECIALIDAD
-        public frmRegistrarEspecialidad()
+        public frmRegistrarEspecialidad(frmAdministrador padre)
         {
-            InitializeComponent();
-            lblTitulo.Text = "Añadir Especialidad";
-            this.Text = "Añadir Especialidad";
             tipo = 2;
             tipoX = 2;
+
+            //Inicializo Formulario
+            InitializeComponent();
+            lblTitulo.Text = "Añadir Especialidad";
+            this.Padre = padre;
+            especaux = new Administrador.especialidad();
+
             estadoComponentes(Estado.Inicial);
         }
         //==============================================================================================================================================================
@@ -114,6 +122,10 @@ namespace Sinapxon.Administrador
                     break;
             }
         }
+
+        //==============================================================================================================================================================
+        public frmAdministrador Padre { get => _padre; set => _padre = value; }
+
 
         //==============================================================================================================================================================
         //NUEVO
@@ -233,9 +245,8 @@ namespace Sinapxon.Administrador
         //REGRESAR
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            frmAgregarEspecialidad formAgregarEspecialidad = new frmAgregarEspecialidad();
-            this.Close();
-            formAgregarEspecialidad.Visible = true;
+            frmAgregarEspecialidad formAgregarEspecialidad = new frmAgregarEspecialidad(this.Padre);
+            _padre.openChildForm(formAgregarEspecialidad);
         }
     }
 }
