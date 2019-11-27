@@ -12,22 +12,20 @@ namespace Sinapxon.Profesor
 {
     public partial class frmCalificar : Form
     {
-        public frmCalificar()
+        private frmProfesor _profesor;
+        public frmCalificar(frmProfesor profesor)
         {
             InitializeComponent();
+            _profesor = profesor;
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnAtras_Click(object sender, EventArgs e)
         {
-            this.Close();
+            frmVerClassroom frmVerClassroom = new frmVerClassroom(_profesor);
+            _profesor.openChildForm(frmVerClassroom);
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btnDescargarArchivo_Click(object sender, EventArgs e)
+        private void btnAsignarPuntaje_Click(object sender, EventArgs e)
         {
 
         }

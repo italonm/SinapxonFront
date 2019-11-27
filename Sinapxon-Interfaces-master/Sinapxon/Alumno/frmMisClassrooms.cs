@@ -147,7 +147,7 @@ namespace Sinapxon.Alumno
             pbEvaluacion.SizeMode = PictureBoxSizeMode.AutoSize;
             pbEvaluacion.Image = global::Sinapxon.Properties.Resources.round_assignment;
             pbEvaluacion.Name = "pbEvaluacion";
-            panelContenido.Controls.Add(pbEvaluacion);
+            //panelContenido.Controls.Add(pbEvaluacion);
 
             /*
              * Picture box Tema
@@ -159,7 +159,7 @@ namespace Sinapxon.Alumno
             pbTemas.Name = "pbTema";
             pbTemas.Size = new Size(34, 36);
             pbTemas.SizeMode = PictureBoxSizeMode.AutoSize;
-            panelContenido.Controls.Add(pbTemas);
+            //panelContenido.Controls.Add(pbTemas);
 
             /*
              * Boton Ir a classroom

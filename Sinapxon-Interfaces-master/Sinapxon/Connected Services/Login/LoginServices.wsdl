@@ -5,17 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/SinapxonSoftServices/LoginServices?xsd=1" namespace="http://services.sinapxon.pucp.edu.pe/" />
     </xsd:schema>
   </types>
+  <message name="actualizarPassword">
+    <part name="parameters" element="tns:actualizarPassword" />
+  </message>
+  <message name="actualizarPasswordResponse">
+    <part name="parameters" element="tns:actualizarPasswordResponse" />
+  </message>
   <message name="validarCorreo">
     <part name="parameters" element="tns:validarCorreo" />
   </message>
   <message name="validarCorreoResponse">
     <part name="parameters" element="tns:validarCorreoResponse" />
-  </message>
-  <message name="validarNickname">
-    <part name="parameters" element="tns:validarNickname" />
-  </message>
-  <message name="validarNicknameResponse">
-    <part name="parameters" element="tns:validarNicknameResponse" />
   </message>
   <message name="validarLogin">
     <part name="parameters" element="tns:validarLogin" />
@@ -23,33 +23,33 @@
   <message name="validarLoginResponse">
     <part name="parameters" element="tns:validarLoginResponse" />
   </message>
-  <message name="actualizarPassword">
-    <part name="parameters" element="tns:actualizarPassword" />
+  <message name="validarNickname">
+    <part name="parameters" element="tns:validarNickname" />
   </message>
-  <message name="actualizarPasswordResponse">
-    <part name="parameters" element="tns:actualizarPasswordResponse" />
+  <message name="validarNicknameResponse">
+    <part name="parameters" element="tns:validarNicknameResponse" />
   </message>
   <portType name="LoginServices">
+    <operation name="actualizarPassword">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/LoginServices/actualizarPasswordRequest" message="tns:actualizarPassword" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/LoginServices/actualizarPasswordResponse" message="tns:actualizarPasswordResponse" />
+    </operation>
     <operation name="validarCorreo">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/LoginServices/validarCorreoRequest" message="tns:validarCorreo" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/LoginServices/validarCorreoResponse" message="tns:validarCorreoResponse" />
-    </operation>
-    <operation name="validarNickname">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/LoginServices/validarNicknameRequest" message="tns:validarNickname" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/LoginServices/validarNicknameResponse" message="tns:validarNicknameResponse" />
     </operation>
     <operation name="validarLogin">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/LoginServices/validarLoginRequest" message="tns:validarLogin" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/LoginServices/validarLoginResponse" message="tns:validarLoginResponse" />
     </operation>
-    <operation name="actualizarPassword">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/LoginServices/actualizarPasswordRequest" message="tns:actualizarPassword" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/LoginServices/actualizarPasswordResponse" message="tns:actualizarPasswordResponse" />
+    <operation name="validarNickname">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/LoginServices/validarNicknameRequest" message="tns:validarNickname" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/LoginServices/validarNicknameResponse" message="tns:validarNicknameResponse" />
     </operation>
   </portType>
   <binding name="LoginServicesPortBinding" type="tns:LoginServices">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="validarCorreo">
+    <operation name="actualizarPassword">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -58,7 +58,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="validarNickname">
+    <operation name="validarCorreo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +76,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarPassword">
+    <operation name="validarNickname">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

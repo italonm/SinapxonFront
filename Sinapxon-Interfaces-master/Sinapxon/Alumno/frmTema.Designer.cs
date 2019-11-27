@@ -46,6 +46,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.saveFileDialogArchivo = new System.Windows.Forms.SaveFileDialog();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArchivos)).BeginInit();
             this.panelContenedorDescripcion.SuspendLayout();
             this.panelTituloDescripcion.SuspendLayout();
@@ -93,7 +97,10 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvArchivos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvArchivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArchivos.Location = new System.Drawing.Point(30, 130);
+            this.dgvArchivos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Nombre});
+            this.dgvArchivos.Location = new System.Drawing.Point(30, 129);
             this.dgvArchivos.Name = "dgvArchivos";
             this.dgvArchivos.ReadOnly = true;
             this.dgvArchivos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -112,6 +119,7 @@
             this.dgvArchivos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvArchivos.Size = new System.Drawing.Size(838, 237);
             this.dgvArchivos.TabIndex = 10;
+            this.dgvArchivos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvArchivos_CellFormatting);
             // 
             // lblDescripcion
             // 
@@ -169,6 +177,7 @@
             this.btnDescargar.Text = "     Descargar";
             this.btnDescargar.UseMnemonic = false;
             this.btnDescargar.UseVisualStyleBackColor = false;
+            this.btnDescargar.Click += new System.EventHandler(this.btnDescargar_Click);
             // 
             // btnAtras
             // 
@@ -181,10 +190,12 @@
             this.btnAtras.Size = new System.Drawing.Size(50, 50);
             this.btnAtras.TabIndex = 24;
             this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // panelContenedorDescripcion
             // 
             this.panelContenedorDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
+            this.panelContenedorDescripcion.Controls.Add(this.txtDescripcion);
             this.panelContenedorDescripcion.Controls.Add(this.panelTituloDescripcion);
             this.panelContenedorDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelContenedorDescripcion.Location = new System.Drawing.Point(12, 65);
@@ -243,6 +254,26 @@
             this.panel4.Size = new System.Drawing.Size(906, 58);
             this.panel4.TabIndex = 0;
             // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(17, 70);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.ReadOnly = true;
+            this.txtDescripcion.Size = new System.Drawing.Size(273, 303);
+            this.txtDescripcion.TabIndex = 1;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
             // frmTema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,6 +292,7 @@
             this.Text = "frmTema";
             ((System.ComponentModel.ISupportInitialize)(this.dgvArchivos)).EndInit();
             this.panelContenedorDescripcion.ResumeLayout(false);
+            this.panelContenedorDescripcion.PerformLayout();
             this.panelTituloDescripcion.ResumeLayout(false);
             this.panelTituloDescripcion.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -290,5 +322,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.SaveFileDialog saveFileDialogArchivo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
     }
 }
