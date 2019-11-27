@@ -12,66 +12,231 @@ namespace Sinapxon.Administrador
 {
     public partial class frmGestionarAlumno : Form
     {
-        static int i = 0;
         private frmAdministrador _padre = null;
+        BindingList<Administrador.alumno> backup;
+        BindingList<Administrador.alumno> toShow;
         private Administrador.alumno alSeleccionado;
-
-
-        Administrador.AdministradorServicesClient DBController = new Administrador.AdministradorServicesClient();
-
-        public alumno AlSeleccionado { get => alSeleccionado; set => alSeleccionado = value; }
-
-        public frmGestionarAlumno()
-        {
-            InitializeComponent();
-            dgvAlumnos.AutoGenerateColumns = false;
-            dgvAlumnos.DataSource = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));
-        }
+        private Administrador.AdministradorServicesClient DBController = new AdministradorServicesClient();
+        int busq = 0;
+        private int index = 0;
+        public frmAdministrador Padre { get => _padre; set => _padre = value; }
 
         public frmGestionarAlumno(frmAdministrador padre)
         {
-            InitializeComponent();
+            InitializeComponent();           
             this.Padre = padre;
-            dgvAlumnos.AutoGenerateColumns = false;
-            dgvAlumnos.DataSource = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));
+
+            //Inicializao dgvAlumnos:con todos los alumnos
+            dgvAlumno.AutoGenerateColumns = false;
+            index += 1;
+            backup = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));      
+            BindingList<Administrador.alumno> bdl = new BindingList<Administrador.alumno> ();
+            for (int n_ = (index - 1) * 20; n_ < index * 20; n_++)
+            {
+                bdl.Add(backup[n_]);
+            }
+            dgvAlumno.DataSource = bdl;
+            BindingList<Administrador.alumno> toShow = new BindingList<Administrador.alumno>();
+            dgvAlumno.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            //Doy espacio al alumno seleccionado
+            alSeleccionado = new Administrador.alumno();
+
+            rbActivo.Checked = false;
+            rbInactivo.Checked = false;
+            rbBloqueado.Checked = false;
+            rbTodos.Checked = true;
         }
 
-        public frmAdministrador Padre { get => _padre; set => _padre = value; }
-
-        private void dgvProfesores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        //===========================================================================================================================================
+        //DGV
+        private void dgvAlumnos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            Administrador.alumno alumnoFila = (Administrador.alumno)dgvAlumnos.Rows[e.RowIndex].DataBoundItem;
-            if (alumnoFila != null)
+            try
             {
-                dgvAlumnos.Rows[e.RowIndex].Cells[0].Value = alumnoFila.codigo.ToString();
-                dgvAlumnos.Rows[e.RowIndex].Cells[1].Value = alumnoFila.nombre;
-                dgvAlumnos.Rows[e.RowIndex].Cells[2].Value = alumnoFila.apellidoPaterno;
-                dgvAlumnos.Rows[e.RowIndex].Cells[3].Value = alumnoFila.apellidoMaterno;
-                dgvAlumnos.Rows[e.RowIndex].Cells[4].Value = alumnoFila.dni;
-                dgvAlumnos.Rows[e.RowIndex].Cells[5].Value = alumnoFila.telefono.ToString();
-                dgvAlumnos.Rows[e.RowIndex].Cells[6].Value = alumnoFila.correo;
+                Administrador.alumno alumFila = (Administrador.alumno)dgvAlumno.Rows[e.RowIndex].DataBoundItem;
+                if (alumFila != null)
+                {
+                    dgvAlumno.Rows[e.RowIndex].Cells[0].Value = alumFila.codigo;
+                    dgvAlumno.Rows[e.RowIndex].Cells[1].Value = alumFila.nombre;
+                    dgvAlumno.Rows[e.RowIndex].Cells[2].Value = alumFila.apellidoPaterno;
+                    dgvAlumno.Rows[e.RowIndex].Cells[3].Value = alumFila.apellidoMaterno;
+                    dgvAlumno.Rows[e.RowIndex].Cells[4].Value = alumFila.dni;
+                    dgvAlumno.Rows[e.RowIndex].Cells[5].Value = alumFila.telefono;
+                    dgvAlumno.Rows[e.RowIndex].Cells[6].Value = alumFila.correo;
+                }
+            }
+            catch
+            {
+
             }
         }
 
+        //=============================================================================================================================================
+        //BUSCAR
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dgvAlumnos.DataSource = DBController.listarAlumnos(txtNombre.Text);
+            toShow = new BindingList<Administrador.alumno>();
+            index = 0;
+
+            int eaux = 3;
+            if (rbActivo.Checked == true)
+            {
+                eaux = 1;
+            }
+            else if (rbInactivo.Checked == true)
+            {
+                eaux = 0;
+            }
+            else if (rbBloqueado.Checked == true)
+            {
+                eaux = 2;
+            }
+
+            String nombreAux = txtNombre.Text.ToUpper();
+            String codigoAux = txtCodigo.Text;
+            String apPatAux = txtApPat.Text.ToUpper();
+            String apMatAux = txtApMat.Text.ToUpper();
+            if (eaux != 3)
+            {
+                foreach (Administrador.alumno al in backup)
+                {
+                    String nombRev = al.nombre.ToUpper();
+                    String codRev = al.codigo;
+                    String apPatRev = al.apellidoPaterno.ToUpper();
+                    String apMatRev = al.apellidoMaterno.ToUpper();
+
+                    if (al.estado == eaux && nombRev.Contains(nombreAux) && codRev.Contains(codigoAux) && apPatRev.Contains(apPatAux) && apMatRev.Contains(apMatAux))
+                    {
+                        toShow.Add(al);
+                    }
+                }
+            }
+            else
+            {
+                foreach (Administrador.alumno al in backup)
+                {
+                    String nombRev = al.nombre.ToUpper();
+                    String codRev = al.codigo;
+                    String apPatRev = al.apellidoPaterno.ToUpper();
+                    String apMatRev = al.apellidoMaterno.ToUpper();
+
+                    if (nombRev.Contains(nombreAux) && codRev.Contains(codigoAux) && apPatRev.Contains(apPatAux) && apMatRev.Contains(apMatAux))
+                    {
+                        toShow.Add(al);
+                    }
+                }
+            }
+
+            if (eaux==3 && txtNombre.Text == "" && txtCodigo.Text == "" && txtApPat.Text=="" && txtApMat.Text=="")
+            {
+                busq = 0;
+                index += 1;
+                BindingList<Administrador.alumno> bdl = new BindingList<Administrador.alumno>();
+                for (int n_ = (index - 1) * 20; n_<backup.Count() && n_ < index * 20; n_++)
+                {
+                    bdl.Add(backup[n_]);
+                }
+                dgvAlumno.DataSource = bdl;
+            }
+            else
+            {
+                if (toShow.Count() == 0)
+                {
+                    MessageBox.Show("No se encontraron resultados, ingrese datos válidos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                index += 1;
+                BindingList<Administrador.alumno> bdl = new BindingList<Administrador.alumno>();
+                busq = 1;
+                for (int n_ = (index - 1) * 20; (n_ < toShow.Count()) && (n_ < index * 20); n_++)
+                {
+                    bdl.Add(toShow[n_]);
+                }
+                dgvAlumno.DataSource = bdl;
+            }
         }
 
+        //=============================================================================================================================================
+        //AGREGAR
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvAlumno.FirstDisplayedScrollingRowIndex = dgvAlumno.RowCount - 1;
+                frmDatosAlumno formDatosAlumno = new frmDatosAlumno(_padre);
+                _padre.openChildForm(formDatosAlumno);
+            }
+            catch
+            {
+                frmDatosAlumno formDatosAlumno = new frmDatosAlumno(_padre);
+                _padre.openChildForm(formDatosAlumno);
+            }
+        }
+
+        //=============================================================================================================================================
+        //SELECCIONAR
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            alSeleccionado = dgvAlumnos.CurrentRow.DataBoundItem as Administrador.alumno;
-            this.DialogResult = DialogResult.OK;
-            if (i==0) {
-                frmDatosAlumno formDatosAlumno = new frmDatosAlumno(alSeleccionado);
-                i = i+1;
+            try
+            {
+                alSeleccionado = dgvAlumno.CurrentRow.DataBoundItem as Administrador.alumno;
+                frmDatosAlumno formDatosAlumno = new frmDatosAlumno(alSeleccionado, _padre);
                 _padre.openChildForm(formDatosAlumno);
-            } 
+            }
+            catch
+            {
+                MessageBox.Show("Debe seleccionar un alumno", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        //=============================================================================================================================================
+        //REGRESAR
+        private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        //=============================================================================================================================================
+        //ANTERIOR
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            BindingList<Administrador.alumno> aux = new BindingList<Administrador.alumno>();
+            backup = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));
+            if (busq != 1) aux = backup;
+            else aux = toShow;
+            if (index > 1)
+            {
+                index -= 1;
+                BindingList<Administrador.alumno> bdl = new BindingList<Administrador.alumno>();
+                for (int n_ = (index - 1) * 20; (n_ >= 0) && (n_ < index * 20); n_++)
+                {
+                    bdl.Add(aux[n_]);
+                }
+                dgvAlumno.DataSource = bdl;
+            }
+        }
+
+        //=============================================================================================================================================
+        //SIGUIENTE
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            BindingList<Administrador.alumno> aux = new BindingList<Administrador.alumno>();
+            backup = new BindingList<Administrador.alumno>(DBController.listarAlumnos(""));
+            if (busq != 1) aux = backup;
+            else aux = toShow;
+            if (index * 20 <= aux.Count() - 1)
+            {
+                index += 1;
+                BindingList<Administrador.alumno> bdl = new BindingList<Administrador.alumno>();
+                for (int n_ = (index - 1) * 20; (n_ < aux.Count()) && (n_ < index * 20); n_++)
+                {
+                    bdl.Add(aux[n_]);
+                }
+                dgvAlumno.DataSource = bdl;
+            }
         }
     }
 }

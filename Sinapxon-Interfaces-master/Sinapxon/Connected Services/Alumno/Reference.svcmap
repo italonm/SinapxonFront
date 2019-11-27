@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4e59cec2-49a0-4ffb-aaa1-5e52e7884860" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="27563d3b-4485-4d7b-9243-762533695f66" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/SinapxonSoftServices/AlumnoServices?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AlumnoServices.xsd" MetadataType="Schema" ID="b6626011-e5a8-409e-ab1c-91e8554c00d8" SourceId="1" SourceUrl="http://localhost:8080/SinapxonSoftServices/AlumnoServices?xsd=1" />
-    <MetadataFile FileName="AlumnoServices.wsdl" MetadataType="Wsdl" ID="5f8ba6e8-3a2a-42de-ac1c-7a7ec6cbc67d" SourceId="1" SourceUrl="http://localhost:8080/SinapxonSoftServices/AlumnoServices?WSDL" />
+    <MetadataFile FileName="AlumnoServices.xsd" MetadataType="Schema" ID="e63889b1-06e8-4f9e-9fce-470622c53187" SourceId="1" SourceUrl="http://localhost:8080/SinapxonSoftServices/AlumnoServices?xsd=1" />
+    <MetadataFile FileName="AlumnoServices.wsdl" MetadataType="Wsdl" ID="429368f6-451b-4d77-8b76-64ecd1822879" SourceId="1" SourceUrl="http://localhost:8080/SinapxonSoftServices/AlumnoServices?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

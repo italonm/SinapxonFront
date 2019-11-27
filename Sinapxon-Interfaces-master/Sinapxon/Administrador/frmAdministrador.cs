@@ -17,6 +17,7 @@ namespace Sinapxon.Administrador
         public frmAdministrador()
         {
             InitializeComponent();
+            //this.WindowState = FormWindowState.Maximized;
             lblNombreUsuario.Text = LoginInfo.persona.nombre;
             panelSubGestionarUsr.Visible = false;
         }
@@ -74,6 +75,11 @@ namespace Sinapxon.Administrador
             this.Hide();
             frmLogin formLogin = new frmLogin();
             formLogin.Show();
+        }
+
+        private void btnEspecialidad_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmAgregarEspecialidad(this));
         }
     }
 }

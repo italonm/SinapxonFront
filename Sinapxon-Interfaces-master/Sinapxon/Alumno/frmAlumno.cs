@@ -17,6 +17,7 @@ namespace Sinapxon.Alumno
         public frmAlumno()
         {
             InitializeComponent();
+            //this.WindowState = FormWindowState.Maximized;
             lblNombreUsuario.Text = LoginInfo.persona.nombre;
         }
 
@@ -53,6 +54,30 @@ namespace Sinapxon.Alumno
             this.Hide();
             frmLogin formLogin = new frmLogin();
             formLogin.Show();
+        }
+
+        private void btnLogOut_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLogin formLogin = new frmLogin();
+            formLogin.Show();
+        }
+
+        private void frmAlumno_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        public void openChildForm_withoutClosing(Form formularioHijo)
+        {
+            formularioActivo = formularioHijo;
+            formularioHijo.TopLevel = false;
+            formularioHijo.FormBorderStyle = FormBorderStyle.None;
+            formularioHijo.Dock = DockStyle.Fill;
+            panelContenedor.Controls.Add(formularioHijo);
+            panelContenedor.Tag = formularioHijo;
+            formularioHijo.BringToFront();
+            formularioHijo.Show();
         }
     }
 }

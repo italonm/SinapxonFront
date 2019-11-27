@@ -56,12 +56,6 @@
     <Compile Include="Administrador\frmAdministrador.Designer.cs">
       <DependentUpon>frmAdministrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\frmCurso.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmCurso.Designer.cs">
-      <DependentUpon>frmCurso.cs</DependentUpon>
-    </Compile>
     <Compile Include="Administrador\frmAgregarEspecialidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +67,12 @@
     </Compile>
     <Compile Include="Administrador\frmAgregarRequisito.Designer.cs">
       <DependentUpon>frmAgregarRequisito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmCurso.Designer.cs">
+      <DependentUpon>frmCurso.cs</DependentUpon>
     </Compile>
     <Compile Include="Administrador\frmDatosAlumno.cs">
       <SubType>Form</SubType>
@@ -116,6 +116,12 @@
     <Compile Include="Administrador\frmListaUsuarios.Designer.cs">
       <DependentUpon>frmListaUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrador\frmRegistrarEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmRegistrarEspecialidad.Designer.cs">
+      <DependentUpon>frmRegistrarEspecialidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\frmSolicitudClassroom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,12 +145,6 @@
     </Compile>
     <Compile Include="Alumno\frmEvaluacion.Designer.cs">
       <DependentUpon>frmEvaluacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Alumno\frmEvaluaciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Alumno\frmEvaluaciones.Designer.cs">
-      <DependentUpon>frmEvaluaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Alumno\frmExplorarClassroom.cs">
       <SubType>Form</SubType>
@@ -181,12 +181,6 @@
     </Compile>
     <Compile Include="Alumno\frmTema.Designer.cs">
       <DependentUpon>frmTema.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Alumno\frmTemas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Alumno\frmTemas.Designer.cs">
-      <DependentUpon>frmTemas.cs</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\Administrador\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -263,6 +257,12 @@
     <Compile Include="Profesor\frmDatosClassroom.Designer.cs">
       <DependentUpon>frmDatosClassroom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Profesor\frmVerAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\frmVerAlumnos.Designer.cs">
+      <DependentUpon>frmVerAlumnos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Profesor\frmVerClassroom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,19 +281,25 @@
     <Compile Include="Profesor\frmProfesor.Designer.cs">
       <DependentUpon>frmProfesor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Profesor\frmVerNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\frmVerNotas.Designer.cs">
+      <DependentUpon>frmVerNotas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Administrador\frmAdministrador.resx">
       <DependentUpon>frmAdministrador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmCurso.resx">
-      <DependentUpon>frmCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmAgregarEspecialidad.resx">
       <DependentUpon>frmAgregarEspecialidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmAgregarRequisito.resx">
       <DependentUpon>frmAgregarRequisito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmCurso.resx">
+      <DependentUpon>frmCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmDatosAlumno.resx">
       <DependentUpon>frmDatosAlumno.cs</DependentUpon>
@@ -316,6 +322,9 @@
     <EmbeddedResource Include="Administrador\frmListaUsuarios.resx">
       <DependentUpon>frmListaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmRegistrarEspecialidad.resx">
+      <DependentUpon>frmRegistrarEspecialidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmSolicitudClassroom.resx">
       <DependentUpon>frmSolicitudClassroom.cs</DependentUpon>
     </EmbeddedResource>
@@ -327,9 +336,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Alumno\frmEvaluacion.resx">
       <DependentUpon>frmEvaluacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Alumno\frmEvaluaciones.resx">
-      <DependentUpon>frmEvaluaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Alumno\frmExplorarClassroom.resx">
       <DependentUpon>frmExplorarClassroom.cs</DependentUpon>
@@ -348,9 +354,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Alumno\frmTema.resx">
       <DependentUpon>frmTema.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Alumno\frmTemas.resx">
-      <DependentUpon>frmTemas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -379,6 +382,9 @@
     <EmbeddedResource Include="Profesor\frmDatosClassroom.resx">
       <DependentUpon>frmDatosClassroom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\frmVerAlumnos.resx">
+      <DependentUpon>frmVerAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Profesor\frmVerClassroom.resx">
       <DependentUpon>frmVerClassroom.cs</DependentUpon>
     </EmbeddedResource>
@@ -388,16 +394,14 @@
     <EmbeddedResource Include="Profesor\frmProfesor.resx">
       <DependentUpon>frmProfesor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\frmVerNotas.resx">
+      <DependentUpon>frmVerNotas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Connected Services\Administrador\AdministradorServices.wsdl" />
     <None Include="Connected Services\Administrador\AdministradorServices.xsd">
       <SubType>Designer</SubType>
@@ -417,6 +421,12 @@
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.alumno.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.cambiarEstadoSolicitudResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.crearClassroom_y_asignarProfesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.curso.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -430,6 +440,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.eliminarProfesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.especialidad.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.idioma.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.insertarAlumnoResponse.datasource">
@@ -450,16 +466,40 @@
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarCursosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarCursosSinResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarEspecialidadesResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarIdiomasXNombreCodigoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarPaisesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarProfesoresResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarRequisitosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarSolicitudesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.obtenerPeriodoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.pais.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.periodo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.profesor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.solicitudClassroom.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Alumno\AlumnoServices.wsdl" />
@@ -472,16 +512,40 @@
     <None Include="Connected Services\Alumno\Sinapxon.Alumno.curso.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.evaluacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.insertarAlumnoAlClassroomResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarClassroomsxCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarClassrooms_Alumno_PeriodoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarClassroomxAlumnoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarCursosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarPaisesResponse.datasource">
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarEvaluacionesXClassroomResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Alumno\Sinapxon.Alumno.pais.datasource">
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarPeriodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarTemaxClassroomResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.periodo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.temaXClassroom.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Login\LoginServices.wsdl" />
@@ -489,6 +553,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\Login\Sinapxon.Login.actualizarPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Login\Sinapxon.Login.alumno.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Login\Sinapxon.Login.persona.datasource">
@@ -500,14 +567,23 @@
     <None Include="Connected Services\Login\Sinapxon.Login.validarLoginResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Login\Sinapxon.Login.validarNicknameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Profesor\ProfesorServices.wsdl" />
     <None Include="Connected Services\Profesor\ProfesorServices.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.alumno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.classroom.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.curso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.evaluacion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.idioma.datasource">
@@ -522,16 +598,25 @@
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.insertarTemaxClassroomResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarAlumnoXClassroomResponse11.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarClassroomxProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarCursosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarEvaluacionesXClassroomResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarIdiomasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarPeriodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarSolicitudesClassroomxProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarTemasResponse.datasource">
@@ -541,6 +626,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.periodo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.solicitudClassroom.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.tema.datasource">
@@ -553,6 +641,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -711,18 +804,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\Alumno\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\Alumno\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\Alumno\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Connected Services\Administrador\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -742,6 +823,93 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contraseña.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enviar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enviar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_arrow_back_ios_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_arrow_left_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_save_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_get_app_white_18dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_assignment_turned_in_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_arrow_left_white_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_insert_drive_file_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_edit_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_delete_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_save_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_cancel_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_library_add_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_person_add_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_mood_bad_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ojoIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Alumno\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Alumno\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Alumno\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

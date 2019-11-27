@@ -23,21 +23,26 @@ namespace Sinapxon.Profesor
             cbTemas.ValueMember = "id_tema";
         }
 
-        private void btnGuardarEvaluacion_Click(object sender, EventArgs e)
-        {
-            Profesor.evaluacion evaluacion = new Profesor.evaluacion();
-            evaluacion.nombre = txtNombreEvaluacion.Text;
-            int codTema=((Profesor.temaXClassroom)cbTemas.SelectedItem).id_tema;
-            evaluacion.peso_porcentual = float.Parse(txtPeso.Text);
-            evaluacion.descripcion = txtDescripcion.Text;
-            evaluacion.tema = new Profesor.temaXClassroom();
-            DBController.insertarEvaluacion(evaluacion,ClassroomInfo.classroom.codigo,codTema);
-            this.Close();
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void butGuardar_Click(object sender, EventArgs e)
+        {
+            Profesor.evaluacion evaluacion = new Profesor.evaluacion();
+            evaluacion.nombre = txtNombreEvaluacion.Text;
+            int codTema = ((Profesor.temaXClassroom)cbTemas.SelectedItem).id_tema;
+            evaluacion.peso_porcentual = float.Parse(txtPeso.Text);
+            evaluacion.descripcion = txtDescripcion.Text;
+            evaluacion.tema = new Profesor.temaXClassroom();
+            DBController.insertarEvaluacion(evaluacion, ClassroomInfo.classroom.codigo, codTema);
+            this.Close();
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

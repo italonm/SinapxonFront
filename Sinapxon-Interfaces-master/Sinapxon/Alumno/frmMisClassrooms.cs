@@ -17,6 +17,9 @@ namespace Sinapxon.Alumno
         private int altura = 0, boxAltura = 174;
         private frmAlumno _padre = null;
 
+        private BindingList<Alumno.classroom> classrooms;
+        private BindingList<Alumno.periodo> periodos;
+
         private Alumno.AlumnoServicesClient DBController = new AlumnoServicesClient();
         
 
@@ -26,8 +29,7 @@ namespace Sinapxon.Alumno
         {
             InitializeComponent();
             this.BringToFront();
-            BindingList<Alumno.classroom> classrooms =
-                new BindingList<classroom>(DBController.listarClassroomxAlumno(LoginInfo.persona.codigo));
+            classrooms = new BindingList<classroom>(DBController.listarClassroomxAlumno(LoginInfo.persona.codigo));
 
             foreach (Alumno.classroom obj in classrooms)
             {
@@ -39,19 +41,31 @@ namespace Sinapxon.Alumno
         {
             InitializeComponent();
             this.BringToFront();
+            _padre = padre;
 
-            BindingList<Alumno.classroom> classrooms = 
-                new BindingList<classroom>(DBController.listarClassroomxAlumno(LoginInfo.persona.codigo));
+            lblSincursos.Hide();
+            pbSinCursos.Hide();
 
-            foreach (Alumno.classroom obj in classrooms)
+            periodos = new BindingList<Alumno.periodo>(DBController.listarPeriodos());
+            cbPerido.DataSource = periodos;
+            cbPerido.DisplayMember = "nombre";
+            cbPerido.ValueMember = "id_periodo";
+
+            try
             {
-                crearElemento(obj);
+                classrooms = new BindingList<classroom>(DBController.listarClassroomxAlumno(LoginInfo.persona.codigo));
+            }
+            catch (ArgumentNullException)
+            {
+                lblSincursos.Show();
+                pbSinCursos.Show();
             }
 
-            //crearElemento();
-            //crearElemento();
-            //crearElemento();
-            _padre = padre;
+            if (classrooms != null)
+            {
+                foreach (Alumno.classroom obj in classrooms)
+                    crearElemento(obj);
+            }
         }
 
         public void crearElemento(Alumno.classroom clsroom)
@@ -163,7 +177,9 @@ namespace Sinapxon.Alumno
             btnIrClassrom.Size = new System.Drawing.Size(182, 49);
             btnIrClassrom.Text = "Ir al classroom";
             btnIrClassrom.UseVisualStyleBackColor = false;
-            btnIrClassrom.Click += new System.EventHandler(this.BtnIrClassroom_Click);
+            //btnIrClassrom.Click += new System.EventHandler(this.BtnIrClassroom_Click);
+            //btnIrClassrom.Click += new System.EventHandler((sender, e) => this.BtnIrClassroom_Click(sender, e, clsroom));
+            btnIrClassrom.Click += new System.EventHandler((sender, e) => this.BtnIrClassroom_Click(sender, e, clsroom));
             panelContenido.Controls.Add(btnIrClassrom);
 
             /*
@@ -193,10 +209,46 @@ namespace Sinapxon.Alumno
 
         }
 
-        private void BtnIrClassroom_Click(object sender, EventArgs e)
+        private void btnIr_Click(object sender, EventArgs e)
         {
+            //txtPeridoID.Text = ((Alumno.periodo)cbPerido.SelectedItem).id_periodo.ToString() + " - "+ LoginInfo.persona.codigo;
+
+            panelContenido.Controls.Clear();
+            try
+            {
+                classrooms = new BindingList<Alumno.classroom>
+                (DBController.listarClassroomsXAlumno_X_Periodo(LoginInfo.persona.codigo,
+                    ((Alumno.periodo)cbPerido.SelectedItem).id_periodo)
+                );
+                altura = 0;
+            }
+            catch (Exception)
+            {
+                classrooms = null;
+            }
+            if (classrooms != null)
+            {
+                foreach (Alumno.classroom obj in classrooms)
+                    crearElemento(obj);
+            }
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnIrClassroom_Click(object sender, EventArgs e, Alumno.classroom classrum)
+        {
+            ALUMNO_ClassroomSeleccionado.classroomSeleccionado = classrum;
             frmMiClassroom formMiClassroom = new frmMiClassroom(_padre);
-            _padre.openChildForm(formMiClassroom);
+            _padre.openChildForm_withoutClosing(formMiClassroom);
         }
     }
+
+    public static class ALUMNO_ClassroomSeleccionado
+    {
+        public static Alumno.classroom classroomSeleccionado;
+    }
+
 }

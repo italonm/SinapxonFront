@@ -24,9 +24,16 @@ namespace Sinapxon.Login
         private void Button1_Click(object sender, EventArgs e)
         {
             Login.LoginServicesClient DBController = new Login.LoginServicesClient() ;
+            txtUsuario.Text = "gabrielJ";
+            txtContrasenia.Text = "abcd1234";
             LoginInfo.persona = DBController.validarLogin(txtUsuario.Text, txtContrasenia.Text);
             //LoginInfo.codigo = result.Substring(0, 6);
             String tipo = LoginInfo.persona.tipo;
+            if (LoginInfo.persona.nombre == null)
+            {
+                MessageBox.Show("Los datos ingresados son incorrectos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (string.Equals(tipo, "D"))
             {
                 frmAdministrador formAdministrador = new frmAdministrador();
@@ -36,7 +43,7 @@ namespace Sinapxon.Login
             }
             else if (string.Equals(tipo, "A"))
             {
-                frmAlumno formAlumno = new frmAlumno();
+                frmAlumno formAlumno = new frmAlumno(); LoginInfo.pswrd = txtContrasenia.Text;
                 formAlumno.Visible = true;
                 this.Visible = true;
             }
@@ -74,10 +81,78 @@ namespace Sinapxon.Login
         {
 
         }
+
+        private void txtContrasenia_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Button1_Click(sender, e);
+            }
+        }
+
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            String usuario = txtUsuario.Text;
+            if (usuario.ToLower().Trim().Equals("usuario"))
+            {
+                txtUsuario.Text = "";
+                txtUsuario.ForeColor = Color.White;
+            }
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            String usuario = txtUsuario.Text;
+            if (usuario.ToLower().Trim().Equals("usuario") || usuario.Trim().Equals(""))
+            {
+                txtUsuario.Text = "usuario";
+                txtUsuario.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtContrasenia_Enter(object sender, EventArgs e)
+        {
+            String password = txtContrasenia.Text;
+            if (password.ToLower().Trim().Equals("contraseña"))
+            {
+                txtContrasenia.Text = "";
+                txtContrasenia.UseSystemPasswordChar = true;
+                txtContrasenia.ForeColor = Color.White;
+            }
+        }
+
+        private void txtContrasenia_Leave(object sender, EventArgs e)
+        {
+            String password = txtContrasenia.Text;
+            if (password.ToLower().Trim().Equals("usuario") || password.Trim().Equals(""))
+            {
+                txtContrasenia.Text = "contraseña";
+                txtContrasenia.UseSystemPasswordChar = false;
+                txtContrasenia.ForeColor = Color.Gray;
+            }
+        }
+
+        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            if (txtContrasenia.UseSystemPasswordChar == false)
+            {
+                txtContrasenia.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtContrasenia.UseSystemPasswordChar = false;
+            }
+        }
     }
 
     public static class LoginInfo
     {
         public static Login.persona persona;
+        public static String pswrd;
     }
 }
