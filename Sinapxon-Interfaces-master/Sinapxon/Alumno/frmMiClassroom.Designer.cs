@@ -28,19 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageTema = new System.Windows.Forms.TabPage();
             this.tabPageEvaluacion = new System.Windows.Forms.TabPage();
-            this.tabPageNotas = new System.Windows.Forms.TabPage();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnAtras = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
-            this.tabPageNotas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -60,7 +53,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl.Controls.Add(this.tabPageTema);
             this.tabControl.Controls.Add(this.tabPageEvaluacion);
-            this.tabControl.Controls.Add(this.tabPageNotas);
             this.tabControl.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl.Location = new System.Drawing.Point(22, 71);
             this.tabControl.Name = "tabControl";
@@ -91,33 +83,6 @@
             this.tabPageEvaluacion.TabIndex = 1;
             this.tabPageEvaluacion.Text = "Evaluaciones";
             // 
-            // tabPageNotas
-            // 
-            this.tabPageNotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
-            this.tabPageNotas.Controls.Add(this.chart1);
-            this.tabPageNotas.Location = new System.Drawing.Point(4, 32);
-            this.tabPageNotas.Name = "tabPageNotas";
-            this.tabPageNotas.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageNotas.Size = new System.Drawing.Size(912, 544);
-            this.tabPageNotas.TabIndex = 2;
-            this.tabPageNotas.Text = "Notas";
-            // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(92, 47);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(721, 453);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            // 
             // btnAtras
             // 
             this.btnAtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
@@ -129,6 +94,7 @@
             this.btnAtras.Size = new System.Drawing.Size(50, 50);
             this.btnAtras.TabIndex = 24;
             this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // frmMiClassroom
             // 
@@ -143,8 +109,6 @@
             this.Name = "frmMiClassroom";
             this.Text = "frmMiClassroom";
             this.tabControl.ResumeLayout(false);
-            this.tabPageNotas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,8 +119,6 @@
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPageTema;
         private System.Windows.Forms.TabPage tabPageEvaluacion;
-        private System.Windows.Forms.TabPage tabPageNotas;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Button btnAtras;
     }
 }

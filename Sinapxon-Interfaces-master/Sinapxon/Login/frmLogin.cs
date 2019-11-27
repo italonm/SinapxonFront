@@ -24,6 +24,7 @@ namespace Sinapxon.Login
         private void Button1_Click(object sender, EventArgs e)
         {
             Login.LoginServicesClient DBController = new Login.LoginServicesClient() ;
+    
             LoginInfo.persona = DBController.validarLogin(txtUsuario.Text, txtContrasenia.Text);
             //LoginInfo.codigo = result.Substring(0, 6);
             String tipo = LoginInfo.persona.tipo;
@@ -41,7 +42,7 @@ namespace Sinapxon.Login
             }
             else if (string.Equals(tipo, "A"))
             {
-                frmAlumno formAlumno = new frmAlumno();
+                frmAlumno formAlumno = new frmAlumno(); LoginInfo.pswrd = txtContrasenia.Text;
                 formAlumno.Visible = true;
                 this.Visible = true;
             }
@@ -134,10 +135,23 @@ namespace Sinapxon.Login
         {
             Application.Exit();
         }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            if (txtContrasenia.UseSystemPasswordChar == false)
+            {
+                txtContrasenia.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtContrasenia.UseSystemPasswordChar = false;
+            }
+        }
     }
 
     public static class LoginInfo
     {
         public static Login.persona persona;
+        public static String pswrd;
     }
 }

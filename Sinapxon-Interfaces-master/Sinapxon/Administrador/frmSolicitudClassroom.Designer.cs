@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSolicitudClassroom));
             this.lblTituloSolicitud = new System.Windows.Forms.Label();
             this.cbIdioma = new System.Windows.Forms.ComboBox();
             this.lblIdioma = new System.Windows.Forms.Label();
@@ -36,23 +37,23 @@
             this.lblPeriodo = new System.Windows.Forms.Label();
             this.lblDescripcionClassroom = new System.Windows.Forms.Label();
             this.panelDatosProfesor = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelTituloDatosProfesor = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panelDatosClassroom = new System.Windows.Forms.Panel();
-            this.panelTituloDatosClassroom = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnDenegar = new System.Windows.Forms.Button();
-            this.btnAprobar = new System.Windows.Forms.Button();
-            this.btnAtras = new System.Windows.Forms.Button();
             this.lblInteres = new System.Windows.Forms.Label();
             this.lblGrado = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblNombreProfesor = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelTituloDatosProfesor = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panelDatosClassroom = new System.Windows.Forms.Panel();
             this.lblNombreCurso = new System.Windows.Forms.Label();
             this.lblCurso = new System.Windows.Forms.Label();
+            this.panelTituloDatosClassroom = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnDenegar = new System.Windows.Forms.Button();
+            this.btnAprobar = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.panelDatosProfesor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTituloDatosProfesor.SuspendLayout();
@@ -63,11 +64,11 @@
             // lblTituloSolicitud
             // 
             this.lblTituloSolicitud.AutoSize = true;
-            this.lblTituloSolicitud.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloSolicitud.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloSolicitud.ForeColor = System.Drawing.Color.Black;
             this.lblTituloSolicitud.Location = new System.Drawing.Point(75, 35);
             this.lblTituloSolicitud.Name = "lblTituloSolicitud";
-            this.lblTituloSolicitud.Size = new System.Drawing.Size(232, 29);
+            this.lblTituloSolicitud.Size = new System.Drawing.Size(250, 29);
             this.lblTituloSolicitud.TabIndex = 0;
             this.lblTituloSolicitud.Text = "Datos de la solicitud";
             // 
@@ -83,10 +84,10 @@
             // lblIdioma
             // 
             this.lblIdioma.AutoSize = true;
-            this.lblIdioma.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdioma.Location = new System.Drawing.Point(20, 85);
             this.lblIdioma.Name = "lblIdioma";
-            this.lblIdioma.Size = new System.Drawing.Size(58, 19);
+            this.lblIdioma.Size = new System.Drawing.Size(57, 20);
             this.lblIdioma.TabIndex = 8;
             this.lblIdioma.Text = "Idioma";
             // 
@@ -101,6 +102,9 @@
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescripcion.Enabled = false;
             this.txtDescripcion.Location = new System.Drawing.Point(24, 175);
             this.txtDescripcion.Multiline = true;
@@ -112,25 +116,27 @@
             // lblPeriodo
             // 
             this.lblPeriodo.AutoSize = true;
-            this.lblPeriodo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPeriodo.Location = new System.Drawing.Point(239, 85);
             this.lblPeriodo.Name = "lblPeriodo";
-            this.lblPeriodo.Size = new System.Drawing.Size(63, 19);
+            this.lblPeriodo.Size = new System.Drawing.Size(63, 20);
             this.lblPeriodo.TabIndex = 2;
             this.lblPeriodo.Text = "Periodo";
             // 
             // lblDescripcionClassroom
             // 
             this.lblDescripcionClassroom.AutoSize = true;
-            this.lblDescripcionClassroom.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcionClassroom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcionClassroom.Location = new System.Drawing.Point(20, 152);
             this.lblDescripcionClassroom.Name = "lblDescripcionClassroom";
-            this.lblDescripcionClassroom.Size = new System.Drawing.Size(92, 19);
+            this.lblDescripcionClassroom.Size = new System.Drawing.Size(92, 20);
             this.lblDescripcionClassroom.TabIndex = 1;
             this.lblDescripcionClassroom.Text = "Descripción";
             // 
             // panelDatosProfesor
             // 
+            this.panelDatosProfesor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panelDatosProfesor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelDatosProfesor.Controls.Add(this.lblInteres);
             this.panelDatosProfesor.Controls.Add(this.lblGrado);
@@ -145,9 +151,82 @@
             this.panelDatosProfesor.Size = new System.Drawing.Size(446, 543);
             this.panelDatosProfesor.TabIndex = 5;
             // 
+            // lblInteres
+            // 
+            this.lblInteres.AutoSize = true;
+            this.lblInteres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(27)))), ((int)(((byte)(146)))));
+            this.lblInteres.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInteres.ForeColor = System.Drawing.Color.White;
+            this.lblInteres.Location = new System.Drawing.Point(103, 460);
+            this.lblInteres.Name = "lblInteres";
+            this.lblInteres.Size = new System.Drawing.Size(138, 24);
+            this.lblInteres.TabIndex = 20;
+            this.lblInteres.Text = "Área de interés";
+            // 
+            // lblGrado
+            // 
+            this.lblGrado.AutoSize = true;
+            this.lblGrado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(27)))), ((int)(((byte)(146)))));
+            this.lblGrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrado.ForeColor = System.Drawing.Color.White;
+            this.lblGrado.Location = new System.Drawing.Point(103, 389);
+            this.lblGrado.Name = "lblGrado";
+            this.lblGrado.Size = new System.Drawing.Size(185, 24);
+            this.lblGrado.TabIndex = 19;
+            this.lblGrado.Text = "Grado de instruccion";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(27)))), ((int)(((byte)(146)))));
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
+            this.lblNombre.Location = new System.Drawing.Point(103, 314);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(184, 24);
+            this.lblNombre.TabIndex = 18;
+            this.lblNombre.Text = "Nombre del profesor";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(27)))), ((int)(((byte)(146)))));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(103, 441);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 20);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Área de interés";
+            // 
+            // lblNombreProfesor
+            // 
+            this.lblNombreProfesor.AutoSize = true;
+            this.lblNombreProfesor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(27)))), ((int)(((byte)(146)))));
+            this.lblNombreProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreProfesor.ForeColor = System.Drawing.Color.White;
+            this.lblNombreProfesor.Location = new System.Drawing.Point(103, 295);
+            this.lblNombreProfesor.Name = "lblNombreProfesor";
+            this.lblNombreProfesor.Size = new System.Drawing.Size(65, 20);
+            this.lblNombreProfesor.TabIndex = 15;
+            this.lblNombreProfesor.Text = "Nombre";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(27)))), ((int)(((byte)(146)))));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(103, 370);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(156, 20);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Grado de instrucción";
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Sinapxon.Properties.Resources.Bloque_Usuario;
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(38, 56);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(370, 513);
@@ -168,16 +247,19 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(18, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(188, 25);
+            this.label4.Size = new System.Drawing.Size(206, 25);
             this.label4.TabIndex = 0;
             this.label4.Text = "Datos del profesor";
             // 
             // panelDatosClassroom
             // 
+            this.panelDatosClassroom.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDatosClassroom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelDatosClassroom.Controls.Add(this.lblNombreCurso);
             this.panelDatosClassroom.Controls.Add(this.lblCurso);
@@ -193,6 +275,26 @@
             this.panelDatosClassroom.Size = new System.Drawing.Size(437, 543);
             this.panelDatosClassroom.TabIndex = 6;
             // 
+            // lblNombreCurso
+            // 
+            this.lblNombreCurso.AutoSize = true;
+            this.lblNombreCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreCurso.Location = new System.Drawing.Point(87, 56);
+            this.lblNombreCurso.Name = "lblNombreCurso";
+            this.lblNombreCurso.Size = new System.Drawing.Size(196, 20);
+            this.lblNombreCurso.TabIndex = 13;
+            this.lblNombreCurso.Text = "Codigo y nombre del curso";
+            // 
+            // lblCurso
+            // 
+            this.lblCurso.AutoSize = true;
+            this.lblCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurso.Location = new System.Drawing.Point(20, 56);
+            this.lblCurso.Name = "lblCurso";
+            this.lblCurso.Size = new System.Drawing.Size(51, 20);
+            this.lblCurso.TabIndex = 12;
+            this.lblCurso.Text = "Curso";
+            // 
             // panelTituloDatosClassroom
             // 
             this.panelTituloDatosClassroom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
@@ -206,20 +308,21 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(32, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(206, 25);
+            this.label5.Size = new System.Drawing.Size(226, 25);
             this.label5.TabIndex = 1;
             this.label5.Text = "Datos del classroom";
             // 
             // btnDenegar
             // 
+            this.btnDenegar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDenegar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.btnDenegar.FlatAppearance.BorderSize = 0;
             this.btnDenegar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDenegar.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDenegar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDenegar.ForeColor = System.Drawing.Color.White;
             this.btnDenegar.Image = global::Sinapxon.Properties.Resources.round_cancel_white_18dp;
             this.btnDenegar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -234,10 +337,11 @@
             // 
             // btnAprobar
             // 
+            this.btnAprobar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAprobar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.btnAprobar.FlatAppearance.BorderSize = 0;
             this.btnAprobar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAprobar.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAprobar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAprobar.ForeColor = System.Drawing.Color.White;
             this.btnAprobar.Image = global::Sinapxon.Properties.Resources.baseline_check_circle_white_18dp;
             this.btnAprobar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -261,98 +365,6 @@
             this.btnAtras.Size = new System.Drawing.Size(50, 50);
             this.btnAtras.TabIndex = 24;
             this.btnAtras.UseVisualStyleBackColor = false;
-            // 
-            // lblInteres
-            // 
-            this.lblInteres.AutoSize = true;
-            this.lblInteres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(27)))), ((int)(((byte)(146)))));
-            this.lblInteres.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInteres.ForeColor = System.Drawing.Color.White;
-            this.lblInteres.Location = new System.Drawing.Point(103, 460);
-            this.lblInteres.Name = "lblInteres";
-            this.lblInteres.Size = new System.Drawing.Size(136, 23);
-            this.lblInteres.TabIndex = 20;
-            this.lblInteres.Text = "Área de interés";
-            // 
-            // lblGrado
-            // 
-            this.lblGrado.AutoSize = true;
-            this.lblGrado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(27)))), ((int)(((byte)(146)))));
-            this.lblGrado.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrado.ForeColor = System.Drawing.Color.White;
-            this.lblGrado.Location = new System.Drawing.Point(103, 389);
-            this.lblGrado.Name = "lblGrado";
-            this.lblGrado.Size = new System.Drawing.Size(185, 23);
-            this.lblGrado.TabIndex = 19;
-            this.lblGrado.Text = "Grado de instruccion";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(27)))), ((int)(((byte)(146)))));
-            this.lblNombre.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(103, 314);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(187, 23);
-            this.lblNombre.TabIndex = 18;
-            this.lblNombre.Text = "Nombre del profesor";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(27)))), ((int)(((byte)(146)))));
-            this.label3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(103, 441);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 19);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Área de interés";
-            // 
-            // lblNombreProfesor
-            // 
-            this.lblNombreProfesor.AutoSize = true;
-            this.lblNombreProfesor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(27)))), ((int)(((byte)(146)))));
-            this.lblNombreProfesor.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreProfesor.ForeColor = System.Drawing.Color.White;
-            this.lblNombreProfesor.Location = new System.Drawing.Point(103, 295);
-            this.lblNombreProfesor.Name = "lblNombreProfesor";
-            this.lblNombreProfesor.Size = new System.Drawing.Size(65, 19);
-            this.lblNombreProfesor.TabIndex = 15;
-            this.lblNombreProfesor.Text = "Nombre";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(27)))), ((int)(((byte)(146)))));
-            this.label2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(103, 370);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 19);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Grado de instrucción";
-            // 
-            // lblNombreCurso
-            // 
-            this.lblNombreCurso.AutoSize = true;
-            this.lblNombreCurso.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreCurso.Location = new System.Drawing.Point(87, 56);
-            this.lblNombreCurso.Name = "lblNombreCurso";
-            this.lblNombreCurso.Size = new System.Drawing.Size(197, 19);
-            this.lblNombreCurso.TabIndex = 13;
-            this.lblNombreCurso.Text = "Codigo y nombre del curso";
-            // 
-            // lblCurso
-            // 
-            this.lblCurso.AutoSize = true;
-            this.lblCurso.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurso.Location = new System.Drawing.Point(20, 56);
-            this.lblCurso.Name = "lblCurso";
-            this.lblCurso.Size = new System.Drawing.Size(50, 19);
-            this.lblCurso.TabIndex = 12;
-            this.lblCurso.Text = "Curso";
             // 
             // frmSolicitudClassroom
             // 

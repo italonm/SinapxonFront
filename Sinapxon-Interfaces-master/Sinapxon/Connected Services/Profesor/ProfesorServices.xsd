@@ -27,6 +27,8 @@
   <xs:element name="listarIdiomas" type="tns:listarIdiomas" />
   <xs:element name="listarIdiomasResponse" type="tns:listarIdiomasResponse" />
   <xs:element name="listarPeriodos" type="tns:listarPeriodos" />
+  <xs:element name="listarPeriodosDisponibles" type="tns:listarPeriodosDisponibles" />
+  <xs:element name="listarPeriodosDisponiblesResponse" type="tns:listarPeriodosDisponiblesResponse" />
   <xs:element name="listarPeriodosResponse" type="tns:listarPeriodosResponse" />
   <xs:element name="listarSolicitudesClassroomxProfesor" type="tns:listarSolicitudesClassroomxProfesor" />
   <xs:element name="listarSolicitudesClassroomxProfesorResponse" type="tns:listarSolicitudesClassroomxProfesorResponse" />
@@ -312,6 +314,14 @@
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarPeriodosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:periodo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPeriodosDisponibles">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPeriodosDisponiblesResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:periodo" />
     </xs:sequence>

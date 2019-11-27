@@ -32,6 +32,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblClassroom = new System.Windows.Forms.Label();
             this.panelTemas = new System.Windows.Forms.Panel();
             this.dgvTemas = new System.Windows.Forms.DataGridView();
@@ -44,15 +50,15 @@
             this.btnAniadirTema = new System.Windows.Forms.Button();
             this.panelEvaluaciones = new System.Windows.Forms.Panel();
             this.dgvEvaluaciones = new System.Windows.Forms.DataGridView();
-            this.Namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnQuitarEvaluacion = new System.Windows.Forms.Button();
             this.panelTituloEvaluacion = new System.Windows.Forms.Panel();
             this.lblEvaluacion = new System.Windows.Forms.Label();
             this.btnAniadirEvaluacion = new System.Windows.Forms.Button();
             this.btnEditarEvaluacion = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.Namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelTemas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTemas)).BeginInit();
             this.panelTituloTema.SuspendLayout();
@@ -68,12 +74,16 @@
             this.lblClassroom.ForeColor = System.Drawing.Color.Black;
             this.lblClassroom.Location = new System.Drawing.Point(85, 28);
             this.lblClassroom.Name = "lblClassroom";
-            this.lblClassroom.Size = new System.Drawing.Size(138, 29);
+            this.lblClassroom.Size = new System.Drawing.Size(161, 29);
             this.lblClassroom.TabIndex = 0;
-            this.lblClassroom.Text = ("Classroom" + ClassroomInfo.classroom.codigo + " - " + ClassroomInfo.classroom.curso.nombre);
+            this.lblClassroom.Text = "Classroom - ";
             // 
             // panelTemas
             // 
+            this.panelTemas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelTemas.AutoSize = true;
             this.panelTemas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelTemas.Controls.Add(this.dgvTemas);
             this.panelTemas.Controls.Add(this.btnQuitarTema);
@@ -81,36 +91,63 @@
             this.panelTemas.Controls.Add(this.btnAniadirTema);
             this.panelTemas.Location = new System.Drawing.Point(12, 76);
             this.panelTemas.Name = "panelTemas";
-            this.panelTemas.Size = new System.Drawing.Size(400, 570);
+            this.panelTemas.Size = new System.Drawing.Size(507, 570);
             this.panelTemas.TabIndex = 5;
             // 
             // dgvTemas
             // 
-            this.dgvTemas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTemas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvTemas.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            this.dgvTemas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvTemas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvTemas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
+            this.dgvTemas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTemas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTemas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTemas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
             this.Descripcion,
             this.Video});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTemas.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTemas.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvTemas.EnableHeadersVisualStyles = false;
+            this.dgvTemas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
             this.dgvTemas.Location = new System.Drawing.Point(15, 139);
             this.dgvTemas.Name = "dgvTemas";
-            this.dgvTemas.Size = new System.Drawing.Size(369, 395);
+            this.dgvTemas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTemas.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvTemas.RowHeadersVisible = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            this.dgvTemas.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvTemas.Size = new System.Drawing.Size(476, 395);
             this.dgvTemas.TabIndex = 4;
             this.dgvTemas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvTemas_CellFormatting);
             // 
@@ -129,7 +166,7 @@
             // 
             this.Video.HeaderText = "VIdeo";
             this.Video.Name = "Video";
-            this.Video.Width = 120;
+            this.Video.Width = 500;
             // 
             // btnQuitarTema
             // 
@@ -139,7 +176,7 @@
             this.btnQuitarTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitarTema.ForeColor = System.Drawing.Color.White;
             this.btnQuitarTema.Image = global::Sinapxon.Properties.Resources.baseline_remove_circle_white_18dp;
-            this.btnQuitarTema.Location = new System.Drawing.Point(209, 73);
+            this.btnQuitarTema.Location = new System.Drawing.Point(130, 73);
             this.btnQuitarTema.Name = "btnQuitarTema";
             this.btnQuitarTema.Size = new System.Drawing.Size(109, 45);
             this.btnQuitarTema.TabIndex = 3;
@@ -155,7 +192,7 @@
             this.panelTituloTema.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTituloTema.Location = new System.Drawing.Point(0, 0);
             this.panelTituloTema.Name = "panelTituloTema";
-            this.panelTituloTema.Size = new System.Drawing.Size(400, 60);
+            this.panelTituloTema.Size = new System.Drawing.Size(507, 60);
             this.panelTituloTema.TabIndex = 0;
             // 
             // lblTema
@@ -177,7 +214,7 @@
             this.btnAniadirTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAniadirTema.ForeColor = System.Drawing.Color.White;
             this.btnAniadirTema.Image = global::Sinapxon.Properties.Resources.baseline_add_circle_white_18dp;
-            this.btnAniadirTema.Location = new System.Drawing.Point(78, 73);
+            this.btnAniadirTema.Location = new System.Drawing.Point(15, 73);
             this.btnAniadirTema.Name = "btnAniadirTema";
             this.btnAniadirTema.Size = new System.Drawing.Size(109, 45);
             this.btnAniadirTema.TabIndex = 2;
@@ -188,63 +225,75 @@
             // 
             // panelEvaluaciones
             // 
+            this.panelEvaluaciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelEvaluaciones.AutoSize = true;
             this.panelEvaluaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelEvaluaciones.Controls.Add(this.dgvEvaluaciones);
             this.panelEvaluaciones.Controls.Add(this.btnQuitarEvaluacion);
             this.panelEvaluaciones.Controls.Add(this.panelTituloEvaluacion);
             this.panelEvaluaciones.Controls.Add(this.btnAniadirEvaluacion);
             this.panelEvaluaciones.Controls.Add(this.btnEditarEvaluacion);
-            this.panelEvaluaciones.Location = new System.Drawing.Point(435, 76);
+            this.panelEvaluaciones.Location = new System.Drawing.Point(539, 76);
             this.panelEvaluaciones.Name = "panelEvaluaciones";
-            this.panelEvaluaciones.Size = new System.Drawing.Size(400, 570);
+            this.panelEvaluaciones.Size = new System.Drawing.Size(403, 570);
             this.panelEvaluaciones.TabIndex = 6;
             // 
             // dgvEvaluaciones
             // 
-            this.dgvEvaluaciones.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEvaluaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvEvaluaciones.AllowUserToAddRows = false;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            this.dgvEvaluaciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvEvaluaciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvEvaluaciones.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
+            this.dgvEvaluaciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEvaluaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvEvaluaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEvaluaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Namee,
             this.Peso,
             this.Description});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEvaluaciones.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvEvaluaciones.Location = new System.Drawing.Point(23, 139);
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEvaluaciones.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvEvaluaciones.EnableHeadersVisualStyles = false;
+            this.dgvEvaluaciones.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            this.dgvEvaluaciones.Location = new System.Drawing.Point(26, 139);
             this.dgvEvaluaciones.Name = "dgvEvaluaciones";
+            this.dgvEvaluaciones.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEvaluaciones.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvEvaluaciones.RowHeadersVisible = false;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            this.dgvEvaluaciones.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvEvaluaciones.Size = new System.Drawing.Size(360, 418);
             this.dgvEvaluaciones.TabIndex = 3;
             this.dgvEvaluaciones.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEvaluaciones_CellFormatting);
-            // 
-            // Namee
-            // 
-            this.Namee.HeaderText = "Nombre";
-            this.Namee.Name = "Namee";
-            // 
-            // Peso
-            // 
-            this.Peso.HeaderText = "Peso";
-            this.Peso.Name = "Peso";
-            this.Peso.Width = 80;
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Descripcion";
-            this.Description.Name = "Description";
-            this.Description.Width = 150;
             // 
             // btnQuitarEvaluacion
             // 
@@ -330,11 +379,30 @@
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
+            // Namee
+            // 
+            this.Namee.HeaderText = "Nombre";
+            this.Namee.Name = "Namee";
+            this.Namee.Width = 150;
+            // 
+            // Peso
+            // 
+            this.Peso.HeaderText = "Peso";
+            this.Peso.Name = "Peso";
+            this.Peso.Width = 80;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Descripcion";
+            this.Description.Name = "Description";
+            this.Description.Width = 400;
+            // 
             // frmVerClassroom
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
-            this.ClientSize = new System.Drawing.Size(857, 681);
+            this.ClientSize = new System.Drawing.Size(964, 681);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.panelEvaluaciones);
             this.Controls.Add(this.panelTemas);

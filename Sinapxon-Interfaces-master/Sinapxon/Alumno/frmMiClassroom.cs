@@ -16,26 +16,64 @@ namespace Sinapxon.Alumno
         private int alturaEvaluaciones = 0;
         private frmAlumno _padre = null;
 
+        private Alumno.AlumnoServicesClient DBController = new AlumnoServicesClient();
+
+        //private BindingList<Alumno.tema> temas;
+        BindingList<Alumno.temaXClassroom> temaXC;
+        private BindingList<Alumno.evaluacion> evaluaciones;
+
         public frmMiClassroom()
         {
             InitializeComponent();
-            agregarTema();
-            agregarTema();
-            agregarTema();
-            agregarEvaluacion();
+            //agregarTema();
+            //agregarTema();
+            //agregarTema();
+            //agregarEvaluacion();
         }
 
         public frmMiClassroom(frmAlumno padre)
         {
             _padre = padre;
             InitializeComponent();
-            agregarTema();
-            agregarTema();
-            agregarTema();
-            agregarEvaluacion();
+            lblTitulo.Text = ALUMNO_ClassroomSeleccionado.classroomSeleccionado.codigo.ToString() +"    "+ ALUMNO_ClassroomSeleccionado.classroomSeleccionado.curso.nombre;
+            
+            //Listar temas
+            try
+            {
+                temaXC = new BindingList<temaXClassroom>(DBController.listarTemaxClassroom(ALUMNO_ClassroomSeleccionado.classroomSeleccionado.codigo));
+            }
+            catch (Exception)
+            {
+                temaXC = new BindingList<temaXClassroom>();
+                
+            }
+            foreach(Alumno.temaXClassroom temaXClassroom in temaXC)
+            {
+                agregarTema(temaXClassroom);
+            }
+
+            //Listar evaluaciones
+            try
+            {
+                evaluaciones = new BindingList<evaluacion>(DBController.listarEvaluacionesXClassroom(ALUMNO_ClassroomSeleccionado.classroomSeleccionado.codigo));
+            }
+            catch (Exception)
+            {
+                evaluaciones = new BindingList<evaluacion>();
+            }
+            foreach(Alumno.evaluacion eval in evaluaciones)
+            {
+                agregarEvaluacion(eval);
+            }
+
+            
+            //agregarTema();
+            //agregarTema();
+            //agregarTema();
+            //agregarEvaluacion();
         }
 
-        private void agregarTema()
+        private void agregarTema(Alumno.temaXClassroom tma)
         {
             //
             // lbl Nombre del tema
@@ -47,7 +85,8 @@ namespace Sinapxon.Alumno
             lblNombTema.Location = new Point(76, 66 + alturaTemas);
             lblNombTema.Name = "lblNombreTema";
             lblNombTema.Size = new Size(300, 23);
-            lblNombTema.Text = "Nombre del tema";
+            //lblNombTema.Text = "Nombre del tema";
+            lblNombTema.Text = tma.nombre;
             lblNombTema.Visible = true;
             tabPageTema.Controls.Add(lblNombTema);
 
@@ -61,7 +100,7 @@ namespace Sinapxon.Alumno
             pbCheck.SizeMode = PictureBoxSizeMode.AutoSize;
             pbCheck.Image = global::Sinapxon.Properties.Resources.baseline_check_circle_white_18dp;
             pbCheck.Name = "pbChecked";
-            tabPageTema.Controls.Add(pbCheck);
+            //tabPageTema.Controls.Add(pbCheck);
 
             //
             // Picture box Cross
@@ -91,7 +130,8 @@ namespace Sinapxon.Alumno
             btnEntrarTema.Size = new System.Drawing.Size(122, 36);
             btnEntrarTema.Text = "Ver tema";
             btnEntrarTema.UseVisualStyleBackColor = false;
-            btnEntrarTema.Click += new System.EventHandler(this.btnVerTema_Click);
+            //btnEntrarTema.Click += new System.EventHandler(this.btnVerTema_Click);
+            btnEntrarTema.Click += new System.EventHandler((sender, e) => this.btnVerTema_Click(sender, e, tma));
             tabPageTema.Controls.Add(btnEntrarTema);
 
             //
@@ -111,7 +151,7 @@ namespace Sinapxon.Alumno
             alturaTemas = alturaTemas + boxAltura;
         }
 
-        private void agregarEvaluacion()
+        private void agregarEvaluacion(Alumno.evaluacion eval)
         {
             //
             // lbl Nombre de la evaluacion
@@ -123,7 +163,8 @@ namespace Sinapxon.Alumno
             lblNombEval.Location = new Point(76, 66 + alturaEvaluaciones);
             lblNombEval.Name = "lblNombreEvaluacion";
             lblNombEval.Size = new Size(300, 23);
-            lblNombEval.Text = "Nombre de la evaluación";
+            //lblNombEval.Text = "Nombre de la evaluación";
+            lblNombEval.Text = eval.nombre;
             lblNombEval.Visible = true;
             tabPageEvaluacion.Controls.Add(lblNombEval);
 
@@ -150,7 +191,7 @@ namespace Sinapxon.Alumno
             pbCross.SizeMode = PictureBoxSizeMode.AutoSize;
             pbCross.Image = global::Sinapxon.Properties.Resources.baseline_cancel_white_18dp;
             pbCross.Name = "pbCrossed";
-            tabPageEvaluacion.Controls.Add(pbCross);
+            //tabPageEvaluacion.Controls.Add(pbCross);
 
             //
             // btn Ver Evaluacion
@@ -167,7 +208,8 @@ namespace Sinapxon.Alumno
             btnEntrarEval.Size = new System.Drawing.Size(150, 36);
             btnEntrarEval.Text = "Ver evaluación";
             btnEntrarEval.UseVisualStyleBackColor = false;
-            btnEntrarEval.Click += new System.EventHandler(this.btnVerEvaluacion_Click);
+            //btnEntrarEval.Click += new System.EventHandler(this.btnVerEvaluacion_Click);
+            btnEntrarEval.Click += new System.EventHandler((sender, e) => this.btnVerEvaluacion_Click(sender, e, eval));
             tabPageEvaluacion.Controls.Add(btnEntrarEval);
 
             //
@@ -189,18 +231,35 @@ namespace Sinapxon.Alumno
 
         //====================================================================================================
 
-        private void btnVerEvaluacion_Click(object sender, EventArgs e)
+        private void btnVerEvaluacion_Click(object sender, EventArgs e, Alumno.evaluacion eval)
         {
+            ALUMNO_evaluacionInfo.evaluacion = eval;
             frmEvaluacion formEvaluacion = new frmEvaluacion();
             //formEvaluacion.Visible = true;
-            _padre.openChildForm(formEvaluacion);
+            _padre.openChildForm_withoutClosing(formEvaluacion);
         }
 
-        private void btnVerTema_Click(object sender, EventArgs e)
+        private void btnAtras_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnVerTema_Click(object sender, EventArgs e, Alumno.temaXClassroom txc)
+        {
+            ALUMNO_temaInfo.tema_X_classroom = txc;
             frmTema formTema = new frmTema();
             //formTema.Visible = true;
-            _padre.openChildForm(formTema);
+            _padre.openChildForm_withoutClosing(formTema);
         }
+    }
+
+    public static class ALUMNO_temaInfo
+    {
+        public static Alumno.temaXClassroom tema_X_classroom;
+    }
+
+    public static class ALUMNO_evaluacionInfo
+    {
+        public static Alumno.evaluacion evaluacion;
     }
 }

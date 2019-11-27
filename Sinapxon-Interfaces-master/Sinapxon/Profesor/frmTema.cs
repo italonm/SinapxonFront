@@ -67,9 +67,9 @@ namespace Sinapxon.Profesor
         {
             try
             {
-                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                if (ofd.ShowDialog() == DialogResult.OK)
                 {
-                    ruta = saveFileDialog1.FileName;
+                    ruta = ofd.FileName;
                     FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
                     //Profesor.archivoXTema arch = new Profesor.archivoXTema ();
                     archivo.nombre = ofd.SafeFileName;

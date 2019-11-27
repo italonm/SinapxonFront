@@ -18,7 +18,7 @@ namespace Sinapxon.Login
         public frmRegistro()
         {
             InitializeComponent();
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
             alumno = new Administrador.alumno();
             BindingList<Administrador.pais> paises = new BindingList<Administrador.pais>(dbContoller.listarPaises());
             cboPais.DataSource = paises;

@@ -27,14 +27,17 @@ namespace Sinapxon.Administrador
             dgvSolicitudesPendientes.AutoGenerateColumns = false;
             solicitudClassroomsPendientes = new BindingList<Administrador.solicitudClassroom>(DBController.listarSolicitudes(2));
             dgvSolicitudesPendientes.DataSource = solicitudClassroomsPendientes;
+            dgvSolicitudesPendientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             dgvSolicitudesAprobadas.AutoGenerateColumns = false;
             solicitudClassroomsAprobados = new BindingList<Administrador.solicitudClassroom>(DBController.listarSolicitudes(1));
             dgvSolicitudesAprobadas.DataSource = solicitudClassroomsAprobados;
+            dgvSolicitudesAprobadas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             dgvSolicitudesDesaprobadas.AutoGenerateColumns = false;
             solicitudClassroomsDesaprobados = new BindingList<Administrador.solicitudClassroom>(DBController.listarSolicitudes(0));
             dgvSolicitudesDesaprobadas.DataSource = solicitudClassroomsDesaprobados;
+            dgvSolicitudesDesaprobadas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         public frmGestionarClassroom(frmAdministrador padre)
@@ -44,16 +47,19 @@ namespace Sinapxon.Administrador
             dgvSolicitudesPendientes.AutoGenerateColumns = false;
             solicitudClassroomsPendientes = new BindingList<Administrador.solicitudClassroom>(DBController.listarSolicitudes(2));
             dgvSolicitudesPendientes.DataSource = solicitudClassroomsPendientes;
+            dgvSolicitudesPendientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             dgvSolicitudesAprobadas.AutoGenerateColumns = false;
             solicitudClassroomsAprobados = new BindingList<Administrador.solicitudClassroom>(DBController.listarSolicitudes(1));
             dgvSolicitudesAprobadas.DataSource = solicitudClassroomsAprobados;
+            dgvSolicitudesAprobadas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             dgvSolicitudesDesaprobadas.AutoGenerateColumns = false;
             try
             {
                 solicitudClassroomsDesaprobados = new BindingList<Administrador.solicitudClassroom>(DBController.listarSolicitudes(0));
                 dgvSolicitudesDesaprobadas.DataSource = solicitudClassroomsDesaprobados;
+                dgvSolicitudesDesaprobadas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             }
             catch (Exception)
             {

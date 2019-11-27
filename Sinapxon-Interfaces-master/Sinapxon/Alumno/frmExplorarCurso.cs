@@ -12,8 +12,12 @@ namespace Sinapxon.Alumno
 {
     public partial class frmExplorarCurso : Form
     {
+        private Alumno.AlumnoServicesClient DBController = new AlumnoServicesClient();
+
         private int altura = 0, boxAltura = 113;
         private int reqAltura = 0, distancia = 80;
+
+        private BindingList<Alumno.classroom> classrooms;
 
         public frmExplorarCurso()
         {
@@ -30,8 +34,22 @@ namespace Sinapxon.Alumno
                 generarListaRequisitos(ALUMNO_CursoInfo.cursoInfo.cursos[i]);
             }
 
-            generarBloqueClassroom();
-            generarBloqueClassroom();
+            try
+            {
+                classrooms = new BindingList<Alumno.classroom>(DBController.listarClassroomsxCurso(ALUMNO_CursoInfo.cursoInfo));
+            }
+            catch (Exception)
+            {
+                classrooms = new BindingList<Alumno.classroom>();
+            }
+
+            foreach(Alumno.classroom classroom in classrooms)
+            {
+                generarBloqueClassroom(classroom);
+            }
+
+            //generarBloqueClassroom();
+            //generarBloqueClassroom();
         }
 
 
@@ -54,7 +72,7 @@ namespace Sinapxon.Alumno
             reqAltura = reqAltura + distancia;
         }
 
-        private void generarBloqueClassroom()
+        private void generarBloqueClassroom(Alumno.classroom classroomIn)
         {
             // 
             // lblNombreProfesor
@@ -66,7 +84,7 @@ namespace Sinapxon.Alumno
             lblNombreProfesor.Location = new System.Drawing.Point(62, 83+altura);
             lblNombreProfesor.Name = "lblNombreProfesor";
             lblNombreProfesor.Size = new System.Drawing.Size(187, 23);
-            lblNombreProfesor.Text = "Nombre del profesor";
+            lblNombreProfesor.Text = classroomIn.profesor.nombre + " " + classroomIn.profesor.apellidoPaterno;
             panelClassrooms.Controls.Add(lblNombreProfesor);
 
             // 
@@ -109,7 +127,8 @@ namespace Sinapxon.Alumno
             btnVerClassroom.Size = new System.Drawing.Size(162, 41);
             btnVerClassroom.Text = "Ver classroom";
             btnVerClassroom.UseVisualStyleBackColor = false;
-            btnVerClassroom.Click += new System.EventHandler(this.BtnVerClassroom_Click);
+            //btnVerClassroom.Click += new System.EventHandler(this.BtnVerClassroom_Click);
+            btnVerClassroom.Click += new System.EventHandler((sender, e) => this.BtnVerClassroom_Click(sender, e, classroomIn));
             panelClassrooms.Controls.Add(btnVerClassroom);
 
             // 
@@ -132,12 +151,21 @@ namespace Sinapxon.Alumno
             this.Close();
         }
 
-        private void BtnVerClassroom_Click(object sender, EventArgs e)
+        private void BtnVerClassroom_Click(object sender, EventArgs e, Alumno.classroom classroomIn)
         {
+            Explorar_classroomInfo.classroom = classroomIn;
             frmExplorarClassroom formExplorarClassroom = new frmExplorarClassroom();
-            
-            formExplorarClassroom.Visible = true;
+            if(formExplorarClassroom.ShowDialog() == DialogResult.OK)
+            {
+                //actualizar el contador de alumnos
+            }
+            //formExplorarClassroom.Visible = true;
         }
+    }
+
+    public static class Explorar_classroomInfo
+    {
+        public static Alumno.classroom classroom;
     }
 
 }

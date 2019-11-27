@@ -67,5 +67,18 @@ namespace Sinapxon.Alumno
         {
             Application.Exit();
         }
+
+        public void openChildForm_withoutClosing(Form formularioHijo)
+        {
+            formularioActivo = formularioHijo;
+            formularioHijo.TopLevel = false;
+            formularioHijo.FormBorderStyle = FormBorderStyle.None;
+            formularioHijo.Dock = DockStyle.Fill;
+            panelContenedor.Controls.Add(formularioHijo);
+            panelContenedor.Tag = formularioHijo;
+            formularioHijo.BringToFront();
+            formularioHijo.Show();
+        }
+
     }
 }
