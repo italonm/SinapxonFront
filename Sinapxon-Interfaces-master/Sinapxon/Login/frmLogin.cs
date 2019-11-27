@@ -24,8 +24,7 @@ namespace Sinapxon.Login
         private void Button1_Click(object sender, EventArgs e)
         {
             Login.LoginServicesClient DBController = new Login.LoginServicesClient() ;
-            txtUsuario.Text = "gabrielJ";
-            txtContrasenia.Text = "abcd1234";
+    
             LoginInfo.persona = DBController.validarLogin(txtUsuario.Text, txtContrasenia.Text);
             //LoginInfo.codigo = result.Substring(0, 6);
             String tipo = LoginInfo.persona.tipo;
