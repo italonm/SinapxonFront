@@ -23,20 +23,7 @@ namespace Sinapxon.Administrador
         private int index = 0;
         public frmAdministrador Padre { get => _padre; set => _padre = value; }
 
-        public frmGestionarCursos()
-        {
-            
-            InitializeComponent();
-
-            //Inicializao dgvCursos:con todos los cursos
-            dgvCursos.AutoGenerateColumns = false;
-            dgvCursos.DataSource = new BindingList<Administrador.curso>(DBController.listarCursosSin(""));
-            dgvCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-            //Doy espacio al curso seleccionado
-            curSeleccionado = new Administrador.curso();
-        }
-
+        //INICIANDO FORMULARIO
         public frmGestionarCursos(frmAdministrador padre)
         {
             InitializeComponent();
@@ -77,6 +64,7 @@ namespace Sinapxon.Administrador
         {
             toShow = new BindingList<Administrador.curso>();
             index = 0;
+
             //Hago búsqueda por código y nombre del curso
             foreach (Administrador.curso cur in backup)
             {
@@ -95,6 +83,7 @@ namespace Sinapxon.Administrador
 
             if (txtNombre.Text == "" & txtCodigo.Text == "")
             {
+                busq = 0;
                 index += 1;
                 BindingList<Administrador.curso> bdl = new BindingList<Administrador.curso>();
                 for (int n_ = (index - 1) * 20; n_ < index * 20; n_++)
@@ -139,18 +128,35 @@ namespace Sinapxon.Administrador
         //AGREGAR
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            dgvCursos.FirstDisplayedScrollingRowIndex = dgvCursos.RowCount - 1;
-            frmCurso formCurso = new frmCurso( _padre);
-            Padre.openChildForm(formCurso);
+            try
+            {
+                dgvCursos.FirstDisplayedScrollingRowIndex = dgvCursos.RowCount - 1;
+                frmCurso formCurso = new frmCurso(_padre);
+                Padre.openChildForm(formCurso);
+            }
+            catch
+            {
+                frmCurso formCurso = new frmCurso(_padre);
+                Padre.openChildForm(formCurso);
+            }
         }
 
         //=============================================================================================================================================
         //SELECCIONAR
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            curSeleccionado = dgvCursos.CurrentRow.DataBoundItem as Administrador.curso;
-            frmCurso formCurso = new frmCurso(curSeleccionado, _padre);
-            Padre.openChildForm(formCurso);
+            try
+            {
+                curSeleccionado = dgvCursos.CurrentRow.DataBoundItem as Administrador.curso;
+                frmCurso formCurso = new frmCurso(curSeleccionado, _padre);
+                Padre.openChildForm(formCurso);
+            }
+            catch
+            {
+                MessageBox.Show("Debe seleccionar un curso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
         }
 
         //=============================================================================================================================================

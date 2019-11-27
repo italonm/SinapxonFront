@@ -24,6 +24,8 @@ namespace Sinapxon.Login
         private void Button1_Click(object sender, EventArgs e)
         {
             Login.LoginServicesClient DBController = new Login.LoginServicesClient() ;
+            txtUsuario.Text = "gabrielJ";
+            txtContrasenia.Text = "abcd1234";
             LoginInfo.persona = DBController.validarLogin(txtUsuario.Text, txtContrasenia.Text);
             //LoginInfo.codigo = result.Substring(0, 6);
             String tipo = LoginInfo.persona.tipo;
@@ -133,6 +135,18 @@ namespace Sinapxon.Login
         private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            if (txtContrasenia.UseSystemPasswordChar == false)
+            {
+                txtContrasenia.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtContrasenia.UseSystemPasswordChar = false;
+            }
         }
     }
 

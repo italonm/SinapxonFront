@@ -51,7 +51,6 @@ namespace Sinapxon.Login
             int nuevaContrasenia = rd.Next(100000, 9999999);
             DBController.actualizarPassword(LoginInfo.persona.codigo,nuevaContrasenia.ToString());
             EnviarCorreo(nuevaContrasenia.ToString(),txtCorreo.Text);
-
         }
 
         private void EnviarCorreo(string contrasenaNueva, string correo)

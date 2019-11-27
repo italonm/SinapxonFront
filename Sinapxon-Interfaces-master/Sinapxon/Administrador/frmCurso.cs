@@ -16,6 +16,7 @@ namespace Sinapxon.Administrador
     {
         private frmAdministrador _padre = null;
         private int tipo;
+        private int tipoX;
         private Administrador.curso curso;
         private BindingList<Administrador.curso> cursos;
         private BindingList<Administrador.curso> listado;
@@ -32,6 +33,7 @@ namespace Sinapxon.Administrador
         {
             //Inicializo Formulario
             tipo = 1;
+            tipoX = 1;
             InitializeComponent();
             this.Padre = padre;
             lblTitulo.Text = "Editar Curso";
@@ -81,6 +83,7 @@ namespace Sinapxon.Administrador
         public frmCurso(frmAdministrador padre)
         {
             tipo = 2;
+            tipoX = 2;
             //Inicializo Formulario
             InitializeComponent();
             this.Padre = padre;
@@ -123,7 +126,6 @@ namespace Sinapxon.Administrador
                     btnAgregarRequisito.Enabled = false;
                     btnQuitarRequisito.Enabled = false;
                     btnCancelar.Enabled = false;
-                    btnAgregarEsp.Enabled = false;
                     txtNombreCurso.Enabled = false;
                     txtCodigoCurso.Enabled = false;
                     txtDescripcion.Enabled = false;
@@ -139,7 +141,6 @@ namespace Sinapxon.Administrador
                     btnCancelar.Enabled = true;
                     btnAgregarRequisito.Enabled = true;
                     btnQuitarRequisito.Enabled = true;
-                    btnAgregarEsp.Enabled = true;
                     txtNombreCurso.Enabled = true;
                     txtCodigoCurso.Enabled = true;
                     txtDescripcion.Enabled = true;
@@ -155,7 +156,6 @@ namespace Sinapxon.Administrador
                     btnCancelar.Enabled = false;
                     btnAgregarRequisito.Enabled = false;
                     btnQuitarRequisito.Enabled = false;
-                    btnAgregarEsp.Enabled = false;
                     txtCodigoCurso.Enabled = false;
                     txtNombreCurso.Enabled = false;
                     txtDescripcion.Enabled = false;
@@ -171,7 +171,6 @@ namespace Sinapxon.Administrador
                     btnCancelar.Enabled = false;
                     btnAgregarRequisito.Enabled = false;
                     btnQuitarRequisito.Enabled = false;
-                    btnAgregarEsp.Enabled = false;
                     txtCodigoCurso.Enabled = false;
                     txtNombreCurso.Enabled = false;
                     txtDescripcion.Enabled = false;
@@ -221,52 +220,89 @@ namespace Sinapxon.Administrador
         //GUARDAR
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            String nombaux = txtNombreCurso.Text.ToLower();
-            nombaux =  CultureInfo.CurrentCulture.TextInfo.ToTitleCase(nombaux);
-            String codigoaux = txtCodigoCurso.Text.ToUpper();
+
             if (txtCodigoCurso.Text == "")
             {
                 MessageBox.Show("Debe asignar un código al curso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            if (txtNombreCurso.Text == "")
+            else
             {
-                MessageBox.Show("Debe colocar el nombre del curso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (txtDescripcion.Text == "")
-            {
-                MessageBox.Show("Debe llenar la descripción del curso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (cbEspecialidad.Text == "")
-            {
-                MessageBox.Show("Debe elegir una especialidad", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (estadoCurso == Estado.Actualizar) { 
-                listado = new BindingList<Administrador.curso>(DBController.listarCursosSin(""));
-                foreach (Administrador.curso curaux in listado)
+                try
                 {
-                    String nb = nombaux.ToUpper();
-                    String cb = codigoaux.ToUpper();
-                    String nl = curaux.nombre.ToUpper();
-                    String cl = curaux.codigo.ToUpper();
-                    if ((string.Equals(cl, cb)) && !(string.Equals(nl, nb)))
+                    int id_al = Int32.Parse(txtCodigoCurso.Text);
+                    MessageBox.Show("El código no es válido/n Tiene que ingresar caracteres alfanuméricos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                catch
+                {
+                    
+                }
+                int tam = txtCodigoCurso.Text.Length;
+                if (tam>6 || tam<6)
+                {
+                    MessageBox.Show("El código debe tener tener 6 caracteres", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (txtNombreCurso.Text == "")
+                {
+                    MessageBox.Show("Debe colocar el nombre del curso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    if (cbEspecialidad.Text == "")
+                    {
+                        MessageBox.Show("Debe elegir una especialidad", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    else
+                    {
+                        if (txtDescripcion.Text == "")
+                        {
+                            MessageBox.Show("Debe llenar la descripción del curso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
+                }
+            }
+            
+            
+
+            String nombaux = txtNombreCurso.Text.ToLower();
+            nombaux = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(nombaux);
+            String codigoaux = txtCodigoCurso.Text.ToUpper();
+            String nb = nombaux.ToUpper();
+            String cb = codigoaux.ToUpper();
+
+            listado = new BindingList<Administrador.curso>(DBController.listarCursosSin(""));
+            foreach (Administrador.curso curaux in listado)
+            {
+                 
+                 String nl = curaux.nombre.ToUpper();
+                 String cl = curaux.codigo.ToUpper();
+                if (tipoX == 2)
+                {
+                    if (string.Equals(cl, cb))
                     {
                         MessageBox.Show("Ya existe un curso registrado con el código ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-                    else if (!(string.Equals(cl, cb)) && (string.Equals(nl, nb)))
+                    else
+                    {
+                        if (string.Equals(nl, nb))
+                        {
+                            MessageBox.Show("Ya existe un curso registrado con el nombre ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
+                }
+                else
+                {
+                    if (!(string.Equals(cl, cb)) && (string.Equals(nl, nb)))
                     {
                         MessageBox.Show("Ya existe un curso registrado con el nombre ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                    else if ((string.Equals(cl, cb)) && (string.Equals(nl, nb)))
-                    {
-                        MessageBox.Show("Ya existe un curso registrado con el código y nombre ingresados", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                 }
@@ -288,38 +324,24 @@ namespace Sinapxon.Administrador
                 cur.administrador = admin;
                 cur.estado = 1;
                 DBController.insertarCurso(cur);
-                if (txtDescripcion.Text == " " & cur.cursos.Count() == 0)
-                {
-                    MessageBox.Show("El curso se ha registrado con exito, no presenta requisitos ni descripción", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (cur.cursos.Count() == 0)
+                if (cur.cursos.Count() == 0)
                 {
                     MessageBox.Show("El curso se ha registrado con exito, no presenta requisitos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else if (txtDescripcion.Text == " ")
-                {
-                    MessageBox.Show("El curso se ha registrado con exito, no presenta descripción", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
                 else MessageBox.Show("El curso se ha registrado con exito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tipoX = 1;
             }
             //ACTUALIZAR CURSO SELECCIONADO
             else if (estadoCurso == Estado.Modificar)
             {
-                admin.codigo = curso.administrador.codigo;
+                if (tipo == 1) admin.codigo = curso.administrador.codigo;
+                if (tipo == 2) admin.codigo = codigoAdmin;
                 cur.administrador = admin;
                 cur.estado = curso.estado;
                 DBController.actualizarCurso(cur);
-                if(txtDescripcion.Text == " " & cur.cursos.Count() == 0)
-                {
-                    MessageBox.Show("El curso se ha actualizado con exito, no presenta requisitos ni descripción", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (cur.cursos.Count() == 0)
+                if (cur.cursos.Count() == 0)
                 {
                     MessageBox.Show("El curso se ha actualizado con exito, no presenta requisitos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (txtDescripcion.Text == " ")
-                {
-                    MessageBox.Show("El curso se ha actualizado con exito, no presenta descripción", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else MessageBox.Show("El curso se ha sido actualizado con exito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -333,15 +355,12 @@ namespace Sinapxon.Administrador
         {
             if (DialogResult.Yes == MessageBox.Show("¿Está seguro que desea eliminar este curso?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation))
             {
-                DBController.eliminaCurso(curso.codigo);
+                DBController.eliminaCurso(txtCodigoCurso.Text);
                 MessageBox.Show("El curso ha sido eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 estadoComponentes(Estado.Inicial);
             }
-            if (tipo==2)
-            {
-                btnNuevo.Enabled = false;
-            }
-            limpiarComponentes();
+            frmGestionarCursos formGestionarCurso = new frmGestionarCursos(this.Padre);
+            Padre.openChildForm(formGestionarCurso);
         }
 
         //==============================================================================================================================================================
@@ -349,6 +368,7 @@ namespace Sinapxon.Administrador
         private void btnModificar_Click(object sender, EventArgs e)
         {
             estadoComponentes(Estado.Nuevo);
+            if (tipoX == 1) txtCodigoCurso.Enabled = false;
             btnEliminar.Enabled = true;
             estadoCurso = Estado.Modificar;
         }
@@ -363,7 +383,14 @@ namespace Sinapxon.Administrador
                 btnNuevo.Enabled = false;
             }
             if(estadoCurso== Estado.Modificar) {
-                dgvRequisitos.DataSource = curso.cursos;
+                try
+                {
+                    dgvRequisitos.DataSource = cur.cursos;
+                }
+                catch
+                {
+
+                }
             }
         }
 
@@ -403,19 +430,16 @@ namespace Sinapxon.Administrador
         }
 
         //==============================================================================================================================================================
-        //GESTIONAR: CREAR O MODIFICAR ESPECIALIDADES
-        private void btnAgregarEsp_Click(object sender, EventArgs e)
-        {
-            frmAgregarEspecialidad formAgregarEspecialidad = new frmAgregarEspecialidad();
-            formAgregarEspecialidad.Visible = true;
-        }
-
-        //==============================================================================================================================================================
         //REGRESAR AL LISTADO DE CURSO
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             frmGestionarCursos formGestionarCurso = new frmGestionarCursos(this.Padre);
             Padre.openChildForm(formGestionarCurso);
+        }
+
+        private void panel5_Resize(object sender, EventArgs e)
+        {
+            
         }
     }
 }

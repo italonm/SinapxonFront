@@ -49,7 +49,6 @@
             this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAgregarRequisito = new System.Windows.Forms.Button();
             this.panelDatosCurso = new System.Windows.Forms.Panel();
-            this.btnAgregarEsp = new System.Windows.Forms.Button();
             this.cbEspecialidad = new System.Windows.Forms.ComboBox();
             this.panelTituloCurso = new System.Windows.Forms.Panel();
             this.lblDatosCurso = new System.Windows.Forms.Label();
@@ -94,6 +93,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(896, 48);
             this.panel5.TabIndex = 87;
+            this.panel5.Resize += new System.EventHandler(this.panel5_Resize);
             // 
             // btnNuevo
             // 
@@ -302,7 +302,7 @@
             this.Column1.HeaderText = "Código";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 150;
+            this.Column1.Width = 200;
             // 
             // Column2
             // 
@@ -310,14 +310,14 @@
             this.Column2.HeaderText = "Nombre";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 270;
+            this.Column2.Width = 350;
             // 
             // Descripción
             // 
             this.Descripción.HeaderText = "Descripción";
             this.Descripción.Name = "Descripción";
             this.Descripción.ReadOnly = true;
-            this.Descripción.Width = 250;
+            this.Descripción.Width = 550;
             // 
             // btnAgregarRequisito
             // 
@@ -342,7 +342,6 @@
             this.panelDatosCurso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panelDatosCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
-            this.panelDatosCurso.Controls.Add(this.btnAgregarEsp);
             this.panelDatosCurso.Controls.Add(this.cbEspecialidad);
             this.panelDatosCurso.Controls.Add(this.panelTituloCurso);
             this.panelDatosCurso.Controls.Add(this.lblNombreCurso);
@@ -357,24 +356,6 @@
             this.panelDatosCurso.Size = new System.Drawing.Size(428, 514);
             this.panelDatosCurso.TabIndex = 84;
             // 
-            // btnAgregarEsp
-            // 
-            this.btnAgregarEsp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarEsp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
-            this.btnAgregarEsp.FlatAppearance.BorderSize = 0;
-            this.btnAgregarEsp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarEsp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarEsp.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarEsp.Image = global::Sinapxon.Properties.Resources.baseline_book;
-            this.btnAgregarEsp.Location = new System.Drawing.Point(274, 209);
-            this.btnAgregarEsp.Name = "btnAgregarEsp";
-            this.btnAgregarEsp.Size = new System.Drawing.Size(133, 46);
-            this.btnAgregarEsp.TabIndex = 13;
-            this.btnAgregarEsp.Text = "Gestionar";
-            this.btnAgregarEsp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAgregarEsp.UseVisualStyleBackColor = false;
-            this.btnAgregarEsp.Click += new System.EventHandler(this.btnAgregarEsp_Click);
-            // 
             // cbEspecialidad
             // 
             this.cbEspecialidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -383,7 +364,7 @@
             this.cbEspecialidad.FormattingEnabled = true;
             this.cbEspecialidad.Location = new System.Drawing.Point(20, 216);
             this.cbEspecialidad.Name = "cbEspecialidad";
-            this.cbEspecialidad.Size = new System.Drawing.Size(248, 28);
+            this.cbEspecialidad.Size = new System.Drawing.Size(250, 28);
             this.cbEspecialidad.TabIndex = 10;
             // 
             // panelTituloCurso
@@ -536,7 +517,6 @@
         private System.Windows.Forms.DataGridView dgvRequisitos;
         private System.Windows.Forms.Button btnAgregarRequisito;
         private System.Windows.Forms.Panel panelDatosCurso;
-        private System.Windows.Forms.Button btnAgregarEsp;
         private System.Windows.Forms.ComboBox cbEspecialidad;
         private System.Windows.Forms.Panel panelTituloCurso;
         private System.Windows.Forms.Label lblDatosCurso;

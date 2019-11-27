@@ -74,6 +74,24 @@
     <Compile Include="Administrador\frmCurso.Designer.cs">
       <DependentUpon>frmCurso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrador\frmDatosAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmDatosAlumno.Designer.cs">
+      <DependentUpon>frmDatosAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmDatosProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmDatosProfesor.Designer.cs">
+      <DependentUpon>frmDatosProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmGestionarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmGestionarAlumno.Designer.cs">
+      <DependentUpon>frmGestionarAlumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\frmGestionarClassroom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +103,12 @@
     </Compile>
     <Compile Include="Administrador\frmGestionarCursos.Designer.cs">
       <DependentUpon>frmGestionarCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmGestionarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmGestionarProfesor.Designer.cs">
+      <DependentUpon>frmGestionarProfesor.cs</DependentUpon>
     </Compile>
     <Compile Include="Administrador\frmListaUsuarios.cs">
       <SubType>Form</SubType>
@@ -277,11 +301,23 @@
     <EmbeddedResource Include="Administrador\frmCurso.resx">
       <DependentUpon>frmCurso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmDatosAlumno.resx">
+      <DependentUpon>frmDatosAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmDatosProfesor.resx">
+      <DependentUpon>frmDatosProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmGestionarAlumno.resx">
+      <DependentUpon>frmGestionarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmGestionarClassroom.resx">
       <DependentUpon>frmGestionarClassroom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmGestionarCursos.resx">
       <DependentUpon>frmGestionarCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmGestionarProfesor.resx">
+      <DependentUpon>frmGestionarProfesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmListaUsuarios.resx">
       <DependentUpon>frmListaUsuarios.cs</DependentUpon>
