@@ -5,27 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/SinapxonSoftServices/AlumnoServices?xsd=1" namespace="http://services.sinapxon.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="listarCursos">
-    <part name="parameters" element="tns:listarCursos" />
-  </message>
-  <message name="listarCursosResponse">
-    <part name="parameters" element="tns:listarCursosResponse" />
-  </message>
-  <message name="listarPeriodos">
-    <part name="parameters" element="tns:listarPeriodos" />
-  </message>
-  <message name="listarPeriodosResponse">
-    <part name="parameters" element="tns:listarPeriodosResponse" />
-  </message>
-  <message name="obtenerArchivo">
-    <part name="parameters" element="tns:obtenerArchivo" />
-  </message>
-  <message name="obtenerArchivoResponse">
-    <part name="parameters" element="tns:obtenerArchivoResponse" />
-  </message>
-  <message name="IOException">
-    <part name="fault" element="tns:IOException" />
-  </message>
   <message name="listarArchivosXTemaXClassroom">
     <part name="parameters" element="tns:listarArchivosXTemaXClassroom" />
   </message>
@@ -43,6 +22,24 @@
   </message>
   <message name="listarTemaxClassroomResponse">
     <part name="parameters" element="tns:listarTemaxClassroomResponse" />
+  </message>
+  <message name="insertarEntregable">
+    <part name="parameters" element="tns:insertarEntregable" />
+  </message>
+  <message name="insertarEntregableResponse">
+    <part name="parameters" element="tns:insertarEntregableResponse" />
+  </message>
+  <message name="insertarAlumnoAlClassroom">
+    <part name="parameters" element="tns:insertarAlumnoAlClassroom" />
+  </message>
+  <message name="insertarAlumnoAlClassroomResponse">
+    <part name="parameters" element="tns:insertarAlumnoAlClassroomResponse" />
+  </message>
+  <message name="eliminarEntregable">
+    <part name="parameters" element="tns:eliminarEntregable" />
+  </message>
+  <message name="eliminarEntregableResponse">
+    <part name="parameters" element="tns:eliminarEntregableResponse" />
   </message>
   <message name="listarEvaluacionesXClassroom">
     <part name="parameters" element="tns:listarEvaluacionesXClassroom" />
@@ -62,12 +59,6 @@
   <message name="listarClassroomsxCursoResponse">
     <part name="parameters" element="tns:listarClassroomsxCursoResponse" />
   </message>
-  <message name="insertarAlumnoAlClassroom">
-    <part name="parameters" element="tns:insertarAlumnoAlClassroom" />
-  </message>
-  <message name="insertarAlumnoAlClassroomResponse">
-    <part name="parameters" element="tns:insertarAlumnoAlClassroomResponse" />
-  </message>
   <message name="listarClassrooms_Alumno_Periodo">
     <part name="parameters" element="tns:listarClassrooms_Alumno_Periodo" />
   </message>
@@ -80,32 +71,28 @@
   <message name="insertarArchivoXEntregableResponse">
     <part name="parameters" element="tns:insertarArchivoXEntregableResponse" />
   </message>
-  <message name="insertarEntregable">
-    <part name="parameters" element="tns:insertarEntregable" />
+  <message name="listarPeriodos">
+    <part name="parameters" element="tns:listarPeriodos" />
   </message>
-  <message name="insertarEntregableResponse">
-    <part name="parameters" element="tns:insertarEntregableResponse" />
+  <message name="listarPeriodosResponse">
+    <part name="parameters" element="tns:listarPeriodosResponse" />
   </message>
-  <message name="eliminarEntregable">
-    <part name="parameters" element="tns:eliminarEntregable" />
+  <message name="listarCursos">
+    <part name="parameters" element="tns:listarCursos" />
   </message>
-  <message name="eliminarEntregableResponse">
-    <part name="parameters" element="tns:eliminarEntregableResponse" />
+  <message name="listarCursosResponse">
+    <part name="parameters" element="tns:listarCursosResponse" />
+  </message>
+  <message name="obtenerArchivo">
+    <part name="parameters" element="tns:obtenerArchivo" />
+  </message>
+  <message name="obtenerArchivoResponse">
+    <part name="parameters" element="tns:obtenerArchivoResponse" />
+  </message>
+  <message name="IOException">
+    <part name="fault" element="tns:IOException" />
   </message>
   <portType name="AlumnoServices">
-    <operation name="listarCursos">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarCursosRequest" message="tns:listarCursos" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarCursosResponse" message="tns:listarCursosResponse" />
-    </operation>
-    <operation name="listarPeriodos">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarPeriodosRequest" message="tns:listarPeriodos" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarPeriodosResponse" message="tns:listarPeriodosResponse" />
-    </operation>
-    <operation name="obtenerArchivo">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/obtenerArchivoRequest" message="tns:obtenerArchivo" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/obtenerArchivoResponse" message="tns:obtenerArchivoResponse" />
-      <fault wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/obtenerArchivo/Fault/IOException" name="IOException" message="tns:IOException" />
-    </operation>
     <operation name="listarArchivosXTemaXClassroom">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarArchivosXTemaXClassroomRequest" message="tns:listarArchivosXTemaXClassroom" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarArchivosXTemaXClassroomResponse" message="tns:listarArchivosXTemaXClassroomResponse" />
@@ -117,6 +104,18 @@
     <operation name="listarTemaxClassroom">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarTemaxClassroomRequest" message="tns:listarTemaxClassroom" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarTemaxClassroomResponse" message="tns:listarTemaxClassroomResponse" />
+    </operation>
+    <operation name="insertarEntregable">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/insertarEntregableRequest" message="tns:insertarEntregable" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/insertarEntregableResponse" message="tns:insertarEntregableResponse" />
+    </operation>
+    <operation name="insertarAlumnoAlClassroom">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/insertarAlumnoAlClassroomRequest" message="tns:insertarAlumnoAlClassroom" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/insertarAlumnoAlClassroomResponse" message="tns:insertarAlumnoAlClassroomResponse" />
+    </operation>
+    <operation name="eliminarEntregable">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/eliminarEntregableRequest" message="tns:eliminarEntregable" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/eliminarEntregableResponse" message="tns:eliminarEntregableResponse" />
     </operation>
     <operation name="listarEvaluacionesXClassroom">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarEvaluacionesXClassroomRequest" message="tns:listarEvaluacionesXClassroom" />
@@ -130,10 +129,6 @@
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsxCursoRequest" message="tns:listarClassroomsxCurso" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsxCursoResponse" message="tns:listarClassroomsxCursoResponse" />
     </operation>
-    <operation name="insertarAlumnoAlClassroom">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/insertarAlumnoAlClassroomRequest" message="tns:insertarAlumnoAlClassroom" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/insertarAlumnoAlClassroomResponse" message="tns:insertarAlumnoAlClassroomResponse" />
-    </operation>
     <operation name="listarClassrooms_Alumno_Periodo">
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassrooms_Alumno_PeriodoRequest" message="tns:listarClassrooms_Alumno_Periodo" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassrooms_Alumno_PeriodoResponse" message="tns:listarClassrooms_Alumno_PeriodoResponse" />
@@ -142,18 +137,113 @@
       <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/insertarArchivoXEntregableRequest" message="tns:insertarArchivoXEntregable" />
       <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/insertarArchivoXEntregableResponse" message="tns:insertarArchivoXEntregableResponse" />
     </operation>
-    <operation name="insertarEntregable">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/insertarEntregableRequest" message="tns:insertarEntregable" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/insertarEntregableResponse" message="tns:insertarEntregableResponse" />
+    <operation name="listarPeriodos">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarPeriodosRequest" message="tns:listarPeriodos" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarPeriodosResponse" message="tns:listarPeriodosResponse" />
     </operation>
-    <operation name="eliminarEntregable">
-      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/eliminarEntregableRequest" message="tns:eliminarEntregable" />
-      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/eliminarEntregableResponse" message="tns:eliminarEntregableResponse" />
+    <operation name="listarCursos">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarCursosRequest" message="tns:listarCursos" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarCursosResponse" message="tns:listarCursosResponse" />
+    </operation>
+    <operation name="obtenerArchivo">
+      <input wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/obtenerArchivoRequest" message="tns:obtenerArchivo" />
+      <output wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/obtenerArchivoResponse" message="tns:obtenerArchivoResponse" />
+      <fault wsam:Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/obtenerArchivo/Fault/IOException" name="IOException" message="tns:IOException" />
     </operation>
   </portType>
   <binding name="AlumnoServicesPortBinding" type="tns:AlumnoServices">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarCursos">
+    <operation name="listarArchivosXTemaXClassroom">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarClassroomsXAlumno_X_Periodo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTemaxClassroom">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarEntregable">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAlumnoAlClassroom">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEntregable">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEvaluacionesXClassroom">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarClassroomxAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarClassroomsxCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarClassrooms_Alumno_Periodo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarArchivoXEntregable">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -163,6 +253,15 @@
       </output>
     </operation>
     <operation name="listarPeriodos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCursos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -182,105 +281,6 @@
       <fault name="IOException">
         <soap:fault use="literal" name="IOException" namespace="" />
       </fault>
-    </operation>
-    <operation name="listarArchivosXTemaXClassroom">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarClassroomsXAlumno_X_Periodo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarTemaxClassroom">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarEvaluacionesXClassroom">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarClassroomxAlumno">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarClassroomsxCurso">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarAlumnoAlClassroom">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarClassrooms_Alumno_Periodo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarArchivoXEntregable">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarEntregable">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarEntregable">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
     </operation>
   </binding>
   <service name="AlumnoServices">

@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdministrador));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnEspecialidad = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.panelSubGestionarUsr = new System.Windows.Forms.Panel();
             this.btnGestionarAlumno = new System.Windows.Forms.Button();
@@ -50,6 +52,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(27)))), ((int)(((byte)(146)))));
+            this.panelMenu.Controls.Add(this.btnEspecialidad);
             this.panelMenu.Controls.Add(this.btnLogOut);
             this.panelMenu.Controls.Add(this.panelSubGestionarUsr);
             this.panelMenu.Controls.Add(this.btnGestionarUsuarios);
@@ -62,6 +65,26 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(300, 681);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnEspecialidad
+            // 
+            this.btnEspecialidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.btnEspecialidad.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEspecialidad.FlatAppearance.BorderSize = 0;
+            this.btnEspecialidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEspecialidad.ForeColor = System.Drawing.Color.White;
+            this.btnEspecialidad.Image = global::Sinapxon.Properties.Resources.baseline_book;
+            this.btnEspecialidad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEspecialidad.Location = new System.Drawing.Point(0, 534);
+            this.btnEspecialidad.Name = "btnEspecialidad";
+            this.btnEspecialidad.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnEspecialidad.Size = new System.Drawing.Size(300, 70);
+            this.btnEspecialidad.TabIndex = 6;
+            this.btnEspecialidad.Text = "          Gestionar Especialidad";
+            this.btnEspecialidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEspecialidad.UseVisualStyleBackColor = false;
+            this.btnEspecialidad.Click += new System.EventHandler(this.btnEspecialidad_Click);
             // 
             // btnLogOut
             // 
@@ -90,7 +113,7 @@
             this.panelSubGestionarUsr.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubGestionarUsr.Location = new System.Drawing.Point(0, 390);
             this.panelSubGestionarUsr.Name = "panelSubGestionarUsr";
-            this.panelSubGestionarUsr.Size = new System.Drawing.Size(300, 151);
+            this.panelSubGestionarUsr.Size = new System.Drawing.Size(300, 144);
             this.panelSubGestionarUsr.TabIndex = 4;
             // 
             // btnGestionarAlumno
@@ -101,10 +124,10 @@
             this.btnGestionarAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGestionarAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionarAlumno.ForeColor = System.Drawing.Color.Black;
-            this.btnGestionarAlumno.Location = new System.Drawing.Point(0, 70);
+            this.btnGestionarAlumno.Location = new System.Drawing.Point(0, 76);
             this.btnGestionarAlumno.Name = "btnGestionarAlumno";
             this.btnGestionarAlumno.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
-            this.btnGestionarAlumno.Size = new System.Drawing.Size(300, 70);
+            this.btnGestionarAlumno.Size = new System.Drawing.Size(300, 68);
             this.btnGestionarAlumno.TabIndex = 1;
             this.btnGestionarAlumno.Text = "Gestionar alumno";
             this.btnGestionarAlumno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -122,7 +145,7 @@
             this.btnGestionarProfesor.Location = new System.Drawing.Point(0, 0);
             this.btnGestionarProfesor.Name = "btnGestionarProfesor";
             this.btnGestionarProfesor.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
-            this.btnGestionarProfesor.Size = new System.Drawing.Size(300, 70);
+            this.btnGestionarProfesor.Size = new System.Drawing.Size(300, 76);
             this.btnGestionarProfesor.TabIndex = 0;
             this.btnGestionarProfesor.Text = "Gestionar profesor";
             this.btnGestionarProfesor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -235,7 +258,7 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(300, 0);
             this.panelContenedor.Name = "panelContenedor";
@@ -249,8 +272,10 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAdministrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Perfil Administrador";
             this.panelMenu.ResumeLayout(false);
             this.panelSubGestionarUsr.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
@@ -275,5 +300,6 @@
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Button btnEspecialidad;
     }
 }

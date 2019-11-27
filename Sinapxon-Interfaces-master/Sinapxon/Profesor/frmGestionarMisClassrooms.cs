@@ -13,27 +13,31 @@ namespace Sinapxon.Profesor
 {
     public partial class frmGestionarMisClassrooms : Form
     {
-        private frmProfesor _padre;
+        private frmProfesor _profesor;
         private int altura = 0, boxAltura = 164;
 
         Profesor.ProfesorServicesClient DBController = new Profesor.ProfesorServicesClient();
 
         private BindingList<Profesor.classroom> classrooms;
 
-        public frmGestionarMisClassrooms()
+        public frmGestionarMisClassrooms(frmProfesor profesor)
         {
+            _profesor = profesor;
             InitializeComponent();
-            classrooms = new BindingList<Profesor.classroom>(DBController.listarClassroomxProfesor(LoginInfo.persona.codigo,""));
-            foreach (Profesor.classroom obj in classrooms){
-                crearClassroom(obj.curso.codigo, obj.curso.nombre, obj.codigo);
+            lblSincursos.Hide();
+            pbSinCursos.Hide();
+            try
+            {
+                classrooms = new BindingList<Profesor.classroom>(DBController.listarClassroomxProfesor(LoginInfo.persona.codigo, ""));
             }
-        }
+            catch (Exception)
+            {
 
-        public frmGestionarMisClassrooms(frmProfesor padre)
-        {
-            _padre = padre;
-            InitializeComponent();
-            classrooms = new BindingList<Profesor.classroom>(DBController.listarClassroomxProfesor(LoginInfo.persona.codigo,""));
+                classrooms = new BindingList<classroom>();
+                lblSincursos.Show();
+                pbSinCursos.Show();
+            }
+            
             foreach (Profesor.classroom obj in classrooms){
                 crearClassroom(obj.curso.codigo, obj.curso.nombre, obj.codigo);
             }
@@ -100,7 +104,7 @@ namespace Sinapxon.Profesor
             btnVerClassroom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             btnVerClassroom.UseVisualStyleBackColor = false;
             //btnVerClassroom.Click += new System.EventHandler(this.btnVerClassroom_Click);
-            btnVerClassroom.Click += new System.EventHandler((sender, e) => this.btnVerClassroom_Click(sender,e,codClassroom));
+            btnVerClassroom.Click += new System.EventHandler((sender, e) => this.btnVerClassroom_Click(sender,e,codClassroom,nombre));
             panelContenedor.Controls.Add(btnVerClassroom);
             // 
             // btnVerAlumnos
@@ -140,7 +144,7 @@ namespace Sinapxon.Profesor
             btnAniadirTema.UseVisualStyleBackColor = false;
             //btnAniadirTema.Click += new System.EventHandler(this.btnAniadirTema_Click);
             btnAniadirTema.Click += new System.EventHandler((sender, e) => btnAniadirTema_Click(sender, e, codClassroom));
-            panelContenedor.Controls.Add(btnAniadirTema);
+            //panelContenedor.Controls.Add(btnAniadirTema);
             // 
             // pbBlueBox
             // 
@@ -156,27 +160,29 @@ namespace Sinapxon.Profesor
             altura = altura + boxAltura;
         }
 
-        private void btnVerClassroom_Click(object sender, EventArgs e, string codClassroom)
+        private void btnVerClassroom_Click(object sender, EventArgs e, string codClassroom, string nombre)
         {
             ClassroomInfo.classroom.codigo = codClassroom;
-            frmVerClassroom formVerClassroom = new frmVerClassroom(_padre);
-            _padre.openChildForm(formVerClassroom);
-        }
-
-        private void btnVerAlumnos_Click(object sender, EventArgs e,string codclassroom,string nombre)
-        {
-            ClassroomInfo.classroom.codigo = codclassroom;
             ClassroomInfo.classroom.curso = new Profesor.curso();
             ClassroomInfo.classroom.curso.nombre = nombre;
-            frmVerAlumnos frmVerAlumnos = new frmVerAlumnos();
-            _padre.openChildForm(frmVerAlumnos);
+            frmVerClassroom formVerClassroom = new frmVerClassroom(_profesor);
+            _profesor.openChildForm(formVerClassroom);
+        }
+
+        private void btnVerAlumnos_Click(object sender, EventArgs e,string codClassroom, string nombre)
+        {
+            ClassroomInfo.classroom.codigo = codClassroom;
+            ClassroomInfo.classroom.curso = new Profesor.curso();
+            ClassroomInfo.classroom.curso.nombre = nombre;
+            frmVerAlumnos frmVerAlumnos = new frmVerAlumnos(_profesor);
+            _profesor.openChildForm(frmVerAlumnos);
             frmVerAlumnos.Visible = true;
         }
 
         private void btnAniadirTema_Click(object sender, EventArgs e, string codclassroom)
         {
             ClassroomInfo.classroom.codigo = codclassroom;
-            frmTema formAniadirTema = new frmTema();
+            frmTema formAniadirTema = new frmTema(_profesor);
             formAniadirTema.Visible = true;
         }
 
@@ -186,7 +192,7 @@ namespace Sinapxon.Profesor
             boxAltura = 164;
             panelContenedor.Controls.Clear();
 
-            classrooms = new BindingList<Profesor.classroom>(DBController.listarClassroomxProfesor(LoginInfo.persona.codigo,txtBuscar.Text));
+            classrooms = new BindingList<Profesor.classroom>(DBController.listarClassroomxProfesor(LoginInfo.persona.codigo, txtnombre.Text));
 
             foreach (Profesor.classroom obj in classrooms)
             {

@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblNombreTema = new System.Windows.Forms.Label();
             this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             this.dgvArchivos = new System.Windows.Forms.DataGridView();
@@ -37,12 +42,12 @@
             this.btnDescargar = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
             this.panelContenedorDescripcion = new System.Windows.Forms.Panel();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.panelTituloDescripcion = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.saveFileDialogArchivo = new System.Windows.Forms.SaveFileDialog();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,32 +63,72 @@
             // lblNombreTema
             // 
             this.lblNombreTema.AutoSize = true;
-            this.lblNombreTema.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreTema.Location = new System.Drawing.Point(91, 24);
             this.lblNombreTema.Name = "lblNombreTema";
-            this.lblNombreTema.Size = new System.Drawing.Size(201, 29);
+            this.lblNombreTema.Size = new System.Drawing.Size(215, 29);
             this.lblNombreTema.TabIndex = 0;
             this.lblNombreTema.Text = "Nombre del tema";
             // 
             // webBrowser2
             // 
             this.webBrowser2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.webBrowser2.Location = new System.Drawing.Point(9, 70);
+            this.webBrowser2.Location = new System.Drawing.Point(11, 70);
             this.webBrowser2.Name = "webBrowser2";
             this.webBrowser2.Size = new System.Drawing.Size(546, 303);
             this.webBrowser2.TabIndex = 3;
             // 
             // dgvArchivos
             // 
+            this.dgvArchivos.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            this.dgvArchivos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvArchivos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvArchivos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvArchivos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
+            this.dgvArchivos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvArchivos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvArchivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArchivos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Nombre});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvArchivos.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvArchivos.EnableHeadersVisualStyles = false;
             this.dgvArchivos.Location = new System.Drawing.Point(30, 129);
             this.dgvArchivos.Name = "dgvArchivos";
+            this.dgvArchivos.ReadOnly = true;
+            this.dgvArchivos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvArchivos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvArchivos.RowHeadersVisible = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            this.dgvArchivos.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvArchivos.Size = new System.Drawing.Size(838, 237);
             this.dgvArchivos.TabIndex = 10;
             this.dgvArchivos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvArchivos_CellFormatting);
@@ -119,11 +164,11 @@
             // 
             this.lblArchivosTema.AutoSize = true;
             this.lblArchivosTema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
-            this.lblArchivosTema.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArchivosTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArchivosTema.ForeColor = System.Drawing.Color.White;
             this.lblArchivosTema.Location = new System.Drawing.Point(20, 20);
             this.lblArchivosTema.Name = "lblArchivosTema";
-            this.lblArchivosTema.Size = new System.Drawing.Size(183, 25);
+            this.lblArchivosTema.Size = new System.Drawing.Size(200, 25);
             this.lblArchivosTema.TabIndex = 13;
             this.lblArchivosTema.Text = "Archivos del tema";
             // 
@@ -133,11 +178,11 @@
             this.btnDescargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.btnDescargar.FlatAppearance.BorderSize = 0;
             this.btnDescargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDescargar.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDescargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDescargar.ForeColor = System.Drawing.Color.White;
             this.btnDescargar.Image = global::Sinapxon.Properties.Resources.baseline_get_app_white_18dp;
             this.btnDescargar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDescargar.Location = new System.Drawing.Point(644, 75);
+            this.btnDescargar.Location = new System.Drawing.Point(644, 68);
             this.btnDescargar.Name = "btnDescargar";
             this.btnDescargar.Size = new System.Drawing.Size(224, 45);
             this.btnDescargar.TabIndex = 4;
@@ -164,11 +209,20 @@
             this.panelContenedorDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelContenedorDescripcion.Controls.Add(this.txtDescripcion);
             this.panelContenedorDescripcion.Controls.Add(this.panelTituloDescripcion);
-            this.panelContenedorDescripcion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelContenedorDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelContenedorDescripcion.Location = new System.Drawing.Point(12, 65);
             this.panelContenedorDescripcion.Name = "panelContenedorDescripcion";
-            this.panelContenedorDescripcion.Size = new System.Drawing.Size(311, 385);
+            this.panelContenedorDescripcion.Size = new System.Drawing.Size(328, 385);
             this.panelContenedorDescripcion.TabIndex = 25;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(17, 70);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.ReadOnly = true;
+            this.txtDescripcion.Size = new System.Drawing.Size(273, 303);
+            this.txtDescripcion.TabIndex = 1;
             // 
             // panelTituloDescripcion
             // 
@@ -177,7 +231,7 @@
             this.panelTituloDescripcion.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTituloDescripcion.Location = new System.Drawing.Point(0, 0);
             this.panelTituloDescripcion.Name = "panelTituloDescripcion";
-            this.panelTituloDescripcion.Size = new System.Drawing.Size(311, 58);
+            this.panelTituloDescripcion.Size = new System.Drawing.Size(328, 58);
             this.panelTituloDescripcion.TabIndex = 0;
             // 
             // panel1
@@ -206,9 +260,9 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.btnDescargar);
             this.panel3.Controls.Add(this.dgvArchivos);
-            this.panel3.Location = new System.Drawing.Point(10, 473);
+            this.panel3.Location = new System.Drawing.Point(10, 481);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(906, 376);
+            this.panel3.Size = new System.Drawing.Size(906, 392);
             this.panel3.TabIndex = 27;
             // 
             // panel4
@@ -221,25 +275,19 @@
             this.panel4.Size = new System.Drawing.Size(906, 58);
             this.panel4.TabIndex = 0;
             // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(17, 70);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.ReadOnly = true;
-            this.txtDescripcion.Size = new System.Drawing.Size(273, 303);
-            this.txtDescripcion.TabIndex = 1;
-            // 
             // ID
             // 
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 200;
             // 
             // Nombre
             // 
             this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             // 
             // frmTema
             // 

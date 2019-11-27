@@ -21,18 +21,24 @@ namespace Sinapxon.Administrador
         Administrador.AdministradorServicesClient DBController = new Administrador.AdministradorServicesClient();
         private String codigoAdmin;
         private Estado estadoEspecialidad;
-        int tipo;
+        private int tipo;
+        private int tipoX;
 
         //==============================================================================================================================================================
         //AL SELECCIONAR UNA ESPECIALIDAD
-        public frmRegistrarEspecialidad(Administrador.especialidad espSelec)
+        public frmRegistrarEspecialidad(Administrador.especialidad espSelec, frmAdministrador padre)
         {
+            tipo = 1;
+            tipoX = 1;
+
+            //Inicializo Formulario
             InitializeComponent();
             lblTitulo.Text = "Editar Especialidad";
-            this.Text = "Editar Especialidad";
+            this.Padre = padre;
+
             especaux = new Administrador.especialidad();
             especaux = espSelec;
-            tipo = 1;
+
             this.codigoAdmin = espSelec.administrador.codigo;
             txtIdEspecialidad.Text = espSelec.id_especialidad.ToString();
             txtNombre.Text = espSelec.nombre;
@@ -42,12 +48,17 @@ namespace Sinapxon.Administrador
 
         //==============================================================================================================================================================
         //AL CREAR UNA ESPECIALIDAD
-        public frmRegistrarEspecialidad()
+        public frmRegistrarEspecialidad(frmAdministrador padre)
         {
+            tipo = 2;
+            tipoX = 2;
+
+            //Inicializo Formulario
             InitializeComponent();
             lblTitulo.Text = "Añadir Especialidad";
-            this.Text = "Añadir Especialidad";
-            tipo = 2;
+            this.Padre = padre;
+            especaux = new Administrador.especialidad();
+
             estadoComponentes(Estado.Inicial);
         }
         //==============================================================================================================================================================
@@ -113,6 +124,10 @@ namespace Sinapxon.Administrador
         }
 
         //==============================================================================================================================================================
+        public frmAdministrador Padre { get => _padre; set => _padre = value; }
+
+
+        //==============================================================================================================================================================
         //NUEVO
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -127,27 +142,41 @@ namespace Sinapxon.Administrador
         //GUARDAR
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            String nombreaux = txtNombre.Text.ToLower();
-            nombreaux = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(nombreaux);
+            
             if (txtNombre.Text == "")
             {
                 MessageBox.Show("Debe colocar el nombre de la especialidad", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (estadoEspecialidad== Estado.Actualizar)
+
+            String nombreaux = txtNombre.Text.ToLower();
+            nombreaux = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(nombreaux);
+
+            listado = new BindingList<Administrador.especialidad>(DBController.listarEspecialidades(""));
+            foreach (Administrador.especialidad especaux in listado)
             {
-                listado = new BindingList<Administrador.especialidad>(DBController.listarEspecialidades(""));
-                foreach (Administrador.especialidad especaux in listado)
+                String nb = nombreaux.ToUpper();
+                String nl = especaux.nombre.ToUpper();
+                int cl = especaux.id_especialidad;               
+                if (tipoX == 2)
                 {
-                    String nb = nombreaux.ToUpper();
-                    String nl = especaux.nombre.ToUpper();
                     if (string.Equals(nl, nb))
                     {
-                        MessageBox.Show("Ya existe un curso registrado con el código ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Ya existe un curso registrado con el nombre ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-                }               
-            }
+                }
+                else
+                {
+                    int cb = Int32.Parse(txtIdEspecialidad.Text);
+                    if (!(string.Equals(cl, cb)) && (string.Equals(nl, nb)))
+                    {
+                        MessageBox.Show("Ya existe un curso registrado con el nombre ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+            }         
+            
             Administrador.administrador admin = new Administrador.administrador();
 
             especialidad = new Administrador.especialidad();           
@@ -158,12 +187,14 @@ namespace Sinapxon.Administrador
             {
                 admin.codigo = LoginInfo.persona.codigo;
                 especialidad.administrador = admin;
-                DBController.insertarEspecialidad(especialidad);
+                txtIdEspecialidad.Text = "" + DBController.insertarEspecialidad(especialidad);
                 MessageBox.Show("La especialidad se ha registrado con exito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tipoX = 1;
             }
             else if (estadoEspecialidad == Estado.Modificar)
             {
-                admin.codigo = codigoAdmin;
+                if (tipo == 1) admin.codigo = codigoAdmin;
+                if (tipo == 2) admin.codigo = LoginInfo.persona.codigo;
                 especialidad.id_especialidad = Int32.Parse(txtIdEspecialidad.Text); 
                 especialidad.administrador = admin;
                 DBController.actualizarEspecialidad(especialidad);
@@ -178,11 +209,11 @@ namespace Sinapxon.Administrador
         {
             if (DialogResult.Yes == MessageBox.Show("¿Está seguro que desea eliminar esta espacialidad?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation))
             {
-                DBController.eliminarEspecialidad(especaux.id_especialidad);
+                DBController.eliminarEspecialidad(Int32.Parse(txtIdEspecialidad.Text));
                 MessageBox.Show("La especialidad se ha sido eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 estadoComponentes(Estado.Inicial);
             }
-            if (tipo == 2)
+            if (tipo == 1)
             {
                 btnNuevo.Enabled = false;
             }
@@ -214,9 +245,8 @@ namespace Sinapxon.Administrador
         //REGRESAR
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            frmAgregarEspecialidad formAgregarEspecialidad = new frmAgregarEspecialidad();
-            this.Close();
-            formAgregarEspecialidad.Visible = true;
+            frmAgregarEspecialidad formAgregarEspecialidad = new frmAgregarEspecialidad(this.Padre);
+            _padre.openChildForm(formAgregarEspecialidad);
         }
     }
 }

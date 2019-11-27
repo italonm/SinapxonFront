@@ -80,8 +80,16 @@ namespace Sinapxon.Administrador
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            curSeleccionado = dgvCursos.CurrentRow.DataBoundItem as Administrador.curso;
-            this.DialogResult = DialogResult.OK;
+            try
+            {
+                curSeleccionado = dgvCursos.CurrentRow.DataBoundItem as Administrador.curso;
+                this.DialogResult = DialogResult.OK;
+            }
+            catch
+            {
+                MessageBox.Show("Debe seleccionar un requisito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

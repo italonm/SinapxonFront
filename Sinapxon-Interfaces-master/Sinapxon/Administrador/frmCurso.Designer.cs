@@ -49,7 +49,6 @@
             this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAgregarRequisito = new System.Windows.Forms.Button();
             this.panelDatosCurso = new System.Windows.Forms.Panel();
-            this.btnAgregarEsp = new System.Windows.Forms.Button();
             this.cbEspecialidad = new System.Windows.Forms.ComboBox();
             this.panelTituloCurso = new System.Windows.Forms.Panel();
             this.lblDatosCurso = new System.Windows.Forms.Label();
@@ -61,6 +60,9 @@
             this.txtCodigoCurso = new System.Windows.Forms.TextBox();
             this.lblEspecialidad = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel5.SuspendLayout();
             this.panelRequisitos.SuspendLayout();
             this.panelTituloRequisitos.SuspendLayout();
@@ -88,12 +90,13 @@
             this.panel5.Controls.Add(this.btnNuevo);
             this.panel5.Controls.Add(this.btnGuardar);
             this.panel5.Controls.Add(this.btnEliminar);
-            this.panel5.Controls.Add(this.btnCancelar);
             this.panel5.Controls.Add(this.btnModificar);
+            this.panel5.Controls.Add(this.btnCancelar);
             this.panel5.Location = new System.Drawing.Point(34, 81);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(896, 48);
             this.panel5.TabIndex = 87;
+            this.panel5.Resize += new System.EventHandler(this.panel5_Resize);
             // 
             // btnNuevo
             // 
@@ -160,7 +163,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Image = global::Sinapxon.Properties.Resources.round_cancel_white_18dp;
-            this.btnCancelar.Location = new System.Drawing.Point(769, 3);
+            this.btnCancelar.Location = new System.Drawing.Point(772, 2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(124, 42);
             this.btnCancelar.TabIndex = 70;
@@ -302,7 +305,7 @@
             this.Column1.HeaderText = "Código";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 150;
+            this.Column1.Width = 200;
             // 
             // Column2
             // 
@@ -310,14 +313,14 @@
             this.Column2.HeaderText = "Nombre";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 270;
+            this.Column2.Width = 350;
             // 
             // Descripción
             // 
             this.Descripción.HeaderText = "Descripción";
             this.Descripción.Name = "Descripción";
             this.Descripción.ReadOnly = true;
-            this.Descripción.Width = 250;
+            this.Descripción.Width = 550;
             // 
             // btnAgregarRequisito
             // 
@@ -342,7 +345,6 @@
             this.panelDatosCurso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panelDatosCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
-            this.panelDatosCurso.Controls.Add(this.btnAgregarEsp);
             this.panelDatosCurso.Controls.Add(this.cbEspecialidad);
             this.panelDatosCurso.Controls.Add(this.panelTituloCurso);
             this.panelDatosCurso.Controls.Add(this.lblNombreCurso);
@@ -357,24 +359,6 @@
             this.panelDatosCurso.Size = new System.Drawing.Size(428, 514);
             this.panelDatosCurso.TabIndex = 84;
             // 
-            // btnAgregarEsp
-            // 
-            this.btnAgregarEsp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarEsp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
-            this.btnAgregarEsp.FlatAppearance.BorderSize = 0;
-            this.btnAgregarEsp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarEsp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarEsp.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarEsp.Image = global::Sinapxon.Properties.Resources.baseline_book;
-            this.btnAgregarEsp.Location = new System.Drawing.Point(274, 209);
-            this.btnAgregarEsp.Name = "btnAgregarEsp";
-            this.btnAgregarEsp.Size = new System.Drawing.Size(133, 46);
-            this.btnAgregarEsp.TabIndex = 13;
-            this.btnAgregarEsp.Text = "Gestionar";
-            this.btnAgregarEsp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAgregarEsp.UseVisualStyleBackColor = false;
-            this.btnAgregarEsp.Click += new System.EventHandler(this.btnAgregarEsp_Click);
-            // 
             // cbEspecialidad
             // 
             this.cbEspecialidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -383,7 +367,7 @@
             this.cbEspecialidad.FormattingEnabled = true;
             this.cbEspecialidad.Location = new System.Drawing.Point(20, 216);
             this.cbEspecialidad.Name = "cbEspecialidad";
-            this.cbEspecialidad.Size = new System.Drawing.Size(248, 28);
+            this.cbEspecialidad.Size = new System.Drawing.Size(250, 28);
             this.cbEspecialidad.TabIndex = 10;
             // 
             // panelTituloCurso
@@ -491,6 +475,36 @@
             this.lblTitulo.TabIndex = 83;
             this.lblTitulo.Text = "Curso";
             // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel6.Location = new System.Drawing.Point(789, 81);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(15, 47);
+            this.panel6.TabIndex = 90;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel4.Location = new System.Drawing.Point(842, 81);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(23, 48);
+            this.panel4.TabIndex = 89;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel3.Location = new System.Drawing.Point(880, 81);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(50, 48);
+            this.panel3.TabIndex = 88;
+            // 
             // frmCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -502,6 +516,9 @@
             this.Controls.Add(this.panelRequisitos);
             this.Controls.Add(this.panelDatosCurso);
             this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCurso";
@@ -536,7 +553,6 @@
         private System.Windows.Forms.DataGridView dgvRequisitos;
         private System.Windows.Forms.Button btnAgregarRequisito;
         private System.Windows.Forms.Panel panelDatosCurso;
-        private System.Windows.Forms.Button btnAgregarEsp;
         private System.Windows.Forms.ComboBox cbEspecialidad;
         private System.Windows.Forms.Panel panelTituloCurso;
         private System.Windows.Forms.Label lblDatosCurso;
@@ -551,5 +567,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripción;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
     }
 }

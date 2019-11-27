@@ -100,7 +100,7 @@ namespace Sinapxon.Alumno
             pbCheck.SizeMode = PictureBoxSizeMode.AutoSize;
             pbCheck.Image = global::Sinapxon.Properties.Resources.baseline_check_circle_white_18dp;
             pbCheck.Name = "pbChecked";
-            tabPageTema.Controls.Add(pbCheck);
+            //tabPageTema.Controls.Add(pbCheck);
 
             //
             // Picture box Cross
@@ -191,7 +191,7 @@ namespace Sinapxon.Alumno
             pbCross.SizeMode = PictureBoxSizeMode.AutoSize;
             pbCross.Image = global::Sinapxon.Properties.Resources.baseline_cancel_white_18dp;
             pbCross.Name = "pbCrossed";
-            tabPageEvaluacion.Controls.Add(pbCross);
+            //tabPageEvaluacion.Controls.Add(pbCross);
 
             //
             // btn Ver Evaluacion

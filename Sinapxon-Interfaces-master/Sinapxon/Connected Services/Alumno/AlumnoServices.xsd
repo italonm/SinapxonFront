@@ -263,6 +263,7 @@
   </xs:complexType>
   <xs:complexType name="archivoXTema">
     <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
       <xs:element name="id_archivo_x_tema" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>

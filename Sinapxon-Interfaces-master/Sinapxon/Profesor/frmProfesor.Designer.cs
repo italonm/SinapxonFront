@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProfesor));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelSubGestionarUsr = new System.Windows.Forms.Panel();
             this.btnSolicitar = new System.Windows.Forms.Button();
@@ -211,8 +212,7 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelContenedor.Location = new System.Drawing.Point(300, 0);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(964, 681);
@@ -225,8 +225,10 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmProfesor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Perfil Profesor";
             this.panelMenu.ResumeLayout(false);
             this.panelSubGestionarUsr.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
