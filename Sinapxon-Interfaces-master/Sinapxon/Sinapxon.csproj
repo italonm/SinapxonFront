@@ -475,6 +475,9 @@
     <None Include="Connected Services\Alumno\AlumnoServices.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.archivoXTema.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Alumno\Sinapxon.Alumno.classroom.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -485,6 +488,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Alumno\Sinapxon.Alumno.insertarAlumnoAlClassroomResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarArchivosXTemaXClassroomResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse.datasource">
@@ -509,6 +515,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarTemaxClassroomResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.obtenerArchivoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Alumno\Sinapxon.Alumno.periodo.datasource">

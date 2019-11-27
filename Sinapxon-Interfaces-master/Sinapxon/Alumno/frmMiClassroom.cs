@@ -130,7 +130,8 @@ namespace Sinapxon.Alumno
             btnEntrarTema.Size = new System.Drawing.Size(122, 36);
             btnEntrarTema.Text = "Ver tema";
             btnEntrarTema.UseVisualStyleBackColor = false;
-            btnEntrarTema.Click += new System.EventHandler(this.btnVerTema_Click);
+            //btnEntrarTema.Click += new System.EventHandler(this.btnVerTema_Click);
+            btnEntrarTema.Click += new System.EventHandler((sender, e) => this.btnVerTema_Click(sender, e, tma));
             tabPageTema.Controls.Add(btnEntrarTema);
 
             //
@@ -207,7 +208,8 @@ namespace Sinapxon.Alumno
             btnEntrarEval.Size = new System.Drawing.Size(150, 36);
             btnEntrarEval.Text = "Ver evaluación";
             btnEntrarEval.UseVisualStyleBackColor = false;
-            btnEntrarEval.Click += new System.EventHandler(this.btnVerEvaluacion_Click);
+            //btnEntrarEval.Click += new System.EventHandler(this.btnVerEvaluacion_Click);
+            btnEntrarEval.Click += new System.EventHandler((sender, e) => this.btnVerEvaluacion_Click(sender, e, eval));
             tabPageEvaluacion.Controls.Add(btnEntrarEval);
 
             //
@@ -229,8 +231,9 @@ namespace Sinapxon.Alumno
 
         //====================================================================================================
 
-        private void btnVerEvaluacion_Click(object sender, EventArgs e)
+        private void btnVerEvaluacion_Click(object sender, EventArgs e, Alumno.evaluacion eval)
         {
+            ALUMNO_evaluacionInfo.evaluacion = eval;
             frmEvaluacion formEvaluacion = new frmEvaluacion();
             //formEvaluacion.Visible = true;
             _padre.openChildForm_withoutClosing(formEvaluacion);
@@ -241,11 +244,22 @@ namespace Sinapxon.Alumno
             this.Close();
         }
 
-        private void btnVerTema_Click(object sender, EventArgs e)
+        private void btnVerTema_Click(object sender, EventArgs e, Alumno.temaXClassroom txc)
         {
+            ALUMNO_temaInfo.tema_X_classroom = txc;
             frmTema formTema = new frmTema();
             //formTema.Visible = true;
-            _padre.openChildForm(formTema);
+            _padre.openChildForm_withoutClosing(formTema);
         }
+    }
+
+    public static class ALUMNO_temaInfo
+    {
+        public static Alumno.temaXClassroom tema_X_classroom;
+    }
+
+    public static class ALUMNO_evaluacionInfo
+    {
+        public static Alumno.evaluacion evaluacion;
     }
 }

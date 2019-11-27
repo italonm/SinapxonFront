@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.dgvEntregables = new System.Windows.Forms.DataGridView();
+            this.lblNombreEvaluacion = new System.Windows.Forms.Label();
             this.dgvArchivos = new System.Windows.Forms.DataGridView();
             this.btnRemoverArchivo = new System.Windows.Forms.Button();
             this.btnAniadirArchivo = new System.Windows.Forms.Button();
-            this.lblEntregables = new System.Windows.Forms.Label();
+            this.lblDescripcion = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelContenedorEntregables = new System.Windows.Forms.Panel();
             this.panelTituloEntregables = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAtras = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEntregables)).BeginInit();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.lblPeso = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArchivos)).BeginInit();
             this.panelContenedorEntregables.SuspendLayout();
             this.panelTituloEntregables.SuspendLayout();
@@ -48,24 +48,15 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lblNombreEvaluacion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(96, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(281, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre de la evaluación";
-            // 
-            // dgvEntregables
-            // 
-            this.dgvEntregables.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvEntregables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEntregables.Location = new System.Drawing.Point(23, 79);
-            this.dgvEntregables.Name = "dgvEntregables";
-            this.dgvEntregables.Size = new System.Drawing.Size(423, 474);
-            this.dgvEntregables.TabIndex = 1;
+            this.lblNombreEvaluacion.AutoSize = true;
+            this.lblNombreEvaluacion.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreEvaluacion.Location = new System.Drawing.Point(96, 31);
+            this.lblNombreEvaluacion.Name = "lblNombreEvaluacion";
+            this.lblNombreEvaluacion.Size = new System.Drawing.Size(281, 29);
+            this.lblNombreEvaluacion.TabIndex = 0;
+            this.lblNombreEvaluacion.Text = "Nombre de la evaluación";
             // 
             // dgvArchivos
             // 
@@ -108,17 +99,17 @@
             this.btnAniadirArchivo.Text = "Añadir";
             this.btnAniadirArchivo.UseVisualStyleBackColor = false;
             // 
-            // lblEntregables
+            // lblDescripcion
             // 
-            this.lblEntregables.AutoSize = true;
-            this.lblEntregables.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
-            this.lblEntregables.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEntregables.ForeColor = System.Drawing.Color.White;
-            this.lblEntregables.Location = new System.Drawing.Point(18, 17);
-            this.lblEntregables.Name = "lblEntregables";
-            this.lblEntregables.Size = new System.Drawing.Size(125, 25);
-            this.lblEntregables.TabIndex = 7;
-            this.lblEntregables.Text = "Entregables";
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
+            this.lblDescripcion.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.ForeColor = System.Drawing.Color.White;
+            this.lblDescripcion.Location = new System.Drawing.Point(18, 17);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(126, 25);
+            this.lblDescripcion.TabIndex = 7;
+            this.lblDescripcion.Text = "Descripcion";
             // 
             // label2
             // 
@@ -135,8 +126,8 @@
             // panelContenedorEntregables
             // 
             this.panelContenedorEntregables.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
+            this.panelContenedorEntregables.Controls.Add(this.txtDescripcion);
             this.panelContenedorEntregables.Controls.Add(this.panelTituloEntregables);
-            this.panelContenedorEntregables.Controls.Add(this.dgvEntregables);
             this.panelContenedorEntregables.Location = new System.Drawing.Point(12, 77);
             this.panelContenedorEntregables.Name = "panelContenedorEntregables";
             this.panelContenedorEntregables.Size = new System.Drawing.Size(463, 574);
@@ -145,7 +136,7 @@
             // panelTituloEntregables
             // 
             this.panelTituloEntregables.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
-            this.panelTituloEntregables.Controls.Add(this.lblEntregables);
+            this.panelTituloEntregables.Controls.Add(this.lblDescripcion);
             this.panelTituloEntregables.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTituloEntregables.Location = new System.Drawing.Point(0, 0);
             this.panelTituloEntregables.Name = "panelTituloEntregables";
@@ -185,6 +176,27 @@
             this.btnAtras.Size = new System.Drawing.Size(50, 50);
             this.btnAtras.TabIndex = 22;
             this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(15, 79);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.ReadOnly = true;
+            this.txtDescripcion.Size = new System.Drawing.Size(434, 472);
+            this.txtDescripcion.TabIndex = 3;
+            // 
+            // lblPeso
+            // 
+            this.lblPeso.AutoSize = true;
+            this.lblPeso.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeso.Location = new System.Drawing.Point(647, 30);
+            this.lblPeso.Name = "lblPeso";
+            this.lblPeso.Size = new System.Drawing.Size(229, 25);
+            this.lblPeso.TabIndex = 23;
+            this.lblPeso.Text = "Peso de la evaluacion: ";
             // 
             // frmEvaluacion
             // 
@@ -192,16 +204,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
             this.ClientSize = new System.Drawing.Size(964, 681);
+            this.Controls.Add(this.lblPeso);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelContenedorEntregables);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblNombreEvaluacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEvaluacion";
             this.Text = "frmEvaluacion";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEntregables)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArchivos)).EndInit();
             this.panelContenedorEntregables.ResumeLayout(false);
+            this.panelContenedorEntregables.PerformLayout();
             this.panelTituloEntregables.ResumeLayout(false);
             this.panelTituloEntregables.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -214,17 +227,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvEntregables;
+        private System.Windows.Forms.Label lblNombreEvaluacion;
         private System.Windows.Forms.Button btnAniadirArchivo;
         private System.Windows.Forms.DataGridView dgvArchivos;
         private System.Windows.Forms.Button btnRemoverArchivo;
-        private System.Windows.Forms.Label lblEntregables;
+        private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelContenedorEntregables;
         private System.Windows.Forms.Panel panelTituloEntregables;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.Label lblPeso;
     }
 }
