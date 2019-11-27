@@ -47,6 +47,8 @@
             this.lblNickname = new System.Windows.Forms.Label();
             this.txtNickname = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGenerarContr = new System.Windows.Forms.Button();
+            this.btnMostrar = new System.Windows.Forms.Button();
             this.rbActivo = new System.Windows.Forms.RadioButton();
             this.rbInactivo = new System.Windows.Forms.RadioButton();
             this.rbBloqueado = new System.Windows.Forms.RadioButton();
@@ -71,8 +73,6 @@
             this.lblId_Alumno = new System.Windows.Forms.Label();
             this.panelDatosGenerales = new System.Windows.Forms.Panel();
             this.btnRegresar = new System.Windows.Forms.Button();
-            this.btnMostrar = new System.Windows.Forms.Button();
-            this.btnGenerarContr = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -119,7 +119,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Image = global::Sinapxon.Properties.Resources.round_cancel_white_18dp;
-            this.btnCancelar.Location = new System.Drawing.Point(782, 0);
+            this.btnCancelar.Location = new System.Drawing.Point(782, 31);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(139, 48);
             this.btnCancelar.TabIndex = 70;
@@ -329,6 +329,35 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(449, 293);
             this.panel1.TabIndex = 70;
+            // 
+            // btnGenerarContr
+            // 
+            this.btnGenerarContr.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnGenerarContr.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGenerarContr.FlatAppearance.BorderSize = 0;
+            this.btnGenerarContr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarContr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarContr.ForeColor = System.Drawing.Color.White;
+            this.btnGenerarContr.Location = new System.Drawing.Point(338, 229);
+            this.btnGenerarContr.Name = "btnGenerarContr";
+            this.btnGenerarContr.Size = new System.Drawing.Size(95, 30);
+            this.btnGenerarContr.TabIndex = 77;
+            this.btnGenerarContr.Text = "Generar";
+            this.btnGenerarContr.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGenerarContr.UseVisualStyleBackColor = false;
+            this.btnGenerarContr.Click += new System.EventHandler(this.btnGenerarContr_Click_1);
+            // 
+            // btnMostrar
+            // 
+            this.btnMostrar.BackColor = System.Drawing.Color.White;
+            this.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrar.Image = global::Sinapxon.Properties.Resources._63568;
+            this.btnMostrar.Location = new System.Drawing.Point(280, 232);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(43, 26);
+            this.btnMostrar.TabIndex = 76;
+            this.btnMostrar.UseVisualStyleBackColor = false;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // rbActivo
             // 
@@ -592,35 +621,6 @@
             this.btnRegresar.TabIndex = 77;
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
-            // 
-            // btnMostrar
-            // 
-            this.btnMostrar.BackColor = System.Drawing.Color.White;
-            this.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMostrar.Image = global::Sinapxon.Properties.Resources._63568;
-            this.btnMostrar.Location = new System.Drawing.Point(280, 232);
-            this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(43, 26);
-            this.btnMostrar.TabIndex = 76;
-            this.btnMostrar.UseVisualStyleBackColor = false;
-            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
-            // 
-            // btnGenerarContr
-            // 
-            this.btnGenerarContr.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnGenerarContr.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGenerarContr.FlatAppearance.BorderSize = 0;
-            this.btnGenerarContr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerarContr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarContr.ForeColor = System.Drawing.Color.White;
-            this.btnGenerarContr.Location = new System.Drawing.Point(338, 229);
-            this.btnGenerarContr.Name = "btnGenerarContr";
-            this.btnGenerarContr.Size = new System.Drawing.Size(95, 30);
-            this.btnGenerarContr.TabIndex = 77;
-            this.btnGenerarContr.Text = "Generar";
-            this.btnGenerarContr.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGenerarContr.UseVisualStyleBackColor = false;
-            this.btnGenerarContr.Click += new System.EventHandler(this.btnGenerarContr_Click_1);
             // 
             // frmDatosAlumno
             // 

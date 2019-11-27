@@ -62,7 +62,7 @@
             this.panelRequisitos.Controls.Add(this.panelTituloRequisitos);
             this.panelRequisitos.Location = new System.Drawing.Point(17, 94);
             this.panelRequisitos.Name = "panelRequisitos";
-            this.panelRequisitos.Size = new System.Drawing.Size(382, 553);
+            this.panelRequisitos.Size = new System.Drawing.Size(412, 553);
             this.panelRequisitos.TabIndex = 3;
             // 
             // panelTituloRequisitos
@@ -72,7 +72,7 @@
             this.panelTituloRequisitos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTituloRequisitos.Location = new System.Drawing.Point(0, 0);
             this.panelTituloRequisitos.Name = "panelTituloRequisitos";
-            this.panelTituloRequisitos.Size = new System.Drawing.Size(382, 58);
+            this.panelTituloRequisitos.Size = new System.Drawing.Size(412, 58);
             this.panelTituloRequisitos.TabIndex = 0;
             // 
             // lblRequisitos
@@ -94,9 +94,9 @@
             this.panelClassrooms.AutoScroll = true;
             this.panelClassrooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelClassrooms.Controls.Add(this.panelTituloClassrooms);
-            this.panelClassrooms.Location = new System.Drawing.Point(405, 94);
+            this.panelClassrooms.Location = new System.Drawing.Point(435, 94);
             this.panelClassrooms.Name = "panelClassrooms";
-            this.panelClassrooms.Size = new System.Drawing.Size(537, 553);
+            this.panelClassrooms.Size = new System.Drawing.Size(507, 553);
             this.panelClassrooms.TabIndex = 4;
             // 
             // panelTituloClassrooms
@@ -106,7 +106,7 @@
             this.panelTituloClassrooms.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTituloClassrooms.Location = new System.Drawing.Point(0, 0);
             this.panelTituloClassrooms.Name = "panelTituloClassrooms";
-            this.panelTituloClassrooms.Size = new System.Drawing.Size(537, 58);
+            this.panelTituloClassrooms.Size = new System.Drawing.Size(507, 58);
             this.panelTituloClassrooms.TabIndex = 5;
             // 
             // lblClasrooms

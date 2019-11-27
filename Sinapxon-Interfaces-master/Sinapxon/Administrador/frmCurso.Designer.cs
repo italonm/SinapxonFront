@@ -60,6 +60,9 @@
             this.txtCodigoCurso = new System.Windows.Forms.TextBox();
             this.lblEspecialidad = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel5.SuspendLayout();
             this.panelRequisitos.SuspendLayout();
             this.panelTituloRequisitos.SuspendLayout();
@@ -87,8 +90,8 @@
             this.panel5.Controls.Add(this.btnNuevo);
             this.panel5.Controls.Add(this.btnGuardar);
             this.panel5.Controls.Add(this.btnEliminar);
-            this.panel5.Controls.Add(this.btnCancelar);
             this.panel5.Controls.Add(this.btnModificar);
+            this.panel5.Controls.Add(this.btnCancelar);
             this.panel5.Location = new System.Drawing.Point(34, 81);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(896, 48);
@@ -160,7 +163,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Image = global::Sinapxon.Properties.Resources.round_cancel_white_18dp;
-            this.btnCancelar.Location = new System.Drawing.Point(769, 3);
+            this.btnCancelar.Location = new System.Drawing.Point(772, 2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(124, 42);
             this.btnCancelar.TabIndex = 70;
@@ -472,6 +475,36 @@
             this.lblTitulo.TabIndex = 83;
             this.lblTitulo.Text = "Curso";
             // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel6.Location = new System.Drawing.Point(789, 81);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(15, 47);
+            this.panel6.TabIndex = 90;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel4.Location = new System.Drawing.Point(842, 81);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(23, 48);
+            this.panel4.TabIndex = 89;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel3.Location = new System.Drawing.Point(880, 81);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(50, 48);
+            this.panel3.TabIndex = 88;
+            // 
             // frmCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -483,6 +516,9 @@
             this.Controls.Add(this.panelRequisitos);
             this.Controls.Add(this.panelDatosCurso);
             this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCurso";
@@ -531,5 +567,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripción;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
     }
 }
