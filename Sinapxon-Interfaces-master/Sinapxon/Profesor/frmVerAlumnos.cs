@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -100,6 +101,13 @@ namespace Sinapxon.Profesor
         {
             frmGestionarMisClassrooms frmGestionarMisClassrooms = new frmGestionarMisClassrooms(_profesor);
             _profesor.openChildForm(frmGestionarMisClassrooms);
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.ShowDialog();
+            byte[] arreglo= DBController.generarReportePDF(ClassroomInfo.classroom.codigo);
+            File.WriteAllBytes(saveFileDialog1.FileName + ".pdf", arreglo);
         }
     }
     public static class AlumnoInfo

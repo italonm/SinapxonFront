@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,10 @@ namespace Sinapxon.Profesor
     {
         Profesor.ProfesorServicesClient DBController = new Profesor.ProfesorServicesClient();
         BindingList<Profesor.tema> temas;
+        BindingList<Profesor.>
         private frmProfesor _profesor;
+        private BindingList<byte[]> archivos = new BindingList<byte[]>();
+        private BindingList<string> nombres = new BindingList<string>();
 
         public frmTema(frmProfesor profesor)
         {
@@ -44,13 +48,38 @@ namespace Sinapxon.Profesor
             temaxClassroom.link = txtLinkVideo.Text;
             temaxClassroom.evaluacion = new Profesor.evaluacion();
             DBController.insertarTemaxClassroom(temaxClassroom);
-            this.Close();
+            
+            frmVerClassroom frmVerClassroom = new frmVerClassroom(_profesor);
+            _profesor.openChildForm(frmVerClassroom);
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
             frmVerClassroom frmVerClassroom = new frmVerClassroom(_profesor);
             _profesor.openChildForm(frmVerClassroom);
+        }
+
+        private void btnAniadirArchivo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    string ruta = saveFileDialog1.FileName;
+                    FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    archivos.Add(br.ReadBytes((int)fs.Length));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnQuitarArchivo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

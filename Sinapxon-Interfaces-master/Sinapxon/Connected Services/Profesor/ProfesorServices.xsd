@@ -4,6 +4,10 @@
   <xs:element name="eliminarEvaluacionxClassroomResponse" type="tns:eliminarEvaluacionxClassroomResponse" />
   <xs:element name="eliminarTemaxClassroom" type="tns:eliminarTemaxClassroom" />
   <xs:element name="eliminarTemaxClassroomResponse" type="tns:eliminarTemaxClassroomResponse" />
+  <xs:element name="generarReportePDF" type="tns:generarReportePDF" />
+  <xs:element name="generarReportePDFResponse" type="tns:generarReportePDFResponse" />
+  <xs:element name="insertarArchivoXTema" type="tns:insertarArchivoXTema" />
+  <xs:element name="insertarArchivoXTemaResponse" type="tns:insertarArchivoXTemaResponse" />
   <xs:element name="insertarEvaluacion" type="tns:insertarEvaluacion" />
   <xs:element name="insertarEvaluacionResponse" type="tns:insertarEvaluacionResponse" />
   <xs:element name="insertarSolicitudClassroom" type="tns:insertarSolicitudClassroom" />
@@ -28,6 +32,14 @@
   <xs:element name="listarTemasResponse" type="tns:listarTemasResponse" />
   <xs:element name="listarTemaxClassroom" type="tns:listarTemaxClassroom" />
   <xs:element name="listarTemaxClassroomResponse" type="tns:listarTemaxClassroomResponse" />
+  <xs:complexType name="eliminarEvaluacionxClassroom">
+    <xs:sequence>
+      <xs:element name="codigo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEvaluacionxClassroomResponse">
+    <xs:sequence />
+  </xs:complexType>
   <xs:complexType name="listarEvaluacionesXClassroom">
     <xs:sequence>
       <xs:element minOccurs="0" name="codigo" type="xs:string" />
@@ -181,13 +193,15 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarEvaluacionxClassroom">
+  <xs:complexType name="listarAlumnoXClassroom">
     <xs:sequence>
-      <xs:element name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarEvaluacionxClassroomResponse">
-    <xs:sequence />
+  <xs:complexType name="listarAlumnoXClassroomResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:alumno" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarTemas">
     <xs:sequence />
@@ -197,14 +211,14 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:tema" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarAlumnoXClassroom">
+  <xs:complexType name="generarReportePDF">
     <xs:sequence>
-      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="codClassroom" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarAlumnoXClassroomResponse">
+  <xs:complexType name="generarReportePDFResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:alumno" />
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarTemaxClassroom">
@@ -243,6 +257,22 @@
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:idioma" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarArchivoXTema">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:archivoXTema" />
+      <xs:element name="arg1" type="xs:int" />
+      <xs:element minOccurs="0" name="arg2" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="archivoXTema">
+    <xs:sequence>
+      <xs:element name="id_archivo_x_tema" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarArchivoXTemaResponse">
+    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarTemaxClassroom">
     <xs:sequence>

@@ -86,14 +86,15 @@ namespace Sinapxon.Profesor
         {
             int codTema = ((Profesor.temaXClassroom)dgvTemas.CurrentRow.DataBoundItem).id_tema;
             DBController.eliminarTemaxClassroom(codTema,ClassroomInfo.classroom.codigo);
-            if (DBController.listarTemaxClassroom(ClassroomInfo.classroom.codigo) != null)
+            /*if (DBController.listarTemaxClassroom(ClassroomInfo.classroom.codigo) != null)
             {
                 temas = new BindingList<temaXClassroom>(DBController.listarTemaxClassroom(ClassroomInfo.classroom.codigo));
                 dgvTemas.DataSource = temas;
             }
             else {
                 dgvTemas.DataSource = null;
-            }
+            }*/
+            dgvTemas.Rows.Remove(dgvTemas.CurrentRow);
             if (DBController.listarEvaluacionesXClassroom(ClassroomInfo.classroom.codigo) != null)
             {
                 evaluaciones = new BindingList<evaluacion>(DBController.listarEvaluacionesXClassroom(ClassroomInfo.classroom.codigo));
@@ -108,7 +109,7 @@ namespace Sinapxon.Profesor
         {
             int codigo = ((Profesor.evaluacion)dgvEvaluaciones.CurrentRow.DataBoundItem).id_evaluacion;
 
-            DBController.eliminarEvaluacionxClassroom(codigo);
+            /*DBController.eliminarEvaluacionxClassroom(codigo);
             if (DBController.listarEvaluacionesXClassroom(ClassroomInfo.classroom.codigo) != null)
             {
                 evaluaciones = new BindingList<evaluacion>(DBController.listarEvaluacionesXClassroom(ClassroomInfo.classroom.codigo));
@@ -117,7 +118,8 @@ namespace Sinapxon.Profesor
             else
             {
                 dgvEvaluaciones.DataSource = null;
-            }
+            }*/
+            dgvEvaluaciones.Rows.Remove(dgvEvaluaciones.CurrentRow);
         }
     }
 }
