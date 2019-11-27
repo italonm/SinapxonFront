@@ -136,7 +136,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConfirmarIngresoClassroom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cnfirmación de ingreso";
+            this.Text = "Confirmación de ingreso";
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

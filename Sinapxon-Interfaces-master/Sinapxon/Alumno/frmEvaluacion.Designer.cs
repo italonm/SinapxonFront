@@ -28,8 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblNombreEvaluacion = new System.Windows.Forms.Label();
             this.dgvArchivos = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRemoverArchivo = new System.Windows.Forms.Button();
             this.btnAniadirArchivo = new System.Windows.Forms.Button();
             this.lblDescripcion = new System.Windows.Forms.Label();
@@ -42,7 +48,6 @@
             this.btnAtras = new System.Windows.Forms.Button();
             this.lblPeso = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArchivos)).BeginInit();
             this.panelContenedorEntregables.SuspendLayout();
             this.panelTituloEntregables.SuspendLayout();
@@ -53,54 +58,72 @@
             // lblNombreEvaluacion
             // 
             this.lblNombreEvaluacion.AutoSize = true;
-            this.lblNombreEvaluacion.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreEvaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreEvaluacion.Location = new System.Drawing.Point(96, 31);
             this.lblNombreEvaluacion.Name = "lblNombreEvaluacion";
-            this.lblNombreEvaluacion.Size = new System.Drawing.Size(281, 29);
+            this.lblNombreEvaluacion.Size = new System.Drawing.Size(304, 29);
             this.lblNombreEvaluacion.TabIndex = 0;
             this.lblNombreEvaluacion.Text = "Nombre de la evaluación";
             // 
             // dgvArchivos
             // 
-            //dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gray;
-           // dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            //dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            //dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            //this.dgvArchivos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvArchivos.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            this.dgvArchivos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvArchivos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvArchivos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
             this.dgvArchivos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            //dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            //.BackColor = System.Drawing.Color.SlateBlue;
-            //dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            //dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            //dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            //dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            //dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            //this.dgvArchivos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvArchivos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvArchivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArchivos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvArchivos.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvArchivos.EnableHeadersVisualStyles = false;
+            this.dgvArchivos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
             this.dgvArchivos.Location = new System.Drawing.Point(20, 148);
             this.dgvArchivos.Name = "dgvArchivos";
             this.dgvArchivos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-          //  dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            //dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlDark;
-            ///dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-           // dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-           // dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
-          //  dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-           // dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-           // this.dgvArchivos.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvArchivos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvArchivos.RowHeadersVisible = false;
-           // dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.ControlDark;
-           // dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-           // dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-           // dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
-           // this.dgvArchivos.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            this.dgvArchivos.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvArchivos.Size = new System.Drawing.Size(423, 403);
             this.dgvArchivos.TabIndex = 3;
             this.dgvArchivos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvArchivos_CellFormatting);
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
             // 
             // btnRemoverArchivo
             // 
@@ -141,11 +164,11 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
-            this.lblDescripcion.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.Color.White;
             this.lblDescripcion.Location = new System.Drawing.Point(18, 17);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(126, 25);
+            this.lblDescripcion.Size = new System.Drawing.Size(136, 25);
             this.lblDescripcion.TabIndex = 7;
             this.lblDescripcion.Text = "Descripcion";
             // 
@@ -176,7 +199,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(15, 79);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -234,22 +257,16 @@
             // lblPeso
             // 
             this.lblPeso.AutoSize = true;
-            this.lblPeso.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPeso.Location = new System.Drawing.Point(647, 30);
             this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(229, 25);
+            this.lblPeso.Size = new System.Drawing.Size(259, 25);
             this.lblPeso.TabIndex = 23;
             this.lblPeso.Text = "Peso de la evaluacion: ";
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
             // 
             // frmEvaluacion
             // 
