@@ -223,14 +223,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:alumno" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarTemaxClassroom">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="tema" type="tns:temaXClassroom" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarTemaxClassroomResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="listarClassroomxProfesor">
     <xs:sequence>
       <xs:element minOccurs="0" name="codigo" type="xs:string" />
@@ -241,6 +233,14 @@
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:classroom" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarTemaxClassroom">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tema" type="tns:temaXClassroom" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarTemaxClassroomResponse">
+    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="insertarSolicitudClassroom">
     <xs:sequence>
@@ -263,6 +263,14 @@
   <xs:complexType name="insertarSolicitudClassroomResponse">
     <xs:sequence />
   </xs:complexType>
+  <xs:complexType name="listarIdiomas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarIdiomasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:idioma" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarSolicitudesClassroomxProfesor">
     <xs:sequence>
       <xs:element minOccurs="0" name="solicitudclassroom" type="xs:string" />
@@ -271,14 +279,6 @@
   <xs:complexType name="listarSolicitudesClassroomxProfesorResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:solicitudClassroom" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarIdiomas">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarIdiomasResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:idioma" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarEvaluacion">

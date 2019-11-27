@@ -62,42 +62,42 @@
             // 
             // dgvArchivos
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            this.dgvArchivos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            //dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gray;
+           // dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            //dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            //this.dgvArchivos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvArchivos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvArchivos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SlateBlue;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvArchivos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            //dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            //.BackColor = System.Drawing.Color.SlateBlue;
+            //dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            //dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            //dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            //dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            //this.dgvArchivos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvArchivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArchivos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre});
             this.dgvArchivos.Location = new System.Drawing.Point(20, 148);
             this.dgvArchivos.Name = "dgvArchivos";
             this.dgvArchivos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvArchivos.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+          //  dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            //dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlDark;
+            ///dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+           // dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+           // dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
+          //  dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+           // dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+           // this.dgvArchivos.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvArchivos.RowHeadersVisible = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            this.dgvArchivos.RowsDefaultCellStyle = dataGridViewCellStyle9;
+           // dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.ControlDark;
+           // dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+           // dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+           // dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
+           // this.dgvArchivos.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvArchivos.Size = new System.Drawing.Size(423, 403);
             this.dgvArchivos.TabIndex = 3;
             this.dgvArchivos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvArchivos_CellFormatting);
