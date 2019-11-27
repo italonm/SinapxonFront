@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblDatosClassroom = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblPeriodo = new System.Windows.Forms.Label();
@@ -37,12 +41,12 @@
             this.cbIdiomas = new System.Windows.Forms.ComboBox();
             this.panelContenedorCursos = new System.Windows.Forms.Panel();
             this.dgvCursos = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBucador = new System.Windows.Forms.Panel();
             this.lblCursos = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblCurso = new System.Windows.Forms.TextBox();
+            this.pbBuscar = new System.Windows.Forms.PictureBox();
+            this.pbContenedorBuscador = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelIdioma = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,57 +54,59 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnAtras = new System.Windows.Forms.Button();
-            this.pbBuscar = new System.Windows.Forms.PictureBox();
-            this.pbContenedorBuscador = new System.Windows.Forms.PictureBox();
             this.btnEnviarSolicitud = new System.Windows.Forms.Button();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelContenedorCursos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
             this.panelBucador.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbContenedorBuscador)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelIdioma.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbContenedorBuscador)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDatosClassroom
             // 
             this.lblDatosClassroom.AutoSize = true;
-            this.lblDatosClassroom.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatosClassroom.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDatosClassroom.ForeColor = System.Drawing.Color.Black;
             this.lblDatosClassroom.Location = new System.Drawing.Point(103, 28);
             this.lblDatosClassroom.Name = "lblDatosClassroom";
-            this.lblDatosClassroom.Size = new System.Drawing.Size(235, 29);
+            this.lblDatosClassroom.Size = new System.Drawing.Size(251, 29);
             this.lblDatosClassroom.TabIndex = 0;
             this.lblDatosClassroom.Text = "Datos del classroom";
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.Color.White;
             this.lblDescripcion.Location = new System.Drawing.Point(25, 16);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(126, 25);
+            this.lblDescripcion.Size = new System.Drawing.Size(136, 25);
             this.lblDescripcion.TabIndex = 2;
             this.lblDescripcion.Text = "Descripción";
             // 
             // lblPeriodo
             // 
             this.lblPeriodo.AutoSize = true;
-            this.lblPeriodo.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPeriodo.ForeColor = System.Drawing.Color.White;
             this.lblPeriodo.Location = new System.Drawing.Point(28, 17);
             this.lblPeriodo.Name = "lblPeriodo";
-            this.lblPeriodo.Size = new System.Drawing.Size(87, 25);
+            this.lblPeriodo.Size = new System.Drawing.Size(93, 25);
             this.lblPeriodo.TabIndex = 3;
             this.lblPeriodo.Text = "Periodo";
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescripcion.Location = new System.Drawing.Point(30, 75);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -110,11 +116,11 @@
             // cbPeriodos
             // 
             this.cbPeriodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbPeriodos.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPeriodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPeriodos.FormattingEnabled = true;
             this.cbPeriodos.Location = new System.Drawing.Point(30, 79);
             this.cbPeriodos.Name = "cbPeriodos";
-            this.cbPeriodos.Size = new System.Drawing.Size(384, 27);
+            this.cbPeriodos.Size = new System.Drawing.Size(384, 28);
             this.cbPeriodos.TabIndex = 10;
             // 
             // lblIdioma
@@ -131,15 +137,19 @@
             // cbIdiomas
             // 
             this.cbIdiomas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbIdiomas.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbIdiomas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbIdiomas.FormattingEnabled = true;
             this.cbIdiomas.Location = new System.Drawing.Point(30, 79);
             this.cbIdiomas.Name = "cbIdiomas";
-            this.cbIdiomas.Size = new System.Drawing.Size(384, 27);
+            this.cbIdiomas.Size = new System.Drawing.Size(384, 28);
             this.cbIdiomas.TabIndex = 16;
             // 
             // panelContenedorCursos
             // 
+            this.panelContenedorCursos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelContenedorCursos.AutoSize = true;
             this.panelContenedorCursos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelContenedorCursos.Controls.Add(this.dgvCursos);
             this.panelContenedorCursos.Controls.Add(this.panelBucador);
@@ -150,28 +160,54 @@
             // 
             // dgvCursos
             // 
-            this.dgvCursos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvCursos.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            this.dgvCursos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCursos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCursos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
+            this.dgvCursos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCursos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCursos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Nombre});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCursos.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvCursos.EnableHeadersVisualStyles = false;
+            this.dgvCursos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
             this.dgvCursos.Location = new System.Drawing.Point(23, 155);
             this.dgvCursos.Name = "dgvCursos";
+            this.dgvCursos.ReadOnly = true;
+            this.dgvCursos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCursos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvCursos.RowHeadersVisible = false;
             this.dgvCursos.Size = new System.Drawing.Size(410, 410);
             this.dgvCursos.TabIndex = 1;
-            // 
-            // Codigo
-            // 
-            this.Codigo.DataPropertyName = "Codigo";
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
             // 
             // panelBucador
             // 
@@ -190,11 +226,11 @@
             // lblCursos
             // 
             this.lblCursos.AutoSize = true;
-            this.lblCursos.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCursos.ForeColor = System.Drawing.Color.White;
             this.lblCursos.Location = new System.Drawing.Point(17, 16);
             this.lblCursos.Name = "lblCursos";
-            this.lblCursos.Size = new System.Drawing.Size(80, 25);
+            this.lblCursos.Size = new System.Drawing.Size(86, 25);
             this.lblCursos.TabIndex = 4;
             this.lblCursos.Text = "Cursos";
             // 
@@ -203,7 +239,7 @@
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(339, 59);
             this.btnBuscar.Name = "btnBuscar";
@@ -223,8 +259,32 @@
             this.lblCurso.Size = new System.Drawing.Size(246, 19);
             this.lblCurso.TabIndex = 2;
             // 
+            // pbBuscar
+            // 
+            this.pbBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pbBuscar.Image = global::Sinapxon.Properties.Resources.round_search;
+            this.pbBuscar.Location = new System.Drawing.Point(24, 66);
+            this.pbBuscar.Name = "pbBuscar";
+            this.pbBuscar.Size = new System.Drawing.Size(36, 36);
+            this.pbBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbBuscar.TabIndex = 1;
+            this.pbBuscar.TabStop = false;
+            // 
+            // pbContenedorBuscador
+            // 
+            this.pbContenedorBuscador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(99)))));
+            this.pbContenedorBuscador.Image = global::Sinapxon.Properties.Resources.Barra_G4;
+            this.pbContenedorBuscador.Location = new System.Drawing.Point(9, 59);
+            this.pbContenedorBuscador.Name = "pbContenedorBuscador";
+            this.pbContenedorBuscador.Size = new System.Drawing.Size(329, 50);
+            this.pbContenedorBuscador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbContenedorBuscador.TabIndex = 0;
+            this.pbContenedorBuscador.TabStop = false;
+            // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panel1.Controls.Add(this.panelIdioma);
             this.panel1.Controls.Add(this.cbIdiomas);
@@ -245,6 +305,8 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.cbPeriodos);
@@ -265,6 +327,9 @@
             // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.AutoSize = true;
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.txtDescripcion);
@@ -295,34 +360,13 @@
             this.btnAtras.TabIndex = 20;
             this.btnAtras.UseVisualStyleBackColor = false;
             // 
-            // pbBuscar
-            // 
-            this.pbBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pbBuscar.Image = global::Sinapxon.Properties.Resources.round_search;
-            this.pbBuscar.Location = new System.Drawing.Point(24, 66);
-            this.pbBuscar.Name = "pbBuscar";
-            this.pbBuscar.Size = new System.Drawing.Size(36, 36);
-            this.pbBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbBuscar.TabIndex = 1;
-            this.pbBuscar.TabStop = false;
-            // 
-            // pbContenedorBuscador
-            // 
-            this.pbContenedorBuscador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(99)))));
-            this.pbContenedorBuscador.Image = global::Sinapxon.Properties.Resources.Barra_G4;
-            this.pbContenedorBuscador.Location = new System.Drawing.Point(9, 59);
-            this.pbContenedorBuscador.Name = "pbContenedorBuscador";
-            this.pbContenedorBuscador.Size = new System.Drawing.Size(329, 50);
-            this.pbContenedorBuscador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbContenedorBuscador.TabIndex = 0;
-            this.pbContenedorBuscador.TabStop = false;
-            // 
             // btnEnviarSolicitud
             // 
+            this.btnEnviarSolicitud.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEnviarSolicitud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
             this.btnEnviarSolicitud.FlatAppearance.BorderSize = 0;
             this.btnEnviarSolicitud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviarSolicitud.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviarSolicitud.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviarSolicitud.ForeColor = System.Drawing.Color.White;
             this.btnEnviarSolicitud.Image = global::Sinapxon.Properties.Resources.enviar2;
             this.btnEnviarSolicitud.Location = new System.Drawing.Point(664, 18);
@@ -333,6 +377,22 @@
             this.btnEnviarSolicitud.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEnviarSolicitud.UseVisualStyleBackColor = false;
             this.btnEnviarSolicitud.Click += new System.EventHandler(this.BtnEnviarSolicitud_Click);
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "Codigo";
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 150;
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             // 
             // frmDatosClassroom
             // 
@@ -347,7 +407,7 @@
             this.Controls.Add(this.panelContenedorCursos);
             this.Controls.Add(this.btnEnviarSolicitud);
             this.Controls.Add(this.lblDatosClassroom);
-            this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDatosClassroom";
             this.Text = "Datos de Classroom";
@@ -355,6 +415,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).EndInit();
             this.panelBucador.ResumeLayout(false);
             this.panelBucador.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbContenedorBuscador)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panelIdioma.ResumeLayout(false);
             this.panelIdioma.PerformLayout();
@@ -365,8 +427,6 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbContenedorBuscador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,8 +456,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.Button btnAtras;
     }
 }

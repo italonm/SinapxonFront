@@ -94,9 +94,9 @@
             this.panelClassrooms.AutoScroll = true;
             this.panelClassrooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelClassrooms.Controls.Add(this.panelTituloClassrooms);
-            this.panelClassrooms.Location = new System.Drawing.Point(435, 94);
+            this.panelClassrooms.Location = new System.Drawing.Point(447, 94);
             this.panelClassrooms.Name = "panelClassrooms";
-            this.panelClassrooms.Size = new System.Drawing.Size(507, 553);
+            this.panelClassrooms.Size = new System.Drawing.Size(495, 553);
             this.panelClassrooms.TabIndex = 4;
             // 
             // panelTituloClassrooms
@@ -106,7 +106,7 @@
             this.panelTituloClassrooms.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTituloClassrooms.Location = new System.Drawing.Point(0, 0);
             this.panelTituloClassrooms.Name = "panelTituloClassrooms";
-            this.panelTituloClassrooms.Size = new System.Drawing.Size(507, 58);
+            this.panelTituloClassrooms.Size = new System.Drawing.Size(495, 58);
             this.panelTituloClassrooms.TabIndex = 5;
             // 
             // lblClasrooms

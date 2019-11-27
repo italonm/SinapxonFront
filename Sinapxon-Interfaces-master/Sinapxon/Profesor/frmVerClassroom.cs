@@ -121,5 +121,7 @@ namespace Sinapxon.Profesor
             }
             //dgvEvaluaciones.Rows.Remove(dgvEvaluaciones.CurrentRow);
         }
+
+     
     }
 }

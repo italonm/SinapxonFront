@@ -77,7 +77,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(606, 12);
+            this.button1.Location = new System.Drawing.Point(615, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(307, 49);
             this.button1.TabIndex = 3;
@@ -99,9 +99,9 @@
             this.panelDescripcion.Controls.Add(this.txtDescripcion);
             this.panelDescripcion.Controls.Add(this.panelTituloDescripcion);
             this.panelDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelDescripcion.Location = new System.Drawing.Point(17, 78);
+            this.panelDescripcion.Location = new System.Drawing.Point(22, 78);
             this.panelDescripcion.Name = "panelDescripcion";
-            this.panelDescripcion.Size = new System.Drawing.Size(398, 539);
+            this.panelDescripcion.Size = new System.Drawing.Size(417, 539);
             this.panelDescripcion.TabIndex = 6;
             // 
             // ldlDescripcion
@@ -170,7 +170,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(23, 276);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(347, 249);
+            this.txtDescripcion.Size = new System.Drawing.Size(366, 249);
             this.txtDescripcion.TabIndex = 1;
             // 
             // panelTituloDescripcion
@@ -180,7 +180,7 @@
             this.panelTituloDescripcion.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTituloDescripcion.Location = new System.Drawing.Point(0, 0);
             this.panelTituloDescripcion.Name = "panelTituloDescripcion";
-            this.panelTituloDescripcion.Size = new System.Drawing.Size(398, 58);
+            this.panelTituloDescripcion.Size = new System.Drawing.Size(417, 58);
             this.panelTituloDescripcion.TabIndex = 0;
             // 
             // lblDescripcion
@@ -211,7 +211,7 @@
             this.panelDatosProfesor.Controls.Add(this.pictureBox1);
             this.panelDatosProfesor.Controls.Add(this.panelTituloDatosProfesor);
             this.panelDatosProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelDatosProfesor.Location = new System.Drawing.Point(443, 78);
+            this.panelDatosProfesor.Location = new System.Drawing.Point(455, 78);
             this.panelDatosProfesor.Name = "panelDatosProfesor";
             this.panelDatosProfesor.Size = new System.Drawing.Size(470, 539);
             this.panelDatosProfesor.TabIndex = 7;

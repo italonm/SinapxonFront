@@ -119,7 +119,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Image = global::Sinapxon.Properties.Resources.round_cancel_white_18dp;
-            this.btnCancelar.Location = new System.Drawing.Point(782, 31);
+            this.btnCancelar.Location = new System.Drawing.Point(782, 0);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(139, 48);
             this.btnCancelar.TabIndex = 70;

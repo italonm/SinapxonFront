@@ -79,5 +79,6 @@ namespace Sinapxon.Alumno
             formularioHijo.BringToFront();
             formularioHijo.Show();
         }
+
     }
 }
