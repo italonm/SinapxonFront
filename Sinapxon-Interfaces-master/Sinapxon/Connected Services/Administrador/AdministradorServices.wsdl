@@ -8,14 +8,14 @@
   <message name="listarCursos">
     <part name="parameters" element="tns:listarCursos" />
   </message>
-  <message name="listarCursosResponse">
-    <part name="parameters" element="tns:listarCursosResponse" />
+  <message name="eliminarEspecialidadResponse">
+    <part name="parameters" element="tns:eliminarEspecialidadResponse" />
   </message>
   <message name="actualizarCurso">
     <part name="parameters" element="tns:actualizarCurso" />
   </message>
-  <message name="actualizarCursoResponse">
-    <part name="parameters" element="tns:actualizarCursoResponse" />
+  <message name="crearClassroom_y_asignarProfesorResponse">
+    <part name="parameters" element="tns:crearClassroom_y_asignarProfesorResponse" />
   </message>
   <message name="eliminarAlumno">
     <part name="parameters" element="tns:eliminarAlumno" />
@@ -56,8 +56,8 @@
   <message name="obtenerPeriodo">
     <part name="parameters" element="tns:obtenerPeriodo" />
   </message>
-  <message name="obtenerPeriodoResponse">
-    <part name="parameters" element="tns:obtenerPeriodoResponse" />
+  <message name="listarRequisitosResponse">
+    <part name="parameters" element="tns:listarRequisitosResponse" />
   </message>
   <message name="listarProfesores">
     <part name="parameters" element="tns:listarProfesores" />
@@ -104,8 +104,8 @@
   <message name="actualizarEspecialidad">
     <part name="parameters" element="tns:actualizarEspecialidad" />
   </message>
-  <message name="actualizarEspecialidadResponse">
-    <part name="parameters" element="tns:actualizarEspecialidadResponse" />
+  <message name="listarCursosResponse">
+    <part name="parameters" element="tns:listarCursosResponse" />
   </message>
   <message name="cambiarEstadoSolicitud">
     <part name="parameters" element="tns:cambiarEstadoSolicitud" />
@@ -113,11 +113,11 @@
   <message name="cambiarEstadoSolicitudResponse">
     <part name="parameters" element="tns:cambiarEstadoSolicitudResponse" />
   </message>
-  <message name="crearClassroom_y_asignarProfesor">
-    <part name="parameters" element="tns:crearClassroom_y_asignarProfesor" />
+  <message name="listarPaises">
+    <part name="parameters" element="tns:listarPaises" />
   </message>
-  <message name="crearClassroom_y_asignarProfesorResponse">
-    <part name="parameters" element="tns:crearClassroom_y_asignarProfesorResponse" />
+  <message name="listarPaisesResponse">
+    <part name="parameters" element="tns:listarPaisesResponse" />
   </message>
   <message name="insertarEspecialidad">
     <part name="parameters" element="tns:insertarEspecialidad" />

@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTema = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
@@ -48,17 +46,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panelArchivosClassroom = new System.Windows.Forms.Panel();
             this.btnQuitarArchivo = new System.Windows.Forms.Button();
-            this.dgvArchivos = new System.Windows.Forms.DataGridView();
             this.panelTituloArchivosClassroom = new System.Windows.Forms.Panel();
             this.lblArchivosTema = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.ofd = new System.Windows.Forms.OpenFileDialog();
+            this.txtArchivo = new System.Windows.Forms.TextBox();
             this.panelDatosTema.SuspendLayout();
             this.panelTituloTema.SuspendLayout();
             this.panelVideo.SuspendLayout();
             this.panelTituloVideo.SuspendLayout();
             this.panelArchivosClassroom.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArchivos)).BeginInit();
             this.panelTituloArchivosClassroom.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +70,7 @@
             this.lblTema.Location = new System.Drawing.Point(71, 31);
             this.lblTema.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTema.Name = "lblTema";
-            this.lblTema.Size = new System.Drawing.Size(80, 29);
+            this.lblTema.Size = new System.Drawing.Size(92, 36);
             this.lblTema.TabIndex = 0;
             this.lblTema.Text = "Tema";
             // 
@@ -82,7 +81,7 @@
             this.lblNombre.Location = new System.Drawing.Point(24, 78);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(130, 20);
+            this.lblNombre.Size = new System.Drawing.Size(160, 25);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre del tema";
             // 
@@ -93,7 +92,7 @@
             this.lblDescripcion.Location = new System.Drawing.Point(436, 62);
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(92, 20);
+            this.lblDescripcion.Size = new System.Drawing.Size(114, 25);
             this.lblDescripcion.TabIndex = 2;
             this.lblDescripcion.Text = "Descripción";
             // 
@@ -104,18 +103,18 @@
             this.lblLinkVideo.Location = new System.Drawing.Point(26, 71);
             this.lblLinkVideo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLinkVideo.Name = "lblLinkVideo";
-            this.lblLinkVideo.Size = new System.Drawing.Size(108, 20);
+            this.lblLinkVideo.Size = new System.Drawing.Size(133, 25);
             this.lblLinkVideo.TabIndex = 3;
             this.lblLinkVideo.Text = "URL del video";
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(437, 89);
+            this.txtDescripcion.Location = new System.Drawing.Point(408, 84);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(490, 67);
+            this.txtDescripcion.Size = new System.Drawing.Size(394, 67);
             this.txtDescripcion.TabIndex = 4;
             // 
             // txtLinkVideo
@@ -124,7 +123,7 @@
             this.txtLinkVideo.Location = new System.Drawing.Point(28, 93);
             this.txtLinkVideo.Margin = new System.Windows.Forms.Padding(2);
             this.txtLinkVideo.Name = "txtLinkVideo";
-            this.txtLinkVideo.Size = new System.Drawing.Size(899, 22);
+            this.txtLinkVideo.Size = new System.Drawing.Size(774, 26);
             this.txtLinkVideo.TabIndex = 4;
             // 
             // btnAniadirArchivo
@@ -135,7 +134,7 @@
             this.btnAniadirArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAniadirArchivo.ForeColor = System.Drawing.Color.White;
             this.btnAniadirArchivo.Image = global::Sinapxon.Properties.Resources.baseline_add_circle_white_18dp;
-            this.btnAniadirArchivo.Location = new System.Drawing.Point(634, 68);
+            this.btnAniadirArchivo.Location = new System.Drawing.Point(458, 68);
             this.btnAniadirArchivo.Margin = new System.Windows.Forms.Padding(2);
             this.btnAniadirArchivo.Name = "btnAniadirArchivo";
             this.btnAniadirArchivo.Size = new System.Drawing.Size(145, 47);
@@ -162,7 +161,7 @@
             this.txtBuscarArchivo.Location = new System.Drawing.Point(28, 82);
             this.txtBuscarArchivo.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscarArchivo.Name = "txtBuscarArchivo";
-            this.txtBuscarArchivo.Size = new System.Drawing.Size(306, 22);
+            this.txtBuscarArchivo.Size = new System.Drawing.Size(306, 26);
             this.txtBuscarArchivo.TabIndex = 1;
             // 
             // panelDatosTema
@@ -173,10 +172,10 @@
             this.panelDatosTema.Controls.Add(this.panelTituloTema);
             this.panelDatosTema.Controls.Add(this.lblDescripcion);
             this.panelDatosTema.Controls.Add(this.lblNombre);
-            this.panelDatosTema.Location = new System.Drawing.Point(14, 81);
+            this.panelDatosTema.Location = new System.Drawing.Point(14, 91);
             this.panelDatosTema.Margin = new System.Windows.Forms.Padding(2);
             this.panelDatosTema.Name = "panelDatosTema";
-            this.panelDatosTema.Size = new System.Drawing.Size(939, 169);
+            this.panelDatosTema.Size = new System.Drawing.Size(832, 169);
             this.panelDatosTema.TabIndex = 8;
             // 
             // cbTemas
@@ -186,7 +185,7 @@
             this.cbTemas.FormattingEnabled = true;
             this.cbTemas.Location = new System.Drawing.Point(30, 105);
             this.cbTemas.Name = "cbTemas";
-            this.cbTemas.Size = new System.Drawing.Size(283, 28);
+            this.cbTemas.Size = new System.Drawing.Size(283, 33);
             this.cbTemas.TabIndex = 17;
             // 
             // panelTituloTema
@@ -197,7 +196,7 @@
             this.panelTituloTema.Location = new System.Drawing.Point(0, 0);
             this.panelTituloTema.Margin = new System.Windows.Forms.Padding(2);
             this.panelTituloTema.Name = "panelTituloTema";
-            this.panelTituloTema.Size = new System.Drawing.Size(939, 58);
+            this.panelTituloTema.Size = new System.Drawing.Size(832, 58);
             this.panelTituloTema.TabIndex = 0;
             // 
             // label1
@@ -208,7 +207,7 @@
             this.label1.Location = new System.Drawing.Point(11, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(281, 25);
+            this.label1.Size = new System.Drawing.Size(346, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Datos generales del tema";
             // 
@@ -218,10 +217,10 @@
             this.panelVideo.Controls.Add(this.txtLinkVideo);
             this.panelVideo.Controls.Add(this.panelTituloVideo);
             this.panelVideo.Controls.Add(this.lblLinkVideo);
-            this.panelVideo.Location = new System.Drawing.Point(14, 264);
+            this.panelVideo.Location = new System.Drawing.Point(14, 274);
             this.panelVideo.Margin = new System.Windows.Forms.Padding(2);
             this.panelVideo.Name = "panelVideo";
-            this.panelVideo.Size = new System.Drawing.Size(939, 133);
+            this.panelVideo.Size = new System.Drawing.Size(832, 133);
             this.panelVideo.TabIndex = 9;
             // 
             // panelTituloVideo
@@ -232,7 +231,7 @@
             this.panelTituloVideo.Location = new System.Drawing.Point(0, 0);
             this.panelTituloVideo.Margin = new System.Windows.Forms.Padding(2);
             this.panelTituloVideo.Name = "panelTituloVideo";
-            this.panelTituloVideo.Size = new System.Drawing.Size(939, 58);
+            this.panelTituloVideo.Size = new System.Drawing.Size(832, 58);
             this.panelTituloVideo.TabIndex = 0;
             // 
             // label2
@@ -243,23 +242,23 @@
             this.label2.Location = new System.Drawing.Point(19, 17);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 25);
+            this.label2.Size = new System.Drawing.Size(88, 31);
             this.label2.TabIndex = 0;
             this.label2.Text = "Video";
             // 
             // panelArchivosClassroom
             // 
             this.panelArchivosClassroom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
+            this.panelArchivosClassroom.Controls.Add(this.txtArchivo);
             this.panelArchivosClassroom.Controls.Add(this.btnQuitarArchivo);
-            this.panelArchivosClassroom.Controls.Add(this.dgvArchivos);
             this.panelArchivosClassroom.Controls.Add(this.btnAniadirArchivo);
             this.panelArchivosClassroom.Controls.Add(this.panelTituloArchivosClassroom);
             this.panelArchivosClassroom.Controls.Add(this.btnExaminar);
             this.panelArchivosClassroom.Controls.Add(this.txtBuscarArchivo);
-            this.panelArchivosClassroom.Location = new System.Drawing.Point(14, 411);
+            this.panelArchivosClassroom.Location = new System.Drawing.Point(14, 425);
             this.panelArchivosClassroom.Margin = new System.Windows.Forms.Padding(2);
             this.panelArchivosClassroom.Name = "panelArchivosClassroom";
-            this.panelArchivosClassroom.Size = new System.Drawing.Size(939, 247);
+            this.panelArchivosClassroom.Size = new System.Drawing.Size(832, 222);
             this.panelArchivosClassroom.TabIndex = 10;
             // 
             // btnQuitarArchivo
@@ -270,7 +269,7 @@
             this.btnQuitarArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitarArchivo.ForeColor = System.Drawing.Color.White;
             this.btnQuitarArchivo.Image = global::Sinapxon.Properties.Resources.baseline_remove_circle_white_18dp;
-            this.btnQuitarArchivo.Location = new System.Drawing.Point(783, 68);
+            this.btnQuitarArchivo.Location = new System.Drawing.Point(658, 68);
             this.btnQuitarArchivo.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuitarArchivo.Name = "btnQuitarArchivo";
             this.btnQuitarArchivo.Size = new System.Drawing.Size(144, 47);
@@ -278,33 +277,7 @@
             this.btnQuitarArchivo.Text = "Quitar";
             this.btnQuitarArchivo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQuitarArchivo.UseVisualStyleBackColor = false;
-            this.btnQuitarArchivo.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // dgvArchivos
-            // 
-            this.dgvArchivos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvArchivos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvArchivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvArchivos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvArchivos.Location = new System.Drawing.Point(28, 123);
-            this.dgvArchivos.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvArchivos.Name = "dgvArchivos";
-            this.dgvArchivos.Size = new System.Drawing.Size(899, 106);
-            this.dgvArchivos.TabIndex = 4;
+            this.btnQuitarArchivo.Click += new System.EventHandler(this.btnQuitarArchivo_Click);
             // 
             // panelTituloArchivosClassroom
             // 
@@ -314,7 +287,7 @@
             this.panelTituloArchivosClassroom.Location = new System.Drawing.Point(0, 0);
             this.panelTituloArchivosClassroom.Margin = new System.Windows.Forms.Padding(2);
             this.panelTituloArchivosClassroom.Name = "panelTituloArchivosClassroom";
-            this.panelTituloArchivosClassroom.Size = new System.Drawing.Size(939, 58);
+            this.panelTituloArchivosClassroom.Size = new System.Drawing.Size(832, 58);
             this.panelTituloArchivosClassroom.TabIndex = 0;
             // 
             // lblArchivosTema
@@ -325,7 +298,7 @@
             this.lblArchivosTema.Location = new System.Drawing.Point(19, 18);
             this.lblArchivosTema.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblArchivosTema.Name = "lblArchivosTema";
-            this.lblArchivosTema.Size = new System.Drawing.Size(200, 25);
+            this.lblArchivosTema.Size = new System.Drawing.Size(246, 31);
             this.lblArchivosTema.TabIndex = 0;
             this.lblArchivosTema.Text = "Archivos del tema";
             // 
@@ -337,7 +310,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Image = global::Sinapxon.Properties.Resources.round_save_white_18dp;
-            this.btnGuardar.Location = new System.Drawing.Point(797, 15);
+            this.btnGuardar.Location = new System.Drawing.Point(660, 17);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(156, 48);
@@ -360,12 +333,25 @@
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
+            // ofd
+            // 
+            this.ofd.FileName = "ofdPortada";
+            // 
+            // txtArchivo
+            // 
+            this.txtArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtArchivo.Location = new System.Drawing.Point(31, 145);
+            this.txtArchivo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtArchivo.Name = "txtArchivo";
+            this.txtArchivo.Size = new System.Drawing.Size(306, 26);
+            this.txtArchivo.TabIndex = 6;
+            // 
             // frmTema
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
-            this.ClientSize = new System.Drawing.Size(964, 681);
+            this.ClientSize = new System.Drawing.Size(857, 681);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.panelArchivosClassroom);
@@ -388,7 +374,6 @@
             this.panelTituloVideo.PerformLayout();
             this.panelArchivosClassroom.ResumeLayout(false);
             this.panelArchivosClassroom.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArchivos)).EndInit();
             this.panelTituloArchivosClassroom.ResumeLayout(false);
             this.panelTituloArchivosClassroom.PerformLayout();
             this.ResumeLayout(false);
@@ -417,9 +402,11 @@
         private System.Windows.Forms.Panel panelTituloArchivosClassroom;
         private System.Windows.Forms.Label lblArchivosTema;
         private System.Windows.Forms.Button btnQuitarArchivo;
-        private System.Windows.Forms.DataGridView dgvArchivos;
         private System.Windows.Forms.ComboBox cbTemas;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog ofd;
+        private System.Windows.Forms.TextBox txtArchivo;
     }
 }
