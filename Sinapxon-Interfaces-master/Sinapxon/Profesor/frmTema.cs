@@ -15,11 +15,9 @@ namespace Sinapxon.Profesor
     {
         Profesor.ProfesorServicesClient DBController = new Profesor.ProfesorServicesClient();
         BindingList<Profesor.tema> temas;
-        BindingList<Profesor.>
+        private Profesor.archivoXTema archivo=new Profesor.archivoXTema();
         private frmProfesor _profesor;
-        private BindingList<byte[]> archivos = new BindingList<byte[]>();
-        private BindingList<string> nombres = new BindingList<string>();
-
+        string ruta;
         public frmTema(frmProfesor profesor)
         {
             InitializeComponent();
@@ -48,7 +46,13 @@ namespace Sinapxon.Profesor
             temaxClassroom.link = txtLinkVideo.Text;
             temaxClassroom.evaluacion = new Profesor.evaluacion();
             DBController.insertarTemaxClassroom(temaxClassroom);
-            
+            /////////////////////
+            FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            byte [] bytes= br.ReadBytes((int)fs.Length);
+            archivo.descripcion = "";
+            int aux=DBController.insertarArchivoXTema(archivo, ((Profesor.tema)cbTemas.SelectedItem).id_tema, ClassroomInfo.classroom.codigo);
+            DBController.guardarArchivoxTema(bytes, aux);
             frmVerClassroom frmVerClassroom = new frmVerClassroom(_profesor);
             _profesor.openChildForm(frmVerClassroom);
         }
@@ -65,10 +69,13 @@ namespace Sinapxon.Profesor
             {
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    string ruta = saveFileDialog1.FileName;
+                    ruta = saveFileDialog1.FileName;
                     FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
-                    BinaryReader br = new BinaryReader(fs);
-                    archivos.Add(br.ReadBytes((int)fs.Length));
+                    //Profesor.archivoXTema arch = new Profesor.archivoXTema ();
+                    archivo.nombre = ofd.SafeFileName;
+                    txtArchivo.Text = archivo.nombre;
+                    //BinaryReader br = new BinaryReader(fs);
+                    //archivos.Add(br.ReadBytes((int)fs.Length));
                 }
             }
             catch (Exception ex)

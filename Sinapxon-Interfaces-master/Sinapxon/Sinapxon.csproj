@@ -543,6 +543,9 @@
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.generarReportePDFResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.guardarArchivoxTemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.idioma.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

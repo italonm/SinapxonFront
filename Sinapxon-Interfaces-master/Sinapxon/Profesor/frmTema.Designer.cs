@@ -46,18 +46,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panelArchivosClassroom = new System.Windows.Forms.Panel();
             this.btnQuitarArchivo = new System.Windows.Forms.Button();
-            this.dgvArchivos = new System.Windows.Forms.DataGridView();
             this.panelTituloArchivosClassroom = new System.Windows.Forms.Panel();
             this.lblArchivosTema = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.ofd = new System.Windows.Forms.OpenFileDialog();
+            this.txtArchivo = new System.Windows.Forms.TextBox();
             this.panelDatosTema.SuspendLayout();
             this.panelTituloTema.SuspendLayout();
             this.panelVideo.SuspendLayout();
             this.panelTituloVideo.SuspendLayout();
             this.panelArchivosClassroom.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArchivos)).BeginInit();
             this.panelTituloArchivosClassroom.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -249,8 +249,8 @@
             // panelArchivosClassroom
             // 
             this.panelArchivosClassroom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
+            this.panelArchivosClassroom.Controls.Add(this.txtArchivo);
             this.panelArchivosClassroom.Controls.Add(this.btnQuitarArchivo);
-            this.panelArchivosClassroom.Controls.Add(this.dgvArchivos);
             this.panelArchivosClassroom.Controls.Add(this.btnAniadirArchivo);
             this.panelArchivosClassroom.Controls.Add(this.panelTituloArchivosClassroom);
             this.panelArchivosClassroom.Controls.Add(this.btnExaminar);
@@ -278,16 +278,6 @@
             this.btnQuitarArchivo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQuitarArchivo.UseVisualStyleBackColor = false;
             this.btnQuitarArchivo.Click += new System.EventHandler(this.btnQuitarArchivo_Click);
-            // 
-            // dgvArchivos
-            // 
-            this.dgvArchivos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvArchivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArchivos.Location = new System.Drawing.Point(28, 131);
-            this.dgvArchivos.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvArchivos.Name = "dgvArchivos";
-            this.dgvArchivos.Size = new System.Drawing.Size(774, 78);
-            this.dgvArchivos.TabIndex = 4;
             // 
             // panelTituloArchivosClassroom
             // 
@@ -343,6 +333,19 @@
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
+            // ofd
+            // 
+            this.ofd.FileName = "ofdPortada";
+            // 
+            // txtArchivo
+            // 
+            this.txtArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtArchivo.Location = new System.Drawing.Point(31, 145);
+            this.txtArchivo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtArchivo.Name = "txtArchivo";
+            this.txtArchivo.Size = new System.Drawing.Size(306, 26);
+            this.txtArchivo.TabIndex = 6;
+            // 
             // frmTema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -371,7 +374,6 @@
             this.panelTituloVideo.PerformLayout();
             this.panelArchivosClassroom.ResumeLayout(false);
             this.panelArchivosClassroom.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArchivos)).EndInit();
             this.panelTituloArchivosClassroom.ResumeLayout(false);
             this.panelTituloArchivosClassroom.PerformLayout();
             this.ResumeLayout(false);
@@ -400,10 +402,11 @@
         private System.Windows.Forms.Panel panelTituloArchivosClassroom;
         private System.Windows.Forms.Label lblArchivosTema;
         private System.Windows.Forms.Button btnQuitarArchivo;
-        private System.Windows.Forms.DataGridView dgvArchivos;
         private System.Windows.Forms.ComboBox cbTemas;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog ofd;
+        private System.Windows.Forms.TextBox txtArchivo;
     }
 }

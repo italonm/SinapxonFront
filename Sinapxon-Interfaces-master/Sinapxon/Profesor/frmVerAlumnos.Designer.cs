@@ -90,7 +90,8 @@
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(391, 36);
             this.lblNombre.TabIndex = 33;
-            this.lblNombre.Text = "Alumnos del classroom:  - ";
+            string aux= ("Alumnos del classroom: " + ClassroomInfo.classroom.codigo + " - " + ClassroomInfo.classroom.curso.nombre);
+            this.lblNombre.Text =aux;
             // 
             // frmVerAlumnos
             // 
