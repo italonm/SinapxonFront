@@ -80,6 +80,7 @@ namespace Sinapxon.Alumno
             byte[] arreglo
                 = DBController.obtenerArchivo(((Alumno.archivoXTema)dgvArchivos.CurrentRow.DataBoundItem).id_archivo_x_tema);
             File.WriteAllBytes(saveFileDialogArchivo.FileName + ((Alumno.archivoXTema)dgvArchivos.CurrentRow.DataBoundItem).nombre, arreglo);
+            MessageBox.Show("Se completo la descarga", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -249,22 +249,22 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarProfesor">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="tns:profesor" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarProfesorResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="actualizarAlumno">
     <xs:sequence>
       <xs:element minOccurs="0" name="arg0" type="tns:alumno" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarAlumnoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarProfesor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:profesor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarProfesorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -363,16 +363,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarEspecialidad">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="tns:especialidad" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarEspecialidadResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listarEspecialidades">
     <xs:sequence>
       <xs:element minOccurs="0" name="arg0" type="xs:string" />
@@ -381,6 +371,16 @@
   <xs:complexType name="listarEspecialidadesResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:especialidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEspecialidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:especialidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEspecialidadResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

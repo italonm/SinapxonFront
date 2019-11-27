@@ -646,6 +646,9 @@
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarIdiomasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarPeriodosDisponiblesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Profesor\Sinapxon.Profesor.listarPeriodosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

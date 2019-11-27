@@ -25,7 +25,7 @@ namespace Sinapxon.Profesor
             cursos = new BindingList<Profesor.curso>(DBController.listarCursos(""));
             dgvCursos.DataSource = cursos;
 
-            periodos = new BindingList<Profesor.periodo>(DBController.listarPeriodos());
+            periodos = new BindingList<Profesor.periodo>(DBController.listarPeriodosDisponibles());
 
             cbPeriodos.DataSource = periodos;
             cbPeriodos.DisplayMember = "Nombre";
@@ -53,6 +53,7 @@ namespace Sinapxon.Profesor
             //frmConfirmacionEnvioSolicitudClassroom formConfirmacion = new frmConfirmacionEnvioSolicitudClassroom();
             //formConfirmacion.Visible = true;
             DBController.insertarSolicitudClassroom(solicitud);
+            MessageBox.Show("Se envió correctamente la solicitud", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void dgvCursos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -69,7 +70,15 @@ namespace Sinapxon.Profesor
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             dgvCursos.AutoGenerateColumns = false;
-            cursos = new BindingList<Profesor.curso>(DBController.listarCursos(lblCurso.Text));
+            try
+            {
+                cursos = new BindingList<Profesor.curso>(DBController.listarCursos(lblCurso.Text));
+            }
+            catch (Exception)
+            {
+                cursos = new BindingList<curso>();
+            }
+            
             dgvCursos.DataSource = cursos;
         }
     }

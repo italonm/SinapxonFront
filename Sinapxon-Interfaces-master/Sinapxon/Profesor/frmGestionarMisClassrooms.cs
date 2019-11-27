@@ -24,7 +24,20 @@ namespace Sinapxon.Profesor
         {
             _profesor = profesor;
             InitializeComponent();
-            classrooms = new BindingList<Profesor.classroom>(DBController.listarClassroomxProfesor(LoginInfo.persona.codigo,""));
+            lblSincursos.Hide();
+            pbSinCursos.Hide();
+            try
+            {
+                classrooms = new BindingList<Profesor.classroom>(DBController.listarClassroomxProfesor(LoginInfo.persona.codigo, ""));
+            }
+            catch (Exception)
+            {
+
+                classrooms = new BindingList<classroom>();
+                lblSincursos.Show();
+                pbSinCursos.Show();
+            }
+            
             foreach (Profesor.classroom obj in classrooms){
                 crearClassroom(obj.curso.codigo, obj.curso.nombre, obj.codigo);
             }
@@ -131,7 +144,7 @@ namespace Sinapxon.Profesor
             btnAniadirTema.UseVisualStyleBackColor = false;
             //btnAniadirTema.Click += new System.EventHandler(this.btnAniadirTema_Click);
             btnAniadirTema.Click += new System.EventHandler((sender, e) => btnAniadirTema_Click(sender, e, codClassroom));
-            panelContenedor.Controls.Add(btnAniadirTema);
+            //panelContenedor.Controls.Add(btnAniadirTema);
             // 
             // pbBlueBox
             // 

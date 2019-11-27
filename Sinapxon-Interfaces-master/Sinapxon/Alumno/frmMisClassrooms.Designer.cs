@@ -120,8 +120,8 @@
             this.lblSincursos.Name = "lblSincursos";
             this.lblSincursos.Size = new System.Drawing.Size(527, 114);
             this.lblSincursos.TabIndex = 0;
-            this.lblSincursos.Text = "Oh! parece que no tienes cursos, ve a la ventana explorar cursos para poder ingre" +
-    "sar a un curso";
+            this.lblSincursos.Text = "Oh! parece que no tienes classroom, ve a la ventana explorar cursos para poder in" +
+    "gresar a un classroom";
             // 
             // btnAtras
             // 

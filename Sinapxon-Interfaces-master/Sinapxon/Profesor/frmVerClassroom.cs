@@ -22,6 +22,7 @@ namespace Sinapxon.Profesor
             InitializeComponent();
             _profesor = profesor;
             dgvTemas.AutoGenerateColumns = false;
+            lblClassroom.Text = ClassroomInfo.classroom.codigo + "  " + ClassroomInfo.classroom.curso.nombre;
             if (DBController.listarTemaxClassroom(ClassroomInfo.classroom.codigo) != null)
             {
                 temas = new BindingList<temaXClassroom>(DBController.listarTemaxClassroom(ClassroomInfo.classroom.codigo));
