@@ -56,11 +56,13 @@
             // 
             // panelRequisitos
             // 
+            this.panelRequisitos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panelRequisitos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelRequisitos.Controls.Add(this.panelTituloRequisitos);
             this.panelRequisitos.Location = new System.Drawing.Point(17, 94);
             this.panelRequisitos.Name = "panelRequisitos";
-            this.panelRequisitos.Size = new System.Drawing.Size(363, 553);
+            this.panelRequisitos.Size = new System.Drawing.Size(382, 553);
             this.panelRequisitos.TabIndex = 3;
             // 
             // panelTituloRequisitos
@@ -70,7 +72,7 @@
             this.panelTituloRequisitos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTituloRequisitos.Location = new System.Drawing.Point(0, 0);
             this.panelTituloRequisitos.Name = "panelTituloRequisitos";
-            this.panelTituloRequisitos.Size = new System.Drawing.Size(363, 58);
+            this.panelTituloRequisitos.Size = new System.Drawing.Size(382, 58);
             this.panelTituloRequisitos.TabIndex = 0;
             // 
             // lblRequisitos
@@ -86,6 +88,9 @@
             // 
             // panelClassrooms
             // 
+            this.panelClassrooms.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelClassrooms.AutoScroll = true;
             this.panelClassrooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelClassrooms.Controls.Add(this.panelTituloClassrooms);

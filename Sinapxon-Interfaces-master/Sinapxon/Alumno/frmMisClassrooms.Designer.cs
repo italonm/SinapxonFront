@@ -51,21 +51,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(100, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 29);
+            this.label1.Size = new System.Drawing.Size(199, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Mis Classrooms";
             // 
             // txtBuscar
             // 
+            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBuscar.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(105, 84);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(619, 23);
+            this.txtBuscar.Size = new System.Drawing.Size(619, 22);
             this.txtBuscar.TabIndex = 9;
             // 
             // btnBuscar
@@ -74,7 +76,7 @@
             this.btnBuscar.BackColor = System.Drawing.Color.SlateBlue;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(762, 66);
             this.btnBuscar.Name = "btnBuscar";
@@ -112,7 +114,7 @@
             // lblSincursos
             // 
             this.lblSincursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblSincursos.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSincursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSincursos.ForeColor = System.Drawing.Color.White;
             this.lblSincursos.Location = new System.Drawing.Point(245, 168);
             this.lblSincursos.Name = "lblSincursos";
@@ -160,6 +162,7 @@
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.ErrorImage = null;
             this.pictureBox2.Image = global::Sinapxon.Properties.Resources.Bloque_G3;
             this.pictureBox2.Location = new System.Drawing.Point(24, 55);
             this.pictureBox2.Name = "pictureBox2";
@@ -170,11 +173,12 @@
             // 
             // cbPerido
             // 
-            this.cbPerido.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPerido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbPerido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPerido.FormattingEnabled = true;
             this.cbPerido.Location = new System.Drawing.Point(730, 13);
             this.cbPerido.Name = "cbPerido";
-            this.cbPerido.Size = new System.Drawing.Size(133, 27);
+            this.cbPerido.Size = new System.Drawing.Size(133, 28);
             this.cbPerido.TabIndex = 25;
             // 
             // btnIr
@@ -183,7 +187,7 @@
             this.btnIr.BackColor = System.Drawing.Color.SlateBlue;
             this.btnIr.FlatAppearance.BorderSize = 0;
             this.btnIr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIr.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIr.ForeColor = System.Drawing.Color.White;
             this.btnIr.Location = new System.Drawing.Point(869, 13);
             this.btnIr.Name = "btnIr";
@@ -209,7 +213,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMisClassrooms";
             this.Text = "frmMisCursos";
