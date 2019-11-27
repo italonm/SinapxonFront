@@ -35,12 +35,14 @@
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelContenedorEntregables = new System.Windows.Forms.Panel();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.panelTituloEntregables = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAtras = new System.Windows.Forms.Button();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblPeso = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArchivos)).BeginInit();
             this.panelContenedorEntregables.SuspendLayout();
             this.panelTituloEntregables.SuspendLayout();
@@ -62,10 +64,13 @@
             // 
             this.dgvArchivos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvArchivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArchivos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre});
             this.dgvArchivos.Location = new System.Drawing.Point(20, 148);
             this.dgvArchivos.Name = "dgvArchivos";
             this.dgvArchivos.Size = new System.Drawing.Size(423, 403);
             this.dgvArchivos.TabIndex = 3;
+            this.dgvArchivos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvArchivos_CellFormatting);
             // 
             // btnRemoverArchivo
             // 
@@ -98,6 +103,7 @@
             this.btnAniadirArchivo.TabIndex = 2;
             this.btnAniadirArchivo.Text = "Añadir";
             this.btnAniadirArchivo.UseVisualStyleBackColor = false;
+            this.btnAniadirArchivo.Click += new System.EventHandler(this.btnAniadirArchivo_Click);
             // 
             // lblDescripcion
             // 
@@ -132,6 +138,16 @@
             this.panelContenedorEntregables.Name = "panelContenedorEntregables";
             this.panelContenedorEntregables.Size = new System.Drawing.Size(463, 574);
             this.panelContenedorEntregables.TabIndex = 9;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(15, 79);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.ReadOnly = true;
+            this.txtDescripcion.Size = new System.Drawing.Size(434, 472);
+            this.txtDescripcion.TabIndex = 3;
             // 
             // panelTituloEntregables
             // 
@@ -178,16 +194,6 @@
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(15, 79);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.ReadOnly = true;
-            this.txtDescripcion.Size = new System.Drawing.Size(434, 472);
-            this.txtDescripcion.TabIndex = 3;
-            // 
             // lblPeso
             // 
             this.lblPeso.AutoSize = true;
@@ -197,6 +203,16 @@
             this.lblPeso.Size = new System.Drawing.Size(229, 25);
             this.lblPeso.TabIndex = 23;
             this.lblPeso.Text = "Peso de la evaluacion: ";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
             // 
             // frmEvaluacion
             // 
@@ -240,5 +256,7 @@
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblPeso;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
     }
 }

@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.sinapxon.pucp.edu.pe/" targetNamespace="http://services.sinapxon.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="IOException" type="tns:IOException" />
+  <xs:element name="eliminarEntregable" type="tns:eliminarEntregable" />
+  <xs:element name="eliminarEntregableResponse" type="tns:eliminarEntregableResponse" />
   <xs:element name="insertarAlumnoAlClassroom" type="tns:insertarAlumnoAlClassroom" />
   <xs:element name="insertarAlumnoAlClassroomResponse" type="tns:insertarAlumnoAlClassroomResponse" />
+  <xs:element name="insertarArchivoXEntregable" type="tns:insertarArchivoXEntregable" />
+  <xs:element name="insertarArchivoXEntregableResponse" type="tns:insertarArchivoXEntregableResponse" />
+  <xs:element name="insertarEntregable" type="tns:insertarEntregable" />
+  <xs:element name="insertarEntregableResponse" type="tns:insertarEntregableResponse" />
   <xs:element name="listarArchivosXTemaXClassroom" type="tns:listarArchivosXTemaXClassroom" />
   <xs:element name="listarArchivosXTemaXClassroomResponse" type="tns:listarArchivosXTemaXClassroomResponse" />
   <xs:element name="listarClassroomsXAlumno_X_Periodo" type="tns:listarClassroomsXAlumno_X_Periodo" />
@@ -23,12 +29,52 @@
   <xs:element name="listarTemaxClassroomResponse" type="tns:listarTemaxClassroomResponse" />
   <xs:element name="obtenerArchivo" type="tns:obtenerArchivo" />
   <xs:element name="obtenerArchivoResponse" type="tns:obtenerArchivoResponse" />
-  <xs:complexType name="listarClassroomxAlumno">
+  <xs:complexType name="listarClassroomsxCurso">
     <xs:sequence>
-      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="curso" type="tns:curso" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarClassroomxAlumnoResponse">
+  <xs:complexType name="curso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="cursos" nillable="true" type="tns:curso" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="especialidad" type="tns:especialidad" />
+      <xs:element name="estado" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="administrador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="nickname" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="pais" type="tns:pais" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pais">
+    <xs:sequence>
+      <xs:element name="id_pais" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="especialidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="id_especialidad" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarClassroomsxCursoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:classroom" />
     </xs:sequence>
@@ -71,46 +117,6 @@
       <xs:element minOccurs="0" name="pais" type="tns:pais" />
       <xs:element minOccurs="0" name="password" type="xs:string" />
       <xs:element minOccurs="0" name="telefono" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="pais">
-    <xs:sequence>
-      <xs:element name="id_pais" type="xs:int" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="curso">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
-      <xs:element minOccurs="0" name="codigo" type="xs:string" />
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="cursos" nillable="true" type="tns:curso" />
-      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
-      <xs:element minOccurs="0" name="especialidad" type="tns:especialidad" />
-      <xs:element name="estado" type="xs:int" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="administrador">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
-      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
-      <xs:element minOccurs="0" name="codigo" type="xs:string" />
-      <xs:element minOccurs="0" name="correo" type="xs:string" />
-      <xs:element minOccurs="0" name="dni" type="xs:string" />
-      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="nickname" type="xs:string" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-      <xs:element minOccurs="0" name="pais" type="tns:pais" />
-      <xs:element minOccurs="0" name="password" type="xs:string" />
-      <xs:element minOccurs="0" name="telefono" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="especialidad">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
-      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
-      <xs:element name="id_especialidad" type="xs:int" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="idioma">
@@ -176,14 +182,72 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarClassroomsxCurso">
+  <xs:complexType name="insertarEntregable">
     <xs:sequence>
-      <xs:element minOccurs="0" name="curso" type="tns:curso" />
+      <xs:element name="idEvaluacion" type="xs:int" />
+      <xs:element minOccurs="0" name="idAlumno" type="xs:string" />
+      <xs:element minOccurs="0" name="idClassroom" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="idArchivoXEntregable" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarClassroomsxCursoResponse">
+  <xs:complexType name="insertarEntregableResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarEvaluacionesXClassroom">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEvaluacionesXClassroomResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evaluacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEntregable">
+    <xs:sequence>
+      <xs:element name="idEvaluacion" type="xs:int" />
+      <xs:element minOccurs="0" name="idAlumno" type="xs:string" />
+      <xs:element minOccurs="0" name="idClassroom" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEntregableResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarClassroomxAlumno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarClassroomxAlumnoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:classroom" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarArchivoXEntregable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="archivo" type="tns:archivoXEntregable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="archivoXEntregable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entregable" type="tns:entregable" />
+      <xs:element name="id_archivo_x_entregable" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="entregable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="alumno" type="tns:classroomXAlumno" />
+      <xs:element minOccurs="0" name="archivo" type="tns:archivoXEntregable" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="evaluacion" type="tns:evaluacion" />
+      <xs:element name="nota" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarArchivoXEntregableResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarArchivosXTemaXClassroom">
@@ -255,16 +319,6 @@
   <xs:complexType name="listarTemaxClassroomResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:temaXClassroom" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarEvaluacionesXClassroom">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="codigo" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarEvaluacionesXClassroomResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evaluacion" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarAlumnoAlClassroom">
