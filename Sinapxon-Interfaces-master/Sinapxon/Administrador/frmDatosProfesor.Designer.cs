@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDatosProfesor));
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -36,6 +37,7 @@
             this.lblGradoInstruccion = new System.Windows.Forms.Label();
             this.txtGrado = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMostrar = new System.Windows.Forms.Button();
             this.btnGenerarContr = new System.Windows.Forms.Button();
             this.txtNickname = new System.Windows.Forms.TextBox();
             this.lblNickname = new System.Windows.Forms.Label();
@@ -79,7 +81,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.btnMostrar = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -180,6 +181,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(445, 264);
             this.panel1.TabIndex = 67;
+            // 
+            // btnMostrar
+            // 
+            this.btnMostrar.BackColor = System.Drawing.Color.White;
+            this.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrar.Image = ((System.Drawing.Image)(resources.GetObject("btnMostrar.Image")));
+            this.btnMostrar.Location = new System.Drawing.Point(280, 210);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(43, 26);
+            this.btnMostrar.TabIndex = 85;
+            this.btnMostrar.UseVisualStyleBackColor = false;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // btnGenerarContr
             // 
@@ -678,18 +691,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(50, 48);
             this.panel8.TabIndex = 79;
-            // 
-            // btnMostrar
-            // 
-            this.btnMostrar.BackColor = System.Drawing.Color.White;
-            this.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMostrar.Image = global::Sinapxon.Properties.Resources._63568;
-            this.btnMostrar.Location = new System.Drawing.Point(280, 210);
-            this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(43, 26);
-            this.btnMostrar.TabIndex = 85;
-            this.btnMostrar.UseVisualStyleBackColor = false;
-            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // frmDatosProfesor
             // 

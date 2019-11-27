@@ -333,26 +333,6 @@ namespace Sinapxon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Bloque_Usuario {
-            get {
-                object obj = ResourceManager.GetObject("Bloque-Usuario", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap calificar {
-            get {
-                object obj = ResourceManager.GetObject("calificar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap ContenedorTXT {
             get {
                 object obj = ResourceManager.GetObject("ContenedorTXT", resourceCulture);
