@@ -14,6 +14,7 @@ namespace Sinapxon.Alumno
     {
         private int altura = 0, boxAltura = 174;
         private frmAlumno _padre = null;
+        private BindingList<Alumno.curso> cursos;
 
         private Alumno.AlumnoServicesClient DBController = new AlumnoServicesClient();
 
@@ -134,6 +135,20 @@ namespace Sinapxon.Alumno
             panelContenedorCursos.Controls.Add(boxBase);
 
             altura = altura + boxAltura;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            altura = 0;
+            boxAltura = 164;
+            panelContenedorCursos.Controls.Clear();
+
+            cursos = new BindingList<Alumno.curso>(DBController.listarCursos(txtBuscar.Text));
+
+            foreach (Alumno.curso obj in cursos)
+            {
+                crearElemento(obj);
+            }
         }
 
         private void BtnVerCurso_Click(object sender, EventArgs e, Alumno.curso curso)

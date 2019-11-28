@@ -60,12 +60,13 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(762, 66);
+            this.btnBuscar.Location = new System.Drawing.Point(776, 66);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(132, 58);
             this.btnBuscar.TabIndex = 15;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
@@ -88,7 +89,7 @@
             this.panelContenedorCursos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelContenedorCursos.Location = new System.Drawing.Point(33, 152);
             this.panelContenedorCursos.Name = "panelContenedorCursos";
-            this.panelContenedorCursos.Size = new System.Drawing.Size(882, 517);
+            this.panelContenedorCursos.Size = new System.Drawing.Size(901, 517);
             this.panelContenedorCursos.TabIndex = 16;
             // 
             // pictureBox4
@@ -124,7 +125,7 @@
             this.pictureBox2.Image = global::Sinapxon.Properties.Resources.Bloque_G3;
             this.pictureBox2.Location = new System.Drawing.Point(24, 55);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(900, 80);
+            this.pictureBox2.Size = new System.Drawing.Size(916, 80);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;

@@ -255,6 +255,7 @@
             this.btnAgregarEntregable.Text = "Añadir";
             this.btnAgregarEntregable.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregarEntregable.UseVisualStyleBackColor = false;
+            this.btnAgregarEntregable.Click += new System.EventHandler(this.btnAgregarEntregable_Click);
             // 
             // dgvEntregables
             // 

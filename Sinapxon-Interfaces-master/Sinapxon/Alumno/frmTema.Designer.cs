@@ -129,7 +129,7 @@
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
             this.dgvArchivos.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvArchivos.Size = new System.Drawing.Size(821, 237);
+            this.dgvArchivos.Size = new System.Drawing.Size(846, 237);
             this.dgvArchivos.TabIndex = 10;
             this.dgvArchivos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvArchivos_CellFormatting);
             // 
@@ -196,7 +196,7 @@
             this.btnDescargar.ForeColor = System.Drawing.Color.White;
             this.btnDescargar.Image = global::Sinapxon.Properties.Resources.baseline_get_app_white_18dp;
             this.btnDescargar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDescargar.Location = new System.Drawing.Point(627, 68);
+            this.btnDescargar.Location = new System.Drawing.Point(652, 68);
             this.btnDescargar.Name = "btnDescargar";
             this.btnDescargar.Size = new System.Drawing.Size(224, 45);
             this.btnDescargar.TabIndex = 4;
@@ -228,7 +228,7 @@
             this.panelContenedorDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelContenedorDescripcion.Location = new System.Drawing.Point(12, 65);
             this.panelContenedorDescripcion.Name = "panelContenedorDescripcion";
-            this.panelContenedorDescripcion.Size = new System.Drawing.Size(297, 385);
+            this.panelContenedorDescripcion.Size = new System.Drawing.Size(336, 385);
             this.panelContenedorDescripcion.TabIndex = 25;
             // 
             // txtDescripcion
@@ -239,7 +239,7 @@
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ReadOnly = true;
-            this.txtDescripcion.Size = new System.Drawing.Size(242, 303);
+            this.txtDescripcion.Size = new System.Drawing.Size(281, 303);
             this.txtDescripcion.TabIndex = 1;
             // 
             // panelTituloDescripcion
@@ -249,7 +249,7 @@
             this.panelTituloDescripcion.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTituloDescripcion.Location = new System.Drawing.Point(0, 0);
             this.panelTituloDescripcion.Name = "panelTituloDescripcion";
-            this.panelTituloDescripcion.Size = new System.Drawing.Size(297, 58);
+            this.panelTituloDescripcion.Size = new System.Drawing.Size(336, 58);
             this.panelTituloDescripcion.TabIndex = 0;
             // 
             // panel1
@@ -258,7 +258,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.webBrowser2);
-            this.panel1.Location = new System.Drawing.Point(329, 65);
+            this.panel1.Location = new System.Drawing.Point(354, 65);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(570, 385);
             this.panel1.TabIndex = 26;
@@ -283,7 +283,7 @@
             this.panel3.Controls.Add(this.dgvArchivos);
             this.panel3.Location = new System.Drawing.Point(10, 481);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(889, 392);
+            this.panel3.Size = new System.Drawing.Size(914, 392);
             this.panel3.TabIndex = 27;
             // 
             // panel4
@@ -293,7 +293,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(889, 58);
+            this.panel4.Size = new System.Drawing.Size(914, 58);
             this.panel4.TabIndex = 0;
             // 
             // frmTema

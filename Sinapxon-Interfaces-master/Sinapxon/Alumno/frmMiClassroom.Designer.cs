@@ -39,10 +39,10 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(90, 25);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(207, 29);
+            this.lblTitulo.Size = new System.Drawing.Size(222, 29);
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "Nombre del curso";
             // 
@@ -53,7 +53,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl.Controls.Add(this.tabPageTema);
             this.tabControl.Controls.Add(this.tabPageEvaluacion);
-            this.tabControl.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl.Location = new System.Drawing.Point(22, 71);
             this.tabControl.Name = "tabControl";
             this.tabControl.Padding = new System.Drawing.Point(80, 3);
@@ -66,20 +66,20 @@
             this.tabPageTema.AutoScroll = true;
             this.tabPageTema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.tabPageTema.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tabPageTema.Location = new System.Drawing.Point(4, 32);
+            this.tabPageTema.Location = new System.Drawing.Point(4, 33);
             this.tabPageTema.Name = "tabPageTema";
             this.tabPageTema.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTema.Size = new System.Drawing.Size(912, 544);
+            this.tabPageTema.Size = new System.Drawing.Size(912, 543);
             this.tabPageTema.TabIndex = 0;
             this.tabPageTema.Text = "Temas";
             // 
             // tabPageEvaluacion
             // 
             this.tabPageEvaluacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
-            this.tabPageEvaluacion.Location = new System.Drawing.Point(4, 32);
+            this.tabPageEvaluacion.Location = new System.Drawing.Point(4, 33);
             this.tabPageEvaluacion.Name = "tabPageEvaluacion";
             this.tabPageEvaluacion.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageEvaluacion.Size = new System.Drawing.Size(912, 544);
+            this.tabPageEvaluacion.Size = new System.Drawing.Size(912, 543);
             this.tabPageEvaluacion.TabIndex = 1;
             this.tabPageEvaluacion.Text = "Evaluaciones";
             // 

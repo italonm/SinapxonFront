@@ -76,11 +76,6 @@ namespace Sinapxon.Login
             this.Hide();
         }
 
-        private void pctImagenSinapxon_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtContrasenia_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)

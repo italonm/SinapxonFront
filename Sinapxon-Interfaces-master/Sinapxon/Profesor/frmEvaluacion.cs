@@ -46,5 +46,10 @@ namespace Sinapxon.Profesor
         {
             this.Close();
         }
+
+        private void btnAgregarEntregable_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

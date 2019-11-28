@@ -78,7 +78,7 @@ namespace Sinapxon.Administrador
         //BUSCAR
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
-            toShow = new BindingList<Administrador.profesor>();
+            
 
             index = 0;
 

@@ -67,6 +67,7 @@ namespace Sinapxon.Administrador
         //BUSCAR
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            index = 0;
             toShow = new BindingList<Administrador.especialidad>();
 
             foreach (Administrador.especialidad esp in backup)
