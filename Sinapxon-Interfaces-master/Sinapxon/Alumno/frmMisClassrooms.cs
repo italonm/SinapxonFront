@@ -29,6 +29,7 @@ namespace Sinapxon.Alumno
         {
             InitializeComponent();
             this.BringToFront();
+
             classrooms = new BindingList<classroom>(DBController.listarClassroomxAlumno(LoginInfo.persona.codigo));
 
             foreach (Alumno.classroom obj in classrooms)

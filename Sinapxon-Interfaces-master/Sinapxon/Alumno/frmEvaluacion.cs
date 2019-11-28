@@ -105,6 +105,7 @@ namespace Sinapxon.Alumno
                                                 res);
                 DBController.guardarArchivo(archivosB[pos], res);
             }
+            MessageBox.Show("Se guardó correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
