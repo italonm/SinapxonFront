@@ -41,7 +41,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContenedor.AutoScroll = true;
-            this.panelContenedor.AutoSize = true;
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelContenedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelContenedor.Location = new System.Drawing.Point(10, 80);
@@ -83,7 +82,7 @@
             this.cbEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Location = new System.Drawing.Point(651, 34);
-            this.cbEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(147, 21);
             this.cbEstado.TabIndex = 38;
@@ -96,7 +95,7 @@
             this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporte.ForeColor = System.Drawing.Color.White;
             this.btnReporte.Location = new System.Drawing.Point(828, 18);
-            this.btnReporte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReporte.Margin = new System.Windows.Forms.Padding(2);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(119, 41);
             this.btnReporte.TabIndex = 39;
@@ -115,7 +114,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmVerSolicitudes";
             this.Text = "VerMisSolicitudes";
             this.ResumeLayout(false);

@@ -110,6 +110,8 @@
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(306, 68);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
@@ -120,6 +122,8 @@
             // 
             // txtLinkVideo
             // 
+            this.txtLinkVideo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLinkVideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLinkVideo.Location = new System.Drawing.Point(21, 80);
             this.txtLinkVideo.Margin = new System.Windows.Forms.Padding(2);
@@ -129,6 +133,7 @@
             // 
             // btnAniadirArchivo
             // 
+            this.btnAniadirArchivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAniadirArchivo.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnAniadirArchivo.FlatAppearance.BorderSize = 0;
             this.btnAniadirArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -167,6 +172,8 @@
             // 
             // panelDatosTema
             // 
+            this.panelDatosTema.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDatosTema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelDatosTema.Controls.Add(this.cbTemas);
             this.panelDatosTema.Controls.Add(this.txtDescripcion);
@@ -185,16 +192,17 @@
             this.cbTemas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTemas.FormattingEnabled = true;
             this.cbTemas.Location = new System.Drawing.Point(22, 84);
-            this.cbTemas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbTemas.Margin = new System.Windows.Forms.Padding(2);
             this.cbTemas.Name = "cbTemas";
             this.cbTemas.Size = new System.Drawing.Size(213, 28);
             this.cbTemas.TabIndex = 17;
             // 
             // panelTituloTema
             // 
+            this.panelTituloTema.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTituloTema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(99)))));
             this.panelTituloTema.Controls.Add(this.label1);
-            this.panelTituloTema.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTituloTema.Location = new System.Drawing.Point(0, 0);
             this.panelTituloTema.Margin = new System.Windows.Forms.Padding(2);
             this.panelTituloTema.Name = "panelTituloTema";
@@ -215,6 +223,8 @@
             // 
             // panelVideo
             // 
+            this.panelVideo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelVideo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelVideo.Controls.Add(this.txtLinkVideo);
             this.panelVideo.Controls.Add(this.panelTituloVideo);
@@ -250,6 +260,8 @@
             // 
             // panelArchivosClassroom
             // 
+            this.panelArchivosClassroom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelArchivosClassroom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelArchivosClassroom.Controls.Add(this.txtArchivo);
             this.panelArchivosClassroom.Controls.Add(this.btnQuitarArchivo);
@@ -274,6 +286,7 @@
             // 
             // btnQuitarArchivo
             // 
+            this.btnQuitarArchivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnQuitarArchivo.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnQuitarArchivo.FlatAppearance.BorderSize = 0;
             this.btnQuitarArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -315,6 +328,7 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGuardar.BackColor = System.Drawing.Color.SlateBlue;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -338,7 +352,7 @@
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.Image = global::Sinapxon.Properties.Resources.round_arrow_left_white_36dp;
             this.btnAtras.Location = new System.Drawing.Point(10, 15);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(2);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(38, 38);
             this.btnAtras.TabIndex = 21;
@@ -365,7 +379,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximizeBox = false;
             this.Name = "frmTema";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Añadir Tema";

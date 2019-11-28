@@ -82,5 +82,6 @@ namespace Sinapxon.Alumno
             File.WriteAllBytes(saveFileDialogArchivo.FileName + ((Alumno.archivoXTema)dgvArchivos.CurrentRow.DataBoundItem).nombre, arreglo);
             MessageBox.Show("Se completo la descarga", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
     }
 }

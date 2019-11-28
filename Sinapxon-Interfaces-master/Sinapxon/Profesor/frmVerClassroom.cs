@@ -35,6 +35,8 @@ namespace Sinapxon.Profesor
                 evaluaciones = new BindingList<evaluacion>(DBController.listarEvaluacionesXClassroom(ClassroomInfo.classroom.codigo));
                 dgvEvaluaciones.DataSource = evaluaciones;
             }
+            dgvTemas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvEvaluaciones.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void btnAniadirTema_Click(object sender, EventArgs e)

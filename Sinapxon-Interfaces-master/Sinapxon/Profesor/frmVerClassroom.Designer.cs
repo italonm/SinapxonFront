@@ -41,9 +41,6 @@
             this.lblClassroom = new System.Windows.Forms.Label();
             this.panelTemas = new System.Windows.Forms.Panel();
             this.dgvTemas = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Video = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnQuitarTema = new System.Windows.Forms.Button();
             this.panelTituloTema = new System.Windows.Forms.Panel();
             this.lblTema = new System.Windows.Forms.Label();
@@ -56,6 +53,9 @@
             this.btnAniadirEvaluacion = new System.Windows.Forms.Button();
             this.btnEditarEvaluacion = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Video = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,7 +83,6 @@
             this.panelTemas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelTemas.AutoSize = true;
             this.panelTemas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelTemas.Controls.Add(this.dgvTemas);
             this.panelTemas.Controls.Add(this.btnQuitarTema);
@@ -91,7 +90,7 @@
             this.panelTemas.Controls.Add(this.btnAniadirTema);
             this.panelTemas.Location = new System.Drawing.Point(12, 76);
             this.panelTemas.Name = "panelTemas";
-            this.panelTemas.Size = new System.Drawing.Size(507, 570);
+            this.panelTemas.Size = new System.Drawing.Size(518, 570);
             this.panelTemas.TabIndex = 5;
             // 
             // dgvTemas
@@ -147,26 +146,9 @@
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
             this.dgvTemas.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvTemas.Size = new System.Drawing.Size(476, 395);
+            this.dgvTemas.Size = new System.Drawing.Size(487, 418);
             this.dgvTemas.TabIndex = 4;
             this.dgvTemas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvTemas_CellFormatting);
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Width = 120;
-            // 
-            // Video
-            // 
-            this.Video.HeaderText = "VIdeo";
-            this.Video.Name = "Video";
-            this.Video.Width = 500;
             // 
             // btnQuitarTema
             // 
@@ -192,7 +174,7 @@
             this.panelTituloTema.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTituloTema.Location = new System.Drawing.Point(0, 0);
             this.panelTituloTema.Name = "panelTituloTema";
-            this.panelTituloTema.Size = new System.Drawing.Size(507, 60);
+            this.panelTituloTema.Size = new System.Drawing.Size(518, 60);
             this.panelTituloTema.TabIndex = 0;
             // 
             // lblTema
@@ -227,14 +209,13 @@
             // 
             this.panelEvaluaciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelEvaluaciones.AutoSize = true;
             this.panelEvaluaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelEvaluaciones.Controls.Add(this.dgvEvaluaciones);
             this.panelEvaluaciones.Controls.Add(this.btnQuitarEvaluacion);
             this.panelEvaluaciones.Controls.Add(this.panelTituloEvaluacion);
             this.panelEvaluaciones.Controls.Add(this.btnAniadirEvaluacion);
             this.panelEvaluaciones.Controls.Add(this.btnEditarEvaluacion);
-            this.panelEvaluaciones.Location = new System.Drawing.Point(539, 76);
+            this.panelEvaluaciones.Location = new System.Drawing.Point(547, 76);
             this.panelEvaluaciones.Name = "panelEvaluaciones";
             this.panelEvaluaciones.Size = new System.Drawing.Size(403, 570);
             this.panelEvaluaciones.TabIndex = 6;
@@ -274,7 +255,7 @@
             this.dgvEvaluaciones.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvEvaluaciones.EnableHeadersVisualStyles = false;
             this.dgvEvaluaciones.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.dgvEvaluaciones.Location = new System.Drawing.Point(26, 139);
+            this.dgvEvaluaciones.Location = new System.Drawing.Point(20, 139);
             this.dgvEvaluaciones.Name = "dgvEvaluaciones";
             this.dgvEvaluaciones.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -291,7 +272,7 @@
             dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.SteelBlue;
             this.dgvEvaluaciones.RowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.dgvEvaluaciones.Size = new System.Drawing.Size(360, 418);
+            this.dgvEvaluaciones.Size = new System.Drawing.Size(363, 418);
             this.dgvEvaluaciones.TabIndex = 3;
             this.dgvEvaluaciones.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEvaluaciones_CellFormatting);
             // 
@@ -303,7 +284,7 @@
             this.btnQuitarEvaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitarEvaluacion.ForeColor = System.Drawing.Color.White;
             this.btnQuitarEvaluacion.Image = global::Sinapxon.Properties.Resources.baseline_remove_circle_white_18dp;
-            this.btnQuitarEvaluacion.Location = new System.Drawing.Point(274, 73);
+            this.btnQuitarEvaluacion.Location = new System.Drawing.Point(271, 73);
             this.btnQuitarEvaluacion.Name = "btnQuitarEvaluacion";
             this.btnQuitarEvaluacion.Size = new System.Drawing.Size(109, 45);
             this.btnQuitarEvaluacion.TabIndex = 2;
@@ -340,7 +321,7 @@
             this.btnAniadirEvaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAniadirEvaluacion.ForeColor = System.Drawing.Color.White;
             this.btnAniadirEvaluacion.Image = global::Sinapxon.Properties.Resources.baseline_add_circle_white_18dp;
-            this.btnAniadirEvaluacion.Location = new System.Drawing.Point(23, 73);
+            this.btnAniadirEvaluacion.Location = new System.Drawing.Point(22, 73);
             this.btnAniadirEvaluacion.Name = "btnAniadirEvaluacion";
             this.btnAniadirEvaluacion.Size = new System.Drawing.Size(109, 45);
             this.btnAniadirEvaluacion.TabIndex = 1;
@@ -357,7 +338,7 @@
             this.btnEditarEvaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarEvaluacion.ForeColor = System.Drawing.Color.White;
             this.btnEditarEvaluacion.Image = global::Sinapxon.Properties.Resources.modificar;
-            this.btnEditarEvaluacion.Location = new System.Drawing.Point(138, 73);
+            this.btnEditarEvaluacion.Location = new System.Drawing.Point(136, 73);
             this.btnEditarEvaluacion.Name = "btnEditarEvaluacion";
             this.btnEditarEvaluacion.Size = new System.Drawing.Size(130, 45);
             this.btnEditarEvaluacion.TabIndex = 0;
@@ -379,11 +360,28 @@
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.Width = 160;
+            // 
+            // Video
+            // 
+            this.Video.HeaderText = "VIdeo";
+            this.Video.Name = "Video";
+            this.Video.Width = 700;
+            // 
             // Namee
             // 
             this.Namee.HeaderText = "Nombre";
             this.Namee.Name = "Namee";
-            this.Namee.Width = 150;
+            this.Namee.Width = 200;
             // 
             // Peso
             // 
@@ -400,7 +398,6 @@
             // frmVerClassroom
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
             this.ClientSize = new System.Drawing.Size(964, 681);
             this.Controls.Add(this.btnAtras);
