@@ -35,6 +35,7 @@ namespace Sinapxon.Profesor
             cbIdiomas.DataSource = idiomas;
             cbIdiomas.DisplayMember = "Nombre";
             cbIdiomas.ValueMember = "Id_idioma";
+            dgvCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void BtnEnviarSolicitud_Click(object sender, EventArgs e)

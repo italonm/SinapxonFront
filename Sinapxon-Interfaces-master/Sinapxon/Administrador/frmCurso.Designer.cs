@@ -96,7 +96,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(896, 48);
             this.panel5.TabIndex = 87;
-            this.panel5.Resize += new System.EventHandler(this.panel5_Resize);
             // 
             // btnNuevo
             // 

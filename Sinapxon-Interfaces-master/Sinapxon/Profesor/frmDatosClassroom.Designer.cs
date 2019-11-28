@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblDatosClassroom = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblPeriodo = new System.Windows.Forms.Label();
@@ -41,6 +41,8 @@
             this.cbIdiomas = new System.Windows.Forms.ComboBox();
             this.panelContenedorCursos = new System.Windows.Forms.Panel();
             this.dgvCursos = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBucador = new System.Windows.Forms.Panel();
             this.lblCursos = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -55,8 +57,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnEnviarSolicitud = new System.Windows.Forms.Button();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelContenedorCursos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
             this.panelBucador.SuspendLayout();
@@ -149,7 +149,6 @@
             this.panelContenedorCursos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelContenedorCursos.AutoSize = true;
             this.panelContenedorCursos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelContenedorCursos.Controls.Add(this.dgvCursos);
             this.panelContenedorCursos.Controls.Add(this.panelBucador);
@@ -161,53 +160,69 @@
             // dgvCursos
             // 
             this.dgvCursos.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            this.dgvCursos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            this.dgvCursos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             this.dgvCursos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCursos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
             this.dgvCursos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCursos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCursos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dgvCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCursos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Nombre});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCursos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCursos.DefaultCellStyle = dataGridViewCellStyle23;
             this.dgvCursos.EnableHeadersVisualStyles = false;
             this.dgvCursos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
             this.dgvCursos.Location = new System.Drawing.Point(23, 155);
             this.dgvCursos.Name = "dgvCursos";
             this.dgvCursos.ReadOnly = true;
             this.dgvCursos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCursos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCursos.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.dgvCursos.RowHeadersVisible = false;
             this.dgvCursos.Size = new System.Drawing.Size(410, 410);
             this.dgvCursos.TabIndex = 1;
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "Codigo";
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 150;
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             // 
             // panelBucador
             // 
@@ -284,7 +299,6 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panel1.Controls.Add(this.panelIdioma);
             this.panel1.Controls.Add(this.cbIdiomas);
@@ -306,7 +320,6 @@
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.cbPeriodos);
@@ -329,7 +342,6 @@
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.AutoSize = true;
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.txtDescripcion);
@@ -378,26 +390,11 @@
             this.btnEnviarSolicitud.UseVisualStyleBackColor = false;
             this.btnEnviarSolicitud.Click += new System.EventHandler(this.BtnEnviarSolicitud_Click);
             // 
-            // Codigo
-            // 
-            this.Codigo.DataPropertyName = "Codigo";
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 150;
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
             // frmDatosClassroom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
             this.ClientSize = new System.Drawing.Size(964, 681);
             this.Controls.Add(this.btnAtras);

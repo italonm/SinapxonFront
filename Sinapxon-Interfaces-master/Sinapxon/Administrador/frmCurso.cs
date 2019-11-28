@@ -19,10 +19,11 @@ namespace Sinapxon.Administrador
         private int tipoX;
         private Administrador.curso curso;
         private BindingList<Administrador.curso> cursos;
+        private BindingList<Administrador.curso> cursos2;
         private BindingList<Administrador.curso> listado;
         private Administrador.curso curSeleccionado;
         Administrador.curso cur;
-
+        int guardado;
         Administrador.AdministradorServicesClient DBController = new Administrador.AdministradorServicesClient();
         private Estado estadoCurso;
         private String codigoAdmin;
@@ -34,6 +35,7 @@ namespace Sinapxon.Administrador
             //Inicializo Formulario
             tipo = 1;
             tipoX = 1;
+            guardado = 0;
             InitializeComponent();
             this.Padre = padre;
             lblTitulo.Text = "Editar Curso";
@@ -62,7 +64,7 @@ namespace Sinapxon.Administrador
             txtDescripcion.Text = curSelec.descripcion;
             cbEspecialidad.Text = curSelec.especialidad.nombre;
             cursos = new BindingList<Administrador.curso>(curso.cursos.ToList());
-            
+            cursos2 = new BindingList<Administrador.curso>(curso.cursos.ToList());
 
             dgvRequisitos.AutoGenerateColumns = false;
             try
@@ -84,6 +86,7 @@ namespace Sinapxon.Administrador
         {
             tipo = 2;
             tipoX = 2;
+            guardado = 0;
             //Inicializo Formulario
             InitializeComponent();
             this.Padre = padre;
@@ -330,6 +333,7 @@ namespace Sinapxon.Administrador
                 }
                 else MessageBox.Show("El curso se ha registrado con exito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tipoX = 1;
+                guardado = 1;
             }
             //ACTUALIZAR CURSO SELECCIONADO
             else if (estadoCurso == Estado.Modificar)
@@ -344,9 +348,11 @@ namespace Sinapxon.Administrador
                     MessageBox.Show("El curso se ha actualizado con exito, no presenta requisitos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else MessageBox.Show("El curso se ha sido actualizado con exito", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                guardado = 1;
             }
 
             estadoComponentes(Estado.Actualizar);
+            
         }
 
         //==============================================================================================================================================================
@@ -382,15 +388,13 @@ namespace Sinapxon.Administrador
             if (tipo == 1) {
                 btnNuevo.Enabled = false;
             }
-            if(estadoCurso== Estado.Modificar) {
-                try
-                {
-                    dgvRequisitos.DataSource = cur.cursos;
-                }
-                catch
-                {
+            try
+            {
+                dgvRequisitos.DataSource = cursos;
+            }
+            catch
+            {
 
-                }
             }
         }
 
@@ -435,11 +439,6 @@ namespace Sinapxon.Administrador
         {
             frmGestionarCursos formGestionarCurso = new frmGestionarCursos(this.Padre);
             Padre.openChildForm(formGestionarCurso);
-        }
-
-        private void panel5_Resize(object sender, EventArgs e)
-        {
-            
         }
     }
 }

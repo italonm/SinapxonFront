@@ -31,19 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarMisClassrooms));
             this.label1 = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.pbSinCursos = new System.Windows.Forms.PictureBox();
+            this.lblSincursos = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.pbBuscar = new System.Windows.Forms.PictureBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pbSinCursos = new System.Windows.Forms.PictureBox();
-            this.lblSincursos = new System.Windows.Forms.Label();
             this.panelContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSinCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSinCursos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -73,6 +73,28 @@
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(921, 457);
             this.panelContenedor.TabIndex = 10;
+            // 
+            // pbSinCursos
+            // 
+            this.pbSinCursos.Image = global::Sinapxon.Properties.Resources.round_mood_bad_white_48dp;
+            this.pbSinCursos.Location = new System.Drawing.Point(146, 174);
+            this.pbSinCursos.Name = "pbSinCursos";
+            this.pbSinCursos.Size = new System.Drawing.Size(96, 96);
+            this.pbSinCursos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbSinCursos.TabIndex = 3;
+            this.pbSinCursos.TabStop = false;
+            // 
+            // lblSincursos
+            // 
+            this.lblSincursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSincursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSincursos.ForeColor = System.Drawing.Color.White;
+            this.lblSincursos.Location = new System.Drawing.Point(248, 171);
+            this.lblSincursos.Name = "lblSincursos";
+            this.lblSincursos.Size = new System.Drawing.Size(527, 114);
+            this.lblSincursos.TabIndex = 2;
+            this.lblSincursos.Text = "Oh! parece que no tienes classrooms para dictar, ve a la ventana solicitar classr" +
+    "oom para poder dictar";
             // 
             // btnAtras
             // 
@@ -159,28 +181,6 @@
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
             // 
-            // pbSinCursos
-            // 
-            this.pbSinCursos.Image = global::Sinapxon.Properties.Resources.round_mood_bad_white_48dp;
-            this.pbSinCursos.Location = new System.Drawing.Point(146, 174);
-            this.pbSinCursos.Name = "pbSinCursos";
-            this.pbSinCursos.Size = new System.Drawing.Size(96, 96);
-            this.pbSinCursos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbSinCursos.TabIndex = 3;
-            this.pbSinCursos.TabStop = false;
-            // 
-            // lblSincursos
-            // 
-            this.lblSincursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblSincursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSincursos.ForeColor = System.Drawing.Color.White;
-            this.lblSincursos.Location = new System.Drawing.Point(248, 171);
-            this.lblSincursos.Name = "lblSincursos";
-            this.lblSincursos.Size = new System.Drawing.Size(527, 114);
-            this.lblSincursos.TabIndex = 2;
-            this.lblSincursos.Text = "Oh! parece que no tienes classrooms para dictar, ve a la ventana solicitar classr" +
-    "oom para poder dictar";
-            // 
             // frmGestionarMisClassrooms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,10 +202,10 @@
             this.Text = "Mis Classrooms";
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSinCursos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSinCursos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
