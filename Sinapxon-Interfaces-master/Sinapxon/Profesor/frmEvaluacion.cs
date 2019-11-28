@@ -21,6 +21,8 @@ namespace Sinapxon.Profesor
             cbTemas.DataSource = temaXClassrooms;
             cbTemas.DisplayMember = "Nombre";
             cbTemas.ValueMember = "id_tema";
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
