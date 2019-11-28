@@ -65,9 +65,9 @@
             this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(105, 84);
+            this.txtBuscar.Location = new System.Drawing.Point(123, 84);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(619, 22);
+            this.txtBuscar.Size = new System.Drawing.Size(601, 22);
             this.txtBuscar.TabIndex = 9;
             // 
             // btnBuscar
@@ -140,7 +140,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox4.Image = global::Sinapxon.Properties.Resources.round_search;
-            this.pictureBox4.Location = new System.Drawing.Point(67, 79);
+            this.pictureBox4.Location = new System.Drawing.Point(71, 79);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 33);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

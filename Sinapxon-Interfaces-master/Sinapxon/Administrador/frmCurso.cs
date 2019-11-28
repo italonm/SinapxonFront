@@ -35,7 +35,7 @@ namespace Sinapxon.Administrador
             //Inicializo Formulario
             tipo = 1;
             tipoX = 1;
-            guardado = 0;
+            guardado = 1;
             InitializeComponent();
             this.Padre = padre;
             lblTitulo.Text = "Editar Curso";
@@ -383,19 +383,18 @@ namespace Sinapxon.Administrador
         //CANCELAR
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            estadoComponentes(Estado.Inicial);
-            btnModificar.Enabled=true;
-            if (tipo == 1) {
-                btnNuevo.Enabled = false;
-            }
-            try
+            if (guardado==1 && tipo!=2)
             {
-                dgvRequisitos.DataSource = cursos;
+                frmCurso formCurso = new frmCurso(curso, _padre);
+                Padre.openChildForm(formCurso);
             }
-            catch
+            if (tipo == 2)
             {
+                estadoComponentes(Estado.Inicial);
+                btnNuevo.Enabled = true;
+                limpiarComponentes();
+            }
 
-            }
         }
 
         //==============================================================================================================================================================
