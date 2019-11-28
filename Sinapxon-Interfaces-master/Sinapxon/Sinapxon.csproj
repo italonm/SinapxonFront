@@ -506,6 +506,9 @@
     <None Include="Connected Services\Alumno\AlumnoServices.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.archivoXEntregable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Alumno\Sinapxon.Alumno.archivoXTema.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -521,6 +524,9 @@
     <None Include="Connected Services\Alumno\Sinapxon.Alumno.evaluacion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.guardarArchivoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Alumno\Sinapxon.Alumno.insertarAlumnoAlClassroomResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -528,6 +534,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Alumno\Sinapxon.Alumno.insertarEntregableResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarArchivosXAlumnoXClassroomXEvaluacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Alumno\Sinapxon.Alumno.listarArchivosXTemaXClassroomResponse.datasource">

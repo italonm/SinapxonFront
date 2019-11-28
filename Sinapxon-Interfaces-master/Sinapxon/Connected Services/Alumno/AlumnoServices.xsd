@@ -3,12 +3,16 @@
   <xs:element name="IOException" type="tns:IOException" />
   <xs:element name="eliminarEntregable" type="tns:eliminarEntregable" />
   <xs:element name="eliminarEntregableResponse" type="tns:eliminarEntregableResponse" />
+  <xs:element name="guardarArchivo" type="tns:guardarArchivo" />
+  <xs:element name="guardarArchivoResponse" type="tns:guardarArchivoResponse" />
   <xs:element name="insertarAlumnoAlClassroom" type="tns:insertarAlumnoAlClassroom" />
   <xs:element name="insertarAlumnoAlClassroomResponse" type="tns:insertarAlumnoAlClassroomResponse" />
   <xs:element name="insertarArchivoXEntregable" type="tns:insertarArchivoXEntregable" />
   <xs:element name="insertarArchivoXEntregableResponse" type="tns:insertarArchivoXEntregableResponse" />
   <xs:element name="insertarEntregable" type="tns:insertarEntregable" />
   <xs:element name="insertarEntregableResponse" type="tns:insertarEntregableResponse" />
+  <xs:element name="listarArchivosXAlumnoXClassroomXEvaluacion" type="tns:listarArchivosXAlumnoXClassroomXEvaluacion" />
+  <xs:element name="listarArchivosXAlumnoXClassroomXEvaluacionResponse" type="tns:listarArchivosXAlumnoXClassroomXEvaluacionResponse" />
   <xs:element name="listarArchivosXTemaXClassroom" type="tns:listarArchivosXTemaXClassroom" />
   <xs:element name="listarArchivosXTemaXClassroomResponse" type="tns:listarArchivosXTemaXClassroomResponse" />
   <xs:element name="listarClassroomsXAlumno_X_Periodo" type="tns:listarClassroomsXAlumno_X_Periodo" />
@@ -194,6 +198,34 @@
   <xs:complexType name="insertarEntregableResponse">
     <xs:sequence />
   </xs:complexType>
+  <xs:complexType name="listarArchivosXAlumnoXClassroomXEvaluacion">
+    <xs:sequence>
+      <xs:element name="idEvaluacion" type="xs:int" />
+      <xs:element minOccurs="0" name="idAlumno" type="xs:string" />
+      <xs:element minOccurs="0" name="idClassroom" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarArchivosXAlumnoXClassroomXEvaluacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:archivoXEntregable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="archivoXEntregable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entregable" type="tns:entregable" />
+      <xs:element name="id_archivo_x_entregable" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="entregable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="alumno" type="tns:classroomXAlumno" />
+      <xs:element minOccurs="0" name="archivo" type="tns:archivoXEntregable" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="evaluacion" type="tns:evaluacion" />
+      <xs:element name="nota" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarEvaluacionesXClassroom">
     <xs:sequence>
       <xs:element minOccurs="0" name="codigo" type="xs:string" />
@@ -214,6 +246,25 @@
   <xs:complexType name="eliminarEntregableResponse">
     <xs:sequence />
   </xs:complexType>
+  <xs:complexType name="guardarArchivo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bytesArchivo" nillable="true" type="xs:base64Binary" />
+      <xs:element name="idArchivo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="guardarArchivoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="insertarArchivoXEntregable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="archivo" type="tns:archivoXEntregable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarArchivoXEntregableResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarClassroomxAlumno">
     <xs:sequence>
       <xs:element minOccurs="0" name="codigo" type="xs:string" />
@@ -222,32 +273,6 @@
   <xs:complexType name="listarClassroomxAlumnoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:classroom" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarArchivoXEntregable">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="archivo" type="tns:archivoXEntregable" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="archivoXEntregable">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="entregable" type="tns:entregable" />
-      <xs:element name="id_archivo_x_entregable" type="xs:int" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="entregable">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="alumno" type="tns:classroomXAlumno" />
-      <xs:element minOccurs="0" name="archivo" type="tns:archivoXEntregable" />
-      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
-      <xs:element minOccurs="0" name="evaluacion" type="tns:evaluacion" />
-      <xs:element name="nota" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarArchivoXEntregableResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarArchivosXTemaXClassroom">

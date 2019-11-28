@@ -49,6 +49,66 @@ namespace Sinapxon.Alumno {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/")]
+    public partial class archivoXTema : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string descripcionField;
+        
+        private int id_archivo_x_temaField;
+        
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id_archivo_x_tema {
+            get {
+                return this.id_archivo_x_temaField;
+            }
+            set {
+                this.id_archivo_x_temaField = value;
+                this.RaisePropertyChanged("id_archivo_x_tema");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/")]
     public partial class entregable : object, System.ComponentModel.INotifyPropertyChanged {
         
         private classroomXAlumno alumnoField;
@@ -1769,104 +1829,9 @@ namespace Sinapxon.Alumno {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/")]
-    public partial class archivoXTema : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string descripcionField;
-        
-        private int id_archivo_x_temaField;
-        
-        private string nombreField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string descripcion {
-            get {
-                return this.descripcionField;
-            }
-            set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_archivo_x_tema {
-            get {
-                return this.id_archivo_x_temaField;
-            }
-            set {
-                this.id_archivo_x_temaField = value;
-                this.RaisePropertyChanged("id_archivo_x_tema");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", ConfigurationName="Alumno.AlumnoServices")]
     public interface AlumnoServices {
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarArchivosXTemaXClassroom" +
-            "Request", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarArchivosXTemaXClassroom" +
-            "Response")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sinapxon.Alumno.listarArchivosXTemaXClassroomResponse listarArchivosXTemaXClassroom(Sinapxon.Alumno.listarArchivosXTemaXClassroomRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarArchivosXTemaXClassroom" +
-            "Request", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarArchivosXTemaXClassroom" +
-            "Response")]
-        System.Threading.Tasks.Task<Sinapxon.Alumno.listarArchivosXTemaXClassroomResponse> listarArchivosXTemaXClassroomAsync(Sinapxon.Alumno.listarArchivosXTemaXClassroomRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsXAlumno_X_Per" +
-            "iodoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsXAlumno_X_Per" +
-            "iodoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse listarClassroomsXAlumno_X_Periodo(Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsXAlumno_X_Per" +
-            "iodoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsXAlumno_X_Per" +
-            "iodoResponse")]
-        System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse> listarClassroomsXAlumno_X_PeriodoAsync(Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarTemaxClassroomRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarTemaxClassroomResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sinapxon.Alumno.listarTemaxClassroomResponse listarTemaxClassroom(Sinapxon.Alumno.listarTemaxClassroomRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarTemaxClassroomRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarTemaxClassroomResponse")]
-        System.Threading.Tasks.Task<Sinapxon.Alumno.listarTemaxClassroomResponse> listarTemaxClassroomAsync(Sinapxon.Alumno.listarTemaxClassroomRequest request);
         
         // CODEGEN: El parámetro 'idEvaluacion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/insertarEntregableRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/insertarEntregableResponse")]
@@ -1888,53 +1853,6 @@ namespace Sinapxon.Alumno {
             "est", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/insertarAlumnoAlClassroomResp" +
             "onse")]
         System.Threading.Tasks.Task<Sinapxon.Alumno.insertarAlumnoAlClassroomResponse> insertarAlumnoAlClassroomAsync(Sinapxon.Alumno.insertarAlumnoAlClassroomRequest request);
-        
-        // CODEGEN: El parámetro 'idEvaluacion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/eliminarEntregableRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/eliminarEntregableResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        Sinapxon.Alumno.eliminarEntregableResponse eliminarEntregable(Sinapxon.Alumno.eliminarEntregableRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/eliminarEntregableRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/eliminarEntregableResponse")]
-        System.Threading.Tasks.Task<Sinapxon.Alumno.eliminarEntregableResponse> eliminarEntregableAsync(Sinapxon.Alumno.eliminarEntregableRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarEvaluacionesXClassroomR" +
-            "equest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarEvaluacionesXClassroomR" +
-            "esponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sinapxon.Alumno.listarEvaluacionesXClassroomResponse listarEvaluacionesXClassroom(Sinapxon.Alumno.listarEvaluacionesXClassroomRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarEvaluacionesXClassroomR" +
-            "equest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarEvaluacionesXClassroomR" +
-            "esponse")]
-        System.Threading.Tasks.Task<Sinapxon.Alumno.listarEvaluacionesXClassroomResponse> listarEvaluacionesXClassroomAsync(Sinapxon.Alumno.listarEvaluacionesXClassroomRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomxAlumnoRequest" +
-            "", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomxAlumnoRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sinapxon.Alumno.listarClassroomxAlumnoResponse listarClassroomxAlumno(Sinapxon.Alumno.listarClassroomxAlumnoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomxAlumnoRequest" +
-            "", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomxAlumnoRespons" +
-            "e")]
-        System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomxAlumnoResponse> listarClassroomxAlumnoAsync(Sinapxon.Alumno.listarClassroomxAlumnoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsxCursoRequest" +
-            "", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsxCursoRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sinapxon.Alumno.listarClassroomsxCursoResponse listarClassroomsxCurso(Sinapxon.Alumno.listarClassroomsxCursoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsxCursoRequest" +
-            "", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsxCursoRespons" +
-            "e")]
-        System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomsxCursoResponse> listarClassroomsxCursoAsync(Sinapxon.Alumno.listarClassroomsxCursoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassrooms_Alumno_Perio" +
@@ -1963,6 +1881,101 @@ namespace Sinapxon.Alumno {
         System.Threading.Tasks.Task<Sinapxon.Alumno.insertarArchivoXEntregableResponse> insertarArchivoXEntregableAsync(Sinapxon.Alumno.insertarArchivoXEntregableRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsXAlumno_X_Per" +
+            "iodoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsXAlumno_X_Per" +
+            "iodoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse listarClassroomsXAlumno_X_Periodo(Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsXAlumno_X_Per" +
+            "iodoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsXAlumno_X_Per" +
+            "iodoResponse")]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse> listarClassroomsXAlumno_X_PeriodoAsync(Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarArchivosXTemaXClassroom" +
+            "Request", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarArchivosXTemaXClassroom" +
+            "Response")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sinapxon.Alumno.listarArchivosXTemaXClassroomResponse listarArchivosXTemaXClassroom(Sinapxon.Alumno.listarArchivosXTemaXClassroomRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarArchivosXTemaXClassroom" +
+            "Request", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarArchivosXTemaXClassroom" +
+            "Response")]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.listarArchivosXTemaXClassroomResponse> listarArchivosXTemaXClassroomAsync(Sinapxon.Alumno.listarArchivosXTemaXClassroomRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarArchivosXAlumnoXClassro" +
+            "omXEvaluacionRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarArchivosXAlumnoXClassro" +
+            "omXEvaluacionResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sinapxon.Alumno.listarArchivosXAlumnoXClassroomXEvaluacionResponse listarArchivosXAlumnoXClassroomXEvaluacion(Sinapxon.Alumno.listarArchivosXAlumnoXClassroomXEvaluacionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarArchivosXAlumnoXClassro" +
+            "omXEvaluacionRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarArchivosXAlumnoXClassro" +
+            "omXEvaluacionResponse")]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.listarArchivosXAlumnoXClassroomXEvaluacionResponse> listarArchivosXAlumnoXClassroomXEvaluacionAsync(Sinapxon.Alumno.listarArchivosXAlumnoXClassroomXEvaluacionRequest request);
+        
+        // CODEGEN: El parámetro 'idEvaluacion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/eliminarEntregableRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/eliminarEntregableResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        Sinapxon.Alumno.eliminarEntregableResponse eliminarEntregable(Sinapxon.Alumno.eliminarEntregableRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/eliminarEntregableRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/eliminarEntregableResponse")]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.eliminarEntregableResponse> eliminarEntregableAsync(Sinapxon.Alumno.eliminarEntregableRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsxCursoRequest" +
+            "", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsxCursoRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sinapxon.Alumno.listarClassroomsxCursoResponse listarClassroomsxCurso(Sinapxon.Alumno.listarClassroomsxCursoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsxCursoRequest" +
+            "", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomsxCursoRespons" +
+            "e")]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomsxCursoResponse> listarClassroomsxCursoAsync(Sinapxon.Alumno.listarClassroomsxCursoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomxAlumnoRequest" +
+            "", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomxAlumnoRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sinapxon.Alumno.listarClassroomxAlumnoResponse listarClassroomxAlumno(Sinapxon.Alumno.listarClassroomxAlumnoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomxAlumnoRequest" +
+            "", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarClassroomxAlumnoRespons" +
+            "e")]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomxAlumnoResponse> listarClassroomxAlumnoAsync(Sinapxon.Alumno.listarClassroomxAlumnoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarTemaxClassroomRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarTemaxClassroomResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sinapxon.Alumno.listarTemaxClassroomResponse listarTemaxClassroom(Sinapxon.Alumno.listarTemaxClassroomRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarTemaxClassroomRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarTemaxClassroomResponse")]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.listarTemaxClassroomResponse> listarTemaxClassroomAsync(Sinapxon.Alumno.listarTemaxClassroomRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarEvaluacionesXClassroomR" +
+            "equest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarEvaluacionesXClassroomR" +
+            "esponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sinapxon.Alumno.listarEvaluacionesXClassroomResponse listarEvaluacionesXClassroom(Sinapxon.Alumno.listarEvaluacionesXClassroomRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarEvaluacionesXClassroomR" +
+            "equest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarEvaluacionesXClassroomR" +
+            "esponse")]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.listarEvaluacionesXClassroomResponse> listarEvaluacionesXClassroomAsync(Sinapxon.Alumno.listarEvaluacionesXClassroomRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarPeriodosRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarPeriodosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -1980,6 +1993,14 @@ namespace Sinapxon.Alumno {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarCursosRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/listarCursosResponse")]
         System.Threading.Tasks.Task<Sinapxon.Alumno.listarCursosResponse> listarCursosAsync(Sinapxon.Alumno.listarCursosRequest request);
         
+        // CODEGEN: El parámetro 'bytesArchivo' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/guardarArchivoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/guardarArchivoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        Sinapxon.Alumno.guardarArchivoResponse guardarArchivo(Sinapxon.Alumno.guardarArchivoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/guardarArchivoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/guardarArchivoResponse")]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.guardarArchivoResponse> guardarArchivoAsync(Sinapxon.Alumno.guardarArchivoRequest request);
+        
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/obtenerArchivoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/obtenerArchivoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Sinapxon.Alumno.IOException), Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/obtenerArchivo/Fault/IOExcept" +
@@ -1990,124 +2011,6 @@ namespace Sinapxon.Alumno {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.sinapxon.pucp.edu.pe/AlumnoServices/obtenerArchivoRequest", ReplyAction="http://services.sinapxon.pucp.edu.pe/AlumnoServices/obtenerArchivoResponse")]
         System.Threading.Tasks.Task<Sinapxon.Alumno.obtenerArchivoResponse> obtenerArchivoAsync(Sinapxon.Alumno.obtenerArchivoRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarArchivosXTemaXClassroom", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarArchivosXTemaXClassroomRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idTema;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string idClassroom;
-        
-        public listarArchivosXTemaXClassroomRequest() {
-        }
-        
-        public listarArchivosXTemaXClassroomRequest(int idTema, string idClassroom) {
-            this.idTema = idTema;
-            this.idClassroom = idClassroom;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarArchivosXTemaXClassroomResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarArchivosXTemaXClassroomResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Sinapxon.Alumno.archivoXTema[] @return;
-        
-        public listarArchivosXTemaXClassroomResponse() {
-        }
-        
-        public listarArchivosXTemaXClassroomResponse(Sinapxon.Alumno.archivoXTema[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClassroomsXAlumno_X_Periodo", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarClassroomsXAlumno_X_PeriodoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string codigoAlumno;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_perido;
-        
-        public listarClassroomsXAlumno_X_PeriodoRequest() {
-        }
-        
-        public listarClassroomsXAlumno_X_PeriodoRequest(string codigoAlumno, int id_perido) {
-            this.codigoAlumno = codigoAlumno;
-            this.id_perido = id_perido;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClassroomsXAlumno_X_PeriodoResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarClassroomsXAlumno_X_PeriodoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Sinapxon.Alumno.classroom[] @return;
-        
-        public listarClassroomsXAlumno_X_PeriodoResponse() {
-        }
-        
-        public listarClassroomsXAlumno_X_PeriodoResponse(Sinapxon.Alumno.classroom[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTemaxClassroom", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTemaxClassroomRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public listarTemaxClassroomRequest() {
-        }
-        
-        public listarTemaxClassroomRequest(string arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTemaxClassroomResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTemaxClassroomResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Sinapxon.Alumno.temaXClassroom[] @return;
-        
-        public listarTemaxClassroomResponse() {
-        }
-        
-        public listarTemaxClassroomResponse(Sinapxon.Alumno.temaXClassroom[] @return) {
-            this.@return = @return;
-        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2202,152 +2105,6 @@ namespace Sinapxon.Alumno {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEntregable", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarEntregableRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idEvaluacion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string idAlumno;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string idClassroom;
-        
-        public eliminarEntregableRequest() {
-        }
-        
-        public eliminarEntregableRequest(int idEvaluacion, string idAlumno, string idClassroom) {
-            this.idEvaluacion = idEvaluacion;
-            this.idAlumno = idAlumno;
-            this.idClassroom = idClassroom;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEntregableResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarEntregableResponse {
-        
-        public eliminarEntregableResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEvaluacionesXClassroom", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarEvaluacionesXClassroomRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string codigo;
-        
-        public listarEvaluacionesXClassroomRequest() {
-        }
-        
-        public listarEvaluacionesXClassroomRequest(string codigo) {
-            this.codigo = codigo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEvaluacionesXClassroomResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarEvaluacionesXClassroomResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Sinapxon.Alumno.evaluacion[] @return;
-        
-        public listarEvaluacionesXClassroomResponse() {
-        }
-        
-        public listarEvaluacionesXClassroomResponse(Sinapxon.Alumno.evaluacion[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClassroomxAlumno", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarClassroomxAlumnoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string codigo;
-        
-        public listarClassroomxAlumnoRequest() {
-        }
-        
-        public listarClassroomxAlumnoRequest(string codigo) {
-            this.codigo = codigo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClassroomxAlumnoResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarClassroomxAlumnoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Sinapxon.Alumno.classroom[] @return;
-        
-        public listarClassroomxAlumnoResponse() {
-        }
-        
-        public listarClassroomxAlumnoResponse(Sinapxon.Alumno.classroom[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClassroomsxCurso", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarClassroomsxCursoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Sinapxon.Alumno.curso curso;
-        
-        public listarClassroomsxCursoRequest() {
-        }
-        
-        public listarClassroomsxCursoRequest(Sinapxon.Alumno.curso curso) {
-            this.curso = curso;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClassroomsxCursoResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarClassroomsxCursoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Sinapxon.Alumno.classroom[] @return;
-        
-        public listarClassroomsxCursoResponse() {
-        }
-        
-        public listarClassroomsxCursoResponse(Sinapxon.Alumno.classroom[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarClassrooms_Alumno_Periodo", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
     public partial class listarClassrooms_Alumno_PeriodoRequest {
         
@@ -2425,6 +2182,316 @@ namespace Sinapxon.Alumno {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClassroomsXAlumno_X_Periodo", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarClassroomsXAlumno_X_PeriodoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string codigoAlumno;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_perido;
+        
+        public listarClassroomsXAlumno_X_PeriodoRequest() {
+        }
+        
+        public listarClassroomsXAlumno_X_PeriodoRequest(string codigoAlumno, int id_perido) {
+            this.codigoAlumno = codigoAlumno;
+            this.id_perido = id_perido;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClassroomsXAlumno_X_PeriodoResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarClassroomsXAlumno_X_PeriodoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sinapxon.Alumno.classroom[] @return;
+        
+        public listarClassroomsXAlumno_X_PeriodoResponse() {
+        }
+        
+        public listarClassroomsXAlumno_X_PeriodoResponse(Sinapxon.Alumno.classroom[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarArchivosXTemaXClassroom", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarArchivosXTemaXClassroomRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idTema;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string idClassroom;
+        
+        public listarArchivosXTemaXClassroomRequest() {
+        }
+        
+        public listarArchivosXTemaXClassroomRequest(int idTema, string idClassroom) {
+            this.idTema = idTema;
+            this.idClassroom = idClassroom;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarArchivosXTemaXClassroomResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarArchivosXTemaXClassroomResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sinapxon.Alumno.archivoXTema[] @return;
+        
+        public listarArchivosXTemaXClassroomResponse() {
+        }
+        
+        public listarArchivosXTemaXClassroomResponse(Sinapxon.Alumno.archivoXTema[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarArchivosXAlumnoXClassroomXEvaluacion", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarArchivosXAlumnoXClassroomXEvaluacionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idEvaluacion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string idAlumno;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string idClassroom;
+        
+        public listarArchivosXAlumnoXClassroomXEvaluacionRequest() {
+        }
+        
+        public listarArchivosXAlumnoXClassroomXEvaluacionRequest(int idEvaluacion, string idAlumno, string idClassroom) {
+            this.idEvaluacion = idEvaluacion;
+            this.idAlumno = idAlumno;
+            this.idClassroom = idClassroom;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarArchivosXAlumnoXClassroomXEvaluacionResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarArchivosXAlumnoXClassroomXEvaluacionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sinapxon.Alumno.archivoXEntregable[] @return;
+        
+        public listarArchivosXAlumnoXClassroomXEvaluacionResponse() {
+        }
+        
+        public listarArchivosXAlumnoXClassroomXEvaluacionResponse(Sinapxon.Alumno.archivoXEntregable[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEntregable", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarEntregableRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idEvaluacion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string idAlumno;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string idClassroom;
+        
+        public eliminarEntregableRequest() {
+        }
+        
+        public eliminarEntregableRequest(int idEvaluacion, string idAlumno, string idClassroom) {
+            this.idEvaluacion = idEvaluacion;
+            this.idAlumno = idAlumno;
+            this.idClassroom = idClassroom;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEntregableResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarEntregableResponse {
+        
+        public eliminarEntregableResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClassroomsxCurso", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarClassroomsxCursoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sinapxon.Alumno.curso curso;
+        
+        public listarClassroomsxCursoRequest() {
+        }
+        
+        public listarClassroomsxCursoRequest(Sinapxon.Alumno.curso curso) {
+            this.curso = curso;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClassroomsxCursoResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarClassroomsxCursoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sinapxon.Alumno.classroom[] @return;
+        
+        public listarClassroomsxCursoResponse() {
+        }
+        
+        public listarClassroomsxCursoResponse(Sinapxon.Alumno.classroom[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClassroomxAlumno", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarClassroomxAlumnoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string codigo;
+        
+        public listarClassroomxAlumnoRequest() {
+        }
+        
+        public listarClassroomxAlumnoRequest(string codigo) {
+            this.codigo = codigo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClassroomxAlumnoResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarClassroomxAlumnoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sinapxon.Alumno.classroom[] @return;
+        
+        public listarClassroomxAlumnoResponse() {
+        }
+        
+        public listarClassroomxAlumnoResponse(Sinapxon.Alumno.classroom[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTemaxClassroom", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTemaxClassroomRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public listarTemaxClassroomRequest() {
+        }
+        
+        public listarTemaxClassroomRequest(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTemaxClassroomResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTemaxClassroomResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sinapxon.Alumno.temaXClassroom[] @return;
+        
+        public listarTemaxClassroomResponse() {
+        }
+        
+        public listarTemaxClassroomResponse(Sinapxon.Alumno.temaXClassroom[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEvaluacionesXClassroom", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarEvaluacionesXClassroomRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string codigo;
+        
+        public listarEvaluacionesXClassroomRequest() {
+        }
+        
+        public listarEvaluacionesXClassroomRequest(string codigo) {
+            this.codigo = codigo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEvaluacionesXClassroomResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarEvaluacionesXClassroomResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sinapxon.Alumno.evaluacion[] @return;
+        
+        public listarEvaluacionesXClassroomResponse() {
+        }
+        
+        public listarEvaluacionesXClassroomResponse(Sinapxon.Alumno.evaluacion[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarPeriodos", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
     public partial class listarPeriodosRequest {
         
@@ -2483,6 +2550,39 @@ namespace Sinapxon.Alumno {
         
         public listarCursosResponse(Sinapxon.Alumno.curso[] @return) {
             this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="guardarArchivo", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class guardarArchivoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
+        public byte[] bytesArchivo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.sinapxon.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idArchivo;
+        
+        public guardarArchivoRequest() {
+        }
+        
+        public guardarArchivoRequest(byte[] bytesArchivo, int idArchivo) {
+            this.bytesArchivo = bytesArchivo;
+            this.idArchivo = idArchivo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="guardarArchivoResponse", WrapperNamespace="http://services.sinapxon.pucp.edu.pe/", IsWrapped=true)]
+    public partial class guardarArchivoResponse {
+        
+        public guardarArchivoResponse() {
         }
     }
     
@@ -2550,79 +2650,6 @@ namespace Sinapxon.Alumno {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sinapxon.Alumno.listarArchivosXTemaXClassroomResponse Sinapxon.Alumno.AlumnoServices.listarArchivosXTemaXClassroom(Sinapxon.Alumno.listarArchivosXTemaXClassroomRequest request) {
-            return base.Channel.listarArchivosXTemaXClassroom(request);
-        }
-        
-        public Sinapxon.Alumno.archivoXTema[] listarArchivosXTemaXClassroom(int idTema, string idClassroom) {
-            Sinapxon.Alumno.listarArchivosXTemaXClassroomRequest inValue = new Sinapxon.Alumno.listarArchivosXTemaXClassroomRequest();
-            inValue.idTema = idTema;
-            inValue.idClassroom = idClassroom;
-            Sinapxon.Alumno.listarArchivosXTemaXClassroomResponse retVal = ((Sinapxon.Alumno.AlumnoServices)(this)).listarArchivosXTemaXClassroom(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sinapxon.Alumno.listarArchivosXTemaXClassroomResponse> Sinapxon.Alumno.AlumnoServices.listarArchivosXTemaXClassroomAsync(Sinapxon.Alumno.listarArchivosXTemaXClassroomRequest request) {
-            return base.Channel.listarArchivosXTemaXClassroomAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Sinapxon.Alumno.listarArchivosXTemaXClassroomResponse> listarArchivosXTemaXClassroomAsync(int idTema, string idClassroom) {
-            Sinapxon.Alumno.listarArchivosXTemaXClassroomRequest inValue = new Sinapxon.Alumno.listarArchivosXTemaXClassroomRequest();
-            inValue.idTema = idTema;
-            inValue.idClassroom = idClassroom;
-            return ((Sinapxon.Alumno.AlumnoServices)(this)).listarArchivosXTemaXClassroomAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse Sinapxon.Alumno.AlumnoServices.listarClassroomsXAlumno_X_Periodo(Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest request) {
-            return base.Channel.listarClassroomsXAlumno_X_Periodo(request);
-        }
-        
-        public Sinapxon.Alumno.classroom[] listarClassroomsXAlumno_X_Periodo(string codigoAlumno, int id_perido) {
-            Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest inValue = new Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest();
-            inValue.codigoAlumno = codigoAlumno;
-            inValue.id_perido = id_perido;
-            Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse retVal = ((Sinapxon.Alumno.AlumnoServices)(this)).listarClassroomsXAlumno_X_Periodo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse> Sinapxon.Alumno.AlumnoServices.listarClassroomsXAlumno_X_PeriodoAsync(Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest request) {
-            return base.Channel.listarClassroomsXAlumno_X_PeriodoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse> listarClassroomsXAlumno_X_PeriodoAsync(string codigoAlumno, int id_perido) {
-            Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest inValue = new Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest();
-            inValue.codigoAlumno = codigoAlumno;
-            inValue.id_perido = id_perido;
-            return ((Sinapxon.Alumno.AlumnoServices)(this)).listarClassroomsXAlumno_X_PeriodoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sinapxon.Alumno.listarTemaxClassroomResponse Sinapxon.Alumno.AlumnoServices.listarTemaxClassroom(Sinapxon.Alumno.listarTemaxClassroomRequest request) {
-            return base.Channel.listarTemaxClassroom(request);
-        }
-        
-        public Sinapxon.Alumno.temaXClassroom[] listarTemaxClassroom(string arg0) {
-            Sinapxon.Alumno.listarTemaxClassroomRequest inValue = new Sinapxon.Alumno.listarTemaxClassroomRequest();
-            inValue.arg0 = arg0;
-            Sinapxon.Alumno.listarTemaxClassroomResponse retVal = ((Sinapxon.Alumno.AlumnoServices)(this)).listarTemaxClassroom(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sinapxon.Alumno.listarTemaxClassroomResponse> Sinapxon.Alumno.AlumnoServices.listarTemaxClassroomAsync(Sinapxon.Alumno.listarTemaxClassroomRequest request) {
-            return base.Channel.listarTemaxClassroomAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Sinapxon.Alumno.listarTemaxClassroomResponse> listarTemaxClassroomAsync(string arg0) {
-            Sinapxon.Alumno.listarTemaxClassroomRequest inValue = new Sinapxon.Alumno.listarTemaxClassroomRequest();
-            inValue.arg0 = arg0;
-            return ((Sinapxon.Alumno.AlumnoServices)(this)).listarTemaxClassroomAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Sinapxon.Alumno.insertarEntregableResponse Sinapxon.Alumno.AlumnoServices.insertarEntregable(Sinapxon.Alumno.insertarEntregableRequest request) {
             return base.Channel.insertarEntregable(request);
         }
@@ -2678,101 +2705,6 @@ namespace Sinapxon.Alumno {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sinapxon.Alumno.eliminarEntregableResponse Sinapxon.Alumno.AlumnoServices.eliminarEntregable(Sinapxon.Alumno.eliminarEntregableRequest request) {
-            return base.Channel.eliminarEntregable(request);
-        }
-        
-        public void eliminarEntregable(int idEvaluacion, string idAlumno, string idClassroom) {
-            Sinapxon.Alumno.eliminarEntregableRequest inValue = new Sinapxon.Alumno.eliminarEntregableRequest();
-            inValue.idEvaluacion = idEvaluacion;
-            inValue.idAlumno = idAlumno;
-            inValue.idClassroom = idClassroom;
-            Sinapxon.Alumno.eliminarEntregableResponse retVal = ((Sinapxon.Alumno.AlumnoServices)(this)).eliminarEntregable(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sinapxon.Alumno.eliminarEntregableResponse> Sinapxon.Alumno.AlumnoServices.eliminarEntregableAsync(Sinapxon.Alumno.eliminarEntregableRequest request) {
-            return base.Channel.eliminarEntregableAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Sinapxon.Alumno.eliminarEntregableResponse> eliminarEntregableAsync(int idEvaluacion, string idAlumno, string idClassroom) {
-            Sinapxon.Alumno.eliminarEntregableRequest inValue = new Sinapxon.Alumno.eliminarEntregableRequest();
-            inValue.idEvaluacion = idEvaluacion;
-            inValue.idAlumno = idAlumno;
-            inValue.idClassroom = idClassroom;
-            return ((Sinapxon.Alumno.AlumnoServices)(this)).eliminarEntregableAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sinapxon.Alumno.listarEvaluacionesXClassroomResponse Sinapxon.Alumno.AlumnoServices.listarEvaluacionesXClassroom(Sinapxon.Alumno.listarEvaluacionesXClassroomRequest request) {
-            return base.Channel.listarEvaluacionesXClassroom(request);
-        }
-        
-        public Sinapxon.Alumno.evaluacion[] listarEvaluacionesXClassroom(string codigo) {
-            Sinapxon.Alumno.listarEvaluacionesXClassroomRequest inValue = new Sinapxon.Alumno.listarEvaluacionesXClassroomRequest();
-            inValue.codigo = codigo;
-            Sinapxon.Alumno.listarEvaluacionesXClassroomResponse retVal = ((Sinapxon.Alumno.AlumnoServices)(this)).listarEvaluacionesXClassroom(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sinapxon.Alumno.listarEvaluacionesXClassroomResponse> Sinapxon.Alumno.AlumnoServices.listarEvaluacionesXClassroomAsync(Sinapxon.Alumno.listarEvaluacionesXClassroomRequest request) {
-            return base.Channel.listarEvaluacionesXClassroomAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Sinapxon.Alumno.listarEvaluacionesXClassroomResponse> listarEvaluacionesXClassroomAsync(string codigo) {
-            Sinapxon.Alumno.listarEvaluacionesXClassroomRequest inValue = new Sinapxon.Alumno.listarEvaluacionesXClassroomRequest();
-            inValue.codigo = codigo;
-            return ((Sinapxon.Alumno.AlumnoServices)(this)).listarEvaluacionesXClassroomAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sinapxon.Alumno.listarClassroomxAlumnoResponse Sinapxon.Alumno.AlumnoServices.listarClassroomxAlumno(Sinapxon.Alumno.listarClassroomxAlumnoRequest request) {
-            return base.Channel.listarClassroomxAlumno(request);
-        }
-        
-        public Sinapxon.Alumno.classroom[] listarClassroomxAlumno(string codigo) {
-            Sinapxon.Alumno.listarClassroomxAlumnoRequest inValue = new Sinapxon.Alumno.listarClassroomxAlumnoRequest();
-            inValue.codigo = codigo;
-            Sinapxon.Alumno.listarClassroomxAlumnoResponse retVal = ((Sinapxon.Alumno.AlumnoServices)(this)).listarClassroomxAlumno(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomxAlumnoResponse> Sinapxon.Alumno.AlumnoServices.listarClassroomxAlumnoAsync(Sinapxon.Alumno.listarClassroomxAlumnoRequest request) {
-            return base.Channel.listarClassroomxAlumnoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomxAlumnoResponse> listarClassroomxAlumnoAsync(string codigo) {
-            Sinapxon.Alumno.listarClassroomxAlumnoRequest inValue = new Sinapxon.Alumno.listarClassroomxAlumnoRequest();
-            inValue.codigo = codigo;
-            return ((Sinapxon.Alumno.AlumnoServices)(this)).listarClassroomxAlumnoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sinapxon.Alumno.listarClassroomsxCursoResponse Sinapxon.Alumno.AlumnoServices.listarClassroomsxCurso(Sinapxon.Alumno.listarClassroomsxCursoRequest request) {
-            return base.Channel.listarClassroomsxCurso(request);
-        }
-        
-        public Sinapxon.Alumno.classroom[] listarClassroomsxCurso(Sinapxon.Alumno.curso curso) {
-            Sinapxon.Alumno.listarClassroomsxCursoRequest inValue = new Sinapxon.Alumno.listarClassroomsxCursoRequest();
-            inValue.curso = curso;
-            Sinapxon.Alumno.listarClassroomsxCursoResponse retVal = ((Sinapxon.Alumno.AlumnoServices)(this)).listarClassroomsxCurso(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomsxCursoResponse> Sinapxon.Alumno.AlumnoServices.listarClassroomsxCursoAsync(Sinapxon.Alumno.listarClassroomsxCursoRequest request) {
-            return base.Channel.listarClassroomsxCursoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomsxCursoResponse> listarClassroomsxCursoAsync(Sinapxon.Alumno.curso curso) {
-            Sinapxon.Alumno.listarClassroomsxCursoRequest inValue = new Sinapxon.Alumno.listarClassroomsxCursoRequest();
-            inValue.curso = curso;
-            return ((Sinapxon.Alumno.AlumnoServices)(this)).listarClassroomsxCursoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Sinapxon.Alumno.listarClassrooms_Alumno_PeriodoResponse Sinapxon.Alumno.AlumnoServices.listarClassrooms_Alumno_Periodo(Sinapxon.Alumno.listarClassrooms_Alumno_PeriodoRequest request) {
             return base.Channel.listarClassrooms_Alumno_Periodo(request);
         }
@@ -2821,6 +2753,201 @@ namespace Sinapxon.Alumno {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse Sinapxon.Alumno.AlumnoServices.listarClassroomsXAlumno_X_Periodo(Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest request) {
+            return base.Channel.listarClassroomsXAlumno_X_Periodo(request);
+        }
+        
+        public Sinapxon.Alumno.classroom[] listarClassroomsXAlumno_X_Periodo(string codigoAlumno, int id_perido) {
+            Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest inValue = new Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest();
+            inValue.codigoAlumno = codigoAlumno;
+            inValue.id_perido = id_perido;
+            Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse retVal = ((Sinapxon.Alumno.AlumnoServices)(this)).listarClassroomsXAlumno_X_Periodo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse> Sinapxon.Alumno.AlumnoServices.listarClassroomsXAlumno_X_PeriodoAsync(Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest request) {
+            return base.Channel.listarClassroomsXAlumno_X_PeriodoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoResponse> listarClassroomsXAlumno_X_PeriodoAsync(string codigoAlumno, int id_perido) {
+            Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest inValue = new Sinapxon.Alumno.listarClassroomsXAlumno_X_PeriodoRequest();
+            inValue.codigoAlumno = codigoAlumno;
+            inValue.id_perido = id_perido;
+            return ((Sinapxon.Alumno.AlumnoServices)(this)).listarClassroomsXAlumno_X_PeriodoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sinapxon.Alumno.listarArchivosXTemaXClassroomResponse Sinapxon.Alumno.AlumnoServices.listarArchivosXTemaXClassroom(Sinapxon.Alumno.listarArchivosXTemaXClassroomRequest request) {
+            return base.Channel.listarArchivosXTemaXClassroom(request);
+        }
+        
+        public Sinapxon.Alumno.archivoXTema[] listarArchivosXTemaXClassroom(int idTema, string idClassroom) {
+            Sinapxon.Alumno.listarArchivosXTemaXClassroomRequest inValue = new Sinapxon.Alumno.listarArchivosXTemaXClassroomRequest();
+            inValue.idTema = idTema;
+            inValue.idClassroom = idClassroom;
+            Sinapxon.Alumno.listarArchivosXTemaXClassroomResponse retVal = ((Sinapxon.Alumno.AlumnoServices)(this)).listarArchivosXTemaXClassroom(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.listarArchivosXTemaXClassroomResponse> Sinapxon.Alumno.AlumnoServices.listarArchivosXTemaXClassroomAsync(Sinapxon.Alumno.listarArchivosXTemaXClassroomRequest request) {
+            return base.Channel.listarArchivosXTemaXClassroomAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sinapxon.Alumno.listarArchivosXTemaXClassroomResponse> listarArchivosXTemaXClassroomAsync(int idTema, string idClassroom) {
+            Sinapxon.Alumno.listarArchivosXTemaXClassroomRequest inValue = new Sinapxon.Alumno.listarArchivosXTemaXClassroomRequest();
+            inValue.idTema = idTema;
+            inValue.idClassroom = idClassroom;
+            return ((Sinapxon.Alumno.AlumnoServices)(this)).listarArchivosXTemaXClassroomAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sinapxon.Alumno.listarArchivosXAlumnoXClassroomXEvaluacionResponse Sinapxon.Alumno.AlumnoServices.listarArchivosXAlumnoXClassroomXEvaluacion(Sinapxon.Alumno.listarArchivosXAlumnoXClassroomXEvaluacionRequest request) {
+            return base.Channel.listarArchivosXAlumnoXClassroomXEvaluacion(request);
+        }
+        
+        public Sinapxon.Alumno.archivoXEntregable[] listarArchivosXAlumnoXClassroomXEvaluacion(int idEvaluacion, string idAlumno, string idClassroom) {
+            Sinapxon.Alumno.listarArchivosXAlumnoXClassroomXEvaluacionRequest inValue = new Sinapxon.Alumno.listarArchivosXAlumnoXClassroomXEvaluacionRequest();
+            inValue.idEvaluacion = idEvaluacion;
+            inValue.idAlumno = idAlumno;
+            inValue.idClassroom = idClassroom;
+            Sinapxon.Alumno.listarArchivosXAlumnoXClassroomXEvaluacionResponse retVal = ((Sinapxon.Alumno.AlumnoServices)(this)).listarArchivosXAlumnoXClassroomXEvaluacion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.listarArchivosXAlumnoXClassroomXEvaluacionResponse> Sinapxon.Alumno.AlumnoServices.listarArchivosXAlumnoXClassroomXEvaluacionAsync(Sinapxon.Alumno.listarArchivosXAlumnoXClassroomXEvaluacionRequest request) {
+            return base.Channel.listarArchivosXAlumnoXClassroomXEvaluacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sinapxon.Alumno.listarArchivosXAlumnoXClassroomXEvaluacionResponse> listarArchivosXAlumnoXClassroomXEvaluacionAsync(int idEvaluacion, string idAlumno, string idClassroom) {
+            Sinapxon.Alumno.listarArchivosXAlumnoXClassroomXEvaluacionRequest inValue = new Sinapxon.Alumno.listarArchivosXAlumnoXClassroomXEvaluacionRequest();
+            inValue.idEvaluacion = idEvaluacion;
+            inValue.idAlumno = idAlumno;
+            inValue.idClassroom = idClassroom;
+            return ((Sinapxon.Alumno.AlumnoServices)(this)).listarArchivosXAlumnoXClassroomXEvaluacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sinapxon.Alumno.eliminarEntregableResponse Sinapxon.Alumno.AlumnoServices.eliminarEntregable(Sinapxon.Alumno.eliminarEntregableRequest request) {
+            return base.Channel.eliminarEntregable(request);
+        }
+        
+        public void eliminarEntregable(int idEvaluacion, string idAlumno, string idClassroom) {
+            Sinapxon.Alumno.eliminarEntregableRequest inValue = new Sinapxon.Alumno.eliminarEntregableRequest();
+            inValue.idEvaluacion = idEvaluacion;
+            inValue.idAlumno = idAlumno;
+            inValue.idClassroom = idClassroom;
+            Sinapxon.Alumno.eliminarEntregableResponse retVal = ((Sinapxon.Alumno.AlumnoServices)(this)).eliminarEntregable(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.eliminarEntregableResponse> Sinapxon.Alumno.AlumnoServices.eliminarEntregableAsync(Sinapxon.Alumno.eliminarEntregableRequest request) {
+            return base.Channel.eliminarEntregableAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sinapxon.Alumno.eliminarEntregableResponse> eliminarEntregableAsync(int idEvaluacion, string idAlumno, string idClassroom) {
+            Sinapxon.Alumno.eliminarEntregableRequest inValue = new Sinapxon.Alumno.eliminarEntregableRequest();
+            inValue.idEvaluacion = idEvaluacion;
+            inValue.idAlumno = idAlumno;
+            inValue.idClassroom = idClassroom;
+            return ((Sinapxon.Alumno.AlumnoServices)(this)).eliminarEntregableAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sinapxon.Alumno.listarClassroomsxCursoResponse Sinapxon.Alumno.AlumnoServices.listarClassroomsxCurso(Sinapxon.Alumno.listarClassroomsxCursoRequest request) {
+            return base.Channel.listarClassroomsxCurso(request);
+        }
+        
+        public Sinapxon.Alumno.classroom[] listarClassroomsxCurso(Sinapxon.Alumno.curso curso) {
+            Sinapxon.Alumno.listarClassroomsxCursoRequest inValue = new Sinapxon.Alumno.listarClassroomsxCursoRequest();
+            inValue.curso = curso;
+            Sinapxon.Alumno.listarClassroomsxCursoResponse retVal = ((Sinapxon.Alumno.AlumnoServices)(this)).listarClassroomsxCurso(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomsxCursoResponse> Sinapxon.Alumno.AlumnoServices.listarClassroomsxCursoAsync(Sinapxon.Alumno.listarClassroomsxCursoRequest request) {
+            return base.Channel.listarClassroomsxCursoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomsxCursoResponse> listarClassroomsxCursoAsync(Sinapxon.Alumno.curso curso) {
+            Sinapxon.Alumno.listarClassroomsxCursoRequest inValue = new Sinapxon.Alumno.listarClassroomsxCursoRequest();
+            inValue.curso = curso;
+            return ((Sinapxon.Alumno.AlumnoServices)(this)).listarClassroomsxCursoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sinapxon.Alumno.listarClassroomxAlumnoResponse Sinapxon.Alumno.AlumnoServices.listarClassroomxAlumno(Sinapxon.Alumno.listarClassroomxAlumnoRequest request) {
+            return base.Channel.listarClassroomxAlumno(request);
+        }
+        
+        public Sinapxon.Alumno.classroom[] listarClassroomxAlumno(string codigo) {
+            Sinapxon.Alumno.listarClassroomxAlumnoRequest inValue = new Sinapxon.Alumno.listarClassroomxAlumnoRequest();
+            inValue.codigo = codigo;
+            Sinapxon.Alumno.listarClassroomxAlumnoResponse retVal = ((Sinapxon.Alumno.AlumnoServices)(this)).listarClassroomxAlumno(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomxAlumnoResponse> Sinapxon.Alumno.AlumnoServices.listarClassroomxAlumnoAsync(Sinapxon.Alumno.listarClassroomxAlumnoRequest request) {
+            return base.Channel.listarClassroomxAlumnoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sinapxon.Alumno.listarClassroomxAlumnoResponse> listarClassroomxAlumnoAsync(string codigo) {
+            Sinapxon.Alumno.listarClassroomxAlumnoRequest inValue = new Sinapxon.Alumno.listarClassroomxAlumnoRequest();
+            inValue.codigo = codigo;
+            return ((Sinapxon.Alumno.AlumnoServices)(this)).listarClassroomxAlumnoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sinapxon.Alumno.listarTemaxClassroomResponse Sinapxon.Alumno.AlumnoServices.listarTemaxClassroom(Sinapxon.Alumno.listarTemaxClassroomRequest request) {
+            return base.Channel.listarTemaxClassroom(request);
+        }
+        
+        public Sinapxon.Alumno.temaXClassroom[] listarTemaxClassroom(string arg0) {
+            Sinapxon.Alumno.listarTemaxClassroomRequest inValue = new Sinapxon.Alumno.listarTemaxClassroomRequest();
+            inValue.arg0 = arg0;
+            Sinapxon.Alumno.listarTemaxClassroomResponse retVal = ((Sinapxon.Alumno.AlumnoServices)(this)).listarTemaxClassroom(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.listarTemaxClassroomResponse> Sinapxon.Alumno.AlumnoServices.listarTemaxClassroomAsync(Sinapxon.Alumno.listarTemaxClassroomRequest request) {
+            return base.Channel.listarTemaxClassroomAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sinapxon.Alumno.listarTemaxClassroomResponse> listarTemaxClassroomAsync(string arg0) {
+            Sinapxon.Alumno.listarTemaxClassroomRequest inValue = new Sinapxon.Alumno.listarTemaxClassroomRequest();
+            inValue.arg0 = arg0;
+            return ((Sinapxon.Alumno.AlumnoServices)(this)).listarTemaxClassroomAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sinapxon.Alumno.listarEvaluacionesXClassroomResponse Sinapxon.Alumno.AlumnoServices.listarEvaluacionesXClassroom(Sinapxon.Alumno.listarEvaluacionesXClassroomRequest request) {
+            return base.Channel.listarEvaluacionesXClassroom(request);
+        }
+        
+        public Sinapxon.Alumno.evaluacion[] listarEvaluacionesXClassroom(string codigo) {
+            Sinapxon.Alumno.listarEvaluacionesXClassroomRequest inValue = new Sinapxon.Alumno.listarEvaluacionesXClassroomRequest();
+            inValue.codigo = codigo;
+            Sinapxon.Alumno.listarEvaluacionesXClassroomResponse retVal = ((Sinapxon.Alumno.AlumnoServices)(this)).listarEvaluacionesXClassroom(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.listarEvaluacionesXClassroomResponse> Sinapxon.Alumno.AlumnoServices.listarEvaluacionesXClassroomAsync(Sinapxon.Alumno.listarEvaluacionesXClassroomRequest request) {
+            return base.Channel.listarEvaluacionesXClassroomAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sinapxon.Alumno.listarEvaluacionesXClassroomResponse> listarEvaluacionesXClassroomAsync(string codigo) {
+            Sinapxon.Alumno.listarEvaluacionesXClassroomRequest inValue = new Sinapxon.Alumno.listarEvaluacionesXClassroomRequest();
+            inValue.codigo = codigo;
+            return ((Sinapxon.Alumno.AlumnoServices)(this)).listarEvaluacionesXClassroomAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Sinapxon.Alumno.listarPeriodosResponse Sinapxon.Alumno.AlumnoServices.listarPeriodos(Sinapxon.Alumno.listarPeriodosRequest request) {
             return base.Channel.listarPeriodos(request);
         }
@@ -2862,6 +2989,30 @@ namespace Sinapxon.Alumno {
             Sinapxon.Alumno.listarCursosRequest inValue = new Sinapxon.Alumno.listarCursosRequest();
             inValue.arg0 = arg0;
             return ((Sinapxon.Alumno.AlumnoServices)(this)).listarCursosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sinapxon.Alumno.guardarArchivoResponse Sinapxon.Alumno.AlumnoServices.guardarArchivo(Sinapxon.Alumno.guardarArchivoRequest request) {
+            return base.Channel.guardarArchivo(request);
+        }
+        
+        public void guardarArchivo(byte[] bytesArchivo, int idArchivo) {
+            Sinapxon.Alumno.guardarArchivoRequest inValue = new Sinapxon.Alumno.guardarArchivoRequest();
+            inValue.bytesArchivo = bytesArchivo;
+            inValue.idArchivo = idArchivo;
+            Sinapxon.Alumno.guardarArchivoResponse retVal = ((Sinapxon.Alumno.AlumnoServices)(this)).guardarArchivo(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sinapxon.Alumno.guardarArchivoResponse> Sinapxon.Alumno.AlumnoServices.guardarArchivoAsync(Sinapxon.Alumno.guardarArchivoRequest request) {
+            return base.Channel.guardarArchivoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sinapxon.Alumno.guardarArchivoResponse> guardarArchivoAsync(byte[] bytesArchivo, int idArchivo) {
+            Sinapxon.Alumno.guardarArchivoRequest inValue = new Sinapxon.Alumno.guardarArchivoRequest();
+            inValue.bytesArchivo = bytesArchivo;
+            inValue.idArchivo = idArchivo;
+            return ((Sinapxon.Alumno.AlumnoServices)(this)).guardarArchivoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

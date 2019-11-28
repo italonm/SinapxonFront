@@ -48,6 +48,7 @@
             this.btnAtras = new System.Windows.Forms.Button();
             this.lblPeso = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArchivos)).BeginInit();
             this.panelContenedorEntregables.SuspendLayout();
             this.panelTituloEntregables.SuspendLayout();
@@ -154,7 +155,7 @@
             this.btnAniadirArchivo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAniadirArchivo.Location = new System.Drawing.Point(20, 79);
             this.btnAniadirArchivo.Name = "btnAniadirArchivo";
-            this.btnAniadirArchivo.Size = new System.Drawing.Size(210, 50);
+            this.btnAniadirArchivo.Size = new System.Drawing.Size(426, 50);
             this.btnAniadirArchivo.TabIndex = 2;
             this.btnAniadirArchivo.Text = "Añadir";
             this.btnAniadirArchivo.UseVisualStyleBackColor = false;
@@ -191,6 +192,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContenedorEntregables.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.panelContenedorEntregables.Controls.Add(this.txtDescripcion);
+            this.panelContenedorEntregables.Controls.Add(this.lblPeso);
             this.panelContenedorEntregables.Controls.Add(this.panelTituloEntregables);
             this.panelContenedorEntregables.Location = new System.Drawing.Point(12, 77);
             this.panelContenedorEntregables.Name = "panelContenedorEntregables";
@@ -203,11 +205,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(15, 79);
+            this.txtDescripcion.Location = new System.Drawing.Point(15, 127);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ReadOnly = true;
-            this.txtDescripcion.Size = new System.Drawing.Size(434, 472);
+            this.txtDescripcion.Size = new System.Drawing.Size(434, 424);
             this.txtDescripcion.TabIndex = 3;
             // 
             // panelTituloEntregables
@@ -260,10 +262,10 @@
             // lblPeso
             // 
             this.lblPeso.AutoSize = true;
-            this.lblPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeso.Location = new System.Drawing.Point(647, 30);
+            this.lblPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeso.Location = new System.Drawing.Point(20, 79);
             this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(259, 25);
+            this.lblPeso.Size = new System.Drawing.Size(171, 16);
             this.lblPeso.TabIndex = 23;
             this.lblPeso.Text = "Peso de la evaluacion: ";
             // 
@@ -271,13 +273,31 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(70)))), ((int)(((byte)(195)))));
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Image = global::Sinapxon.Properties.Resources.round_save_white_18dp;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(734, 19);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(210, 50);
+            this.btnGuardar.TabIndex = 9;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // frmEvaluacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
             this.ClientSize = new System.Drawing.Size(964, 681);
-            this.Controls.Add(this.lblPeso);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelContenedorEntregables);
@@ -315,5 +335,6 @@
         private System.Windows.Forms.Label lblPeso;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }
