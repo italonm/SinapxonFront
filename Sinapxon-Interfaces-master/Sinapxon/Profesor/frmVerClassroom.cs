@@ -50,6 +50,7 @@ namespace Sinapxon.Profesor
         }
         private void btnEditarEvaluacion_Click(object sender, EventArgs e)
         {
+            EvaluacionInfo.evaluacion.id_evaluacion =((Profesor.evaluacion)dgvEvaluaciones.CurrentRow.DataBoundItem).id_evaluacion;
             frmCalificar frmCalificar = new frmCalificar(_profesor);
             _profesor.openChildForm(frmCalificar);
         }
@@ -124,5 +125,9 @@ namespace Sinapxon.Profesor
         }
 
      
+    }
+    public static class EvaluacionInfo
+    {
+        public static Profesor.evaluacion evaluacion = new Profesor.evaluacion();
     }
 }
