@@ -34,8 +34,21 @@ namespace Sinapxon.Administrador
             BindingList<Administrador.curso> temp = new BindingList<Administrador.curso>();
 
             bool isReq = false;
-            BindingList<Administrador.curso> cursos2 = new BindingList<Administrador.curso>();
-            buscarCursosReq(cursos2, codigoCur);
+            //BindingList<Administrador.curso> cursos2 = new BindingList<Administrador.curso>();
+            //buscarCursosReq(cursos2, codigoCur);
+            BindingList<Administrador.curso> cursosFinal =  new BindingList<Administrador.curso>();
+            BindingList<Administrador.curso> cursos2 = cursos;
+
+            foreach (Administrador.curso curY in cursos2)
+            {
+                buscarCursosReq(cursosFinal, curY.codigo);
+            }
+
+            foreach (Administrador.curso curZ in cursos2)
+            {
+                cursosFinal.Add(curZ);
+            }
+
             try
             {
                 cursos3 = new BindingList<Administrador.curso>(DBController.listarCursosXRequsitos(codigoCur));
@@ -48,7 +61,7 @@ namespace Sinapxon.Administrador
             {
                 foreach (Administrador.curso curX in cursos3)
                 {
-                    cursos2.Add(curX);
+                    cursosFinal.Add(curX);
                 }
             }
 
@@ -56,7 +69,7 @@ namespace Sinapxon.Administrador
             foreach (Administrador.curso cur in (BindingList<Administrador.curso>)dgvCursos.DataSource)
             {
                 isReq = false;
-                foreach (Administrador.curso cursoReq in cursos2)
+                foreach (Administrador.curso cursoReq in cursosFinal)
                 {
                     if (string.Equals(cur.codigo, cursoReq.codigo))
                     {
