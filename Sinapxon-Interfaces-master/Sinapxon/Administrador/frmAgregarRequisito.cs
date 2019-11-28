@@ -15,6 +15,10 @@ namespace Sinapxon.Administrador
         private Administrador.curso curSeleccionado;
         BindingList<Administrador.curso> backup;
         BindingList<Administrador.curso> toShow;
+        BindingList<Administrador.curso> cursos2;
+        BindingList<Administrador.curso> cursos3;
+        BindingList<Administrador.curso> req_de_curso;
+        Administrador.curso cur;
         int busq = 0;
         private int index = 0;
 
@@ -27,15 +31,34 @@ namespace Sinapxon.Administrador
             InitializeComponent();
             dgvCursos.AutoGenerateColumns = false;
             dgvCursos.DataSource = new BindingList<Administrador.curso>(DBController.listarCursosSin(""));
-            BindingList<Administrador.curso>  temp = new BindingList<Administrador.curso>();
+            BindingList<Administrador.curso> temp = new BindingList<Administrador.curso>();
 
             bool isReq = false;
+            BindingList<Administrador.curso> cursos2 = new BindingList<Administrador.curso>();
+            buscarCursosReq(cursos2, codigoCur);
+            try
+            {
+                cursos3 = new BindingList<Administrador.curso>(DBController.listarCursosXRequsitos(codigoCur));
+            }
+            catch
+            {
+                cursos3 = new BindingList<Administrador.curso>();
+            }
+            if (cursos3.Count() != 0)
+            {
+                foreach (Administrador.curso curX in cursos3)
+                {
+                    cursos2.Add(curX);
+                }
+            }
+
+
             foreach (Administrador.curso cur in (BindingList<Administrador.curso>)dgvCursos.DataSource)
             {
                 isReq = false;
-                foreach (Administrador.curso cursoReq in cursos)
+                foreach (Administrador.curso cursoReq in cursos2)
                 {
-                    if(string.Equals(cur.codigo, cursoReq.codigo))
+                    if (string.Equals(cur.codigo, cursoReq.codigo))
                     {
                         isReq = true;
                         break;
@@ -52,6 +75,9 @@ namespace Sinapxon.Administrador
                 }
             }
 
+
+
+
             index += 1;
             dgvCursos.AutoGenerateColumns = false;
 
@@ -65,6 +91,32 @@ namespace Sinapxon.Administrador
             dgvCursos.DataSource = bdl;
             BindingList<Administrador.curso> toShow = new BindingList<Administrador.curso>();
             dgvCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+        private void buscarCursosReq(BindingList<Administrador.curso> curs, String codigo)
+        //esto devuelve el arbol de requisitos de un cursp
+        {
+            try
+            {
+                req_de_curso = new BindingList<Administrador.curso>(DBController.listarRequisitos(codigo));
+            }
+            catch
+            {
+                req_de_curso = null;
+            }
+
+            if (req_de_curso != null)
+            {
+                foreach (Administrador.curso cur in req_de_curso)
+                {
+                    curs.Add(cur);
+                    buscarCursosReq(curs, cur.codigo);
+                }
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void dgvCursos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

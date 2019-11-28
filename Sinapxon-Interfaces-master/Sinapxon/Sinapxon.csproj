@@ -469,6 +469,9 @@
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarCursosSinResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarCursosXRequsitosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Administrador\Sinapxon.Administrador.listarEspecialidadesResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
