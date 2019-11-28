@@ -33,6 +33,19 @@ namespace Sinapxon.Login
                 MessageBox.Show("Los datos ingresados son incorrectos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            else
+            {
+                Administrador.AdministradorServicesClient dbAdmin = new Administrador.AdministradorServicesClient();
+                BindingList<Administrador.alumno> alumnos = new BindingList<Administrador.alumno>(dbAdmin.listarAlumnos(""));
+                foreach (Administrador.alumno al in alumnos)
+                {
+                    if(LoginInfo.persona.codigo == al.codigo && (al.estado == 2 || al.estado == 3))
+                    {
+                        MessageBox.Show("Acceso restringido", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+            }
             if (string.Equals(tipo, "D"))
             {
                 frmAdministrador formAdministrador = new frmAdministrador();
